@@ -1,0 +1,28 @@
+language: generic
+
+env:
+  global:
+  - '$HOME/.local/bin/:$PATH'
+
+branches:
+  only:
+  - 'master'
+
+cache:
+  directories:
+  - '$HOME/.stack'
+  - '$HOME/.local'
+  - '.stack-work'
+
+before_install:
+# Install stack
+# - 'curl -sSL https://get.haskellstack.org/ | sh'
+# - 'stack upgrade'
+- 'curl -Lo stack.tar.gz https://www.stackage.org/stack/linux-x86_64-static'
+- 'tar xzf stack.tar.gz'
+- 'mkdir -p "$HOME/.local/bin"'
+- 'cp stack-*-linux-x86_64-static/stack "$HOME/.local/bin/"'
+
+script:
+- 'bash deploy/build.sh'
+- 'bash deploy/deploy.sh'

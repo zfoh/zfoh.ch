@@ -1,9 +1,8 @@
 #!/bin/bash
 set -o nounset -o pipefail -o errexit
 
-DEPLOY_REPO=`git config remote.origin.url`
+DEPLOY_REPO="$(git config remote.origin.url)"
 DEPLOY_SSH_REPO=${DEPLOY_REPO/https:\/\/github.com\//git@github.com:}
-DEPLOY_SHA=`git rev-parse --verify HEAD`
 
 DEPLOY_BRANCH="gh-pages"
 
@@ -28,10 +27,16 @@ DEPLOY_DIR="$(mktemp -d)"
 git clone --single-branch --branch "$DEPLOY_BRANCH" \
     "$DEPLOY_SSH_REPO" "$DEPLOY_DIR"
 
-rsync -v -r --exclude '.git/' --delete "_site/" "$DEPLOY_DIR/"
+rsync -v -r --delete \
+    --exclude '.git/' --exclude 'CNAME' \
+    "_site/" "$DEPLOY_DIR/"
 
 cd "$DEPLOY_DIR"
 
 git add -A .
-git commit -m 'CI commit'
-git push origin "$DEPLOY_BRANCH"
+
+if git commit -m 'CI commit'; then
+    git push origin "$DEPLOY_BRANCH"
+else
+    echo "No commit was made"
+fi

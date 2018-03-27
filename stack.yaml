@@ -1,9 +1,12 @@
 resolver: lts-11.0
-extra-package-dbs: []
-flags: {}
 
+extra-package-dbs: []
 packages:
 - '.'
+
+flags:
+  hakyll:
+    usePandoc: false
 
 extra-deps:
 - 'hakyll-4.12.1.0'

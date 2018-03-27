@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
+import           Data.Monoid ((<>))
 import           Hakyll
 import           Meetup
 
@@ -14,10 +15,20 @@ main = hakyll $ do
         route idRoute
         compile compressCssCompiler
 
-    match "content/index.html" $ do
+    match "index.html" $ do
+        route idRoute
+        compile $
+            getResourceBody >>= applyAsTemplate sectionContext
+
+    match "sections/about-us.html" $ do
         route idRoute
         compile getResourceBody
 
-    create ["content/meetup.html"] $ do
+    create ["sections/meetup.html"] $ do
         route idRoute
-        compile $ unsafeCompiler getMeetup >>= makeItem
+        compile $ unsafeCompiler getMeetups >>= makeItem
+
+sectionContext :: Context String
+sectionContext =
+    functionField "section" (\[name] _ -> loadBody (fromFilePath name)) <>
+    defaultContext

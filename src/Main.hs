@@ -20,9 +20,7 @@ main = hakyll $ do
         compile $
             getResourceBody >>= applyAsTemplate sectionContext
 
-    match "sections/about-us.html" $ do
-        route idRoute
-        compile getResourceBody
+    match "sections/*.html" $ compile getResourceBody
 
     create ["sections/meetup.html"] $ do
         route idRoute

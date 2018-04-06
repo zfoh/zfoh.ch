@@ -7,7 +7,7 @@ import           Meetup
 main :: IO ()
 main = hakyll $ do
 
-    match "images/*.png" $ do
+    match ("images/*.png" .||. "images/*.jpg") $ do
         route idRoute
         compile copyFileCompiler
 

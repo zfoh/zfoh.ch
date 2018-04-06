@@ -1,6 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 import           Data.Monoid ((<>))
+import qualified Data.Time   as Time
 import           Hakyll
 import           Meetup
 
@@ -29,4 +30,15 @@ main = hakyll $ do
 sectionContext :: Context String
 sectionContext =
     functionField "section" (\[name] _ -> loadBody (fromFilePath name)) <>
+    field "copyrightYears" (\_ -> do
+        let founded = 2018
+        year <- unsafeCompiler getCurrentYear
+        return $ if year == founded
+            then show year
+            else show founded ++ " - " ++ show year) <>
     defaultContext
+
+getCurrentYear :: IO Integer
+getCurrentYear = do
+    (y, _m, _d) <- Time.toGregorian . Time.utctDay <$> Time.getCurrentTime
+    return y

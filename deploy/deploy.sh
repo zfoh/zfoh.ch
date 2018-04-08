@@ -1,6 +1,12 @@
 #!/bin/bash
 set -o nounset -o pipefail -o errexit
 
+if [[ "${TRAVIS_PULL_REQUEST-false}" != "false" || \
+        "${TRAVIS_BRANCH-}" != "master" ]]; then
+    echo "Not on master so not deploying..." >&2
+    exit 0
+fi
+
 DEPLOY_REPO="$(git config remote.origin.url)"
 DEPLOY_SSH_REPO=${DEPLOY_REPO/https:\/\/github.com\//git@github.com:}
 
@@ -38,5 +44,5 @@ git add -A .
 if git commit -m 'CI commit'; then
     git push origin "$DEPLOY_BRANCH"
 else
-    echo "No commit was made"
+    echo "No commit was made, skipping deploy..." >&2
 fi

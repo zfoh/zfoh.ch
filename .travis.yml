@@ -11,7 +11,7 @@ cache:
   - '.stack-work'
 
 before_install:
-- 'curl -Lo stack.tar.gz https://www.stackage.org/stack/linux-x86_64-static'
+- 'curl -Lo stack.tar.gz https://get.haskellstack.org/stable/linux-x86_64.tar.gz'
 - 'tar xzf stack.tar.gz'
 - 'mkdir -p "$HOME/.local/bin"'
 - 'cp stack-*-linux-x86_64-static/stack "$HOME/.local/bin/"'

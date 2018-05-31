@@ -80,3 +80,12 @@ footer {
   text-align: center;
   font-size: 12px;
 }
+
+a.button {
+  background-color: #258bcd;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+}

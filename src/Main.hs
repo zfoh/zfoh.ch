@@ -16,14 +16,19 @@ main = hakyll $ do
         route idRoute
         compile compressCssCompiler
 
-    match "index.html" $ do
-        route idRoute
+    -- TODO (jaspervdj): Unify these two guys
+    match "content/index.html" $ do
+        route $ constRoute "index.html"
+        compile $
+            getResourceBody >>= applyAsTemplate sectionContext
+    match "content/zurihac2019/index.html" $ do
+        route $ constRoute "zurihac2019/index.html"
         compile $
             getResourceBody >>= applyAsTemplate sectionContext
 
-    match "sections/*.html" $ compile getResourceBody
+    match "content/sections/*.html" $ compile getResourceBody
 
-    create ["sections/meetup.html"] $ do
+    create ["content/sections/meetup.html"] $ do
         route idRoute
         compile $ unsafeCompiler getMeetups >>= makeItem
 

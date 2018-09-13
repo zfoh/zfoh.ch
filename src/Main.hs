@@ -1,9 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import           Data.Monoid ((<>))
-import qualified Data.Time   as Time
+import           Data.Monoid     ((<>))
+import qualified Data.Time       as Time
 import           Hakyll
 import           Meetup
+import           System.FilePath (joinPath, splitPath)
 
 main :: IO ()
 main = hakyll $ do
@@ -16,25 +17,41 @@ main = hakyll $ do
         route idRoute
         compile compressCssCompiler
 
-    -- TODO (jaspervdj): Unify these two guys
     match "content/index.html" $ do
-        route $ constRoute "index.html"
+        route dropContentRoute
         compile $
-            getResourceBody >>= applyAsTemplate sectionContext
+            getResourceBody >>=
+            applyAsTemplate sectionContext >>=
+            loadAndApplyTemplate "templates/main.html" zfohContext
+
+    match (fromList
+        [ "content/privacy-policy.html"
+        , "content/terms-and-conditions.html"]) $ do
+        route dropContentRoute
+        compile $
+            getResourceBody >>=
+            loadAndApplyTemplate "templates/main.html" zfohContext
+
     match "content/zurihac2019/index.html" $ do
-        route $ constRoute "zurihac2019/index.html"
+        route dropContentRoute
         compile $
             getResourceBody >>= applyAsTemplate sectionContext
 
-    match "content/sections/*.html" $ compile getResourceBody
+    match "content/index/*.html" $ compile getResourceBody
 
-    create ["content/sections/meetup.html"] $ do
+    create ["content/index/meetup.html"] $ do
         route idRoute
         compile $ unsafeCompiler getMeetups >>= makeItem
+
+    match "templates/*.html" $ compile templateCompiler
 
 sectionContext :: Context String
 sectionContext =
     functionField "section" (\[name] _ -> loadBody (fromFilePath name)) <>
+    zfohContext
+
+zfohContext :: Context String
+zfohContext =
     field "copyrightYears" (\_ -> do
         let founded = 2018
         year <- unsafeCompiler getCurrentYear
@@ -47,3 +64,11 @@ getCurrentYear :: IO Integer
 getCurrentYear = do
     (y, _m, _d) <- Time.toGregorian . Time.utctDay <$> Time.getCurrentTime
     return y
+
+-- | Drop the `content/` part from a route.
+dropContentRoute :: Routes
+dropContentRoute = customRoute $ \ident ->
+    let path0 = toFilePath ident in
+    case splitPath path0 of
+        "content/" : path1 -> joinPath path1
+        _                  -> path0

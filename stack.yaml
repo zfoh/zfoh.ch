@@ -1,4 +1,4 @@
-resolver: lts-11.7
+resolver: nightly-2018-08-29
 
 extra-package-dbs: []
 packages:
@@ -9,8 +9,6 @@ flags:
     usePandoc: false
 
 extra-deps:
-- 'hakyll-4.12.1.0'
-- git: https://github.com/haskell/haddock.git
-  commit: 8064353244842c8a5b04d99cd5e6bb6430a9b51c
-  subdirs:
-  - 'haddock-library'
+- 'hakyll-4.12.3.0'
+- 'file-embed-0.0.10.1'
+- 'yaml-0.8.32'

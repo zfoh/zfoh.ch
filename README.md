@@ -1,3 +1,3 @@
 # zfoh.ch
 
-Source of <http://zfoh.ch>
+Source of <https://zfoh.ch>

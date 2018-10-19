@@ -2,19 +2,314 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ZuriHac 2019</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/zurihac.css">
   </head>
-  <body style="text-align: center;">
-    <img style="max-width: 90%; margin-bottom: 30px;" src="/images/zurihac2019-dates.png">
-    <p style="margin-bottom: 60px; font-size: 18px;">
-        More information coming soon.  ZuriHac 2018 website can be found
-        <a href="https://2018.zurihac.info">here</a>.
+  <body>
+    <!-- Main menu things -->
+    <div class="header-wide">
+      <header>
+        <nav id="nav">
+          <ul>
+            <li><a href="#toggle-nav" class="x">X</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a href="#toggle-nav" class="shadow"></a>
+        </nav>
+        <a href="#nav" id="#toggle-nav" class="toggle-nav">
+          <div></div><div></div><div></div>
+        </a>
+        <a href="/zurihac2019/" class="logo">ZuriHac 2019</a>
+      </header>
+    </div>
+
+    <main>
+      <div
+    style="
+        width: 100%;
+        background: linear-gradient(
+          rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.8)),
+          url('/images/zurihac2019/cover.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;">
+  <img style="width: 80%; max-width: 600px;"
+      src="/images/zurihac2019/dates.png">
+</div>
+
+<section>
+  <h1>About</h1>
+  <p>
+    Middle of June 2019, the
+    <a href="https://zfoh.ch/">Zürich Friends of Haskell association</a>
+    will organize ZuriHac 2018, a three day
+    <a href="https://haskell.org/">Haskell</a>
+    Hackathon hosted at the
+    <a href="https://www.hsr.ch/en/">HSR Hochschule für Technik Rapperswil</a>.
+    This is the eighth Haskell Hackathon organized in Zürich and and the third
+    one hosted at the HSR. This fantastic venue is located right at lake Zürich
+    and provides space for more than 400 participants.
+  </p>
+  <p>
+    The Haskell Hackathon is a <strong>completely free</strong>, international,
+    grassroots collaborative coding festival whose goal is to expand the
+    community and to build and improve Haskell libraries, tools, and
+    infrastructure.  This is a great opportunity to learn more about Haskell,
+    meet fellow Haskellers in real life, find new contributors for your project,
+    improve existing libraries and tools or even start new ones!
+  </p>
+  <p>
+    This event is open to any experience level, from beginners to gurus. In
+    fact, one of the goals is to bring beginners in contact with experts so that
+    the former can get a quick start in the Haskell community.
+    We will have a dedicated beginners' course, and there will be mentors on
+    site whom you can directly approach during the whole event with any
+    Haskell-related question you have.
+  </p>
+</section>
+
+<div class="wide">
+  <strong>supported by</strong><br>
+
+  <a href="http://hub.digitalasset.com/events/zurich/zurihac" target="_blank"
+      class="sponsor">
+    <img alt="Digital Asset Logo"
+        src="/images/sponsors/digitalasset-big-blue.png">
+  </a>
+
+  <a href="https://www.hsr.ch/en" target="_blank" class="sponsor">
+    <img alt="HSR" src="/images/sponsors/hsr.svg">
+  </a>
+
+  <br>
+  Interested in sponsoring?  <a href="mailto:zurihac@zfoh.ch">Contact us!</a>
+</div>
+
+<section>
+  <div class="anchor" id="program"></div>
+  <h1>Program</h1>
+  <h2>Speakers</h2>
+    Speakers to be announced.
+  <h2>Schedule</h2>
+  <p>
+    The schedule is preliminary and will be updated as we get closer to the
+    event.
+  </p>
+  <table class="schedule">
+    <tr>
+        <th><span class="day">Friday</span> 14 June</th>
+      <th><span class="day">Saturday</span> 15 June</th>
+      <th><span class="day">Sunday</span> 16 June</th>
+    </tr>
+    <tr>
+      <td class="admin"><span class="time">9.00</span> Doors open</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="keynote"><span class="time">10.00</span> Keynote</td>
+      <td class="keynote"><span class="time">10.00</span> Keynote</td>
+      <td class="keynote"><span class="time">10.00</span> Keynote</td>
+    </tr>
+    <tr>
+      <td class="keynote"><span class="time">11.00</span> Opening ceremony</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="food"><span class="time">12.00</span> Lunch</td>
+      <td class="food"><span class="time">12.00</span> Lunch</td>
+      <td class="food"><span class="time">12.00</span> Lunch</td>
+    </tr>
+    <tr>
+      <td class="keynote"><span class="time">13.30</span> Keynote</td>
+      <td class="keynote"><span class="time">13.30</span> Keynote</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td class="keynote"><span class="time">15.00</span> Project demos</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td class="admin"><span class="time">17.00</span> End of event</td>
+    </tr>
+    <tr>
+      <td class="food"><span class="time">18.00</span> Barbeque</td>
+      <td class="food"><span class="time">18.00</span> Food</td>
+      <td></td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <div class="anchor" id="venue"></div>
+  <h1>Venue</h1>
+  <p>
+    The hackathon takes place at the
+    <a href='https://www.hsr.ch/en'>HSR Hochschule für Technik Rapperswil</a>.
+    The
+    <a href='https://www.google.ch/maps/place/HSR+Hochschule+f%C3%BCr+Technik+Rapperswil/@47.2233188,8.8150867,17z/data=!3m1!4b1!4m5!3m4!1s0x479ab6e12facc7ad:0x711fa65bf58f9c0f!8m2!3d47.2233188!4d8.8172754?hl=en'>campus</a>
+    is about 40 minutes outside of the Zurich city.
+  </p>
+
+  <div style="text-align: center;">
+    <img src="/images/zurihac2019/campus.jpg" alt="HSR campus"
+        style="max-width: 700px; width: 90%">
+  </div>
+
+  <p>
+    HSR Hochschule für Technik Rapperswil<br/>
+    Oberseestrasse 10<br/>
+    8640 Rapperswil-Jona
+  </p>
+
+  <p>
+    The Hackathon mainly takes place in two buildings: Building 1 and
+    Building 4.  Detailed info on the different rooms will be announced later.
+  </p>
+  <p>
+    The venue is located right next to the lake, and weather has been superb
+    (25°C, 77℉) during the previous years, so feel free to bring your swimming
+    gear!
+  </p>
+
+  <h2 id="getting-there">Getting there</h2>
+  <p>
+    You can take the S7 or S15 to get from the Zurich main station to
+    Rapperswil.  These trains run regularly in 30 minute and 60 minute
+    intervals, respectively.  Google maps works well for directions if you use
+    the "public transport" tab.
+  </p>
+
+  <p>
+    If you arrive at the Zurich airport, first take the train to the Zurich main
+    station and then continue with S7 or S15. Trains from the airport towards
+    the city run every few minutes.
+  </p>
+
+  <h2 id="train-tickets">Train tickets</h2>
+
+  <p>
+    If you stay in Zurich city, the easiest option is to get a 24 hour pass for
+    <strong>all zones</strong>. It's good for all public transportation around
+    Zurich, up to Rapperswil. A one-way ticket costs 17.20CHF, the 24 hour pass
+    34.40CHF.
+  </p>
+
+  <p>
+    Please note that the 24 hour pass is literally a 24 hour pass and can be
+    used over multiple days: e.g. if you buy one on the first day of the
+    Hackathon at e.g. 9.00, you can still use it to take the train at 8.00 the
+    next day. This way, it is possible to buy only two tickets for the three-day
+    conference.
+  </p>
+
+  <p>
+    A lightly cheaper alternative to the 24 hour pass is the
+    <a href="https://www.zvv.ch/zvv/en/travelcards-and-tickets/tickets/9-oclock-daypass.html">9 O&#39;Clock day pass</a>
+    which works more like a regular day pass.  However, this requires you to
+    take the train to Rapperswil after 09:00 on Friday, as described on the
+    website.
+  </p>
+  <p>
+    You can buy tickets from the SBB or ZVV vending machines, which have a
+    button to use them in English rather than German on the home screen.
+
+    Alternatively, you can use the
+    <a target="_blank" href="https://www.zvv.ch/zvv/en/service/apps/ticket-app.html">ZVV ticket app</a>
+    on
+    <a href="https://play.google.com/store/apps/details?id=mnc.android.zvvticket">Android</a>
+    or
+    <a href="https://itunes.apple.com/ch/app/zvv-tickets/id1033896474?mt=8">iOS</a>.
+  </p>
+
+  <h2 id="getting-around">Getting around</h2>
+  <p>
+    See <a target='_blank' href='https://www.google.com/maps/d/u/0/viewer?mid=1OmDEXl-VKylIyv2Or-yH0nqah38'>this map</a>
+    for more information on accomodation, grocery stores, and other useful
+    places.
+  </p>
+</section>
+
+<section>
+  <div class="anchor" id="registration"></div>
+  <h1>Registration</h1>
+  <p>
+    Registration is currently scheduled to open somewhere after November 2018.
+    We will announce the exact date well in advance.
+  </p>
+</section>
+
+<section>
+  <div class="anchor" id="contact"></div>
+  <h1>Contact</h1>
+  <p>
+    If you have any questions before the event, please reach out to
+    <a href="mailto:m@jaspervdj.be">Jasper Van der Jeugt</a>,
+    <a href="mailto:juri.chome@gmail.com">Juri Chome</a> or
+    <a href="mailto:farhad.mehta@hsr.ch">Farhad Mehta</a>.
+    We also monitor our official
+    <a href="https://twitter.com/zurihac">Twitter account</a>.
+  </p>
+
+  <p>
+    The primary medium to communicate with other participants is our
+    <a href="https://slack.zurihac.info">Slack Organization</a>.
+    We use the hashtag <code>#zurihac</code> on Twiter, and you can discuss the
+    Hackathon on IRC in <code>#zurihac</code> channel on Freenode.
+  </p>
+</section>
+
+<div class="wide darker">
+  <section>
+    <h2>Who are we?</h2>
+    <p>
+      Organizing ZuriHac would not be possible without the help of all volunteers
+      involved.
     </p>
+
+    <ul>
+      <li><strong>Main Organizers</strong>: Jasper Van der Jeugt, Juri Chome, Farhad Mehta</li>
+      <li><strong>Beginner Track</strong>: Nicolas Gagliani, Martin Huschenbett</li>
+      <li><strong>GHC DevOps Track</strong>: Andreas Herrmann, Niklas Hambüchen</li>
+      <li><strong>T-Shirts</strong>: Carl Baatz</li>
+      <li><strong>Sponsoring</strong>: Arvin Moezzi, Ivan Kristo</li>
+      <li><strong>HSR Location and Facilities</strong>: Ingrid Vettiger, Farhad Mehta</li>
+      <li><strong>Food and Beverages</strong>: Niklas Hambüchen</li>
+      <li><strong>Additional help</strong>: Tomas Carnecky, Simon Meier, Gleb Peregud</li>
+    </li>
+  <section>
+</div>
+
+
+<section>
+  <h1 id="terms-and-conditions">Terms and Conditions</h1>
+  <p>
+    Each participant will retain ownership of any and all intellectual and
+    industrial property rights to his or her work created or used during the
+    Hackathon.
+  </p>
+</section>
+
+    </main>
+
     <footer>
       Copyright © 2018 Zürich Friends of Haskell.
-      <a href="https://github.com/zfoh/zfoh.ch">Source code available</a>.
+      <a href="https://github.com/zfoh/zfoh.ch">Source code available</a>
+      ·
+      <a href="/terms-and-conditions.html">Terms and Conditions</a>
+      ·
+      <a href="/privacy-policy.html">Privacy Policy</a>
     </footer>
   </body>
 </html>
+

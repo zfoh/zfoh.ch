@@ -9,7 +9,7 @@ import           System.FilePath (joinPath, splitPath)
 main :: IO ()
 main = hakyll $ do
 
-    match ("images/*.png" .||. "images/*.jpg") $ do
+    match ("images/**.svg" .||. "images/**.png" .||. "images/**.jpg" .||. "images/**.gif") $ do
         route idRoute
         compile copyFileCompiler
 
@@ -22,7 +22,7 @@ main = hakyll $ do
         compile $
             getResourceBody >>=
             applyAsTemplate sectionContext >>=
-            loadAndApplyTemplate "templates/main.html" zfohContext
+            loadAndApplyTemplate "templates/zfoh.html" zfohContext
 
     match (fromList
         [ "content/privacy-policy.html"
@@ -30,16 +30,19 @@ main = hakyll $ do
         route dropContentRoute
         compile $
             getResourceBody >>=
-            loadAndApplyTemplate "templates/main.html" zfohContext
+            loadAndApplyTemplate "templates/zfoh.html" zfohContext
 
     match "content/zurihac2019/index.html" $ do
         route dropContentRoute
         compile $
-            getResourceBody >>= applyAsTemplate sectionContext
+            getResourceBody >>=
+            applyAsTemplate sectionContext >>=
+            loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
 
-    match "content/index/*.html" $ compile getResourceBody
+    match "content/sections/*.html" $ compile getResourceBody
+    match "content/zurihac2019/sections/*.html" $ compile getResourceBody
 
-    create ["content/index/meetup.html"] $ do
+    create ["content/sections/meetup.html"] $ do
         route idRoute
         compile $ unsafeCompiler getMeetups >>= makeItem
 

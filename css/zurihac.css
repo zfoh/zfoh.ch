@@ -230,6 +230,47 @@ a.sponsor img {
 .schedule th       {background-color: #E99E32;}
 .schedule .x       {background-color: #B54A37;}
 
+/*******************************************************************************
+ * Speakers */
+
+.speakers {
+  display: flex;
+}
+
+.speaker .details {
+  display: flex;
+  flex-direction: row;
+}
+
+.speaker .avatar {
+  border: 2px solid #258bcd;
+  height: 60px;
+  margin-right: 24px;
+}
+
+.speaker .name {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.speaker .links {
+  display: flex;
+  flex-direction: row;
+}
+
+.speaker .links a {
+  background-size: cover;
+  height: 24px;
+  margin-right: 6px;
+  width: 24px;
+  opacity: 0.5;
+}
+
+.speaker .links .web {
+  background: url("/images/icons/globe.svg");
+}
+
 footer {
   font-size: 12px;
   margin: 60px 6px 30px 6px;

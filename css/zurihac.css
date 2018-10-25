@@ -169,12 +169,12 @@ div.anchor {
 
 h1, h2, h3 {
   color: #258bcd;
-  font-variant: small-caps;
   font-weight: bold;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 36px;
+  font-variant: small-caps;
 }
 
 h2 {

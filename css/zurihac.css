@@ -187,11 +187,31 @@ strong {
 }
 
 a {
-  color: #258bcd;
+  /* Similar to the main colour used, #258bcd, but a bit darker to have more
+   * contrast. */
+  color: #16557f;
+}
+
+.action {
+  text-align: center;
+  background-color: #489C85;
+  border: 6px solid #489C85;
+  border-radius: 6px;
+  margin: 24px 0px 24px 0px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.action a {
+  color: #ffffff;
 }
 
 /*******************************************************************************
  * Sponsors */
+
+.sponsors {
+  margin: 60px auto 60px auto;
+}
 
 a.sponsor {
   text-decoration: none;

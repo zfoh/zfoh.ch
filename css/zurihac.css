@@ -209,15 +209,15 @@ a {
 /*******************************************************************************
  * Sponsors */
 
-.sponsors {
+.s43 {
   margin: 60px auto 60px auto;
 }
 
-a.sponsor {
+.s43 a {
   text-decoration: none;
 }
 
-a.sponsor img {
+.s43 img {
   height: 60px;
   margin: 18px;
 }

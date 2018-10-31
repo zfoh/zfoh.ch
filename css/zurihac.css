@@ -21,6 +21,7 @@ div.header-wide {
   background: white;
   border-bottom: 6px solid #258bcd;
   padding: 12px;
+  z-index: 1;
 }
 
 header {

@@ -260,11 +260,23 @@ a {
 
 .speakers {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.speaker {
+  padding: 0px;
+}
+
+@media (min-width: 768px) {
+  .speakers {flex-direction: row;}
+  .speaker  {width:  50%}
 }
 
 .speaker .details {
   display: flex;
   flex-direction: row;
+  margin: 12px;
 }
 
 .speaker .avatar {
@@ -292,9 +304,13 @@ a {
   opacity: 0.5;
 }
 
-.speaker .links .web {
-  background: url("/images/icons/globe.png"); background-size: 24px 24px;
+.speaker .bio {
+  margin: 12px;
 }
+
+.speaker .links .github  {background: url("/images/icons/github.png");  background-size: 24px 24px;}
+.speaker .links .twitter {background: url("/images/icons/twitter.png"); background-size: 24px 24px;}
+.speaker .links .web     {background: url("/images/icons/globe.png");   background-size: 24px 24px;}
 
 footer {
   font-size: 12px;

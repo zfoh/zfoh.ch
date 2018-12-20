@@ -241,6 +241,7 @@ a {
 .schedule td, th {
   width: 30%;
   padding: 6px 6px 24px 6px;
+  vertical-align: top;
 }
 
 .schedule th .day {
@@ -252,8 +253,8 @@ a {
 .schedule .food    {background-color: #489C85;}
 .schedule .keynote {background-color: #2E3F4F;}
 .schedule .admin   {background-color: #B2A54B;}
+.schedule .hacking {background-color: #B54A37;}
 .schedule th       {background-color: #E99E32;}
-.schedule .x       {background-color: #B54A37;}
 
 /*******************************************************************************
  * Speakers */

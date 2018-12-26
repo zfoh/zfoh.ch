@@ -194,13 +194,14 @@ a {
 }
 
 .action {
-  text-align: center;
   background-color: #489C85;
-  border: 6px solid #489C85;
   border-radius: 6px;
-  margin: 24px 0px 24px 0px;
-  font-weight: bold;
+  border: 6px solid #489C85;
   color: #ffffff;
+  display: block;
+  font-weight: bold;
+  margin: 24px 0px 24px 0px;
+  text-align: center;
 }
 
 .action a {

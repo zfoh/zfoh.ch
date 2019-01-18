@@ -275,7 +275,7 @@ a {
 .schedule .hacking {background-color: #B54A37;}
 .schedule .tracks {
   background-color: #C57A67;
-  border: 0px;
+  border-left: 0px;
 }
 
 /*******************************************************************************

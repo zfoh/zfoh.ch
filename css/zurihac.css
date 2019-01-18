@@ -234,16 +234,31 @@ a {
  * Schedule */
 
 .schedule {
-  color: #ffffff;
+  color: #fff;
+  table-layout: fixed;
   text-transform: uppercase;
   font-size: 12px;
   width: 100%;
+  border-collapse: collapse;
 }
 
+.schedule td + td { border-left: 1px solid #fff; }
+.schedule th + th { border-left: 1px solid #fff; }
+
 .schedule td, th {
-  width: 30%;
-  padding: 6px 6px 24px 6px;
+  padding: 6px 6px 6px 6px;
   vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+}
+
+.schedule .hour {
+  color: #fff;
+  text-align: right;
+  width: 0px;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  padding: 0px 0px 6px 0px;
 }
 
 .schedule th .day {
@@ -252,11 +267,16 @@ a {
 }
 
 /* Color scheme-ish for schedule */
+.schedule th       {background-color: #E99E32;}
+.schedule .hour    {background-color: #ffffff;}
 .schedule .food    {background-color: #489C85;}
 .schedule .keynote {background-color: #2E3F4F;}
-.schedule .admin   {background-color: #B2A54B;}
+.schedule .admin   {background-color: #B2B54B;}
 .schedule .hacking {background-color: #B54A37;}
-.schedule th       {background-color: #E99E32;}
+.schedule .tracks {
+  background-color: #C57A67;
+  border: 0px;
+}
 
 /*******************************************************************************
  * Speakers */

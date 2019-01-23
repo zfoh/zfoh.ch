@@ -1,14 +1,15 @@
-resolver: nightly-2018-08-29
+resolver: lts-13.0
 
 extra-package-dbs: []
 packages:
 - '.'
 
 flags:
+  # This significantly speeds up CI builds, and we don't really need Pandoc for
+  # this website.
   hakyll:
     usePandoc: false
 
 extra-deps:
-- 'hakyll-4.12.3.0'
-- 'file-embed-0.0.10.1'
-- 'yaml-0.8.32'
+- 'hakyll-4.12.5.0'
+- 'lrucache-1.2.0.1'

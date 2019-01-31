@@ -249,11 +249,11 @@ a {
   padding: 6px 6px 6px 6px;
   vertical-align: top;
   text-align: left;
-  border-bottom: 1px solid #fff;
+  border-bottom: 0px solid #fff;
 }
 
 .schedule .hour {
-  color: #fff;
+  color: #000;
   text-align: right;
   width: 0px;
   /* white-space: nowrap; */
@@ -273,10 +273,7 @@ a {
 .schedule .keynote {background-color: #2E3F4F;}
 .schedule .admin   {background-color: #B2B54B;}
 .schedule .hacking {background-color: #B54A37;}
-.schedule .tracks {
-  background-color: #C57A67;
-  border-left: 0px;
-}
+.schedule .tracks  {background-color: #9e3825;}
 
 /*******************************************************************************
  * Speakers */

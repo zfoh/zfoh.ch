@@ -1,4 +1,5 @@
 language: generic
+sudo: false
 
 env:
   global:
@@ -12,8 +13,6 @@ addons:
 cache:
   directories:
   - '$HOME/.stack'
-  - '$HOME/.local'
-  - '.stack-work'
 
 before_install:
 - 'curl -Lo stack.tar.gz https://get.haskellstack.org/stable/linux-x86_64.tar.gz'

@@ -324,6 +324,12 @@ a {
   opacity: 0.5;
 }
 
+.speaker .timeslot {
+  margin: 12px;
+  font-weight: bold;
+  color: #258bcd;
+}
+
 .speaker .bio {
   margin: 12px;
 }

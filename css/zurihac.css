@@ -342,3 +342,25 @@ footer {
   font-size: 12px;
   margin: 60px 6px 30px 6px;
 }
+
+/*******************************************************************************
+ * Projects */
+
+.projects {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.projects li {
+  margin-bottom: 18px;
+}
+
+.projects .name {
+  color:#258bcd;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.projects p {
+  margin: 6px 0px 6px 0px;
+}

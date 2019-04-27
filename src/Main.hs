@@ -44,6 +44,12 @@ main = hakyll $ do
             applyAsTemplate sectionContext >>=
             loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
 
+    match "content/zurihac2019/projects.html" $ do
+        route dropContentRoute
+        compile $
+            getResourceBody >>=
+            loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
+
     match "content/sections/*.html" $ compile getResourceBody
     match "content/zurihac2019/sections/*.html" $ compile getResourceBody
 

@@ -1,12 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import           Data.Monoid     ((<>))
-import qualified Data.Time       as Time
+import           Data.Monoid      ((<>))
+import qualified Data.Time        as Time
 import           Hakyll
 import           Meetup
-import           System.Exit     (ExitCode (..))
-import           System.FilePath (joinPath, splitPath)
-import qualified System.Process  as Process
+import           System.Exit      (ExitCode (..))
+import           System.FilePath  (joinPath, splitPath)
+import qualified System.Process   as Process
+import           ZuriHac.Projects
 
 main :: IO ()
 main = hakyll $ do
@@ -44,11 +45,13 @@ main = hakyll $ do
             applyAsTemplate sectionContext >>=
             loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
 
+    match "content/zurihac2019/projects.json" $ compile compileProjects
     match "content/zurihac2019/projects.html" $ do
         route dropContentRoute
         compile $
             getResourceBody >>=
-            loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
+            applyAsTemplate projectsContext >>=
+            loadAndApplyTemplate "templates/zurihac2019.html" projectsContext
 
     match "content/sections/*.html" $ compile getResourceBody
     match "content/zurihac2019/sections/*.html" $ compile getResourceBody
@@ -81,6 +84,13 @@ inkscapeCompiler (w, h) = do
 sectionContext :: Context String
 sectionContext =
     functionField "section" (\[name] _ -> loadBody (fromFilePath name)) <>
+    zfohContext
+
+projectsContext :: Context String
+projectsContext =
+    field "projects" (\_ -> do
+        ps <- loadBody "content/zurihac2019/projects.json"
+        return $ renderProjects ps) <>
     zfohContext
 
 zfohContext :: Context String

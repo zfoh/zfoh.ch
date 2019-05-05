@@ -63,7 +63,7 @@
         "description": "Implement dynamic linking on Linux to match features of the RTS linker."
     },
     {
-        "name": "Electronic Health Records Management a",
+        "name": "Electronic Health Records Management as a Service",
         "link": "https://sites.google.com/view/electronichealthrecords/home",
         "contributor level": "Intermediate, Advanced",
         "contact": "Manu Gupta",
@@ -84,7 +84,7 @@
         "description": "Example-based Haskell Documentation"
     },
     {
-        "name": "Extending and Adapting Octave using Glasgow Haskell Compiler and Open Sou",
+        "name": "Extending and Adapting Octave using Glasgow Haskell Compiler and Open Source Spreadsheet",
         "link": "https://seeta.in",
         "contributor level": "Beginner, Intermediate",
         "contact": "Manu Gupta",

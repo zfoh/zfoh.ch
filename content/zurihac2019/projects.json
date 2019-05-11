@@ -252,13 +252,6 @@
         "description": "PureScript package manager and build tool powered by Dhall and Spacchetti."
     },
     {
-        "name": "sudbury",
-        "link": "https://github.com/abooij/sudbury",
-        "contributor level": "Intermediate, Advanced",
-        "contact": "Auke Booij",
-        "description": "Haskell implementation of the wayland protocol."
-    },
-    {
         "name": "TaskLite",
         "link": "https://github.com/ad-si/tasklite",
         "contributor level": "Intermediate",

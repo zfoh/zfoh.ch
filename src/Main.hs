@@ -7,10 +7,12 @@ import           Meetup
 import           System.Exit      (ExitCode (..))
 import           System.FilePath  (joinPath, splitPath)
 import qualified System.Process   as Process
-import           ZuriHac.Projects
 
 main :: IO ()
 main = hakyll $ do
+
+    ----------------------------------------------------------------------------
+    -- Images, CSS, etc.
 
     match ("images/**.png" .||. "images/**.jpg" .||. "images/**.gif") $ do
         route idRoute
@@ -22,6 +24,9 @@ main = hakyll $ do
     match "css/*" $ do
         route idRoute
         compile compressCssCompiler
+
+    ----------------------------------------------------------------------------
+    -- Simple static pages.
 
     match "content/index.html" $ do
         route dropContentRoute
@@ -38,6 +43,9 @@ main = hakyll $ do
             getResourceBody >>=
             loadAndApplyTemplate "templates/zfoh.html" zfohContext
 
+    ----------------------------------------------------------------------------
+    -- ZuriHac 2019.
+
     match "content/zurihac2019/index.html" $ do
         route dropContentRoute
         compile $
@@ -45,20 +53,43 @@ main = hakyll $ do
             applyAsTemplate sectionContext >>=
             loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
 
-    match "content/zurihac2019/projects.json" $ compile compileProjects
+    ----------------------------------------------------------------------------
+    -- Projects page.
+
+    let projectsStaticFiles =
+            [ "content/zurihac2019/projects.json"
+            , "content/zurihac2019/projects/bookmark-regular.svg"
+            , "content/zurihac2019/projects/bookmark-solid.svg"
+            , "content/zurihac2019/projects/main.js"
+            , "content/zurihac2019/projects/projects.css"
+            , "content/zurihac2019/projects/projects.js"
+            ]
+
+    match (fromList projectsStaticFiles) $ do
+        route dropContentRoute
+        compile copyFileCompiler
+
     match "content/zurihac2019/projects.html" $ do
         route dropContentRoute
         compile $
             getResourceBody >>=
-            applyAsTemplate projectsContext >>=
-            loadAndApplyTemplate "templates/zurihac2019.html" projectsContext
+            loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
+
+    ----------------------------------------------------------------------------
+    -- Sections that we can pull in from anywhere, they're just strings.
 
     match "content/sections/*.html" $ compile getResourceBody
     match "content/zurihac2019/sections/*.html" $ compile getResourceBody
 
+    ----------------------------------------------------------------------------
+    -- Meetup section is dynamically generated.
+
     create ["content/sections/meetup.html"] $ do
         route idRoute
         compile $ unsafeCompiler getMeetups >>= makeItem
+
+    ----------------------------------------------------------------------------
+    -- Templates.
 
     match "templates/*.html" $ compile templateCompiler
 
@@ -84,13 +115,6 @@ inkscapeCompiler (w, h) = do
 sectionContext :: Context String
 sectionContext =
     functionField "section" (\[name] _ -> loadBody (fromFilePath name)) <>
-    zfohContext
-
-projectsContext :: Context String
-projectsContext =
-    field "projects" (\_ -> do
-        ps <- loadBody "content/zurihac2019/projects.json"
-        return $ renderProjects ps) <>
     zfohContext
 
 zfohContext :: Context String

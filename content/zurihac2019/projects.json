@@ -105,11 +105,11 @@
     },
     {
         "id": "ff",
-        "name": "ff",
-        "link": "https://github.com/ff-notes",
-        "contributor level": "Intermediate",
+        "name": "RON, Swarm, ff",
+        "link": "https://replicated.cc",
+        "contributor level": "Beginner, Intermediate, Advanced",
         "contact": "Yuriy Syrovetskiy",
-        "description": "Task tracker and note taker."
+        "description": "RON is a protocol CRDT-based protocol of data exchange and presentation format. Swarm is an embeddable distributed fully-CRDT database. ff is a distributed personal and team task tracker and note taker (CLI, GUI). There are pure Haskell components as well as FFI to C++."
     },
     {
         "id": "ginger",

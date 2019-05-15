@@ -23,7 +23,6 @@ Executable zfoh
 
   Other-modules:
     Meetup
-    ZuriHac.Projects
 
   Build-depends:
     aeson        >= 1.2  && < 1.5,

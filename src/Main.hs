@@ -18,7 +18,7 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
-    match "images/s43/*.svg" $ inkscapeRules (Nothing, Just 120)
+    match "images/s43/*.svg" $ inkscapeRules (Nothing, Just 180)
     match "images/icons/*.svg" $ inkscapeRules (Just 64, Just 64)
 
     match "css/*" $ do

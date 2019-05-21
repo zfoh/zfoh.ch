@@ -224,6 +224,14 @@
         "description": "Pomelo is a new FRP library, whose development is just starting. Key goals for Pomelo are a clean semantics and an efficient implementation."
     },
     {
+        "id": "plutus",
+        "name": "Plutus",
+        "link": "https://github.com/input-output-hk/plutus",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Michael Peyton Jones",
+        "description": "The Plutus platform is a smart contract platform consisting of a small functional programming language, a compiler from Haskell to Plutus, and library support for writing contracts."
+    },
+    {
         "id": "ppp",
         "name": "PPP",
         "link": "http://PPP.pfff",

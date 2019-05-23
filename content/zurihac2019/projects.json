@@ -310,8 +310,8 @@
         "contributor level": "Beginner, Intermediate, Advanced",
         "contact": "Ben Brunzel",
         "description": "traze is a MQTT based tronlike multiplayer game with a Gameserver implementation in Haskell."
-    }
-        {
+    },
+    {
         "id": "morley",
         "name": "Morley",
         "link": "https://github.com/serokell/morley-zurihac",

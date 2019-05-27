@@ -168,6 +168,14 @@
         "description": "Haskell/Idris to Michelson/WASM smart contract compiler (work in progress)."
     },
     {
+        "id": "linear-types",
+        "name": "Linear types in GHC",
+        "link": "https://gitlab.haskell.org/ghc/ghc/merge_requests/852",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Krzysztof Gogolewski & Arnaud Spiwack",
+        "description": "Adding linear types to GHC."
+    },
+    {
         "id": "massiv",
         "name": "massiv",
         "link": "https://github.com/lehins/massiv",

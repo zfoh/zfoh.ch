@@ -168,6 +168,14 @@
         "description": "Haskell/Idris to Michelson/WASM smart contract compiler (work in progress)."
     },
     {
+        "id": "linear-types",
+        "name": "Linear types in GHC",
+        "link": "https://gitlab.haskell.org/ghc/ghc/merge_requests/852",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Krzysztof Gogolewski & Arnaud Spiwack",
+        "description": "Adding linear types to GHC."
+    },
+    {
         "id": "massiv",
         "name": "massiv",
         "link": "https://github.com/lehins/massiv",
@@ -222,6 +230,14 @@
         "contributor level": "Advanced",
         "contact": "Wolfgang Jeltsch",
         "description": "Pomelo is a new FRP library, whose development is just starting. Key goals for Pomelo are a clean semantics and an efficient implementation."
+    },
+    {
+        "id": "plutus",
+        "name": "Plutus",
+        "link": "https://github.com/input-output-hk/plutus",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Michael Peyton Jones",
+        "description": "The Plutus platform is a smart contract platform consisting of a small functional programming language, a compiler from Haskell to Plutus, and library support for writing contracts."
     },
     {
         "id": "ppp",
@@ -302,5 +318,13 @@
         "contributor level": "Beginner, Intermediate, Advanced",
         "contact": "Ben Brunzel",
         "description": "traze is a MQTT based tronlike multiplayer game with a Gameserver implementation in Haskell."
+    },
+    {
+        "id": "morley",
+        "name": "Morley",
+        "link": "https://github.com/serokell/morley-zurihac",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Ivan Gromakovskiy",
+        "description": "Hacking on developer tools for the smart contract language of Tezos with Serokell and TQ"
     }
 ]

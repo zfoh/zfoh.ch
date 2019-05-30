@@ -96,14 +96,6 @@
         "description": "Example-based Haskell Documentation"
     },
     {
-        "id": "extending-and-adapting-octave-using-glasgow-haskell-compiler-and-open-source-spreadsheet",
-        "name": "Extending and Adapting Octave using Glasgow Haskell Compiler and Open Source Spreadsheet",
-        "link": "https://seeta.in",
-        "contributor level": "Beginner, Intermediate",
-        "contact": "Manu Gupta",
-        "description": "We wish to extend and adapt octave (open source version of matlab) using Glasgow Haskell Compiler and Open Source spreadsheet namely Ethercalc. This will enable students and researchers to actively use Matlab for a variety of high performance and super computing applications in the fields of Physics, Chemistry, Biology and Mathematics."
-    },
-    {
         "id": "ff",
         "name": "RON, Swarm, ff",
         "link": "https://replicated.cc",
@@ -142,14 +134,6 @@
         "contributor level": "Intermediate, Advanced",
         "contact": "John Wiegley",
         "description": "An implementation of the Nix language in Haskell"
-    },
-    {
-        "id": "integrated-water-management-resource-center",
-        "name": "Integrated Water Management Resource Center",
-        "link": "https://sites.google.com/view/integratedwatermanagment/home",
-        "contributor level": "Intermediate, Advanced",
-        "contact": "Manu Gupta",
-        "description": "Enabling the Bottom of Pyramid through Water Management Services on the Cloud build using Reflex FRP framework, Water Quality Tools, Open Source Spreadsheet with Haskell server stack and Picture Archiving and Communication System. Remote Water Monitoring, Sewage Management, Quality Assurance and Recyclability of Water using a software stack build with Glasgow Haskell Compiler."
     },
     {
         "id": "juvix",

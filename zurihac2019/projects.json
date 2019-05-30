@@ -136,14 +136,6 @@
         "description": "Learning methodology for Haskell"
     },
     {
-        "id": "haskell-stdio",
-        "name": "haskell-stdio",
-        "link": "https://github.com/orgs/haskell-stdio",
-        "contributor level": "Intermediate, Advanced",
-        "contact": "winterland1989",
-        "description": "IO toolkit based on libuv for GHC"
-    },
-    {
         "id": "hnix",
         "name": "hnix",
         "link": "https://github.com/haskell-nix/hnix",

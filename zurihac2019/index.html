@@ -168,13 +168,11 @@
   </ul>
   <p>
     ZuriHac is not a conference.  Most of the time is reserved to work on
-    projects together.  At the start of the Hackathon maintainers get a few
-    moments to present their project.  If you want, you can join any of these
-    projects and learn, contribute code, write documentation, or make any other
-    sort of progress.  There will be something for all skill levels.
-  </p>
-  <p>
-    We will highlight a few projects on our website before the event.
+    <a href="#projects">projects</a> together.  At the start of the Hackathon
+    maintainers get a few moments to present their project.  If you want, you
+    can join any of these projects and learn, contribute code, write
+    documentation, or make any other sort of progress.  There will be something
+    for all skill levels.
   </p>
   <p>
     Of course — in between hacking —  we love learning from some of the most
@@ -183,12 +181,13 @@
     from both industry and academia.
 
     In addition to that, there are some free
-    <a href="#beginner-course">courses you can</a>
-    <a href="#advanced-course">take as well</a>.
+    <a href="#beginner-track">courses you can</a>
+    <a href="#advanced-track">take as well</a>.
   </p>
   <p>
-    Please <a href="#contact">contact</a> us if you have more questions about
-    the schedule.
+    You can identify volunteer <strong>mentors</strong> from the dark blue
+    Zurihac shirt.  They welcome any questions you may have about Haskell, so
+    please grab them if you have any issues or questions.
   </p>
 </section>
 <div class="wide darker">
@@ -436,7 +435,7 @@
   </tr>
   <tr>
     <td class="hour">18:00</td>
-    <td rowspan="3" colspan="2" class="food">18:00 Food Truck</td>
+    <td rowspan="3" colspan="2" class="food">18:00 Ramen</td>
     <td rowspan="3" colspan="2" class="food">18:00 Barbeque</td>
     <td rowspan="3" colspan="2"></td>
   </tr>
@@ -449,37 +448,22 @@
   </table>
 </section>
 <section>
-  <div class="anchor" id="beginner-info"></div>
-  <h2>Beginner Info</h2>
-  <p>
+  <div class="anchor" id="tracks"></div>
+  <h2>Tracks</h2>
+  <!-- <p>
     We want to make the event accessible to Haskellers at all levels.  This is
-    why we have dedicated mentors and beginner-level Haskell exercises every
-    year, and 2019 will be the second year to feature an introductory course
-    by Julie Moronuki.
-  </p>
+    why we have dedicated mentors and tracks at
+  </p> -->
+  <div class="anchor" id="beginner-track"></div>
+  <h3>Beginner Track</h3>
 
-  <h3>Mentors</h3>
-  <p>
-    You can identify mentors from the black Zurihac shirt.  They welcome any
-    questions you may have, so please grab them if you have any issues or
-    questions.
-  </p>
-
-  <div class="anchor" id="beginner-course"></div>
-  <h3>Beginner course</h3>
   <img style="float: right; max-width: 100px; margin: 0px 12px 12px 12px;
                 border: 2px solid #258bcd"
       src="/images/speakers/ryan-moore.jpg">
   <p>
-    <strong>Important update:</strong> unfortunately,
-    <a href="https://twitter.com/argumatronic">Julie</a>,
-    will not be able to make it to ZuriHac this year.
-    <a href="https://twitter.com/panicwhenever">Ryan Moore</a> will be teaching
-    the beginners course in her absence.
-  </p>
-  <p>
-    The <em>free beginners course</em> will be focused on Haskell language
-    fundamentals with no prior experience to the language assumed or required.
+    The beginners track features a <em>free course</em> focused on Haskell
+    language fundamentals with no prior experience to the language assumed or
+    required.
   </p>
   <p>
     Topics that will be covered include:
@@ -493,16 +477,97 @@
       <li>Working with lists and text</li>
       <li>Reading &amp; writing data to files</li>
   </ol>
-
-  <div class="anchor" id="advanced-course"></div>
-  <h2>Advanced course</h2>
   <p>
-    Due to popular demand we are offering an advanced track for the first time.
-    So if you already feel comfortable with the basics of Haskell, but are eager
-    to learn more, then you will be able to register as soon as we publish the
-    programme.
-    This course will be lead by the Haskell experts from
-    <a href="http://www.well-typed.com/">Well-Typed</a>.
+    <strong>Important update:</strong> unfortunately,
+    <a href="https://twitter.com/argumatronic">Julie</a>,
+    will not be able to make it to ZuriHac this year.
+    <a href="https://twitter.com/panicwhenever">Ryan Moore</a> will be teaching
+    the beginners course in her absence.
+  </p>
+
+  <div class="anchor" id="advanced-track"></div>
+  <h3>Advanced Track</h3>
+  <p>
+    The Haskell experts from <a href="http://www.well-typed.com/">Well-Typed</a>
+    will teach a two-part course in the advanced track.  The two sessions are
+    completely independent and take place on Friday and Saturday afternoon.
+  </p>
+  <ul>
+    <li>
+      <p>
+        Duncan Coutts will lead a session on <em>Evaluation &amp;
+        Performance</em>.  He will teach you how to properly reason about
+        evaluation in Haskell program, and discuss performance pitfalls.
+      </p>
+    </li>
+    <li>
+      <p>
+        Adam Gundry will host a session about Advanced Types, so you can learn
+        about various GHC type system extensions.
+      </p>
+    </li>
+  </ul>
+
+  <div class="anchor" id="ghc-track"></div>
+  <h3>GHC Track</h3>
+  <p>
+    This year we will again feature a dedicated GHC track to foster
+    contributions to GHC and teach newcomers how to participate in GHC's
+    development.  It was a great success last year, and we hope it will be a
+    great success this year as well.
+  </p>
+  <p>
+    We currently have the following workshops planned:
+  </p>
+  <ul>
+    <li>
+      <strong>Simon Peyton Jones</strong>:
+      session on understanding GHC's type inference engine
+    </li>
+    <li>
+      <strong>Richard Eisenberg</strong>:
+      high-level overview on the GHC compilation pipeline
+    </li>
+    <li>
+      <strong>Andrey Mokhov</strong>: Hadrian
+    </li>
+    <li>
+      <strong>Matthew Pickering</strong>:
+      working with tools such as tools such as ghc-artefact-nix,
+      haskell-ide-engine, ghcid, GHC's debugger whilst working on GHC.
+    </li>
+  </ul>
+  <p>
+    The exact schedule will be announced before the event.
+  </p>
+
+  <div class="anchor" id="docs-track"></div>
+  <h3>Docs Track</h3>
+  <img style="float: left; max-width: 100px; margin: 0px 12px 12px 0px;
+                border: 2px solid #258bcd"
+      src="/images/speakers/beth-aitman.jpg">
+  <p>
+    Writing good docs is a non-trivial task, and can hugely improve how your
+    users see your software.
+    <a href="https://twitter.com/baitman">Beth Aitman</a>, technical writer at
+    our sponsor Digital Asset, will teach you how write effective and clear
+    documentation.  With the right conceptual understanding you might even start
+    loving to write docs for your projects!
+  </p>
+  <p>
+    This track consists of a talk at 11.00 on Saturday, followed by
+    collaborative doc writing for any projects that are interested.
+  </p>
+
+  <div class="anchor" id="projects"></div>
+  <h2>Projects</h2>
+  <p>
+    Like each year, ZuriHac hosts many projects by and for attendees.
+    <a href="/zurihac2019/projects.html">You can see the full list here</a>.
+  </p>
+  <p>
+    Before the Hackathon, we will highlight a few projects from our sponsors
+    here.
   </p>
 </section>
 

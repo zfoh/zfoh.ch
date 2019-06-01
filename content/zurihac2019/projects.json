@@ -160,6 +160,14 @@
         "description": "Efficient Haskell Arrays featuring Parallel computation."
     },
     {
+        "id": "niv",
+        "name": "niv",
+        "link": "https://github.com/nmattia/niv",
+        "contributor level": "Beginner, Intermediate",
+        "contact": "Domen Kožar",
+        "description": "Easy dependency management for Nix projects."
+    },
+    {
         "id": "shake",
         "name": "Shake",
         "link": "https://shakebuild.com",

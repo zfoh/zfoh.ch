@@ -128,6 +128,14 @@
         "description": "Learning methodology for Haskell"
     },
     {
+        "id": "hatrace",
+        "name": "hatrace",
+        "link": "https://github.com/nh2/hatrace#readme",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Niklas Hambüchen, Kirill Zaborsky",
+        "description": "System call tracing library in Haskell. We need your help to add more syscalls and can mentor you through the process. You can learn Haskell FFI, C, Assembly, Linux and practical Haskell programming."
+    },
+    {
         "id": "hnix",
         "name": "hnix",
         "link": "https://github.com/haskell-nix/hnix",

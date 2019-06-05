@@ -132,7 +132,7 @@
         "name": "Haskell IDE Core",
         "link": "https://github.com/digital-asset/daml/tree/master/compiler/haskell-ide-core",
         "contributor level": "Intermediate, Advanced",
-        "contact": "David Millar-Durrant",
+        "contact": "David Millar-Durrant, Neil Mitchell",
         "description": "A lightweight, extensible base for LSP IDE tooling based on Shake and GHC Lib"
     },
     {

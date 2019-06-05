@@ -322,7 +322,7 @@
     {
         "id": "morley",
         "name": "Morley",
-        "link": "https://github.com/serokell/morley-zurihac",
+        "link": "https://morley-zurihac.serokell.io/",
         "contributor level": "Intermediate, Advanced",
         "contact": "Ivan Gromakovskiy",
         "description": "Hacking on developer tools for the smart contract language of Tezos with Serokell and TQ"

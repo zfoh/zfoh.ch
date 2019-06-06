@@ -104,6 +104,14 @@
         "description": "RON is a protocol CRDT-based protocol of data exchange and presentation format. Swarm is an embeddable distributed fully-CRDT database. ff is a distributed personal and team task tracker and note taker (CLI, GUI). There are pure Haskell components as well as FFI to C++."
     },
     {
+        "id": "ghc-prof",
+        "name": "GHC heap profiling - visualisation and improvements",
+        "link": "https://gitlab.haskell.org/ghc/ghc/wikis/Zurihac-2019-Profiler-Ideas",
+        "contributor level": "Beginner, Intermediate, Advanced",
+        "contact": "Matthew Pickering",
+        "description": "Work on a new visualiser for heap profiles and/or other improvements to GHC's profiler."
+    },
+    {
         "id": "ginger",
         "name": "Ginger",
         "link": "https://ginger.tobiasdammers.nl/",

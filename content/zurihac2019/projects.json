@@ -326,5 +326,13 @@
         "contributor level": "Intermediate, Advanced",
         "contact": "Ivan Gromakovskiy",
         "description": "Hacking on developer tools for the smart contract language of Tezos with Serokell and TQ"
+    },
+    {
+        "id": "versioning",
+        "name": "versioning",
+        "link": "https://github.com/lortabac/versioning",
+        "contributor level": "Advanced",
+        "contact": "Lorenzo Tabacchini",
+        "description": "Type-safe data versioning."
     }
 ]

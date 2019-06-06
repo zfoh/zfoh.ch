@@ -304,6 +304,14 @@
         "description": "PureScript package manager and build tool powered by Dhall and Spacchetti."
     },
     {
+        "id": "streaming-lmdb",
+        "name": "streaming-lmdb",
+        "link": "https://github.com/shlok/streaming-lmdb",
+        "contributor level": "Intermediate",
+        "contact": "Shlok Datye",
+        "description": "Stream data to or from an LMDB database. What I wrote seems to work, but I would love to get feedback or help write something from scratch if you have better ideas."
+    },
+    {
         "id": "tasklite",
         "name": "TaskLite",
         "link": "https://github.com/ad-si/tasklite",

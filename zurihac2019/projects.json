@@ -240,6 +240,14 @@
         "description": "Pomelo is a new FRP library, whose development is just starting. Key goals for Pomelo are a clean semantics and an efficient implementation."
     },
     {
+        "id": "porcupine",
+        "name": "porcupine",
+        "link": "https://github.com/tweag/porcupine",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Yves Parès",
+        "description": "EDSL to express data pipelines in a datasource and serialization agnostic manner. Each task of the pipeline automatically exposes the parameters it accepts and the data sources it needs (so they can't be rebound without recompiling) to the outside world."
+    },
+    {
         "id": "plutus",
         "name": "Plutus",
         "link": "https://github.com/input-output-hk/plutus",

@@ -264,6 +264,14 @@
         "description": "Piffomètre Programming Paradigm."
     },
     {
+        "id": "purescript-esm",
+        "name": "PureScript ES Modules",
+        "link": "https://github.com/purescript/purescript/issues/3613",
+        "contributor level": "Intermediate",
+        "contact": "Daniel Gasienica",
+        "description": "Add ES modules code generation to PureScript compiler. One benefit is better dead code elimination (tree shaking) for PureScript with popular JavaScript bundlers such as webpack, Parcel, etc."
+    },
+    {
         "id": "reflex-site-builder",
         "name": "Reflex Site Builder",
         "link": "",

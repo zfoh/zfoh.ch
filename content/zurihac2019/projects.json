@@ -31,6 +31,13 @@
         "contact": "Mikhail Glushenkov",
         "description": "Cabal is a system for building and packaging Haskell libraries and programs."
     },
+    {   "id": "clash",
+        "name": "Clash",
+        "link": "https://clash-lang.org/blog/0003-zurihac-2019/",
+        "contributor level": "Beginner, Intermediate, Advanced",
+        "contact": "Christiaan Baaij",
+        "description": "A-side: Tutorial; learn Clash and circuit design by building a stack-based (think Forth) CPU in Haskell. B-side: Nix/Haskell/Shake project setup for easy Clash-to-FPGA deployment."
+    },
     {
         "id": "darcs",
         "name": "Darcs",

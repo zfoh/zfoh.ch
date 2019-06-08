@@ -26,19 +26,18 @@ div.header-wide {
 }
 
 header {
-  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto 0px auto;
   max-width: 768px;
   text-align: left;
-  margin: 0px auto 0px auto;
+  text-transform: uppercase;
 }
 
 header .logo img {
+  vertical-align: top;
   height: 30px;
-}
-
-.toggle-nav {
-  float: right;
-  margin-top: 3px;
 }
 
 .toggle-nav div {
@@ -109,15 +108,12 @@ nav:not(:target) {
   /*****************************************************************************
    * Desktop nav */
   nav#nav {
-    display: block;
+    display: inline;
   }
 
   nav#nav ul {
     position: relative;
     width: auto;
-    padding-left: 24px;
-    margin-top: 6px;
-    float: right;
     background: inherit;
   }
 
@@ -189,6 +185,17 @@ a {
   /* Similar to the main colour used, #258bcd, but a bit darker to have more
    * contrast. */
   color: #16557f;
+}
+
+.question {
+  color: #258bcd;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 24px auto 0px auto;
+}
+
+.answer {
+  margin: 6px auto 12px auto;
 }
 
 .action {

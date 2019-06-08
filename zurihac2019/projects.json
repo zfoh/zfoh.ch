@@ -16,14 +16,6 @@
         "description": "A Haskell to WebAssembly compiler."
     },
     {
-        "id": "beans",
-        "name": "beans",
-        "link": "https://github.com/sboehler/beans",
-        "contributor level": "Beginner, Intermediate, Advanced",
-        "contact": "Silvio Böhler",
-        "description": "An accounting tool inspired by beancount and ledger."
-    },
-    {
         "id": "cabal",
         "name": "Cabal",
         "link": "https://haskell.org/cabal",

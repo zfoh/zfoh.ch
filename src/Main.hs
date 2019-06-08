@@ -14,12 +14,12 @@ main = hakyll $ do
     ----------------------------------------------------------------------------
     -- Images, CSS, etc.
 
-    match ("images/**.png" .||. "images/**.jpg" .||. "images/**.gif") $ do
-        route idRoute
-        compile copyFileCompiler
-
     match "images/s43/*.svg" $ inkscapeRules (Nothing, Just 180)
     match "images/icons/*.svg" $ inkscapeRules (Just 64, Just 64)
+
+    match ("images/**.png" .||. "images/**.jpg" .||. "images/**.gif" .||. "images/**.svg") $ do
+        route idRoute
+        compile copyFileCompiler
 
     match "css/*" $ do
         route idRoute

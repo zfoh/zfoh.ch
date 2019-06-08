@@ -32,17 +32,13 @@ header {
   margin: 0px auto 0px auto;
 }
 
-header a.logo {
-  font-weight: bold;
-  display: inline;
-  color: #258bcd;
-  text-decoration: none;
-  font-size: 24px;
+header .logo img {
+  height: 30px;
 }
 
 .toggle-nav {
   float: right;
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
 .toggle-nav div {
@@ -167,7 +163,7 @@ div.darker {
 /* Anchor links are placed above their targets. */
 div.anchor {
   position: relative;
-  top: -60px;
+  top: -80px;
 }
 
 h1, h2, h3 {

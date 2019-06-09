@@ -253,10 +253,18 @@ a {
 }
 
 .timetable .sequential {
-  border-left: 1px solid white;
   border-right: 1px solid white;
   flex-basis: 0;  /* Don't take content into account when calculating width. */
   flex-grow: 1;
+}
+
+.timetable .sequential:last-child {
+  border-right: none;
+}
+
+.timetable .parallel {
+  display: flex;
+  flex-direction: row;
 }
 
 .timetable .day {
@@ -269,6 +277,8 @@ a {
   padding: 0px 6px 0px 6px;
   font-size: 12px;
   overflow: hidden;
+  display: block;
+  color: #fff;
 }
 
 /* Color scheme-ish for schedule */

@@ -44,6 +44,7 @@
     <div class="speakers">
 
       <div class="speaker">
+        <div class="anchor" id="speaker-simon-peyton-jones"></div>
         <div class="details">
           <img src="/images/speakers/simon-peyton-jones.jpg"
               alt="Simon Peyton Jones" class="avatar">
@@ -66,6 +67,7 @@
       </div>
 
       <div class="speaker">
+        <div class="anchor" id="speaker-ryan-trinkle"></div>
         <div class="details">
           <img src="/images/speakers/ryan-trinkle.jpg"
               alt="Ryan Trinkle" class="avatar">
@@ -90,6 +92,7 @@
       </div>
 
       <div class="speaker">
+        <div class="anchor" id="speaker-susan-potter"></div>
         <div class="details">
           <img src="/images/speakers/susan-potter.jpg"
               alt="Susan Potter" class="avatar">
@@ -115,6 +118,7 @@
       </div>
 
       <div class="speaker">
+        <div class="anchor" id="speaker-richard-eisenberg"></div>
         <div class="details">
           <img src="/images/speakers/richard-eisenberg.jpg"
               alt="Richard Eisenberg" class="avatar">
@@ -139,6 +143,7 @@
       </div>
 
       <div class="speaker">
+        <div class="anchor" id="speaker-andrey-mokhov"></div>
         <div class="details">
           <img src="/images/speakers/andrey-mokhov.jpg"
               alt="Andrey Mokhov" class="avatar">
@@ -164,6 +169,7 @@
       </div>
 
       <div class="speaker">
+        <div class="anchor" id="speaker-edward-kmett"></div>
         <div class="details">
           <img src="/images/speakers/edward-kmett.jpg"
               alt="Edward Kmett" class="avatar">
@@ -201,30 +207,55 @@
     <div class="sequential">
       <div class="day">Friday<br>14 June</div>
       <div class="event admin   d1h00m">9:00  Registration</div>
-      <div class="event keynote d1h00m">10:00 Keynote by Ryan Trinkle</div>
+      <a   class="event keynote d1h00m" href="#speaker-ryan-trinkle">10:00 Keynote by Ryan Trinkle</a>
       <div class="event keynote d0h30m">11:00 Opening Ceremony</div>
       <div class="event food    d0h30m">11:30 Break</div>
       <div class="event keynote d0h45m">12:00 Project pitches</div>
       <div class="event food    d1h15m">12:45 Lunch</div>
-      <div class="event tracks  d3h00m">14:00 Hacking &amp; Tracks</div>
-      <div class="event keynote d1h00m">17:00 Keynote by Andrey Mokhov</div>
+      <div class="parallel">
+        <div class="sequential">
+          <a class="event tracks d3h00m" href="#beginner-track">14:00 Beginner Track</a>
+        </div>
+        <div class="sequential">
+          <a class="event tracks d3h00m" href="#beginner-track">14:00 Advanced Track</a>
+        </div>
+        <div class="sequential">
+          <div class="              d0h15m"></div>
+          <a   class="event keynote d1h00m" href="#ghc-track-richard-eisenberg">14:15 GHC Talk</a>
+          <div class="              d0h15m"></div>
+          <a   class="event keynote d0h30m" href="#ghc-track-matthew-pickering">15:30 GHC Talk</a>
+        </div>
+      </div>
+      <a   class="event keynote d1h00m" href="#speaker-andrey-mokhov">17:00 Keynote by Andrey Mokhov</a>
       <div class="event food    d1h30m">18:00 Ramen</div>
     </div>
     <div class="sequential">
       <div class="day">Saturday<br>15 June</div>
       <div class="event hacking d1h00m">9:00  Hacking</div>
-      <div class="event keynote d1h00m">10:00 Keynote by Simon Peyton Jones</div>
+      <a   class="event keynote d1h00m" href="#speaker-simon-peyton-jones">10:00 Keynote by Simon Peyton Jones</a>
       <div class="event hacking d1h00m">11:00 Hacking</div>
       <div class="event food    d1h30m">12:00 Lunch</div>
-      <div class="event tracks  d2h30m">13:30 Hacking &amp; Tracks</div>
-      <div class="event keynote d1h00m">16:00 Keynote by Susan Potter</div>
-      <div class="event tracks  d1h00m">13:30 Hacking</div>
+      <div class="parallel">
+        <div class="sequential">
+          <a class="event tracks d2h30m" href="#beginner-track">13:30 Beginner Track</a>
+        </div>
+        <div class="sequential">
+          <a class="event tracks d2h30m" href="#advanced-track">13:30 Advanced Track</a>
+        </div>
+        <div class="sequential">
+          <a   class="event keynote d1h00m" href="#ghc-track-andrey-mokhov">13:30 GHC Talk</a>
+          <div class="              d0h15m"></div>
+          <a   class="event keynote d1h00m" href="#ghc-track-simon-peyton-jones">14:15 GHC Talk</a>
+        </div>
+      </div>
+      <a   class="event keynote d1h00m" href="#speaker-susan-potter">16:00 Keynote by Susan Potter</a>
+      <div class="event hacking d1h00m">17:00 Hacking</div>
       <div class="event food    d1h30m">18:00 Barbeque</div>
     </div>
     <div class="sequential">
       <div class="day">Sunday<br> 16 June</div>
       <div class="event hacking d1h00m">9:00  Hacking</div>
-      <div class="event keynote d1h00m">10:00 Keynote by Richard Eisenberg</div>
+      <a   class="event keynote d1h00m" href="#speaker-richard-eisenberg">10:00 Keynote by Richard Eisenberg</a>
       <div class="event hacking d1h00m">11:00 Hacking</div>
       <div class="event food    d1h30m">12:00 Lunch</div>
       <div class="event hacking d1h30m">13:30 Hacking</div>
@@ -305,6 +336,7 @@
   <p>
     The following workshops will take place:
   </p>
+  <div class="anchor" id="ghc-track-richard-eisenberg"></div>
   <p>
     <strong>Richard Eisenberg</strong>
     <br>
@@ -312,6 +344,7 @@
     <br>
     A high-level overview on the GHC compilation pipeline.
   </p>
+  <div class="anchor" id="ghc-track-matthew-pickering"></div>
   <p>
     <strong>Matthew Pickering</strong>
     <br>
@@ -319,6 +352,7 @@
     <br>
     Tools for working on GHC.
   </p>
+  <div class="anchor" id="ghc-track-andrey-mokhov"></div>
   <p>
     <strong>Andrey Mokhov</strong>
     <br>
@@ -326,6 +360,7 @@
     <br>
     Hadrian build system.
   </p>
+  <div class="anchor" id="ghc-track-simon-peyton-jones"></div>
   <p>
     <strong>Simon Peyton Jones</strong>
     <br>

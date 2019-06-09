@@ -268,8 +268,10 @@ a {
 }
 
 .timetable .day {
-  font-weight: bold;
+  border-bottom: 1px solid white;
   font-size: 16px;
+  font-weight: bold;
+  margin-top: 12px;
   padding: 6px;
 }
 

@@ -284,12 +284,12 @@ a {
 }
 
 /* Color scheme-ish for schedule */
-.timetable .day     {background-color: #E99E32;}
-.timetable .food    {background-color: #489C85;}
-.timetable .keynote {background-color: #2E3F4F;}
-.timetable .admin   {background-color: #CB7881;}
-.timetable .hacking {background-color: #186516;}
-.timetable .tracks  {background-color: #9e3825;}
+.timetable .day     {background-color: #fff1F1; color: #339;}
+.timetable .admin   {background-color: #5f8f71;}
+.timetable .keynote {background-color: #339   ;}
+.timetable .food    {background-color: #9fa0b1;}
+.timetable .tracks  {background-color: #c84b29;}
+.timetable .hacking {background-color: #f29696;}
 
 /* Oh man.  The things I go through to get a pretty schedule table. */
 .timetable .d0h15m {height: calc( 1 * 12px);}

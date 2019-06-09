@@ -238,47 +238,60 @@ a {
 /*******************************************************************************
  * Schedule */
 
-.schedule {
+.timetable {
+  display: flex;
   color: #fff;
-  table-layout: fixed;
   text-transform: uppercase;
-  font-size: 12px;
-  width: 100%;
-  border-collapse: collapse;
+  flex-direction: column;
 }
 
-.schedule td + td { border-left: 1px solid #fff; }
-.schedule th + th { border-left: 1px solid #fff; }
 
-.schedule td, th {
-  padding: 6px 6px 6px 6px;
-  vertical-align: top;
-  text-align: left;
-  border-bottom: 0px solid #fff;
+@media (min-width: 768px) {
+  .timetable {
+    flex-direction: row;
+  }
 }
 
-.schedule .hour {
-  color: #000;
-  text-align: right;
-  width: 0px;
-  /* white-space: nowrap; */
-  overflow: hidden;
-  padding: 0px 0px 6px 0px;
+.timetable .sequential {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  flex-basis: 0;  /* Don't take content into account when calculating width. */
+  flex-grow: 1;
 }
 
-.schedule th .day {
+.timetable .day {
+  font-weight: bold;
   font-size: 16px;
-  display: block;
+  padding: 6px;
+}
+
+.event {
+  padding: 0px 6px 0px 6px;
+  font-size: 12px;
+  overflow: hidden;
 }
 
 /* Color scheme-ish for schedule */
-.schedule th       {background-color: #E99E32;}
-.schedule .hour    {background-color: #ffffff;}
-.schedule .food    {background-color: #489C85;}
-.schedule .keynote {background-color: #2E3F4F;}
-.schedule .admin   {background-color: #CB7881;}
-.schedule .hacking {background-color: #B54A37;}
-.schedule .tracks  {background-color: #9e3825;}
+.timetable .day     {background-color: #E99E32;}
+.timetable .food    {background-color: #489C85;}
+.timetable .keynote {background-color: #2E3F4F;}
+.timetable .admin   {background-color: #CB7881;}
+.timetable .hacking {background-color: #B54A37;}
+.timetable .tracks  {background-color: #9e3825;}
+
+/* Oh man.  The things I go through to get a pretty schedule table. */
+.timetable .d0h15m {height: calc( 1 * 12px);}
+.timetable .d0h30m {height: calc( 2 * 12px);}
+.timetable .d0h45m {height: calc( 3 * 12px);}
+.timetable .d1h00m {height: calc( 4 * 12px);}
+.timetable .d1h15m {height: calc( 5 * 12px);}
+.timetable .d1h30m {height: calc( 6 * 12px);}
+.timetable .d1h45m {height: calc( 7 * 12px);}
+.timetable .d2h00m {height: calc( 8 * 12px);}
+.timetable .d2h15m {height: calc( 9 * 12px);}
+.timetable .d2h30m {height: calc(10 * 12px);}
+.timetable .d2h45m {height: calc(11 * 12px);}
+.timetable .d3h00m {height: calc(12 * 12px);}
 
 /*******************************************************************************
  * Speakers */

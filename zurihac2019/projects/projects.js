@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.Z.G === region.ai.G)
+	if (region.Z.H === region.ai.H)
 	{
-		return 'on line ' + region.Z.G;
+		return 'on line ' + region.Z.H;
 	}
-	return 'on lines ' + region.Z.G + ' through ' + region.ai.G;
+	return 'on lines ' + region.Z.H + ' through ' + region.ai.H;
 }
 
 
@@ -4098,7 +4098,7 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 		impl.a6,
 		impl.a0,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.J && impl.J(sendToApp)
+			var divertHrefToApp = impl.K && impl.K(sendToApp)
 			var view = impl.a8;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
@@ -4173,7 +4173,7 @@ function _Browser_application(impl)
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		J: function(sendToApp)
+		K: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4975,7 +4975,7 @@ var NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required = F3(
 	});
 var author$project$Main$Project = F6(
 	function (id, name, link, contributorLevel, contact, description) {
-		return {ae: contact, af: contributorLevel, ah: description, P: id, an: link, H: name};
+		return {ae: contact, af: contributorLevel, ah: description, G: id, an: link, I: name};
 	});
 var elm$json$Json$Decode$string = _Json_decodeString;
 var elm$json$Json$Decode$succeed = _Json_succeed;
@@ -5913,9 +5913,9 @@ var elm$core$Set$fromList = function (list) {
 };
 var author$project$Main$init = function (selectedProjects) {
 	var model = {
-		O: elm$core$Maybe$Nothing,
+		P: elm$core$Maybe$Nothing,
 		Q: _List_Nil,
-		I: elm$core$Set$fromList(selectedProjects),
+		J: elm$core$Set$fromList(selectedProjects),
 		R: billstclair$elm_sortable_table$Table$initialSort('Name')
 	};
 	return _Utils_Tuple2(model, author$project$Main$readProjects);
@@ -5971,7 +5971,7 @@ var elm$json$Json$Encode$list = F2(
 var elm$json$Json$Encode$string = _Json_wrap;
 var author$project$Main$update = F2(
 	function (msg, model) {
-		var selectedProjects = model.I;
+		var selectedProjects = model.J;
 		switch (msg.$) {
 			case 2:
 				if (!msg.a.$) {
@@ -5987,7 +5987,7 @@ var author$project$Main$update = F2(
 						_Utils_update(
 							model,
 							{
-								O: elm$core$Maybe$Just(
+								P: elm$core$Maybe$Just(
 									author$project$Main$httpErrorToString(err))
 							}),
 						elm$core$Platform$Cmd$none);
@@ -6003,7 +6003,7 @@ var author$project$Main$update = F2(
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{I: newSelectedProjects}),
+						{J: newSelectedProjects}),
 					cmd);
 			default:
 				var newState = msg.a;
@@ -6038,6 +6038,7 @@ var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 	}
 };
 var elm$html$Html$a = _VirtualDom_node('a');
+var elm$html$Html$div = _VirtualDom_node('div');
 var elm$html$Html$img = _VirtualDom_node('img');
 var elm$html$Html$p = _VirtualDom_node('p');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
@@ -6056,6 +6057,7 @@ var elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
+var elm$html$Html$Attributes$id = elm$html$Html$Attributes$stringProperty('id');
 var elm$html$Html$Attributes$src = function (url) {
 	return A2(
 		elm$html$Html$Attributes$stringProperty,
@@ -6081,19 +6083,27 @@ var elm$html$Html$Events$onClick = function (msg) {
 };
 var author$project$Main$viewInfo = F2(
 	function (selectedIds, p) {
-		var iconFile = A2(elm$core$Set$member, p.P, selectedIds) ? 'projects/bookmark-solid.svg' : 'projects/bookmark-regular.svg';
+		var iconFile = A2(elm$core$Set$member, p.G, selectedIds) ? 'projects/bookmark-solid.svg' : 'projects/bookmark-regular.svg';
 		return A2(
 			billstclair$elm_sortable_table$Table$HtmlDetails,
 			_List_Nil,
 			_List_fromArray(
 				[
 					A2(
+					elm$html$Html$div,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('anchor'),
+							elm$html$Html$Attributes$id(p.G)
+						]),
+					_List_Nil),
+					A2(
 					elm$html$Html$img,
 					_List_fromArray(
 						[
 							elm$html$Html$Attributes$src(iconFile),
 							elm$html$Html$Events$onClick(
-							author$project$Main$ToggleSelected(p.P)),
+							author$project$Main$ToggleSelected(p.G)),
 							elm$html$Html$Attributes$class('clickable bookmark')
 						]),
 					_List_Nil),
@@ -6106,7 +6116,7 @@ var author$project$Main$viewInfo = F2(
 						]),
 					_List_fromArray(
 						[
-							elm$html$Html$text(p.H)
+							elm$html$Html$text(p.I)
 						])),
 					A2(
 					elm$html$Html$p,
@@ -6130,10 +6140,10 @@ var billstclair$elm_sortable_table$Table$veryCustomColumn = elm$core$Basics$iden
 var author$project$Main$infoColumn = function (selectedIds) {
 	return billstclair$elm_sortable_table$Table$veryCustomColumn(
 		{
-			H: 'Name',
+			I: 'Name',
 			a_: billstclair$elm_sortable_table$Table$increasingOrDecreasingBy(
 				function ($) {
-					return $.H;
+					return $.I;
 				}),
 			a9: author$project$Main$viewInfo(selectedIds)
 		});
@@ -6209,7 +6219,7 @@ var author$project$Main$toRowAttrs = F2(
 		return _List_fromArray(
 			[
 				elm$html$Html$Attributes$class(
-				A2(elm$core$Set$member, p.P, selectedIds) ? 'selected' : '')
+				A2(elm$core$Set$member, p.G, selectedIds) ? 'selected' : '')
 			]);
 	});
 var billstclair$elm_sortable_table$Table$Config = elm$core$Basics$identity;
@@ -6337,7 +6347,7 @@ var elm$core$Basics$composeL = F3(
 var billstclair$elm_sortable_table$Table$stringColumn = F2(
 	function (name, toStr) {
 		return {
-			H: name,
+			I: name,
 			a_: billstclair$elm_sortable_table$Table$increasingOrDecreasingBy(toStr),
 			a9: A2(elm$core$Basics$composeL, billstclair$elm_sortable_table$Table$textDetails, toStr)
 		};
@@ -6372,7 +6382,7 @@ var author$project$Main$tableConfig = function (selectedIds) {
 					a2: author$project$Main$simpleThead
 				}),
 			a4: function ($) {
-				return $.H;
+				return $.I;
 			},
 			a5: author$project$Main$SetTableState
 		});
@@ -6406,7 +6416,7 @@ var billstclair$elm_sortable_table$Table$findSorter = F2(
 			if (!columnData.b) {
 				return elm$core$Maybe$Nothing;
 			} else {
-				var name = columnData.a.H;
+				var name = columnData.a.I;
 				var sorter = columnData.a.a_;
 				var remainingColumnData = columnData.b;
 				if (_Utils_eq(name, selectedColumn)) {
@@ -6468,7 +6478,7 @@ var billstclair$elm_sortable_table$Table$toHeaderInfo = F3(
 	function (_n0, toMsg, _n1) {
 		var sortName = _n0.a;
 		var isReversed = _n0.b;
-		var name = _n1.H;
+		var name = _n1.I;
 		var sorter = _n1.a_;
 		switch (sorter.$) {
 			case 0:
@@ -6600,13 +6610,12 @@ var billstclair$elm_sortable_table$Table$view = F3(
 				}
 			}());
 	});
-var elm$html$Html$div = _VirtualDom_node('div');
 var elm$html$Html$h1 = _VirtualDom_node('h1');
 var author$project$Main$view = function (_n0) {
 	var projects = _n0.Q;
 	var tableState = _n0.R;
-	var selectedProjects = _n0.I;
-	var error = _n0.O;
+	var selectedProjects = _n0.J;
+	var error = _n0.P;
 	return A2(
 		elm$html$Html$div,
 		_List_Nil,

@@ -182,7 +182,8 @@ viewInfo selectedIds p =
     in
     Table.HtmlDetails
         []
-        [ Html.img
+        [ Html.div [class "anchor", HtmlA.id p.id] []
+        , Html.img
             [ HtmlA.src iconFile
             , onClick (ToggleSelected p.id)
             , HtmlA.class "clickable bookmark"

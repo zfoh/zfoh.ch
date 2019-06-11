@@ -159,6 +159,14 @@
         "description": "An implementation of the Nix language in Haskell"
     },
     {
+        "id": "ihaskell",
+        "name": "IHaskell",
+        "link": "https://github.com/gibiansky/IHaskell",
+        "contributor level": "Beginner, Intermediate, Advanced",
+        "contact": "Vaibhav Sagar",
+        "description": "A Haskell kernel for the Jupyter project"
+    },
+    {
         "id": "juvix",
         "name": "Juvix",
         "link": "https://github.com/cwgoes/juvix",

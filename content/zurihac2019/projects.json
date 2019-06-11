@@ -215,6 +215,14 @@
         "description": "I'd like to build a haskell config library along the lines of Java's spring-config."
     },
     {
+        "id": "optics",
+        "name": "optics",
+        "link": "https://github.com/well-typed/optics",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Andrzej Rybczak",
+        "description": "Rich hierarchy of optic kinds (as in the lens library) encapsulated in an abstract interface"
+    },
+    {
         "id": "ormolu",
         "name": "Ormolu",
         "link": "",

@@ -381,5 +381,13 @@
         "contributor level": "Advanced",
         "contact": "Lorenzo Tabacchini",
         "description": "Type-safe data versioning."
+    },
+    {
+        "id": "harch",
+        "name": "harch",
+        "link": "https://github.com/j1r1k/harch",
+        "contributor level": "Beginner",
+        "contact": "Jiri Marsicek",
+        "description": "Command line tool for archiving files and directories (to S3). Built using turtle"
     }
 ]

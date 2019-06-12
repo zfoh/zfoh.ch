@@ -1,5 +1,13 @@
 [
     {
+        "id": "arion",
+        "name": "Arion",
+        "link": "https://github.com/hercules-ci/arion#readme",
+        "contributor level": "Beginner",
+        "contact": "Robert Hensing",
+        "description": "Arion integrates Nix and Docker Compose to improve container development. It sorely needs a Main.hs. Your first Haskell command line tool?"
+    },
+    {
         "id": "arithmoi",
         "name": "arithmoi",
         "link": "https://github.com/cartazio/arithmoi",

@@ -71,14 +71,6 @@
         "description": "Haskell API to communicate with vehicles over MAVLink."
     },
     {
-        "id": "ghc-dynamic-linking",
-        "name": "Dynamic Linking in GHC",
-        "link": "https://ghc.haskell.org/trac/ghc/ticket/11238",
-        "contributor level": "Intermediate",
-        "contact": "Peter Trommler",
-        "description": "Implement dynamic linking on Linux to match features of the RTS linker."
-    },
-    {
         "id": "electronic-health-records-management-as-a-service",
         "name": "Electronic Health Records Management as a Service",
         "link": "https://sites.google.com/view/electronichealthrecords/home",

@@ -232,9 +232,9 @@
     },
     {
         "id": "haskell-spring-config-library",
-        "name": "(no name)",
-        "link": "",
-        "contributor level": "Intermediate",
+        "name": "conferer",
+        "link": "https://github.com/ludat/conferer",
+        "contributor level": "Beginner, Intermediate",
         "contact": "ludat",
         "description": "I'd like to build a haskell config library along the lines of Java's spring-config."
     },

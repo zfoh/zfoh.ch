@@ -199,6 +199,14 @@
         "description": "Efficient Haskell Arrays featuring Parallel computation."
     },
     {
+        "id": "mlir",
+        "name": "Modeling functional languages with MLIR",
+        "link": "https://github.com/tensorflow/mlir/",
+        "contributor level": "Intermediate, Advanced",
+        "contact": "Tobias Grosser",
+        "description": "MLIR proposes a JSON for compiler IRs. Let's explore how a dialect for a functional language could look like. I am personally interested in lean, but would like to understand well which properties translate well across languages."
+    },
+    {
         "id": "niv",
         "name": "niv",
         "link": "https://github.com/nmattia/niv",

@@ -335,6 +335,14 @@
         "description": "PureScript package manager and build tool powered by Dhall and Spacchetti."
     },
     {
+        "id": "static-haskell-nix",
+        "name": "static-haskell-nix",
+        "link": "https://github.com/nh2/static-haskell-nix",
+        "contributor level": "Intermediate",
+        "contact": "Niklas Hambüchen, Bas van Dijk, Roel van Dijk",
+        "description": "Easily build most Haskell programs into fully static Linux executables."
+    },
+    {
         "id": "streaming-lmdb",
         "name": "streaming-lmdb",
         "link": "https://github.com/shlok/streaming-lmdb",

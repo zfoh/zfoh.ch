@@ -397,5 +397,13 @@
         "contributor level": "Beginner",
         "contact": "Jiri Marsicek",
         "description": "Command line tool for archiving files and directories (to S3). Built using turtle"
+    },
+    {
+        "id": "archetype",
+        "name": "Archetype",
+        "link": "https://github.com/trskop/archetype",
+        "contributor level": "Beginner, Intermediate, Advanced",
+        "contact": "Peter Trsko",
+        "description": "Archetype is another attempt at IDL (interface description/definition language) inspired by Dhall configuration language."
     }
 ]

@@ -287,14 +287,6 @@
         "description": "The Plutus platform is a smart contract platform consisting of a small functional programming language, a compiler from Haskell to Plutus, and library support for writing contracts."
     },
     {
-        "id": "ppp",
-        "name": "PPP",
-        "link": "http://PPP.pfff",
-        "contributor level": "Beginner",
-        "contact": "Tiphaine LAURENT",
-        "description": "Piffomètre Programming Paradigm."
-    },
-    {
         "id": "purescript-esm",
         "name": "PureScript ES Modules",
         "link": "https://github.com/purescript/purescript/issues/3613",

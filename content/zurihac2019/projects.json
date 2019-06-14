@@ -303,14 +303,6 @@
         "description": "Add ES modules code generation to PureScript compiler. One benefit is better dead code elimination (tree shaking) for PureScript with popular JavaScript bundlers such as webpack, Parcel, etc."
     },
     {
-        "id": "reflex-site-builder",
-        "name": "Reflex Site Builder",
-        "link": "",
-        "contributor level": "Intermediate",
-        "contact": "Ru Horlick",
-        "description": "A UI based website builder using Reflex and GHCJS. Down with WordPress!"
-    },
-    {
         "id": "rome",
         "name": "Rome",
         "link": "https://github.com/blender/Rome",

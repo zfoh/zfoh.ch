@@ -25,6 +25,10 @@ main = hakyll $ do
         route idRoute
         compile compressCssCompiler
 
+    match "content/zurihac2019/files/*" $ do
+        route dropContentRoute
+        compile copyFileCompiler
+
     ----------------------------------------------------------------------------
     -- Simple static pages.
 

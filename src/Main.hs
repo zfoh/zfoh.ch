@@ -58,6 +58,16 @@ main = hakyll $ do
             loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
 
     ----------------------------------------------------------------------------
+    -- ZuriHac 2020.
+
+    match "content/zurihac2020/index.html" $ do
+        route dropContentRoute
+        compile $
+            getResourceBody >>=
+            applyAsTemplate sectionContext >>=
+            loadAndApplyTemplate "templates/zurihac2020.html" zfohContext
+
+    ----------------------------------------------------------------------------
     -- Projects page.
 
     let projectsStaticFiles =
@@ -84,6 +94,7 @@ main = hakyll $ do
 
     match "content/sections/*.html" $ compile getResourceBody
     match "content/zurihac2019/sections/*.html" $ compile getResourceBody
+    match "content/zurihac2020/sections/*.html" $ compile getResourceBody
 
     ----------------------------------------------------------------------------
     -- Meetup section is dynamically generated.

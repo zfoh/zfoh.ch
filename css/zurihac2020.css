@@ -1,0 +1,47 @@
+/*******************************************************************************
+ * Global things */
+
+html {
+  font-family: 'Times','Times New Roman',serif;
+  line-height: 140%;
+  font-size: 18px;
+  text-align: center;
+  background: #ffe0c4;
+  color: #031a6f;
+}
+
+body {
+  margin: 0px;
+}
+
+h1, p.question {
+  font-family: "Futura",Verdana,Tahoma,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 3px solid #031a6f;
+  display: table;
+}
+
+section {
+  max-width: 768px;
+  text-align: left;
+  margin: 0px auto 30px auto;
+  padding: 0px 8px 0px 8px;
+}
+
+a {
+  color: #842d02;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.raise {
+  background: #ffedcb;
+  border-bottom: 3px solid #031a6f;
+  padding: 3px 0px 6px 0px;
+}
+
+footer {
+  font-size: 14px;
+  margin: 42px auto 18px auto;
+}

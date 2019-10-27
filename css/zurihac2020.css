@@ -22,6 +22,10 @@ h1, p.question {
   display: table;
 }
 
+h1 {
+  margin-top: 60px;
+}
+
 section {
   max-width: 768px;
   text-align: left;
@@ -43,5 +47,5 @@ a {
 
 footer {
   font-size: 14px;
-  margin: 42px auto 18px auto;
+  margin: 60px auto 18px auto;
 }

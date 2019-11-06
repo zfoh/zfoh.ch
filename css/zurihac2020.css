@@ -39,11 +39,76 @@ a {
   text-decoration: underline;
 }
 
+/*******************************************************************************
+ * Raised parts */
+
 .raise {
   background: #ffedcb;
-  border-bottom: 3px solid #031a6f;
-  padding: 3px 0px 6px 0px;
+  box-shadow: inset 6px 0px #ffe0c4, 0px 3px #031a6f;
 }
+
+/*******************************************************************************
+ * Speakers */
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.speaker {
+  margin: 12px;
+}
+
+@media (min-width: 768px) {
+  .speakers {flex-direction: row;}
+  .speaker  {width:  calc(50% - 24px)}
+}
+
+.speaker .details {
+  display: flex;
+  flex-direction: row;
+  margin: 6px 0px 12px 0px;
+}
+
+.speaker .avatar {
+  border: 3px solid #031a6f;
+  height: 60px;
+  margin-right: 24px;
+}
+
+.speaker .name {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-family: "Futura",Verdana,Tahoma,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.speaker .links {
+  display: flex;
+  flex-direction: row;
+}
+
+.speaker .links a {
+  background-size: contain;
+  height: 24px;
+  margin-right: 6px;
+  width: 24px;
+  opacity: 0.5;
+}
+
+.speaker p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.speaker .links .github  {background: url("/images/icons/github.png");  background-size: 24px 24px;}
+.speaker .links .twitter {background: url("/images/icons/twitter.png"); background-size: 24px 24px;}
+.speaker .links .web     {background: url("/images/icons/globe.png");   background-size: 24px 24px;}
+
+/*******************************************************************************
+ * Footer */
 
 footer {
   font-size: 14px;

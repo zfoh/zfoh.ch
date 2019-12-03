@@ -22,6 +22,24 @@ h1, p.question {
   display: table;
 }
 
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto 0px auto;
+  max-width: 768px;
+  text-align: left;
+  padding: 6px;
+}
+
+header a {
+  color: #031a6f;
+  font-family: "Futura",Verdana,Tahoma,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 h1 {
   margin-top: 60px;
 }
@@ -37,6 +55,96 @@ a {
   color: #842d02;
   font-weight: bold;
   text-decoration: underline;
+}
+
+/*******************************************************************************
+ * Navigation */
+
+.toggle-nav div {
+  /* Hamburger */
+  border-bottom: 2px solid #031a6f;
+  margin-bottom: 4px;
+  width: 30px;
+}
+
+nav:target {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul a {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+}
+
+nav:target ul {
+  position: fixed;
+  right: 0px; top: 0px; bottom: 0px;
+  width: 224px;  /* width + padding * 2 */
+  z-index: 10;
+  background: #031a6f;
+}
+
+nav:target a {
+  border-bottom: 1px solid #ffe0c4;
+  display: block;
+  padding: 12px;
+  color: #ffe0c4;
+  text-decoration: none;
+}
+
+nav:target a.x {
+  font-weight: bold;
+  color: #ffe0c4;
+  text-align: right;
+}
+
+nav:target a.shadow {
+  background: #031a6f;
+  position: fixed;
+  top: 0px; right: 0px; bottom: 0px; left: 0px;
+  width: auto;
+  z-index: 9;
+  opacity: 0.4;
+}
+
+nav:not(:target) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav#nav {
+    display: inline;
+  }
+
+  nav#nav ul {
+    position: relative;
+    width: auto;
+    background: inherit;
+  }
+
+  nav#nav a {
+    border-bottom: none;
+    display: inline;
+    padding-right: 3px; padding-left: 3px;
+    text-decoration: none;
+  }
+
+  header a.toggle-nav, header nav#nav a.x, header nav#nav a.shadow {
+    /* Hide hamburger, X and shadow */
+    display: none;
+  }
 }
 
 /*******************************************************************************

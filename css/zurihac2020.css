@@ -24,6 +24,7 @@ h1, h2, h3, p.question {
 
 h1 {
   background: url('/images/zurihac2020/header-grid.png');
+  border-bottom: none;
   color: #ffe0c4;
   font-size: 30px;
   margin-top: 60px 0px 42px 0px;

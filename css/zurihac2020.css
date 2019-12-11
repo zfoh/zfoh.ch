@@ -231,6 +231,23 @@ nav:not(:target) {
 .speaker .links .web     {background: url("/images/icons/globe.png");   background-size: 24px 24px;}
 
 /*******************************************************************************
+ * Sponsors */
+
+.s43 {
+  margin: 60px auto 60px auto;
+}
+
+.s43 img {
+  margin: 18px;
+  max-height: 60px;
+  max-width: 80%;
+}
+
+.s43 p {
+  margin: 30px auto 30px auto;
+}
+
+/*******************************************************************************
  * Footer */
 
 footer {

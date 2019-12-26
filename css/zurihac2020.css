@@ -41,14 +41,22 @@ h3 {
   border-bottom: none;
 }
 
+div.header-wide {
+  position: fixed;
+  top: 0px; left: 0px; right: 0px;
+  z-index: 1;
+  background: #ffe0c4;
+  border-bottom: 3px solid #031a6f;
+}
+
 header {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin: 0px auto 0px auto;
   max-width: 768px;
-  text-align: left;
   padding: 6px;
+  text-align: left;
 }
 
 header a {

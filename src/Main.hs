@@ -25,7 +25,7 @@ main = hakyll $ do
         route idRoute
         compile compressCssCompiler
 
-    match "content/zurihac2019/files/*" $ do
+    match "content/zurihac20*/files/*" $ do
         route dropContentRoute
         compile copyFileCompiler
 

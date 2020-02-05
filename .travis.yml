@@ -1,4 +1,3 @@
-language: generic
 sudo: false
 
 env:

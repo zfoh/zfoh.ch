@@ -80,6 +80,14 @@ a {
   text-decoration: underline;
 }
 
+/* Anchor links are placed above their targets because of the fixed header
+ * that would otherwise obscure the start of the content. */
+div.anchor {
+  position: relative;
+  top: -60px;
+}
+
+
 /*******************************************************************************
  * Navigation */
 

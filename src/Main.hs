@@ -4,18 +4,13 @@ import           Data.Monoid      ((<>))
 import qualified Data.Time        as Time
 import           Hakyll
 import           Meetup
-import           System.Exit      (ExitCode (..))
 import           System.FilePath  (joinPath, splitPath)
-import qualified System.Process   as Process
 
 main :: IO ()
 main = hakyll $ do
 
     ----------------------------------------------------------------------------
     -- Images, CSS, etc.
-
-    match "images/s43/*.svg" $ inkscapeRules (Nothing, Just 180)
-    match "images/icons/*.svg" $ inkscapeRules (Just 64, Just 64)
 
     match ("images/**.png" .||. "images/**.jpg" .||. "images/**.gif" .||. "images/**.svg") $ do
         route idRoute
@@ -107,25 +102,6 @@ main = hakyll $ do
     -- Templates.
 
     match "templates/*.html" $ compile templateCompiler
-
-inkscapeRules :: (Maybe Int, Maybe Int) -> Rules ()
-inkscapeRules wh = do
-    route $ setExtension "png"
-    compile $ inkscapeCompiler wh
-
-inkscapeCompiler :: (Maybe Int, Maybe Int) -> Compiler (Item TmpFile)
-inkscapeCompiler (w, h) = do
-    filePath          <- toFilePath <$> getUnderlying
-    png@(TmpFile tmp) <- newTmpFile "inkscape"
-    exitCode <- unsafeCompiler $ Process.rawSystem "inkscape" $
-        ["-e", tmp] ++
-        (case w of Nothing -> []; Just w' -> ["-w", show w']) ++
-        (case h of Nothing -> []; Just h' -> ["-h", show h']) ++
-        [filePath]
-    case exitCode of
-        ExitSuccess   -> return ()
-        ExitFailure e -> fail $ "inkscape exit code " ++ show e
-    makeItem png
 
 sectionContext :: Context String
 sectionContext =

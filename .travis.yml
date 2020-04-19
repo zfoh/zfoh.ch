@@ -4,11 +4,6 @@ env:
   global:
   - PATH="$HOME/.local/bin/:$PATH"
 
-addons:
-  apt:
-    packages:
-    - inkscape
-
 cache:
   directories:
   - '$HOME/.stack'

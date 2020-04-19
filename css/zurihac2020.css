@@ -280,15 +280,17 @@ nav:not(:target) {
 }
 
 .speaker .links .github {
-  background: url("/images/icons/github.png");
+  background: url("/images/icons/github.svg");
   background-size: 24px 24px;
 }
+
 .speaker .links .twitter {
-  background: url("/images/icons/twitter.png");
+  background: url("/images/icons/twitter.svg");
   background-size: 24px 24px;
 }
+
 .speaker .links .web {
-  background: url("/images/icons/globe.png");
+  background: url("/images/icons/globe.svg");
   background-size: 24px 24px;
 }
 

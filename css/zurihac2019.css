@@ -358,9 +358,9 @@ a {
   margin: 12px;
 }
 
-.speaker .links .github  {background: url("/images/icons/github.png");  background-size: 24px 24px;}
-.speaker .links .twitter {background: url("/images/icons/twitter.png"); background-size: 24px 24px;}
-.speaker .links .web     {background: url("/images/icons/globe.png");   background-size: 24px 24px;}
+.speaker .links .github  {background: url("/images/icons/github.svg");  background-size: 24px 24px;}
+.speaker .links .twitter {background: url("/images/icons/twitter.svg"); background-size: 24px 24px;}
+.speaker .links .web     {background: url("/images/icons/globe.svg");   background-size: 24px 24px;}
 
 footer {
   font-size: 12px;

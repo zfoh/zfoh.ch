@@ -2,7 +2,7 @@
  * Global things */
 
 html {
-  font-family: 'Times','Times New Roman',serif;
+  font-family: "Times", "Times New Roman", serif;
   line-height: 140%;
   font-size: 18px;
   text-align: center;
@@ -14,8 +14,11 @@ body {
   margin: 0px;
 }
 
-h1, h2, h3, p.question {
-  font-family: "Futura",Verdana,Tahoma,Helvetica,Arial,sans-serif;
+h1,
+h2,
+h3,
+p.question {
+  font-family: "Futura", Verdana, Tahoma, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   border-bottom: 3px solid #031a6f;
@@ -23,7 +26,7 @@ h1, h2, h3, p.question {
 }
 
 h1 {
-  background: url('/images/zurihac2020/header-grid.png');
+  background: url("/images/zurihac2020/header-grid.png");
   border-bottom: none;
   color: #ffe0c4;
   font-size: 30px;
@@ -43,7 +46,9 @@ h3 {
 
 div.header-wide {
   position: fixed;
-  top: 0px; left: 0px; right: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   z-index: 1;
   background: #ffe0c4;
   border-bottom: 3px solid #031a6f;
@@ -61,7 +66,7 @@ header {
 
 header a {
   color: #031a6f;
-  font-family: "Futura",Verdana,Tahoma,Helvetica,Arial,sans-serif;
+  font-family: "Futura", Verdana, Tahoma, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 16px;
@@ -87,6 +92,26 @@ div.anchor {
   top: -60px;
 }
 
+/*******************************************************************************
+ * Hero */
+
+.hero {
+  background: url("https://zfoh.ch/images/zurihac2020/header-grid.png");
+  margin-bottom: 42px;
+  padding-top: 84px;
+  padding-bottom: 42px;
+}
+
+.hero--inner {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.hero--inner img {
+  width: 100%;
+  height: auto;
+}
 
 /*******************************************************************************
  * Navigation */
@@ -121,8 +146,10 @@ nav ul li {
 
 nav:target ul {
   position: fixed;
-  right: 0px; top: 0px; bottom: 0px;
-  width: 224px;  /* width + padding * 2 */
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 224px; /* width + padding * 2 */
   z-index: 10;
   background: #031a6f;
 }
@@ -144,7 +171,10 @@ nav:target a.x {
 nav:target a.shadow {
   background: #031a6f;
   position: fixed;
-  top: 0px; right: 0px; bottom: 0px; left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   width: auto;
   z-index: 9;
   opacity: 0.4;
@@ -168,11 +198,14 @@ nav:not(:target) {
   nav#nav a {
     border-bottom: none;
     display: inline;
-    padding-right: 3px; padding-left: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
     text-decoration: none;
   }
 
-  header a.toggle-nav, header nav#nav a.x, header nav#nav a.shadow {
+  header a.toggle-nav,
+  header nav#nav a.x,
+  header nav#nav a.shadow {
     /* Hide hamburger, X and shadow */
     display: none;
   }
@@ -200,8 +233,12 @@ nav:not(:target) {
 }
 
 @media (min-width: 768px) {
-  .speakers {flex-direction: row;}
-  .speaker  {width:  calc(50% - 24px)}
+  .speakers {
+    flex-direction: row;
+  }
+  .speaker {
+    width: calc(50% - 24px);
+  }
 }
 
 .speaker .details {
@@ -219,7 +256,7 @@ nav:not(:target) {
 .speaker .name {
   font-size: 18px;
   margin-bottom: 6px;
-  font-family: "Futura",Verdana,Tahoma,Helvetica,Arial,sans-serif;
+  font-family: "Futura", Verdana, Tahoma, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -242,9 +279,20 @@ nav:not(:target) {
   margin-bottom: 12px;
 }
 
-.speaker .links .github  {background: url("/images/icons/github.svg");  background-size: 24px 24px;}
-.speaker .links .twitter {background: url("/images/icons/twitter.svg"); background-size: 24px 24px;}
-.speaker .links .web     {background: url("/images/icons/globe.svg");   background-size: 24px 24px;}
+.speaker .links .github {
+  background: url("/images/icons/github.svg");
+  background-size: 24px 24px;
+}
+
+.speaker .links .twitter {
+  background: url("/images/icons/twitter.svg");
+  background-size: 24px 24px;
+}
+
+.speaker .links .web {
+  background: url("/images/icons/globe.svg");
+  background-size: 24px 24px;
+}
 
 /*******************************************************************************
  * Sponsors */

@@ -93,27 +93,6 @@ div.anchor {
 }
 
 /*******************************************************************************
- * Hero */
-
-.hero {
-  background: url("https://zfoh.ch/images/zurihac2020/header-grid.png");
-  margin-bottom: 42px;
-  padding-top: 84px;
-  padding-bottom: 42px;
-}
-
-.hero--inner {
-  width: 90%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.hero--inner img {
-  width: 100%;
-  height: auto;
-}
-
-/*******************************************************************************
  * Navigation */
 
 .toggle-nav div {

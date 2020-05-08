@@ -8,7 +8,7 @@
 }
 
 .projects .name {
-  color: #258bcd;
+  color: #031a6f;
   font-weight: bold;
   font-size: 20px;
   /* margin-bottom: 2.5em; */
@@ -23,12 +23,16 @@
 }
 
 .projects tr:nth-child(even) {
-  background: #e9f3f8;
+  background: #ffedcb;
+}
+
+.projects tr:nth-child(odd) {
+  background: #f8d7ba;
 }
 
 .projects th {
-  background: #258bcd;
-  color: white;
+  background: #031a6f;
+  color: #ffe0c4;
   white-space: nowrap;
   font-size: 20px;
 }
@@ -38,7 +42,7 @@
     vertical-align: top;
     text-align: left;
     padding: 0.5em;
-    border-top: 2px solid white;
+    border-top: 2px solid #031a6f;
   }
 }
 
@@ -49,7 +53,7 @@
     display: block;
   }
 
-  td:first-child { border-top: 2px solid white; }
+  td:first-child { border-top: 2px solid #031a6f; }
 
   td:nth-child(2) { font-weight: bold; }
   td:nth-child(3) { font-weight: bold; }

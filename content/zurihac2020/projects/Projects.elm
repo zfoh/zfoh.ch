@@ -1,4 +1,4 @@
-port module Main exposing (main)
+port module Projects exposing (main)
 
 import Browser
 import Html exposing (Attribute, Html, a, div, text)
@@ -32,7 +32,8 @@ type alias Model =
     }
 
 
-type alias ProjectId = String
+type alias ProjectId =
+    String
 
 
 type alias Project =
@@ -124,8 +125,11 @@ view : Model -> Html Msg
 view { projects, tableState, selectedProjects, error } =
     div []
         [ case error of
-            Nothing -> text ""
-            Just e  -> Html.h1 [] [ text e ]
+            Nothing ->
+                text ""
+
+            Just e ->
+                Html.h1 [] [ text e ]
         , Table.view (tableConfig selectedProjects) tableState projects
         ]
 
@@ -137,8 +141,8 @@ tableConfig selectedIds =
         , toMsg = SetTableState
         , columns =
             [ infoColumn selectedIds
-            , Table.stringColumn "Contact" .contact
-            , Table.stringColumn "Level" .contributorLevel
+            , stringColumnUnsortable "Contact" .contact
+            , stringColumnUnsortable "Level" .contributorLevel
             ]
         , customizations =
             { defaultCustomizations
@@ -166,7 +170,16 @@ infoColumn selectedIds =
     Table.veryCustomColumn
         { name = "Name"
         , viewData = viewInfo selectedIds
-        , sorter = Table.increasingOrDecreasingBy .name
+        , sorter = Table.unsortable
+        }
+
+
+stringColumnUnsortable : String -> (data -> String) -> Table.Column data msg
+stringColumnUnsortable name toStr =
+    Table.customColumn
+        { name = name
+        , viewData = toStr
+        , sorter = Table.unsortable
         }
 
 
@@ -182,7 +195,7 @@ viewInfo selectedIds p =
     in
     Table.HtmlDetails
         []
-        [ Html.div [class "anchor", HtmlA.id p.id] []
+        [ Html.div [ class "anchor", HtmlA.id p.id ] []
         , Html.img
             [ HtmlA.src iconFile
             , onClick (ToggleSelected p.id)
@@ -237,10 +250,21 @@ simpleTheadHelp ( name, status, click ) =
     in
     Html.th [ click, class "clickable" ] content
 
+
 httpErrorToString : Http.Error -> String
-httpErrorToString error = case error of
-    Http.BadUrl text    -> "Bad Url: " ++ text
-    Http.Timeout        -> "Http Timeout"
-    Http.NetworkError   -> "Network Error"
-    Http.BadStatus code -> "Bad Http Status: " ++ String.fromInt code
-    Http.BadBody reason -> "Bad Http Body: " ++ reason
+httpErrorToString error =
+    case error of
+        Http.BadUrl text ->
+            "Bad Url: " ++ text
+
+        Http.Timeout ->
+            "Http Timeout"
+
+        Http.NetworkError ->
+            "Network Error"
+
+        Http.BadStatus code ->
+            "Bad Http Status: " ++ String.fromInt code
+
+        Http.BadBody reason ->
+            "Bad Http Body: " ++ reason

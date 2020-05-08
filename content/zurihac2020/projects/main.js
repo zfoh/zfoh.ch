@@ -1,6 +1,6 @@
 var storedState = localStorage.getItem('save');
 var startingState = storedState ? JSON.parse(storedState) : [];
-var app = Elm.Main.init({
+var app = Elm.Projects.init({
   node: document.getElementById('elm'),
   flags: startingState
 });

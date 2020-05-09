@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.T.C === region.ac.C)
+	if (region.U.D === region.ag.D)
 	{
-		return 'on line ' + region.T.C;
+		return 'on line ' + region.U.D;
 	}
-	return 'on lines ' + region.T.C + ' through ' + region.ac.C;
+	return 'on lines ' + region.U.D + ' through ' + region.ag.D;
 }
 
 
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aQ,
-		impl.a6,
-		impl.a$,
+		impl.aT,
+		impl.a9,
+		impl.a2,
 		function() { return function() {} }
 	);
 });
@@ -2660,7 +2660,7 @@ var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
 		k: func(record.k),
-		U: record.U,
+		V: record.V,
 		R: record.R
 	}
 });
@@ -2930,7 +2930,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 
 		var value = result.a;
 		var message = !tag ? value : tag < 3 ? value.a : value.k;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.U;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.V;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
 			(tag == 2 ? value.b : tag == 3 && value.R) && event.preventDefault(),
@@ -3883,11 +3883,11 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aQ,
-		impl.a6,
-		impl.a$,
+		impl.aT,
+		impl.a9,
+		impl.a2,
 		function(sendToApp, initialModel) {
-			var view = impl.a8;
+			var view = impl.bb;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3919,12 +3919,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aQ,
-		impl.a6,
-		impl.a$,
+		impl.aT,
+		impl.a9,
+		impl.a2,
 		function(sendToApp, initialModel) {
 			var divertHrefToApp = impl.S && impl.S(sendToApp)
-			var view = impl.a8;
+			var view = impl.bb;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3932,12 +3932,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 			{
 				_VirtualDom_divertHrefToApp = divertHrefToApp;
 				var doc = view(model);
-				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aH);
+				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aK);
 				var patches = _VirtualDom_diff(currNode, nextNode);
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.a3) && (_VirtualDom_doc.title = title = doc.a3);
+				(title !== doc.a6) && (_VirtualDom_doc.title = title = doc.a6);
 			});
 		}
 	);
@@ -3993,8 +3993,8 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.aS;
-	var onUrlRequest = impl.aT;
+	var onUrlChange = impl.aV;
+	var onUrlRequest = impl.aW;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
@@ -4014,9 +4014,9 @@ function _Browser_application(impl)
 					var next = $elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.aq === next.aq
-							&& curr.ag === next.ag
-							&& curr.an.a === next.an.a
+							&& curr.av === next.av
+							&& curr.ak === next.ak
+							&& curr.as.a === next.as.a
 						)
 							? $elm$browser$Browser$Internal(next)
 							: $elm$browser$Browser$External(href)
@@ -4024,13 +4024,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		aQ: function(flags)
+		aT: function(flags)
 		{
-			return A3(impl.aQ, flags, _Browser_getUrl(), key);
+			return A3(impl.aT, flags, _Browser_getUrl(), key);
 		},
-		a8: impl.a8,
-		a6: impl.a6,
-		a$: impl.a$
+		bb: impl.bb,
+		a9: impl.a9,
+		a2: impl.a2
 	});
 }
 
@@ -4096,17 +4096,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { aO: 'hidden', aI: 'visibilitychange' }
+		? { aR: 'hidden', aL: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { aO: 'mozHidden', aI: 'mozvisibilitychange' }
+		? { aR: 'mozHidden', aL: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { aO: 'msHidden', aI: 'msvisibilitychange' }
+		? { aR: 'msHidden', aL: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { aO: 'webkitHidden', aI: 'webkitvisibilitychange' }
-		: { aO: 'hidden', aI: 'visibilitychange' };
+		? { aR: 'webkitHidden', aL: 'webkitvisibilitychange' }
+		: { aR: 'hidden', aL: 'visibilitychange' };
 }
 
 
@@ -4187,11 +4187,11 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		aw: _Browser_getScene(),
-		aD: {
+		aB: _Browser_getScene(),
+		aG: {
 			M: _Browser_window.pageXOffset,
 			N: _Browser_window.pageYOffset,
-			x: _Browser_doc.documentElement.clientWidth,
+			y: _Browser_doc.documentElement.clientWidth,
 			s: _Browser_doc.documentElement.clientHeight
 		}
 	};
@@ -4202,7 +4202,7 @@ function _Browser_getScene()
 	var body = _Browser_doc.body;
 	var elem = _Browser_doc.documentElement;
 	return {
-		x: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
+		y: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
 		s: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
@@ -4226,14 +4226,14 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			aw: {
-				x: node.scrollWidth,
+			aB: {
+				y: node.scrollWidth,
 				s: node.scrollHeight
 			},
-			aD: {
+			aG: {
 				M: node.scrollLeft,
 				N: node.scrollTop,
-				x: node.clientWidth,
+				y: node.clientWidth,
 				s: node.clientHeight
 			}
 		};
@@ -4264,17 +4264,17 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			aw: _Browser_getScene(),
-			aD: {
+			aB: _Browser_getScene(),
+			aG: {
 				M: x,
 				N: y,
-				x: _Browser_doc.documentElement.clientWidth,
+				y: _Browser_doc.documentElement.clientWidth,
 				s: _Browser_doc.documentElement.clientHeight
 			},
-			aL: {
+			aO: {
 				M: x + rect.left,
 				N: y + rect.top,
-				x: rect.width,
+				y: rect.width,
 				s: rect.height
 			}
 		};
@@ -4320,25 +4320,25 @@ var _Http_toTask = F3(function(router, toTask, request)
 	return _Scheduler_binding(function(callback)
 	{
 		function done(response) {
-			callback(toTask(request.aM.a(response)));
+			callback(toTask(request.aP.a(response)));
 		}
 
 		var xhr = new XMLHttpRequest();
 		xhr.addEventListener('error', function() { done($elm$http$Http$NetworkError_); });
 		xhr.addEventListener('timeout', function() { done($elm$http$Http$Timeout_); });
-		xhr.addEventListener('load', function() { done(_Http_toResponse(request.aM.b, xhr)); });
-		$elm$core$Maybe$isJust(request.aB) && _Http_track(router, xhr, request.aB.a);
+		xhr.addEventListener('load', function() { done(_Http_toResponse(request.aP.b, xhr)); });
+		$elm$core$Maybe$isJust(request.aF) && _Http_track(router, xhr, request.aF.a);
 
 		try {
-			xhr.open(request.aR, request.a7, true);
+			xhr.open(request.aU, request.ba, true);
 		} catch (e) {
-			return done($elm$http$Http$BadUrl_(request.a7));
+			return done($elm$http$Http$BadUrl_(request.ba));
 		}
 
 		_Http_configureRequest(xhr, request);
 
-		request.aH.a && xhr.setRequestHeader('Content-Type', request.aH.a);
-		xhr.send(request.aH.b);
+		request.aK.a && xhr.setRequestHeader('Content-Type', request.aK.a);
+		xhr.send(request.aK.b);
 
 		return function() { xhr.c = true; xhr.abort(); };
 	});
@@ -4349,13 +4349,13 @@ var _Http_toTask = F3(function(router, toTask, request)
 
 function _Http_configureRequest(xhr, request)
 {
-	for (var headers = request.af; headers.b; headers = headers.b) // WHILE_CONS
+	for (var headers = request.aj; headers.b; headers = headers.b) // WHILE_CONS
 	{
 		xhr.setRequestHeader(headers.a.a, headers.a.b);
 	}
-	xhr.timeout = request.a2.a || 0;
-	xhr.responseType = request.aM.d;
-	xhr.withCredentials = request.aF;
+	xhr.timeout = request.a5.a || 0;
+	xhr.responseType = request.aP.d;
+	xhr.withCredentials = request.aI;
 }
 
 
@@ -4376,10 +4376,10 @@ function _Http_toResponse(toBody, xhr)
 function _Http_toMetadata(xhr)
 {
 	return {
-		a7: xhr.responseURL,
-		aZ: xhr.status,
-		a_: xhr.statusText,
-		af: _Http_parseHeaders(xhr.getAllResponseHeaders())
+		ba: xhr.responseURL,
+		a0: xhr.status,
+		a1: xhr.statusText,
+		aj: _Http_parseHeaders(xhr.getAllResponseHeaders())
 	};
 }
 
@@ -4474,15 +4474,15 @@ function _Http_track(router, xhr, tracker)
 	xhr.upload.addEventListener('progress', function(event) {
 		if (xhr.c) { return; }
 		_Scheduler_rawSpawn(A2($elm$core$Platform$sendToSelf, router, _Utils_Tuple2(tracker, $elm$http$Http$Sending({
-			aY: event.loaded,
-			ax: event.total
+			a$: event.loaded,
+			aC: event.total
 		}))));
 	});
 	xhr.addEventListener('progress', function(event) {
 		if (xhr.c) { return; }
 		_Scheduler_rawSpawn(A2($elm$core$Platform$sendToSelf, router, _Utils_Tuple2(tracker, $elm$http$Http$Receiving({
-			aV: event.loaded,
-			ax: event.lengthComputable ? $elm$core$Maybe$Just(event.total) : $elm$core$Maybe$Nothing
+			aY: event.loaded,
+			aC: event.lengthComputable ? $elm$core$Maybe$Just(event.total) : $elm$core$Maybe$Nothing
 		}))));
 	});
 }var $elm$core$Basics$EQ = 1;
@@ -4989,7 +4989,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {ae: fragment, ag: host, al: path, an: port_, aq: protocol, ar: query};
+		return {ai: fragment, ak: host, aq: path, as: port_, av: protocol, aw: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -5880,7 +5880,7 @@ var $elm$http$Http$resolve = F2(
 			case 3:
 				var metadata = response.a;
 				return $elm$core$Result$Err(
-					$elm$http$Http$BadStatus(metadata.aZ));
+					$elm$http$Http$BadStatus(metadata.a0));
 			default:
 				var body = response.b;
 				return A2(
@@ -5908,7 +5908,7 @@ var $elm$http$Http$Request = function (a) {
 };
 var $elm$http$Http$State = F2(
 	function (reqs, subs) {
-		return {at: reqs, az: subs};
+		return {ay: reqs, aD: subs};
 	});
 var $elm$http$Http$init = $elm$core$Task$succeed(
 	A2($elm$http$Http$State, $elm$core$Dict$empty, _List_Nil));
@@ -5952,7 +5952,7 @@ var $elm$http$Http$updateReqs = F3(
 					return A2(
 						$elm$core$Task$andThen,
 						function (pid) {
-							var _v4 = req.aB;
+							var _v4 = req.aF;
 							if (_v4.$ === 1) {
 								return A3($elm$http$Http$updateReqs, router, otherCmds, reqs);
 							} else {
@@ -5982,7 +5982,7 @@ var $elm$http$Http$onEffects = F4(
 				return $elm$core$Task$succeed(
 					A2($elm$http$Http$State, reqs, subs));
 			},
-			A3($elm$http$Http$updateReqs, router, cmds, state.at));
+			A3($elm$http$Http$updateReqs, router, cmds, state.ay));
 	});
 var $elm$core$List$maybeCons = F3(
 	function (f, mx, xs) {
@@ -6025,7 +6025,7 @@ var $elm$http$Http$onSelfMsg = F3(
 				A2(
 					$elm$core$List$filterMap,
 					A3($elm$http$Http$maybeSend, router, tracker, progress),
-					state.az)));
+					state.aD)));
 	});
 var $elm$http$Http$Cancel = function (a) {
 	return {$: 0, a: a};
@@ -6039,14 +6039,14 @@ var $elm$http$Http$cmdMap = F2(
 			var r = cmd.a;
 			return $elm$http$Http$Request(
 				{
+					aI: r.aI,
+					aK: r.aK,
+					aP: A2(_Http_mapExpect, func, r.aP),
+					aj: r.aj,
+					aU: r.aU,
+					a5: r.a5,
 					aF: r.aF,
-					aH: r.aH,
-					aM: A2(_Http_mapExpect, func, r.aM),
-					af: r.af,
-					aR: r.aR,
-					a2: r.a2,
-					aB: r.aB,
-					a7: r.a7
+					ba: r.ba
 				});
 		}
 	});
@@ -6069,19 +6069,89 @@ var $elm$http$Http$subscription = _Platform_leaf('Http');
 var $elm$http$Http$request = function (r) {
 	return $elm$http$Http$command(
 		$elm$http$Http$Request(
-			{aF: false, aH: r.aH, aM: r.aM, af: r.af, aR: r.aR, a2: r.a2, aB: r.aB, a7: r.a7}));
+			{aI: false, aK: r.aK, aP: r.aP, aj: r.aj, aU: r.aU, a5: r.a5, aF: r.aF, ba: r.ba}));
 };
 var $elm$http$Http$get = function (r) {
 	return $elm$http$Http$request(
-		{aH: $elm$http$Http$emptyBody, aM: r.aM, af: _List_Nil, aR: 'GET', a2: $elm$core$Maybe$Nothing, aB: $elm$core$Maybe$Nothing, a7: r.a7});
+		{aK: $elm$http$Http$emptyBody, aP: r.aP, aj: _List_Nil, aU: 'GET', a5: $elm$core$Maybe$Nothing, aF: $elm$core$Maybe$Nothing, ba: r.ba});
 };
 var $elm$json$Json$Decode$list = _Json_decodeList;
 var $author$project$Projects$Project = F6(
 	function (id, name, link, contributorLevel, contact, description) {
-		return {Z: contact, _: contributorLevel, ab: description, B: id, ai: link, D: name};
+		return {ac: contact, ad: contributorLevel, af: description, C: id, an: link, t: name};
 	});
+var $author$project$Projects$ContribLevels = F3(
+	function (beginner, intermediate, advanced) {
+		return {_: advanced, aa: beginner, al: intermediate};
+	});
+var $elm$json$Json$Decode$bool = _Json_decodeBool;
 var $NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$custom = $elm$json$Json$Decode$map2($elm$core$Basics$apR);
 var $elm$json$Json$Decode$field = _Json_decodeField;
+var $elm$json$Json$Decode$andThen = _Json_andThen;
+var $elm$json$Json$Decode$decodeValue = _Json_run;
+var $elm$json$Json$Decode$fail = _Json_fail;
+var $elm$json$Json$Decode$null = _Json_decodeNull;
+var $elm$json$Json$Decode$oneOf = _Json_oneOf;
+var $elm$json$Json$Decode$value = _Json_decodeValue;
+var $NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optionalDecoder = F3(
+	function (pathDecoder, valDecoder, fallback) {
+		var nullOr = function (decoder) {
+			return $elm$json$Json$Decode$oneOf(
+				_List_fromArray(
+					[
+						decoder,
+						$elm$json$Json$Decode$null(fallback)
+					]));
+		};
+		var handleResult = function (input) {
+			var _v0 = A2($elm$json$Json$Decode$decodeValue, pathDecoder, input);
+			if (!_v0.$) {
+				var rawValue = _v0.a;
+				var _v1 = A2(
+					$elm$json$Json$Decode$decodeValue,
+					nullOr(valDecoder),
+					rawValue);
+				if (!_v1.$) {
+					var finalResult = _v1.a;
+					return $elm$json$Json$Decode$succeed(finalResult);
+				} else {
+					var finalErr = _v1.a;
+					return $elm$json$Json$Decode$fail(
+						$elm$json$Json$Decode$errorToString(finalErr));
+				}
+			} else {
+				return $elm$json$Json$Decode$succeed(fallback);
+			}
+		};
+		return A2($elm$json$Json$Decode$andThen, handleResult, $elm$json$Json$Decode$value);
+	});
+var $NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optional = F4(
+	function (key, valDecoder, fallback, decoder) {
+		return A2(
+			$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$custom,
+			A3(
+				$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optionalDecoder,
+				A2($elm$json$Json$Decode$field, key, $elm$json$Json$Decode$value),
+				valDecoder,
+				fallback),
+			decoder);
+	});
+var $author$project$Projects$contribLevelsDecoder = A4(
+	$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optional,
+	'advanced',
+	$elm$json$Json$Decode$bool,
+	false,
+	A4(
+		$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optional,
+		'intermediate',
+		$elm$json$Json$Decode$bool,
+		false,
+		A4(
+			$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optional,
+			'beginner',
+			$elm$json$Json$Decode$bool,
+			false,
+			$elm$json$Json$Decode$succeed($author$project$Projects$ContribLevels))));
 var $NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required = F3(
 	function (key, valDecoder, decoder) {
 		return A2(
@@ -6090,10 +6160,11 @@ var $NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required = F3(
 			decoder);
 	});
 var $elm$json$Json$Decode$string = _Json_decodeString;
-var $author$project$Projects$projectDecoder = A3(
-	$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required,
+var $author$project$Projects$projectDecoder = A4(
+	$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optional,
 	'description',
 	$elm$json$Json$Decode$string,
+	'',
 	A3(
 		$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required,
 		'contact',
@@ -6101,11 +6172,12 @@ var $author$project$Projects$projectDecoder = A3(
 		A3(
 			$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required,
 			'contributor level',
-			$elm$json$Json$Decode$string,
-			A3(
-				$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required,
+			$author$project$Projects$contribLevelsDecoder,
+			A4(
+				$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$optional,
 				'link',
 				$elm$json$Json$Decode$string,
+				'',
 				A3(
 					$NoRedInk$elm_json_decode_pipeline$Json$Decode$Pipeline$required,
 					'name',
@@ -6117,11 +6189,11 @@ var $author$project$Projects$projectDecoder = A3(
 						$elm$json$Json$Decode$succeed($author$project$Projects$Project)))))));
 var $author$project$Projects$readProjects = $elm$http$Http$get(
 	{
-		aM: A2(
+		aP: A2(
 			$elm$http$Http$expectJson,
 			$author$project$Projects$GotProjects,
 			$elm$json$Json$Decode$list($author$project$Projects$projectDecoder)),
-		a7: './projects.json'
+		ba: './projects.json'
 	});
 var $author$project$Projects$init = function (selectedProjects) {
 	var model = {
@@ -6241,32 +6313,98 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $billstclair$elm_sortable_table$Table$HtmlDetails = F2(
+	function (attributes, children) {
+		return {A: attributes, B: children};
+	});
+var $elm$html$Html$span = _VirtualDom_node('span');
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $billstclair$elm_sortable_table$Table$None = {$: 0};
+var $billstclair$elm_sortable_table$Table$unsortable = $billstclair$elm_sortable_table$Table$None;
+var $billstclair$elm_sortable_table$Table$Column = $elm$core$Basics$identity;
+var $billstclair$elm_sortable_table$Table$veryCustomColumn = $elm$core$Basics$identity;
+var $author$project$Projects$contribColumn = function () {
+	var contribAttr = function (isEnabled) {
+		return isEnabled ? A2($elm$html$Html$Attributes$style, 'opacity', '1') : A2($elm$html$Html$Attributes$style, 'opacity', '0.2');
+	};
+	var viewLevels = function (lvls) {
+		return A2(
+			$billstclair$elm_sortable_table$Table$HtmlDetails,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('font-mono font-bold')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$span,
+					_List_fromArray(
+						[
+							contribAttr(lvls.aa)
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('B ')
+						])),
+					A2(
+					$elm$html$Html$span,
+					_List_fromArray(
+						[
+							contribAttr(lvls.al)
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('I ')
+						])),
+					A2(
+					$elm$html$Html$span,
+					_List_fromArray(
+						[
+							contribAttr(lvls._)
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('A ')
+						]))
+				]));
+	};
+	return $billstclair$elm_sortable_table$Table$veryCustomColumn(
+		{
+			t: 'Levels',
+			T: $billstclair$elm_sortable_table$Table$unsortable,
+			Y: A2(
+				$elm$core$Basics$composeR,
+				function ($) {
+					return $.ad;
+				},
+				viewLevels)
+		});
+}();
 var $billstclair$elm_sortable_table$Table$Config = $elm$core$Basics$identity;
 var $billstclair$elm_sortable_table$Table$customConfig = function (_v0) {
-	var toId = _v0.a4;
-	var toMsg = _v0.a5;
-	var columns = _v0.aJ;
-	var customizations = _v0.aK;
+	var toId = _v0.a7;
+	var toMsg = _v0.a8;
+	var columns = _v0.aM;
+	var customizations = _v0.aN;
 	return {
-		aJ: A2(
+		aM: A2(
 			$elm$core$List$map,
 			function (_v1) {
 				var cData = _v1;
 				return cData;
 			},
 			columns),
-		aK: customizations,
-		a4: toId,
-		a5: toMsg
+		aN: customizations,
+		a7: toId,
+		a8: toMsg
 	};
 };
 var $billstclair$elm_sortable_table$Table$simpleRowAttrs = function (_v0) {
 	return _List_Nil;
 };
-var $billstclair$elm_sortable_table$Table$HtmlDetails = F2(
-	function (attributes, children) {
-		return {z: attributes, A: children};
-	});
 var $elm$core$Char$fromCode = _Char_fromCode;
 var $elm$core$String$fromList = _String_fromList;
 var $billstclair$elm_sortable_table$Table$nbsp = $elm$core$String$fromList(
@@ -6274,11 +6412,6 @@ var $billstclair$elm_sortable_table$Table$nbsp = $elm$core$String$fromList(
 		[
 			$elm$core$Char$fromCode(160)
 		]));
-var $elm$html$Html$span = _VirtualDom_node('span');
-var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
-var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $billstclair$elm_sortable_table$Table$darkGrey = function (symbol) {
 	return A2(
 		$elm$html$Html$span,
@@ -6355,11 +6488,7 @@ var $billstclair$elm_sortable_table$Table$simpleThead = function (headers) {
 		_List_Nil,
 		A2($elm$core$List$map, $billstclair$elm_sortable_table$Table$simpleTheadHelp, headers));
 };
-var $billstclair$elm_sortable_table$Table$defaultCustomizations = {O: $elm$core$Maybe$Nothing, aX: $billstclair$elm_sortable_table$Table$simpleRowAttrs, a0: _List_Nil, V: _List_Nil, W: $elm$core$Maybe$Nothing, a1: $billstclair$elm_sortable_table$Table$simpleThead};
-var $billstclair$elm_sortable_table$Table$None = {$: 0};
-var $billstclair$elm_sortable_table$Table$unsortable = $billstclair$elm_sortable_table$Table$None;
-var $billstclair$elm_sortable_table$Table$Column = $elm$core$Basics$identity;
-var $billstclair$elm_sortable_table$Table$veryCustomColumn = $elm$core$Basics$identity;
+var $billstclair$elm_sortable_table$Table$defaultCustomizations = {O: $elm$core$Maybe$Nothing, a_: $billstclair$elm_sortable_table$Table$simpleRowAttrs, a3: _List_Nil, W: _List_Nil, X: $elm$core$Maybe$Nothing, a4: $billstclair$elm_sortable_table$Table$simpleThead};
 var $author$project$Projects$ToggleSelected = function (a) {
 	return {$: 0, a: a};
 };
@@ -6398,7 +6527,7 @@ var $elm$html$Html$Attributes$src = function (url) {
 };
 var $author$project$Projects$viewInfo = F2(
 	function (selectedIds, p) {
-		var iconFile = A2($elm$core$Set$member, p.B, selectedIds) ? 'projects/bookmark-solid.svg' : 'projects/bookmark-regular.svg';
+		var iconFile = A2($elm$core$Set$member, p.C, selectedIds) ? 'projects/bookmark-solid.svg' : 'projects/bookmark-regular.svg';
 		return A2(
 			$billstclair$elm_sortable_table$Table$HtmlDetails,
 			_List_Nil,
@@ -6409,7 +6538,7 @@ var $author$project$Projects$viewInfo = F2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('anchor'),
-							$elm$html$Html$Attributes$id(p.B)
+							$elm$html$Html$Attributes$id(p.C)
 						]),
 					_List_Nil),
 					A2(
@@ -6418,7 +6547,7 @@ var $author$project$Projects$viewInfo = F2(
 						[
 							$elm$html$Html$Attributes$src(iconFile),
 							$elm$html$Html$Events$onClick(
-							$author$project$Projects$ToggleSelected(p.B)),
+							$author$project$Projects$ToggleSelected(p.C)),
 							$elm$html$Html$Attributes$class('clickable bookmark')
 						]),
 					_List_Nil),
@@ -6427,27 +6556,27 @@ var $author$project$Projects$viewInfo = F2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('name'),
-							$elm$html$Html$Attributes$href(p.ai)
+							$elm$html$Html$Attributes$href(p.an)
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text(p.D)
+							$elm$html$Html$text(p.t)
 						])),
 					A2(
 					$elm$html$Html$p,
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text(p.ab)
+							$elm$html$Html$text(p.af)
 						]))
 				]));
 	});
 var $author$project$Projects$infoColumn = function (selectedIds) {
 	return $billstclair$elm_sortable_table$Table$veryCustomColumn(
 		{
-			D: 'Name',
-			ay: $billstclair$elm_sortable_table$Table$unsortable,
-			aC: $author$project$Projects$viewInfo(selectedIds)
+			t: 'Name',
+			T: $billstclair$elm_sortable_table$Table$unsortable,
+			Y: $author$project$Projects$viewInfo(selectedIds)
 		});
 };
 var $author$project$Projects$simpleTheadHelp = function (_v0) {
@@ -6489,10 +6618,7 @@ var $author$project$Projects$simpleTheadHelp = function (_v0) {
 	return A2(
 		$elm$html$Html$th,
 		_List_fromArray(
-			[
-				click,
-				$elm$html$Html$Attributes$class('clickable')
-			]),
+			[click]),
 		content);
 };
 var $author$project$Projects$simpleThead = function (headers) {
@@ -6503,7 +6629,7 @@ var $author$project$Projects$simpleThead = function (headers) {
 };
 var $billstclair$elm_sortable_table$Table$ColumnData = F3(
 	function (name, viewData, sorter) {
-		return {D: name, ay: sorter, aC: viewData};
+		return {t: name, T: sorter, Y: viewData};
 	});
 var $elm$core$Basics$composeL = F3(
 	function (g, f, x) {
@@ -6520,9 +6646,9 @@ var $billstclair$elm_sortable_table$Table$textDetails = function (str) {
 			]));
 };
 var $billstclair$elm_sortable_table$Table$customColumn = function (_v0) {
-	var name = _v0.D;
-	var viewData = _v0.aC;
-	var sorter = _v0.ay;
+	var name = _v0.t;
+	var viewData = _v0.Y;
+	var sorter = _v0.T;
 	return A3(
 		$billstclair$elm_sortable_table$Table$ColumnData,
 		name,
@@ -6532,49 +6658,44 @@ var $billstclair$elm_sortable_table$Table$customColumn = function (_v0) {
 var $author$project$Projects$stringColumnUnsortable = F2(
 	function (name, toStr) {
 		return $billstclair$elm_sortable_table$Table$customColumn(
-			{D: name, ay: $billstclair$elm_sortable_table$Table$unsortable, aC: toStr});
+			{t: name, T: $billstclair$elm_sortable_table$Table$unsortable, Y: toStr});
 	});
 var $author$project$Projects$toRowAttrs = F2(
 	function (selectedIds, p) {
 		return _List_fromArray(
 			[
 				$elm$html$Html$Attributes$class(
-				A2($elm$core$Set$member, p.B, selectedIds) ? 'selected' : '')
+				A2($elm$core$Set$member, p.C, selectedIds) ? 'selected' : '')
 			]);
 	});
 var $author$project$Projects$tableConfig = function (selectedIds) {
 	return $billstclair$elm_sortable_table$Table$customConfig(
 		{
-			aJ: _List_fromArray(
+			aM: _List_fromArray(
 				[
 					$author$project$Projects$infoColumn(selectedIds),
 					A2(
 					$author$project$Projects$stringColumnUnsortable,
 					'Contact',
 					function ($) {
-						return $.Z;
+						return $.ac;
 					}),
-					A2(
-					$author$project$Projects$stringColumnUnsortable,
-					'Level',
-					function ($) {
-						return $._;
-					})
+					$author$project$Projects$contribColumn
 				]),
-			aK: _Utils_update(
+			aN: _Utils_update(
 				$billstclair$elm_sortable_table$Table$defaultCustomizations,
 				{
-					aX: $author$project$Projects$toRowAttrs(selectedIds),
-					a0: _List_fromArray(
+					a_: $author$project$Projects$toRowAttrs(selectedIds),
+					a3: _List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('projects')
 						]),
-					a1: $author$project$Projects$simpleThead
+					a4: $author$project$Projects$simpleThead
 				}),
-			a4: function ($) {
-				return $.D;
+			a7: function ($) {
+				return $.t;
 			},
-			a5: $author$project$Projects$SetTableState
+			a8: $author$project$Projects$SetTableState
 		});
 };
 var $elm$html$Html$caption = _VirtualDom_node('caption');
@@ -6607,8 +6728,8 @@ var $billstclair$elm_sortable_table$Table$findSorter = F2(
 			if (!columnData.b) {
 				return $elm$core$Maybe$Nothing;
 			} else {
-				var name = columnData.a.D;
-				var sorter = columnData.a.ay;
+				var name = columnData.a.t;
+				var sorter = columnData.a.T;
 				var remainingColumnData = columnData.b;
 				if (_Utils_eq(name, selectedColumn)) {
 					return $elm$core$Maybe$Just(sorter);
@@ -6636,10 +6757,10 @@ var $billstclair$elm_sortable_table$Table$sort = F3(
 	});
 var $billstclair$elm_sortable_table$Table$getSortedData = F3(
 	function (_v0, state, data) {
-		var toId = _v0.a4;
-		var toMsg = _v0.a5;
-		var columns = _v0.aJ;
-		var customizations = _v0.aK;
+		var toId = _v0.a7;
+		var toMsg = _v0.a8;
+		var columns = _v0.aM;
+		var customizations = _v0.aN;
 		return A3($billstclair$elm_sortable_table$Table$sort, state, columns, data);
 	});
 var $elm$virtual_dom$VirtualDom$keyedNode = function (tag) {
@@ -6677,8 +6798,8 @@ var $billstclair$elm_sortable_table$Table$toHeaderInfo = F3(
 	function (_v0, toMsg, _v1) {
 		var sortName = _v0.a;
 		var isReversed = _v0.b;
-		var name = _v1.D;
-		var sorter = _v1.ay;
+		var name = _v1.t;
+		var sorter = _v1.T;
 		switch (sorter.$) {
 			case 0:
 				return _Utils_Tuple3(
@@ -6723,9 +6844,9 @@ var $elm$html$Html$Lazy$lazy3 = $elm$virtual_dom$VirtualDom$lazy3;
 var $elm$html$Html$td = _VirtualDom_node('td');
 var $billstclair$elm_sortable_table$Table$viewCell = F2(
 	function (data, _v0) {
-		var viewData = _v0.aC;
+		var viewData = _v0.Y;
 		var details = viewData(data);
-		return A2($elm$html$Html$td, details.z, details.A);
+		return A2($elm$html$Html$td, details.A, details.B);
 	});
 var $billstclair$elm_sortable_table$Table$viewRowHelp = F3(
 	function (columns, toRowAttrs, data) {
@@ -6745,38 +6866,38 @@ var $billstclair$elm_sortable_table$Table$viewRow = F4(
 	});
 var $billstclair$elm_sortable_table$Table$view = F3(
 	function (conf, state, data) {
-		var toId = conf.a4;
-		var toMsg = conf.a5;
-		var columns = conf.aJ;
-		var customizations = conf.aK;
-		var theadDetails = customizations.a1(
+		var toId = conf.a7;
+		var toMsg = conf.a8;
+		var columns = conf.aM;
+		var customizations = conf.aN;
+		var theadDetails = customizations.a4(
 			A2(
 				$elm$core$List$map,
 				A2($billstclair$elm_sortable_table$Table$toHeaderInfo, state, toMsg),
 				columns));
 		var thead = A2(
 			$elm$html$Html$thead,
-			theadDetails.z,
+			theadDetails.A,
 			_List_fromArray(
 				[
-					A2($elm$html$Html$tr, _List_Nil, theadDetails.A)
+					A2($elm$html$Html$tr, _List_Nil, theadDetails.B)
 				]));
 		var sortedData = A3($billstclair$elm_sortable_table$Table$getSortedData, conf, state, data);
 		var tbody = A3(
 			$elm$html$Html$Keyed$node,
 			'tbody',
-			customizations.V,
+			customizations.W,
 			A2(
 				$elm$core$List$map,
-				A3($billstclair$elm_sortable_table$Table$viewRow, toId, columns, customizations.aX),
+				A3($billstclair$elm_sortable_table$Table$viewRow, toId, columns, customizations.a_),
 				sortedData));
 		var withFoot = function () {
-			var _v1 = customizations.W;
+			var _v1 = customizations.X;
 			if (_v1.$ === 1) {
 				return A2($elm$core$List$cons, tbody, _List_Nil);
 			} else {
-				var attributes = _v1.a.z;
-				var children = _v1.a.A;
+				var attributes = _v1.a.A;
+				var children = _v1.a.B;
 				return A2(
 					$elm$core$List$cons,
 					A2($elm$html$Html$tfoot, attributes, children),
@@ -6785,14 +6906,14 @@ var $billstclair$elm_sortable_table$Table$view = F3(
 		}();
 		return A2(
 			$elm$html$Html$table,
-			customizations.a0,
+			customizations.a3,
 			function () {
 				var _v0 = customizations.O;
 				if (_v0.$ === 1) {
 					return A2($elm$core$List$cons, thead, withFoot);
 				} else {
-					var attributes = _v0.a.z;
-					var children = _v0.a.A;
+					var attributes = _v0.a.A;
+					var children = _v0.a.B;
 					return A2(
 						$elm$core$List$cons,
 						A2($elm$html$Html$caption, attributes, children),
@@ -6833,12 +6954,12 @@ var $author$project$Projects$view = function (_v0) {
 };
 var $author$project$Projects$main = $elm$browser$Browser$element(
 	{
-		aQ: $author$project$Projects$init,
-		a$: function (_v0) {
+		aT: $author$project$Projects$init,
+		a2: function (_v0) {
 			return $elm$core$Platform$Sub$none;
 		},
-		a6: $author$project$Projects$update,
-		a8: $author$project$Projects$view
+		a9: $author$project$Projects$update,
+		bb: $author$project$Projects$view
 	});
 _Platform_export({'Projects':{'init':$author$project$Projects$main(
 	$elm$json$Json$Decode$list($elm$json$Json$Decode$string))(0)}});}(this));

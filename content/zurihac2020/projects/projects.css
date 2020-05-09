@@ -78,3 +78,9 @@
         -ms-user-select: none; /* internet explorer/edge */
             user-select: none; /* chrome and opera */
 }
+
+.font-mono {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-bold	{font-weight: 700;}

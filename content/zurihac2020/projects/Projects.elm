@@ -36,11 +36,26 @@ type alias ProjectId =
     String
 
 
+type alias ContribLevels =
+    { beginner : Bool
+    , intermediate : Bool
+    , advanced : Bool
+    }
+
+
+contribLevelsDecoder : Decoder ContribLevels
+contribLevelsDecoder =
+    Decode.succeed ContribLevels
+        |> P.optional "beginner" Decode.bool False
+        |> P.optional "intermediate" Decode.bool False
+        |> P.optional "advanced" Decode.bool False
+
+
 type alias Project =
     { id : ProjectId
     , name : String
     , link : String
-    , contributorLevel : String
+    , contributorLevel : ContribLevels
     , contact : String
     , description : String
     }
@@ -59,10 +74,10 @@ projectDecoder =
     Decode.succeed Project
         |> P.required "id" Decode.string
         |> P.required "name" Decode.string
-        |> P.required "link" Decode.string
-        |> P.required "contributor level" Decode.string
+        |> P.optional "link" Decode.string ""
+        |> P.required "contributor level" contribLevelsDecoder
         |> P.required "contact" Decode.string
-        |> P.required "description" Decode.string
+        |> P.optional "description" Decode.string ""
 
 
 init : List ProjectId -> ( Model, Cmd Msg )
@@ -142,7 +157,7 @@ tableConfig selectedIds =
         , columns =
             [ infoColumn selectedIds
             , stringColumnUnsortable "Contact" .contact
-            , stringColumnUnsortable "Level" .contributorLevel
+            , contribColumn
             ]
         , customizations =
             { defaultCustomizations
@@ -170,6 +185,31 @@ infoColumn selectedIds =
     Table.veryCustomColumn
         { name = "Name"
         , viewData = viewInfo selectedIds
+        , sorter = Table.unsortable
+        }
+
+
+contribColumn : Table.Column Project Msg
+contribColumn =
+    let
+        contribAttr isEnabled =
+            if isEnabled then
+                HtmlA.style "opacity" "1"
+
+            else
+                HtmlA.style "opacity" "0.2"
+
+        viewLevels : ContribLevels -> Table.HtmlDetails Msg
+        viewLevels lvls =
+            Table.HtmlDetails [ class "font-mono font-bold" ]
+                [ Html.span [ contribAttr lvls.beginner ] [ text "B " ]
+                , Html.span [ contribAttr lvls.intermediate ] [ text "I " ]
+                , Html.span [ contribAttr lvls.advanced ] [ text "A " ]
+                ]
+    in
+    Table.veryCustomColumn
+        { name = "Levels"
+        , viewData = .contributorLevel >> viewLevels
         , sorter = Table.unsortable
         }
 
@@ -248,7 +288,7 @@ simpleTheadHelp ( name, status, click ) =
                         )
                     ]
     in
-    Html.th [ click, class "clickable" ] content
+    Html.th [ click ] content
 
 
 httpErrorToString : Http.Error -> String

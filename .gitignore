@@ -1,3 +1,5 @@
 .stack-work
 _cache
 _site
+dist-newstyle
+elm-stuff

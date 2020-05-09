@@ -72,6 +72,13 @@ main = hakyll $ do
             , "content/zurihac2019/projects/main.js"
             , "content/zurihac2019/projects/projects.css"
             , "content/zurihac2019/projects/projects.js"
+            -- 2020
+            , "content/zurihac2020/projects.json"
+            , "content/zurihac2020/projects/bookmark-regular.svg"
+            , "content/zurihac2020/projects/bookmark-solid.svg"
+            , "content/zurihac2020/projects/main.js"
+            , "content/zurihac2020/projects/projects.css"
+            , "content/zurihac2020/projects/projects.js"
             ]
 
     match (fromList projectsStaticFiles) $ do
@@ -83,6 +90,12 @@ main = hakyll $ do
         compile $
             getResourceBody >>=
             loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
+
+    match "content/zurihac2020/projects.html" $ do
+        route dropContentRoute
+        compile $
+            getResourceBody >>=
+            loadAndApplyTemplate "templates/zurihac2020.html" zfohContext
 
     ----------------------------------------------------------------------------
     -- Sections that we can pull in from anywhere, they're just strings.

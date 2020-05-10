@@ -295,6 +295,70 @@ nav:not(:target) {
 }
 
 /*******************************************************************************
+ * Schedule */
+
+.timetable {
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+  .timetable {
+    flex-direction: row;
+  }
+}
+
+.timetable .sequential {
+  border-right: 1px dashed #031a6f;
+  flex-basis: 0;  /* Don't take content into account when calculating width. */
+  flex-grow: 1;
+}
+
+.timetable .sequential:last-child {
+  border-right: none;
+}
+
+.timetable .parallel {
+  display: flex;
+  flex-direction: row;
+}
+
+.timetable .day {
+  border-bottom: 1px dashed #031a6f;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 12px;
+  padding: 6px;
+}
+
+.event {
+  padding: 0px 6px 0px 6px;
+  font-size: 12px;
+  overflow: hidden;
+  display: block;
+}
+
+/* Oh man.  The things I go through to get a pretty schedule table. */
+.timetable .d0h15m {height: calc( 1 * 24px);}
+.timetable .d0h30m {height: calc( 2 * 24px);}
+.timetable .d0h45m {height: calc( 3 * 24px);}
+.timetable .d1h00m {height: calc( 4 * 24px);}
+.timetable .d1h15m {height: calc( 5 * 24px);}
+.timetable .d1h30m {height: calc( 6 * 24px);}
+.timetable .d1h45m {height: calc( 7 * 24px);}
+.timetable .d2h00m {height: calc( 8 * 24px);}
+.timetable .d2h15m {height: calc( 9 * 24px);}
+.timetable .d2h30m {height: calc(10 * 24px);}
+.timetable .d2h45m {height: calc(11 * 24px);}
+.timetable .d3h00m {height: calc(12 * 24px);}
+
+.timetable .talk  {background-color: #fcc}
+.timetable .admin {background-color: #dfd}
+
+
+/*******************************************************************************
  * Footer */
 
 footer {

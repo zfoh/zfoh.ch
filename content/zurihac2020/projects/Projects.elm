@@ -313,7 +313,12 @@ viewInfo selectedIds p =
             , HtmlA.class "clickable bookmark"
             ]
             []
-        , a [ class "name", href p.link ] [ text p.name ]
+        , case p.link of
+            "" ->
+                div [ class "name" ] [ text p.name ]
+
+            _ ->
+                a [ class "name", href p.link ] [ text p.name ]
         , Html.p [] [ text p.description ]
         ]
 

@@ -9,6 +9,7 @@ import Json.Decode as Decode exposing (Decoder, Value)
 import Json.Decode.Pipeline as P
 import Json.Encode as Encode
 import Set exposing (Set)
+import String.Extra
 import Table exposing (defaultCustomizations)
 
 
@@ -26,7 +27,10 @@ main =
 
 type alias Model =
     { projects : List Project
-    , selectedProjects : Set ProjectId
+    , bookmarkedProjects : Set ProjectId
+    , selBeginner : Bool
+    , selIntermediate : Bool
+    , selAdvanced : Bool
     , tableState : Table.State
     , error : Maybe String
     }
@@ -36,11 +40,26 @@ type alias ProjectId =
     String
 
 
+type alias ContribLevels =
+    { beginner : Bool
+    , intermediate : Bool
+    , advanced : Bool
+    }
+
+
+contribLevelsDecoder : Decoder ContribLevels
+contribLevelsDecoder =
+    Decode.succeed ContribLevels
+        |> P.optional "beginner" Decode.bool False
+        |> P.optional "intermediate" Decode.bool False
+        |> P.optional "advanced" Decode.bool False
+
+
 type alias Project =
     { id : ProjectId
     , name : String
     , link : String
-    , contributorLevel : String
+    , contributorLevel : ContribLevels
     , contact : String
     , description : String
     }
@@ -59,18 +78,21 @@ projectDecoder =
     Decode.succeed Project
         |> P.required "id" Decode.string
         |> P.required "name" Decode.string
-        |> P.required "link" Decode.string
-        |> P.required "contributor level" Decode.string
+        |> P.optional "link" Decode.string ""
+        |> P.required "contributor level" contribLevelsDecoder
         |> P.required "contact" Decode.string
-        |> P.required "description" Decode.string
+        |> P.optional "description" Decode.string ""
 
 
 init : List ProjectId -> ( Model, Cmd Msg )
-init selectedProjects =
+init bookmarkedProjects =
     let
         model =
             { projects = []
-            , selectedProjects = Set.fromList selectedProjects
+            , bookmarkedProjects = Set.fromList bookmarkedProjects
+            , selBeginner = True
+            , selIntermediate = True
+            , selAdvanced = True
             , tableState = Table.initialSort "Name"
             , error = Nothing
             }
@@ -82,10 +104,11 @@ type Msg
     = ToggleSelected ProjectId
     | SetTableState Table.State
     | GotProjects (Result Http.Error (List Project))
+    | ToggleContribLevel String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update msg ({ selectedProjects } as model) =
+update msg ({ bookmarkedProjects } as model) =
     case msg of
         GotProjects (Ok projects) ->
             ( { model | projects = projects }
@@ -99,19 +122,19 @@ update msg ({ selectedProjects } as model) =
 
         ToggleSelected id ->
             let
-                newSelectedProjects =
-                    if Set.member id selectedProjects then
-                        Set.remove id selectedProjects
+                newBookmarkedProjects =
+                    if Set.member id bookmarkedProjects then
+                        Set.remove id bookmarkedProjects
 
                     else
-                        Set.insert id selectedProjects
+                        Set.insert id bookmarkedProjects
 
                 cmd =
-                    Set.toList newSelectedProjects
+                    Set.toList newBookmarkedProjects
                         |> Encode.list Encode.string
                         |> save
             in
-            ( { model | selectedProjects = newSelectedProjects }
+            ( { model | bookmarkedProjects = newBookmarkedProjects }
             , cmd
             )
 
@@ -120,9 +143,35 @@ update msg ({ selectedProjects } as model) =
             , Cmd.none
             )
 
+        ToggleContribLevel level ->
+            case level of
+                "beginner" ->
+                    ( { model | selBeginner = not model.selBeginner }
+                    , Cmd.none
+                    )
+
+                "intermediate" ->
+                    ( { model | selIntermediate = not model.selIntermediate }
+                    , Cmd.none
+                    )
+
+                _ ->
+                    ( { model | selAdvanced = not model.selAdvanced }
+                    , Cmd.none
+                    )
+
 
 view : Model -> Html Msg
-view { projects, tableState, selectedProjects, error } =
+view ({ projects, tableState, bookmarkedProjects, error } as model) =
+    let
+        projectIsInFilter p =
+            (model.selBeginner && p.contributorLevel.beginner)
+                || (model.selIntermediate && p.contributorLevel.intermediate)
+                || (model.selAdvanced && p.contributorLevel.advanced)
+
+        selectedProjects =
+            List.filter projectIsInFilter projects
+    in
     div []
         [ case error of
             Nothing ->
@@ -130,7 +179,44 @@ view { projects, tableState, selectedProjects, error } =
 
             Just e ->
                 Html.h1 [] [ text e ]
-        , Table.view (tableConfig selectedProjects) tableState projects
+        , div [ HtmlA.style "margin-bottom" "1rem" ]
+            [ levelCheckbox model "beginner"
+            , levelCheckbox model "intermediate"
+            , levelCheckbox model "advanced"
+            ]
+        , Table.view
+            (tableConfig bookmarkedProjects)
+            tableState
+            selectedProjects
+        ]
+
+
+levelCheckbox : Model -> String -> Html Msg
+levelCheckbox model level =
+    let
+        accessor =
+            case level of
+                "beginner" ->
+                    .selBeginner
+
+                "intermediate" ->
+                    .selIntermediate
+
+                _ ->
+                    .selAdvanced
+
+        htmlId =
+            "select-" ++ level
+    in
+    div []
+        [ Html.input
+            [ HtmlA.type_ "checkbox"
+            , HtmlA.checked (accessor model)
+            , onClick (ToggleContribLevel level)
+            , HtmlA.id htmlId
+            ]
+            []
+        , Html.label [ HtmlA.for htmlId ] [ text <| String.Extra.humanize level ]
         ]
 
 
@@ -142,7 +228,7 @@ tableConfig selectedIds =
         , columns =
             [ infoColumn selectedIds
             , stringColumnUnsortable "Contact" .contact
-            , stringColumnUnsortable "Level" .contributorLevel
+            , contribColumn
             ]
         , customizations =
             { defaultCustomizations
@@ -170,6 +256,31 @@ infoColumn selectedIds =
     Table.veryCustomColumn
         { name = "Name"
         , viewData = viewInfo selectedIds
+        , sorter = Table.unsortable
+        }
+
+
+contribColumn : Table.Column Project Msg
+contribColumn =
+    let
+        contribAttr isEnabled =
+            if isEnabled then
+                HtmlA.style "opacity" "1"
+
+            else
+                HtmlA.style "opacity" "0.2"
+
+        viewLevels : ContribLevels -> Table.HtmlDetails Msg
+        viewLevels lvls =
+            Table.HtmlDetails [ class "font-mono font-bold" ]
+                [ Html.span [ contribAttr lvls.beginner ] [ text "B " ]
+                , Html.span [ contribAttr lvls.intermediate ] [ text "I " ]
+                , Html.span [ contribAttr lvls.advanced ] [ text "A " ]
+                ]
+    in
+    Table.veryCustomColumn
+        { name = "Levels"
+        , viewData = .contributorLevel >> viewLevels
         , sorter = Table.unsortable
         }
 
@@ -202,7 +313,12 @@ viewInfo selectedIds p =
             , HtmlA.class "clickable bookmark"
             ]
             []
-        , a [ class "name", href p.link ] [ text p.name ]
+        , case p.link of
+            "" ->
+                div [ class "name" ] [ text p.name ]
+
+            _ ->
+                a [ class "name", href p.link ] [ text p.name ]
         , Html.p [] [ text p.description ]
         ]
 
@@ -248,7 +364,7 @@ simpleTheadHelp ( name, status, click ) =
                         )
                     ]
     in
-    Html.th [ click, class "clickable" ] content
+    Html.th [ click ] content
 
 
 httpErrorToString : Http.Error -> String

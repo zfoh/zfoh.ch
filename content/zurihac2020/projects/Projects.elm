@@ -9,6 +9,7 @@ import Json.Decode as Decode exposing (Decoder, Value)
 import Json.Decode.Pipeline as P
 import Json.Encode as Encode
 import Set exposing (Set)
+import String.Extra
 import Table exposing (defaultCustomizations)
 
 
@@ -26,7 +27,10 @@ main =
 
 type alias Model =
     { projects : List Project
-    , selectedProjects : Set ProjectId
+    , bookmarkedProjects : Set ProjectId
+    , selBeginner : Bool
+    , selIntermediate : Bool
+    , selAdvanced : Bool
     , tableState : Table.State
     , error : Maybe String
     }
@@ -81,11 +85,14 @@ projectDecoder =
 
 
 init : List ProjectId -> ( Model, Cmd Msg )
-init selectedProjects =
+init bookmarkedProjects =
     let
         model =
             { projects = []
-            , selectedProjects = Set.fromList selectedProjects
+            , bookmarkedProjects = Set.fromList bookmarkedProjects
+            , selBeginner = True
+            , selIntermediate = True
+            , selAdvanced = True
             , tableState = Table.initialSort "Name"
             , error = Nothing
             }
@@ -97,10 +104,11 @@ type Msg
     = ToggleSelected ProjectId
     | SetTableState Table.State
     | GotProjects (Result Http.Error (List Project))
+    | ToggleContribLevel String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update msg ({ selectedProjects } as model) =
+update msg ({ bookmarkedProjects } as model) =
     case msg of
         GotProjects (Ok projects) ->
             ( { model | projects = projects }
@@ -114,19 +122,19 @@ update msg ({ selectedProjects } as model) =
 
         ToggleSelected id ->
             let
-                newSelectedProjects =
-                    if Set.member id selectedProjects then
-                        Set.remove id selectedProjects
+                newBookmarkedProjects =
+                    if Set.member id bookmarkedProjects then
+                        Set.remove id bookmarkedProjects
 
                     else
-                        Set.insert id selectedProjects
+                        Set.insert id bookmarkedProjects
 
                 cmd =
-                    Set.toList newSelectedProjects
+                    Set.toList newBookmarkedProjects
                         |> Encode.list Encode.string
                         |> save
             in
-            ( { model | selectedProjects = newSelectedProjects }
+            ( { model | bookmarkedProjects = newBookmarkedProjects }
             , cmd
             )
 
@@ -135,9 +143,35 @@ update msg ({ selectedProjects } as model) =
             , Cmd.none
             )
 
+        ToggleContribLevel level ->
+            case level of
+                "beginner" ->
+                    ( { model | selBeginner = not model.selBeginner }
+                    , Cmd.none
+                    )
+
+                "intermediate" ->
+                    ( { model | selIntermediate = not model.selIntermediate }
+                    , Cmd.none
+                    )
+
+                _ ->
+                    ( { model | selAdvanced = not model.selAdvanced }
+                    , Cmd.none
+                    )
+
 
 view : Model -> Html Msg
-view { projects, tableState, selectedProjects, error } =
+view ({ projects, tableState, bookmarkedProjects, error } as model) =
+    let
+        projectIsInFilter p =
+            (model.selBeginner && p.contributorLevel.beginner)
+                || (model.selIntermediate && p.contributorLevel.intermediate)
+                || (model.selAdvanced && p.contributorLevel.advanced)
+
+        selectedProjects =
+            List.filter projectIsInFilter projects
+    in
     div []
         [ case error of
             Nothing ->
@@ -145,7 +179,44 @@ view { projects, tableState, selectedProjects, error } =
 
             Just e ->
                 Html.h1 [] [ text e ]
-        , Table.view (tableConfig selectedProjects) tableState projects
+        , div [ HtmlA.style "margin-bottom" "1rem" ]
+            [ levelCheckbox model "beginner"
+            , levelCheckbox model "intermediate"
+            , levelCheckbox model "advanced"
+            ]
+        , Table.view
+            (tableConfig bookmarkedProjects)
+            tableState
+            selectedProjects
+        ]
+
+
+levelCheckbox : Model -> String -> Html Msg
+levelCheckbox model level =
+    let
+        accessor =
+            case level of
+                "beginner" ->
+                    .selBeginner
+
+                "intermediate" ->
+                    .selIntermediate
+
+                _ ->
+                    .selAdvanced
+
+        htmlId =
+            "select-" ++ level
+    in
+    div []
+        [ Html.input
+            [ HtmlA.type_ "checkbox"
+            , HtmlA.checked (accessor model)
+            , onClick (ToggleContribLevel level)
+            , HtmlA.id htmlId
+            ]
+            []
+        , Html.label [ HtmlA.for htmlId ] [ text <| String.Extra.humanize level ]
         ]
 
 

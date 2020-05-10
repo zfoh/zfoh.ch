@@ -35,4 +35,4 @@ Executable zfoh
     http-conduit >= 2.3  && < 2.4,
     process      >= 1.6  && < 1.7,
     text         >= 1.2  && < 1.3,
-    time         >= 1.8  && < 1.9
+    time         >= 1.8  && < 1.10

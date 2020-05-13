@@ -623,5 +623,17 @@
       },
       "contact": "Alejandro Serrano & Flavio Corpa",
       "description": "Write microservices in a format- and protocol-independent way."
+    },
+    {
+      "id": "AURIS",
+      "name": "Satellite Mission Control System in Haskell",
+      "link": "https://github.com/oswald2/AURIS",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Michael Oswald",
+      "description": "A mission control system according to ESA's PUS Standard"
     }
   ]

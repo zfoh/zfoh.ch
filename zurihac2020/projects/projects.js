@@ -6842,7 +6842,7 @@ var $author$project$Projects$viewInfo = F2(
 					var _v0 = p.W;
 					if (_v0 === '') {
 						return A2(
-							$elm$html$Html$div,
+							$elm$html$Html$span,
 							_List_fromArray(
 								[
 									$elm$html$Html$Attributes$class('name')

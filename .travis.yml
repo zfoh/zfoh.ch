@@ -15,5 +15,4 @@ before_install:
 - 'cp stack-*-linux-x86_64/stack "$HOME/.local/bin/"'
 
 script:
-- 'bash deploy/build.sh'
-- 'bash deploy/deploy.sh'
+- 'bash deploy/build.sh && bash deploy/deploy.sh'

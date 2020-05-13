@@ -1,6 +1,110 @@
 <div class="anchor" id="program"></div>
 <h1>Program</h1>
 <section>
+  <h2>Timetable</h2>
+  <p>
+    This timetable is very preliminary.  It will be updated and
+    more details will be added as we get closer to the event.
+  </p>
+  <div class="timetable"></div>
+  <p class="timetable-local-time" style="display: none">
+    Times displayed in your local time zone.
+  </p>
+  <ul class="schedule">
+    <li>
+      <span class="start">2020-06-12T18:00:00+02:00</span> -
+      <span class="end">  2020-06-12T18:15:00+02:00</span>:
+      <span class="label">Opening</span>
+    </li>
+    <li>
+      <span class="start">2020-06-12T18:15:00+02:00</span> -
+      <span class="end">  2020-06-12T19:15:00+02:00</span>:
+      <span class="label">Invited talk 1</span>
+    </li>
+    <li>
+      <span class="start">2020-06-13T10:00:00+02:00</span> -
+      <span class="end">  2020-06-13T11:00:00+02:00</span>:
+      <span class="label">Invited talk 2</span>
+    </li>
+    <li>
+      <span class="start">2020-06-13T18:00:00+02:00</span> -
+      <span class="end">  2020-06-13T19:00:00+02:00</span>:
+      <span class="label">Invited talk 3</span>
+    </li>
+    <li>
+      <span class="start">2020-06-14T10:00:00+02:00</span> -
+      <span class="end">  2020-06-14T11:00:00+02:00</span>:
+      <span class="label">Invited talk 4</span>
+    </li>
+    <li>
+      <span class="start">2020-06-14T18:00:00+02:00</span> -
+      <span class="end">  2020-06-14T19:00:00+02:00</span>:
+      <span class="label">Invited talk 5</span>
+    </li>
+  </ul>
+
+  <script type="text/JavaScript">
+    window.onload = function() {
+      // NOTE(jaspervdj): Sorry I started this and then I couldn't stop
+      // until it worked.
+      const daysOfTheWeek = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+      ]
+
+      // Map respects insertion order.  Create a map of things in the schedule.
+      const days = new Map();
+      const schedule = document.querySelector(".schedule");
+      for(const li of schedule.querySelectorAll("li")) {
+        const start = new Date(li.querySelector(".start").innerText);
+        const end = new Date(li.querySelector(".end").innerText);
+        const label = li.querySelector(".label").innerText;
+        const day = daysOfTheWeek[start.getDay()] + '<br>' +
+            start.toLocaleDateString();
+        if(!days.has(day)) days.set(day, new Array());
+        days.get(day).push(
+            start.toLocaleTimeString() + ' - ' +
+            end.toLocaleTimeString() + '<br>' +
+            label);
+      }
+
+      // Convert schedule to timetable.
+      const timetable = document.querySelector(".timetable");
+      for(const [day, events] of days) {
+        const sequential = document.createElement("div");
+        sequential.classList.add("sequential");
+
+        const header = document.createElement("div");
+        header.classList.add("day");
+        header.innerHTML = day;
+        sequential.appendChild(header);
+
+        for(let event of events) {
+          let entry = document.createElement("div");
+          entry.classList.add("event");
+          entry.innerHTML = event;
+          sequential.appendChild(entry);
+        }
+
+        timetable.appendChild(sequential);
+      }
+
+      schedule.remove();
+      document.querySelector(".timetable-local-time").style.display = "block";
+    }
+  </script>
+
+  <p>
+    There is also a
+    <a href="https://calendar.google.com/calendar/embed?src=208isgf6m89473jiuk2pqme97g%40group.calendar.google.com">public Google calendar</a>
+    that you can use.
+  </p>
+
   <div class="anchor" id="speakers"></div>
   <h2>Speakers</h2>
   <div class="speakers">
@@ -128,31 +232,6 @@
   </div>
   <p>
     More speakers will be announced as we get closer to the event.
-  </p>
-
-  <div class="anchor" id="how-it-works"></div>
-  <h2>How it works</h2>
-  <p>
-    ZuriHac focuses on three goals:
-  </p>
-  <ul>
-    <li>to work on interesting open source projects;</li>
-    <li>to learn more about our favorite programming language; and</li>
-    <li>to have fun and build a community!</li>
-  </ul>
-  <p>
-    ZuriHac is not a conference.  Most of the time is reserved to work on
-    projects together.  At the start of the Hackathon maintainers get a few
-    moments to present their project.  If you want, you can join any of these
-    projects and learn, contribute code, write documentation, or make any other
-    sort of progress.  There will be something for all skill levels.
-  </p>
-  <p>
-    Of course — in between hacking — we love learning from some of the most
-    interesting Haskellers out there, so we have a couple of
-    <a href="#speakers">invited talks from several amazing people</a>
-    from both industry and academia, in addition to some free
-    <a href="#tracks">tracks you can follow</a>.
   </p>
 
   <div class="anchor" id="tracks"></div>

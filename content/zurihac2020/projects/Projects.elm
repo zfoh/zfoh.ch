@@ -315,7 +315,7 @@ viewInfo selectedIds p =
             []
         , case p.link of
             "" ->
-                div [ class "name" ] [ text p.name ]
+                Html.span [ class "name" ] [ text p.name ]
 
             _ ->
                 a [ class "name", href p.link ] [ text p.name ]

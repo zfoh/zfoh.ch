@@ -1,6 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import           Data.Monoid      ((<>))
 import qualified Data.Time        as Time
 import           Hakyll
 import           Meetup

@@ -6,7 +6,6 @@ import           Control.Monad                   (forM_)
 import qualified Data.Aeson                      as Aeson
 import qualified Data.List                       as List
 import qualified Data.List.NonEmpty              as NonEmpty
-import           Data.Monoid                     ((<>))
 import           Data.Ord                        (Down (..))
 import qualified Data.Text                       as T
 import qualified Data.Time                       as Time

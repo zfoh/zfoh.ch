@@ -409,16 +409,16 @@
       "description": "Jupyter kernel for Haskell"
     },
     {
-      "id": "implicit-effects",
-      "name": "Implicit Effects",
-      "link": "https://github.com/maybevoid/implicit-effects",
+      "id": "casimir",
+      "name": "Casimir Effects",
+      "link": "https://github.com/maybevoid/casimir",
       "contributor level": {
         "beginner": false,
         "intermediate": true,
         "advanced": true
       },
       "contact": "Soares Chen",
-      "description": "Tutorial for learning effects in a simpler way"
+      "description": "A unified framework for effects"
     },
     {
       "id": "juvix",

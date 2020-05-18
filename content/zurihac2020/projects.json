@@ -635,5 +635,17 @@
       },
       "contact": "Michael Oswald",
       "description": "A mission control system according to ESA's PUS Standard"
+    },
+    {
+      "id": "servant",
+      "name": "servant, servant-uverb",
+      "link": "https://github.com/haskell-servant/servant/issues/1299",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Matthias Fischmann",
+      "description": "Rethinking webservices and APIs in Haskell, one combinator at a time"
     }
   ]

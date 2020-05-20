@@ -650,7 +650,7 @@
     },
     {
       "id": "lean-pandoc",
-      "name": "lean parser for pandoc"
+      "name": "lean parser for pandoc",
       "link": "https://github.com/jgm/pandoc",
       "contributor level": {
         "beginner": true,

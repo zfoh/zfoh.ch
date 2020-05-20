@@ -647,5 +647,11 @@
       },
       "contact": "Matthias Fischmann",
       "description": "Rethinking webservices and APIs in Haskell, one combinator at a time"
+    },
+    {
+      "id": "lean-pandoc",
+      "name": "lean parser for pandoc"
     }
+
+
   ]

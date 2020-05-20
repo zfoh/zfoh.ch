@@ -651,7 +651,13 @@
     {
       "id": "lean-pandoc",
       "name": "lean parser for pandoc"
+      "link": "https://github.com/jgm/pandoc",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Kanishka Azimi",
+      "description": "A pandoc reader for the lean theorem prover (https://github.com/leanprover/lean). Existing converter, but not in pandoc: (https://github.com/leanprover-community/format_lean)"
     }
-
-
   ]

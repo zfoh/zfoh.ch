@@ -647,5 +647,17 @@
       },
       "contact": "Matthias Fischmann",
       "description": "Rethinking webservices and APIs in Haskell, one combinator at a time"
+    },
+    {
+      "id": "poker-maison",
+      "name": "poker-maison",
+      "link": "https://github.com/therewillbecode/poker-maison",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Tom Chambrier",
+      "description": "A multiplayer poker app for playing with friends"
     }
   ]

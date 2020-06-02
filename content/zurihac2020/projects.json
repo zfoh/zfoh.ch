@@ -659,5 +659,17 @@
       },
       "contact": "Tom Chambrier",
       "description": "A multiplayer poker app for playing with friends"
+    },
+    {
+      "id": "ariel",
+      "name": "ariel",
+      "link": "https://github.com/lortabac/ariel",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Lorenzo Tabacchini",
+      "description": "A purely-functional language with a smooth learning curve"
     }
   ]

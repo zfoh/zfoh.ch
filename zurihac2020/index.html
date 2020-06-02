@@ -956,42 +956,42 @@
     Times displayed in your local time zone.
   </p>
   <ul class="schedule">
-    <li>
+    <li class="admin">
       <span class="start">2020-06-12T18:00:00+02:00</span> -
       <span class="end">  2020-06-12T18:15:00+02:00</span>:
       <span class="label">Opening</span>
     </li>
-    <li>
+    <li class="talk">
       <span class="start">2020-06-12T18:15:00+02:00</span> -
       <span class="end">  2020-06-12T19:15:00+02:00</span>:
       <span class="label">Invited talk 1</span>
     </li>
-    <li>
+    <li class="talk">
       <span class="start">2020-06-13T10:00:00+02:00</span> -
       <span class="end">  2020-06-13T11:00:00+02:00</span>:
       <span class="label">Invited talk 2</span>
     </li>
-    <li>
+    <li class="advanced">
       <span class="start">2020-06-13T14:00:00+02:00</span> -
       <span class="end">  2020-06-13T17:00:00+02:00</span>:
       <span class="label">Advanced track session 1</span>
     </li>
-    <li>
+    <li class="talk">
       <span class="start">2020-06-13T18:00:00+02:00</span> -
       <span class="end">  2020-06-13T19:00:00+02:00</span>:
       <span class="label">Invited talk 3</span>
     </li>
-    <li>
+    <li class="talk">
       <span class="start">2020-06-14T10:00:00+02:00</span> -
       <span class="end">  2020-06-14T11:00:00+02:00</span>:
       <span class="label">Invited talk 4</span>
     </li>
-    <li>
+    <li class="advanced">
       <span class="start">2020-06-14T14:00:00+02:00</span> -
       <span class="end">  2020-06-14T17:00:00+02:00</span>:
       <span class="label">Advanced track session 2</span>
     </li>
-    <li>
+    <li class="talk">
       <span class="start">2020-06-14T18:00:00+02:00</span> -
       <span class="end">  2020-06-14T19:00:00+02:00</span>:
       <span class="label">Invited talk 5</span>
@@ -1021,11 +1021,19 @@
         const label = li.querySelector(".label").innerText;
         const day = daysOfTheWeek[start.getDay()] + '<br>' +
             start.toLocaleDateString();
+
+        const entry = document.createElement("div");
+        entry.classList.add("event");
+        for(const c of li.classList) {
+          entry.classList.add(c);
+        }
+        entry.innerHTML =
+          start.toLocaleTimeString() + ' - ' +
+          end.toLocaleTimeString() + '<br>' +
+          label;
+
         if(!days.has(day)) days.set(day, new Array());
-        days.get(day).push(
-            start.toLocaleTimeString() + ' - ' +
-            end.toLocaleTimeString() + '<br>' +
-            label);
+        days.get(day).push(entry);
       }
 
       // Convert schedule to timetable.
@@ -1040,10 +1048,7 @@
         sequential.appendChild(header);
 
         for(let event of events) {
-          let entry = document.createElement("div");
-          entry.classList.add("event");
-          entry.innerHTML = event;
-          sequential.appendChild(entry);
+          sequential.appendChild(event);
         }
 
         timetable.appendChild(sequential);

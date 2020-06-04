@@ -671,5 +671,17 @@
       },
       "contact": "Lorenzo Tabacchini",
       "description": "A purely-functional language with a smooth learning curve"
+    },
+    {
+      "id": "web-gamepad",
+      "name": "Web Gamepad",
+      "link": "https://github.com/georgefst/web-gamepad",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "George Thomas",
+      "description": "A web-based gamepad, designed to be used from smartphones, and ideal for simple games with large numbers of players. Built with Servant and Elm. Already works on a Linux host, but I could really do with a Windows-based collaborator (will probably require some FFI work). There are also plenty of smaller tasks."
     }
   ]

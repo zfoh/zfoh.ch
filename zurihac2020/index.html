@@ -948,7 +948,7 @@
 <section>
   <h2>Timetable</h2>
   <p>
-    This timetable is very preliminary.  It will be updated and
+    This timetable is still a bit preliminary.  It will be updated and
     more details will be added as we get closer to the event.
   </p>
   <div class="timetable"></div>
@@ -964,37 +964,37 @@
     <li class="talk">
       <span class="start">2020-06-12T18:15:00+02:00</span> -
       <span class="end">  2020-06-12T19:15:00+02:00</span>:
-      <span class="label">Invited talk 1</span>
+      <span class="label"><a href="#speaker-rob-rix">Talk by Rob Rix</a></span>
     </li>
     <li class="talk">
       <span class="start">2020-06-13T10:00:00+02:00</span> -
       <span class="end">  2020-06-13T11:00:00+02:00</span>:
-      <span class="label">Invited talk 2</span>
+      <span class="label"><a href="#speaker-philip-wadler">Talk by Philip Wadler</a></span>
     </li>
     <li class="advanced">
       <span class="start">2020-06-13T14:00:00+02:00</span> -
       <span class="end">  2020-06-13T17:00:00+02:00</span>:
-      <span class="label">Advanced track session 1</span>
+      <span class="label"><a href="#advanced-track-saturday">Advanced track session 1</a></span>
     </li>
     <li class="talk">
       <span class="start">2020-06-13T18:00:00+02:00</span> -
       <span class="end">  2020-06-13T19:00:00+02:00</span>:
-      <span class="label">Invited talk 3</span>
+      <span class="label"><a href="#speaker-gabriel-gonzalez">Talk by Gabriel Gonzalez</a></span>
     </li>
     <li class="talk">
       <span class="start">2020-06-14T10:00:00+02:00</span> -
       <span class="end">  2020-06-14T11:00:00+02:00</span>:
-      <span class="label">Invited talk 4</span>
+      <span class="label"><a href="#speaker-simon-meier">Talk by Simon Meier</a></span>
     </li>
     <li class="advanced">
       <span class="start">2020-06-14T14:00:00+02:00</span> -
       <span class="end">  2020-06-14T17:00:00+02:00</span>:
-      <span class="label">Advanced track session 2</span>
+      <span class="label"><a href="#advanced-track-sunday">Advanced track session 2</a></span>
     </li>
     <li class="talk">
       <span class="start">2020-06-14T18:00:00+02:00</span> -
       <span class="end">  2020-06-14T19:00:00+02:00</span>:
-      <span class="label">Invited talk 5</span>
+      <span class="label"><a href="#speaker-alexis-king">Talk by Alexis King</a></span>
     </li>
   </ul>
 
@@ -1018,7 +1018,7 @@
       for(const li of schedule.querySelectorAll("li")) {
         const start = new Date(li.querySelector(".start").innerText);
         const end = new Date(li.querySelector(".end").innerText);
-        const label = li.querySelector(".label").innerText;
+        const label = li.querySelector(".label").innerHTML;
         const day = daysOfTheWeek[start.getDay()] + '<br>' +
             start.toLocaleDateString();
 
@@ -1144,24 +1144,26 @@
     </div>
 
     <div class="speaker raise">
-      <div class="anchor" id="speaker-emily-pillmore"></div>
+      <div class="anchor" id="speaker-gabriel-gonzalez"></div>
       <div class="details">
-        <img src="/images/speakers/emily-pillmore.jpg" alt="Emily Pillmore" class="avatar">
+        <img src="/images/speakers/gabriel-gonzalez.jpg" alt="Gabriel Gonzalez" class="avatar">
         <div>
-          <span class="name">Emily Pillmore</span>
+          <span class="name">Gabriel Gonzalez</span>
           <div class="links">
-            <a class="web" href="http://cohomolo.gy/"></a>
-            <a class="github" href="https://github.com/emilypi"></a>
-            <a class="twitter" href="https://twitter.com/pitopos"></a>
+            <a class="web" href="http://www.haskellforall.com/"></a>
+            <a class="github" href="https://github.com/Gabriel439"></a>
+            <a class="twitter" href="https://twitter.com/GabrielG439"></a>
           </div>
         </div>
       </div>
       <p>
-        Emily is a long-time functional programmer, Haskell developer and
-        a member of the Haskell.org committee.  She is an independent
-        researcher interested in Homotopy Theory, Category Theory
-        and Topology and recently co-authored a paper about
-        <a href="https://arxiv.org/abs/2001.07488">Profunctor optics</a>.
+        Gabriel is a long-time Haskell Enthusiast and programmer at
+        <a href="https://awakesecurity.com/">Awake Security</a>.  He is the
+        author of a host of Haskell libraries and tools including
+        <a href="https://hackage.haskell.org/package/pipes">pipes</a> and
+        <a href="https://hackage.haskell.org/package/dhall">Dhall</a>,
+        and writer behind the well-known
+        <a href="http://www.haskellforall.com/">Haskell for all</a> blog.
       </p>
     </div>
 
@@ -1205,6 +1207,7 @@
     different subjects and are completely independent.
   </p>
 
+  <div class="anchor" id="advanced-track-saturday"></div>
   <h4>Saturday session: Datatype-Generic Programming by Andres Löh</h4>
   <p>
     Datatype-Generic programming is a powerful tool that allows the
@@ -1228,6 +1231,7 @@
     syntax and semantics will be helpful.
   </p>
 
+  <div class="anchor" id="advanced-track-sunday"></div>
   <h4>Sunday session: Haskell and InfoSec by Tobias Dammers</h4>
   <p>
     In this workshop, we will look at Haskell from an information security point

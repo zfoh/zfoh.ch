@@ -349,11 +349,15 @@ nav:not(:target) {
   color: white;
 }
 
+.event a {
+  color: white;
+}
+
 /* Color scheme */
 .timetable .day      {background-color: #fdd}
 .timetable .admin    {background-color: #3a5b2b}
 .timetable .talk     {background-color: #46466e}
-.timetable .advanced {background-color: #7d5b5b}
+.timetable .advanced {background-color: #982d82}
 
 
 /*******************************************************************************

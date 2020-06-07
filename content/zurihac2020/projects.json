@@ -683,5 +683,17 @@
       },
       "contact": "George Thomas",
       "description": "A web-based gamepad, designed to be used from smartphones, and ideal for simple games with large numbers of players. Built with Servant and Elm. Already works on a Linux host, but I could really do with a Windows-based collaborator (will probably require some FFI work). There are also plenty of smaller tasks."
-    }
+    },
+    {
+      "id": "chromar-lang",
+      "name": "Chromar language",
+      "link": "https://github.com/azardilis/Chromar",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Argyris Zardilis",
+      "description": "Haskell implementation of Chromar (https://doi.org/10.1016/j.tcs.2017.07.034), a language for biological models, embedded using quasiquotes."
+    },
   ]

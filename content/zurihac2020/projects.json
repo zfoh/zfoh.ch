@@ -694,6 +694,6 @@
         "advanced": false
       },
       "contact": "Argyris Zardilis",
-      "description": "Haskell implementation of Chromar (https://doi.org/10.1016/j.tcs.2017.07.034), a language for biological models, embedded using quasiquotes."
+      "description": "Haskell implementation of Chromar (https://doi.org/10.1016/j.tcs.2017.07.034), a language for biological models, embedded using quasiquotes. I plan to revive the language and work on (i) ease of use perhaps through virtualisation and IHaskell and (ii) optimisations of the queries of the rules of the language"
     }
   ]

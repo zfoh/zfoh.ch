@@ -359,6 +359,7 @@ nav:not(:target) {
 .timetable .talk     {background-color: #46466e}
 .timetable .advanced {background-color: #982d82}
 .timetable .beginner {background-color: #151e5f}
+.timetable .ghc      {background-color: #064a62}
 
 
 /*******************************************************************************

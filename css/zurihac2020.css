@@ -17,6 +17,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p.question {
   font-family: "Futura", Verdana, Tahoma, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -41,6 +42,11 @@ h2 {
 
 h3 {
   font-size: 18px;
+  border-bottom: none;
+}
+
+h4 {
+  font-size: 16px;
   border-bottom: none;
 }
 
@@ -333,7 +339,6 @@ nav:not(:target) {
   font-size: 16px;
   font-weight: bold;
   padding: 6px;
-  background-color: #fdd;
 }
 
 .event {
@@ -341,7 +346,20 @@ nav:not(:target) {
   font-size: 14px;
   overflow: hidden;
   display: block;
+  color: white;
 }
+
+.event a {
+  color: white;
+}
+
+/* Color scheme */
+.timetable .day      {background-color: #fdd}
+.timetable .admin    {background-color: #3a5b2b}
+.timetable .talk     {background-color: #46466e}
+.timetable .advanced {background-color: #982d82}
+.timetable .beginner {background-color: #151e5f}
+.timetable .ghc      {background-color: #064a62}
 
 
 /*******************************************************************************

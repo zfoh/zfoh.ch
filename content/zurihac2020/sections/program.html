@@ -3,43 +3,103 @@
 <section>
   <h2>Timetable</h2>
   <p>
-    This timetable is very preliminary.  It will be updated and
-    more details will be added as we get closer to the event.
+    ZuriHac is a community event and a hackathon over a conference.
+    Aside from the talks and tracks, attendees are encouraged to
+    work together on all sorts of Haskell-related open-source
+    <a href="/zurihac2020/projects.html">projects</a> and socialize.  Since
+    ZuriHac is an online event this year, our Discord instance will serve as a
+    digital hub for this.  <a href="#registration">Register for the event</a>
+    to get access to this, it's completely free!
   </p>
   <div class="timetable"></div>
   <p class="timetable-local-time" style="display: none">
     Times displayed in your local time zone.
   </p>
   <ul class="schedule">
-    <li>
+    <li class="admin">
       <span class="start">2020-06-12T18:00:00+02:00</span> -
       <span class="end">  2020-06-12T18:15:00+02:00</span>:
       <span class="label">Opening</span>
     </li>
-    <li>
+    <li class="talk">
       <span class="start">2020-06-12T18:15:00+02:00</span> -
       <span class="end">  2020-06-12T19:15:00+02:00</span>:
-      <span class="label">Invited talk 1</span>
+      <span class="label"><a href="#speaker-rob-rix">Talk by Rob Rix</a></span>
     </li>
-    <li>
+    <li class="ghc">
+      <span class="start">2020-06-12T20:00:00+02:00</span> -
+      <span class="end">  2020-06-12T20:30:00+02:00</span>:
+      <span class="label"><a href="#ghc-track-richard-eisenberg">GHC - Richard Eisenberg</a></span>
+    </li>
+    <li class="ghc">
+      <span class="start">2020-06-12T20:45:00+02:00</span> -
+      <span class="end">  2020-06-12T21:15:00+02:00</span>:
+      <span class="label"><a href="#ghc-track-divesh-otwani">GHC - Divesh Otwani</a></span>
+    </li>
+    <li class="talk">
       <span class="start">2020-06-13T10:00:00+02:00</span> -
       <span class="end">  2020-06-13T11:00:00+02:00</span>:
-      <span class="label">Invited talk 2</span>
+      <span class="label"><a href="#speaker-philip-wadler">Talk by Philip Wadler</a></span>
     </li>
-    <li>
+    <li class="advanced">
+      <span class="start">2020-06-13T14:00:00+02:00</span> -
+      <span class="end">  2020-06-13T17:00:00+02:00</span>:
+      <span class="label"><a href="#advanced-track-saturday">Advanced track session 1</a></span>
+    </li>
+    <li class="beginner">
+      <span class="start">2020-06-13T16:00:00+02:00</span> -
+      <span class="end">  2020-06-13T17:30:00+02:00</span>:
+      <span class="label"><a href="#beginner-track">Beginner track session 1</a></span>
+    </li>
+    <li class="talk">
       <span class="start">2020-06-13T18:00:00+02:00</span> -
       <span class="end">  2020-06-13T19:00:00+02:00</span>:
-      <span class="label">Invited talk 3</span>
+      <span class="label"><a href="#speaker-gabriel-gonzalez">Talk by Gabriel Gonzalez</a></span>
     </li>
-    <li>
+    <li class="beginner">
+      <span class="start">2020-06-13T19:30:00+02:00</span> -
+      <span class="end">  2020-06-13T21:00:00+02:00</span>:
+      <span class="label"><a href="#beginner-track">Beginner track session 2</a></span>
+    </li>
+    <li class="ghc">
+      <span class="start">2020-06-13T20:00:00+02:00</span> -
+      <span class="end">  2020-06-13T20:30:00+02:00</span>:
+      <span class="label"><a href="#ghc-track-facundo-dominguez">GHC - Facundo Dominguez</a></span>
+    </li>
+    <li class="ghc">
+      <span class="start">2020-06-13T20:45:00+02:00</span> -
+      <span class="end">  2020-06-13T21:15:00+02:00</span>:
+      <span class="label"><a href="#ghc-track-nicolas-frisby">GHC - Nicolas Frisby</a></span>
+    </li>
+    <li class="talk">
       <span class="start">2020-06-14T10:00:00+02:00</span> -
       <span class="end">  2020-06-14T11:00:00+02:00</span>:
-      <span class="label">Invited talk 4</span>
+      <span class="label"><a href="#speaker-simon-meier">Talk by S. Meier &amp; O. Marić</a></span>
     </li>
-    <li>
+    <li class="beginner">
+      <span class="start">2020-06-14T13:00:00+02:00</span> -
+      <span class="end">  2020-06-14T15:00:00+02:00</span>:
+      <span class="label"><a href="#mob-programming">Mob Programming: Space Invaders</a></span>
+    </li>
+    <li class="advanced">
+      <span class="start">2020-06-14T14:00:00+02:00</span> -
+      <span class="end">  2020-06-14T17:00:00+02:00</span>:
+      <span class="label"><a href="#advanced-track-sunday">Advanced track session 2</a></span>
+    </li>
+    <li class="beginner">
+      <span class="start">2020-06-14T16:00:00+02:00</span> -
+      <span class="end">  2020-06-14T17:30:00+02:00</span>:
+      <span class="label"><a href="#beginner-track">Beginner track session 3</a></span>
+    </li>
+    <li class="talk">
       <span class="start">2020-06-14T18:00:00+02:00</span> -
       <span class="end">  2020-06-14T19:00:00+02:00</span>:
-      <span class="label">Invited talk 5</span>
+      <span class="label"><a href="#speaker-alexis-king">Talk by Alexis King</a></span>
+    </li>
+    <li class="beginner">
+      <span class="start">2020-06-14T19:30:00+02:00</span> -
+      <span class="end">  2020-06-14T21:00:00+02:00</span>:
+      <span class="label"><a href="#beginner-track">Beginner track session 4</a></span>
     </li>
   </ul>
 
@@ -63,14 +123,22 @@
       for(const li of schedule.querySelectorAll("li")) {
         const start = new Date(li.querySelector(".start").innerText);
         const end = new Date(li.querySelector(".end").innerText);
-        const label = li.querySelector(".label").innerText;
+        const label = li.querySelector(".label").innerHTML;
         const day = daysOfTheWeek[start.getDay()] + '<br>' +
             start.toLocaleDateString();
+
+        const entry = document.createElement("div");
+        entry.classList.add("event");
+        for(const c of li.classList) {
+          entry.classList.add(c);
+        }
+        entry.innerHTML =
+          start.toLocaleTimeString() + ' - ' +
+          end.toLocaleTimeString() + '<br>' +
+          label;
+
         if(!days.has(day)) days.set(day, new Array());
-        days.get(day).push(
-            start.toLocaleTimeString() + ' - ' +
-            end.toLocaleTimeString() + '<br>' +
-            label);
+        days.get(day).push(entry);
       }
 
       // Convert schedule to timetable.
@@ -85,10 +153,7 @@
         sequential.appendChild(header);
 
         for(let event of events) {
-          let entry = document.createElement("div");
-          entry.classList.add("event");
-          entry.innerHTML = event;
-          sequential.appendChild(entry);
+          sequential.appendChild(event);
         }
 
         timetable.appendChild(sequential);
@@ -147,6 +212,7 @@
           </div>
         </div>
       </div>
+      <p><strong>“Languages all the way down”</strong></p>
       <p>
         Rob works at <a href="https://github.com/">GitHub</a> and leads the
         development of
@@ -170,6 +236,7 @@
           </div>
         </div>
       </div>
+      <p><strong>“(Programming Languages) in Agda = Programming (Languages in Agda)”</strong></p>
       <p>
         Philip is a professor at the
         <a href="http://www.ed.ac.uk/">University of Edinburgh</a> who played
@@ -184,24 +251,27 @@
     </div>
 
     <div class="speaker raise">
-      <div class="anchor" id="speaker-emily-pillmore"></div>
+      <div class="anchor" id="speaker-gabriel-gonzalez"></div>
       <div class="details">
-        <img src="/images/speakers/emily-pillmore.jpg" alt="Emily Pillmore" class="avatar">
+        <img src="/images/speakers/gabriel-gonzalez.jpg" alt="Gabriel Gonzalez" class="avatar">
         <div>
-          <span class="name">Emily Pillmore</span>
+          <span class="name">Gabriel Gonzalez</span>
           <div class="links">
-            <a class="web" href="http://cohomolo.gy/"></a>
-            <a class="github" href="https://github.com/emilypi"></a>
-            <a class="twitter" href="https://twitter.com/pitopos"></a>
+            <a class="web" href="http://www.haskellforall.com/"></a>
+            <a class="github" href="https://github.com/Gabriel439"></a>
+            <a class="twitter" href="https://twitter.com/GabrielG439"></a>
           </div>
         </div>
       </div>
+      <p><strong>“A bare-bones Twitter clone implemented with Haskell + Nix”</strong></p>
       <p>
-        Emily is a long-time functional programmer, Haskell developer and
-        a member of the Haskell.org committee.  She is an independent
-        researcher interested in Homotopy Theory, Category Theory
-        and Topology and recently co-authored a paper about
-        <a href="https://arxiv.org/abs/2001.07488">Profunctor optics</a>.
+        Gabriel is a long-time Haskell Enthusiast and programmer at
+        <a href="https://awakesecurity.com/">Awake Security</a>.  He is the
+        author of a host of Haskell libraries and tools including
+        <a href="https://hackage.haskell.org/package/pipes">pipes</a> and
+        <a href="https://hackage.haskell.org/package/dhall">Dhall</a>,
+        and writer behind the well-known
+        <a href="http://www.haskellforall.com/">Haskell for all</a> blog.
       </p>
     </div>
 
@@ -217,6 +287,7 @@
           </div>
         </div>
       </div>
+      <p><strong>“Can Haskell Be the World's Database?”</strong></p>
       <p>
         Simon Meier is one of the founding members of the
         <a href="https://zfoh.ch/">Zurich Haskell Community</a>.
@@ -229,10 +300,27 @@
         security protocol verifier.
       </p>
     </div>
+    <div class="speaker raise">
+      <div class="anchor" id="speaker-ognjen-maric"></div>
+      <div class="details">
+        <img src="/images/speakers/ognjen-maric.jpg" alt="Ognjen Marić" class="avatar">
+        <div>
+          <span class="name">Ognjen Marić</span>
+          <div class="links">
+            <a class="github" href="https://github.com/oggy-"></a>
+          </div>
+        </div>
+      </div>
+      <p><strong>Joint talk with Simon Meier</strong></p>
+      <p>
+        Ognjen works at <a href="https://digitalasset.com">Digital Asset</a>,
+        building a <a href="https://canton.io">distributed protocol</a> for
+        <a href="https://daml.com">DAML</a> smart contracts that provides strong
+        integrity and privacy guarantees. Previously, he did academic research
+        on formal methods, distributed systems, and security.
+      </p>
+    </div>
   </div>
-  <p>
-    More speakers will be announced as we get closer to the event.
-  </p>
 
   <div class="anchor" id="tracks"></div>
   <h2>Tracks</h2>
@@ -242,9 +330,48 @@
   <p>
     The Haskell experts from <a href="http://www.well-typed.com/">Well-Typed</a>
     will teach a two-part course in the advanced track.  The two sessions cover
-    different subjects and are completely independent.  They will take place on
-    Friday and Saturday afternoon.  The exact topics will be announced here
-    before the event.
+    different subjects and are completely independent.
+  </p>
+
+  <div class="anchor" id="advanced-track-saturday"></div>
+  <h4>Saturday session: Datatype-Generic Programming by Andres Löh</h4>
+  <p>
+    Datatype-Generic programming is a powerful tool that allows the
+    implementation of functions that adapt themselves to a large class of
+    datatypes and can be made available on new datatypes easily by means such as
+    "deriving".
+  </p>
+  <p>
+    In this workshop, we focus on the ideas at the core of two popular
+    approaches to generic programming: GHC.Generics and generics-sop. Both can
+    be difficult to understand at first. We will build simpler versions of both
+    approaches to illustrate some of the design decisions taken.
+    This exploration will lead to a better understanding of the trade-offs
+    and ultimately also make using these libraries easier.
+  </p>
+  <p>
+    This presentation will involve various type-level programming concepts
+    such as type families, data kinds, GADTs and higher-rank types. It's not a
+    requirement to be an expert in using these features, but I will not focus on
+    explaining them in detail either; so having some basic familiarity with the
+    syntax and semantics will be helpful.
+  </p>
+
+  <div class="anchor" id="advanced-track-sunday"></div>
+  <h4>Sunday session: Haskell and InfoSec by Tobias Dammers</h4>
+  <p>
+    In this workshop, we will look at Haskell from an information security point
+    of view. How do security vulnerabilities such as SQL Injection (SQLi) or
+    Cross-Site Scripting (XSS) work? How does a hacker exploit them? What can
+    we, as Haskell programmers, do to prevent them, and how can Haskell help
+    us with that? And what principles can we extract from this to develop more
+    security-aware coding habits?
+  </p>
+  <p>
+    No knowledge of or experience with information security is required for
+    this course, but participants are expected to have a working knowledge
+    of practical Haskell. If you can write a simple web application with,
+    e.g., Scotty, you should be fine.
   </p>
 
   <div class="anchor" id="beginner-track"></div>
@@ -260,9 +387,43 @@
     the beginners course again this year.
   </p>
   <p>
-    The beginners course focuses on Haskell language fundamentals and requires
-    no prior experience with the language.  It will take place in two
-    parts, on Friday and Saturday afternoon.  We will post detailed installation
-    instructions here prior to the event, so you will be able to dive right in!
+    The beginners course focuses on Haskell language fundamentals and is really aimed at
+    complete beginners, so it requires no prior experience with the language.
+    It will take place in two parts, on Saturday and Sunday afternoon, please see the
+    calendar for the exact times.
+  </p>
+  <p>
+    The lessons will be structure such that you can do the follow-along exercises on
+    <a href='https://repl.it'>repl.it</a>.  This means you don't have to install
+    anything on your local machine.
+  </p>
+  <p>
+    The course will be a mix of video lessons, interactive exercises, and plenty of support
+    from your fellow Haskellers in the chat. The interactive part will be done in its own
+    channel on our Discord server.  The invite to the server is sent when you register
+    for ZuriHac.
+  </p>
+
+  <div class="anchor" id="mob-programming"></div>
+  <h3>Mob Programming: Space Invaders</h3>
+  <p><strong>By Caroline and Gaël</strong></p>
+  <p>
+    The goal of this workshop is to collectively implement a small “space
+    invaders” clone, starting from a rudimentary skeleton.  Its format is that
+    of a “coding dojo” or “mob programming” event: there is only one computer,
+    shared among all participants.
+  </p>
+  <p>
+    Volunteers successively get to implement a small part of the game, while
+    receiving advice from the rest of the group.  The direction of
+    the development is entirely driven by the audience: they get to decide what
+    features they want to implement, and in what order.
+  </p>
+  <p>
+    The workshop is targeted toward programmers, but no prior experience with
+    functional programming is assumed; in fact, the code is extremely simple
+    (thanks to the Gloss library), and the core logic is free from “scary”
+    features such as applicative functors, monads, lenses, etc. This allows
+    guests to focus on simple, pure functions.
   </p>
 </section>

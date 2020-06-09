@@ -313,6 +313,18 @@
       "description": "Hydra is a full-fledged framework for building web services, multithreaded and concurrent applications with SQL and KV DB support."
     },
     {
+      "id": "dependabot",
+      "name": "Haskell support for Dependabot",
+      "link": "https://github.com/sgraf812/dependabot-core",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Sebastian Graf",
+      "description": "This one is not in Haskell, but Ruby. Dependabot is a useful Bot for code hosting platforms such as GitHub and GitLab. Whenever there's an outdated dependency, it will open a Pull Request with a bumped Cabal file."
+    },
+    {
       "id": "spago",
       "name": "Spago",
       "link": "https://github.com/spacchetti/spago",

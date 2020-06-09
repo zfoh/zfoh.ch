@@ -695,5 +695,17 @@
       },
       "contact": "Troels Henriksen",
       "description": "A high-performance parallel functional programming language whose compiler and tooling is written in Haskell, and has both easy, intermediate, and impossible opportunities for contribution."
+    },
+    {
+      "id": "xmobar",
+      "name": "xmobar",
+      "link": "https://github.com/jaor/xmobar",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Sibi Prabakaran",
+      "description": "a minimalistic status bar for X Window System"
     }
   ]

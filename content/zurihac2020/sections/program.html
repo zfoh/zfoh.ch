@@ -11,10 +11,8 @@
     digital hub for this.  <a href="#registration">Register for the event</a>
     to get access to this, it's completely free!
   </p>
+  <p class="timetable-local-time"></p>
   <div class="timetable"></div>
-  <p class="timetable-local-time" style="display: none">
-    Times displayed in your local time zone.
-  </p>
   <ul class="schedule">
     <li class="admin">
       <span class="start">2020-06-12T18:00:00+02:00</span> -
@@ -160,7 +158,9 @@
       }
 
       schedule.remove();
-      document.querySelector(".timetable-local-time").style.display = "block";
+      document.querySelector(".timetable-local-time").innerText =
+          'Times are displayed in your browser\'s timezone (' +
+          Intl.DateTimeFormat().resolvedOptions().timeZone + ').';
     }
   </script>
 

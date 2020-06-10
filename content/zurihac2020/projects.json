@@ -731,5 +731,17 @@
       },
       "contact": "Tom Ellis",
       "description": "Opaleye Hackathon: work on Opaleye, a composable Postgres embedded relational query language"
+    },
+    {
+      "id": "contracts4tshirts",
+      "name": "Smart Contracts For Free T-Shirts",
+      "link": "https://github.com/digital-asset/contracts-for-tshirts",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Ognjen Maric",
+      "description": "Write DAML smart contracts to help restore the world of free T-shirts that we all know and love"
     }
   ]

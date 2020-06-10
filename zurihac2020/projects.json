@@ -733,6 +733,18 @@
       "description": "Opaleye Hackathon: work on Opaleye, a composable Postgres embedded relational query language"
     },
     {
+      "id": "smos",
+      "name": "Smos",
+      "link": "https://github.com/NorfairKing/smos/",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Tom Sydney Kerckhove, syd@cs-syd.eu",
+      "description": "A comprehensive self-management system. Org-mode minus emacs plus Haskell"
+    },
+    {
       "id": "curry-language-server",
       "name": "Curry Language Server",
       "link": "https://github.com/fwcd/curry-language-server.git",

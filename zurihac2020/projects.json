@@ -733,6 +733,18 @@
       "description": "Opaleye Hackathon: work on Opaleye, a composable Postgres embedded relational query language"
     },
     {
+      "id": "grpc-native",
+      "name": "gRPC Native",
+      "link": "https://github.com/haskell-grpc-native/",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Lucas DiCioccio",
+      "description": "Improve grpc-native (docs, CI, features, perf, tests, benchs) one tiny step at a time."
+    },
+    {
       "id": "distributed-dataset",
       "name": "distributed-dataset",
       "link": "https://github.com/utdemir/distributed-dataset",

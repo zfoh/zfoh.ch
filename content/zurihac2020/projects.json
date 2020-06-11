@@ -743,7 +743,6 @@
       },
       "contact": "Tom Ellis",
       "description": "Opaleye Hackathon: work on Opaleye, a composable Postgres embedded relational query language"
-    
     },
     {
       "id": "contracts4tshirts",
@@ -804,5 +803,17 @@
       },
       "contact": "Fredrik Wieczerkowski",
       "description": "An IDE-backend for the Haskell-like functional logic language Curry"
+    },
+    {
+      "id": "toplevelselectors",
+      "name": "NoToplevelSelectors GHC Extension",
+      "link": "https://github.com/ghc-proposals/ghc-proposals/pull/160",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Simon @reactormonk Hafner",
+      "description": "Implement the NoToplevelSelectors GHC extension. It's been sketched out, and I already have some feedback from an earlier iteration."
     }
   ]

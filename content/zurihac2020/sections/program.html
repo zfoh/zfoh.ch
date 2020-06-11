@@ -378,15 +378,15 @@
   <h3>GHC track</h3>
 
   <div class="anchor" id="ghc-track-richard-eisenberg"></div>
-  <h4>A high-level overview on the GHC compilation pipeline by Richard Eisenberg</h4>
+  <h4>Write a GHC extension in 30 minutes by Richard Eisenberg</h4>
   <p>
-  TBA
+  This live-coding session will witness a brand-new (mostly useless) extension to GHC. By watching, you will get a road map of how this is done and what the moving pieces in GHC's front end are: parsing, name resolution, type checking, and error messages.
   </p>
 
   <div class="anchor" id="ghc-track-divesh-otwani"></div>
   <h4>A tour of linear types and linear base by Divesh Otwani</h4>
   <p>
-  TBA
+  In this talk, I'll briefly present what linear types are and how you can use them with linear base. We'll follow the example of doing a topological sort of a DAG represented by a linear hashmap from linear-base that allows update-in-place. Along the way, we'll notice how linear types enable a safe API for mutable hashmaps and build some intuition on how to use linear types and tools from linear-base.
   </p>
 
   <div class="anchor" id="ghc-track-facundo-dominguez"></div>
@@ -439,12 +439,14 @@
 
   <div class="anchor" id="mob-programming"></div>
   <h3>Mob Programming: Space Invaders</h3>
-  <p><strong>By Caroline and Gaël</strong></p>
+  <p><strong>By <a href="https://twitter.com/akhesaCaro">Caroline Gaudreau</a> (<a href="https://tech.fretlink.com/">Fretlink</a>) and <a href="https://twitter.com/gael_deest">Gaël Deest</a> (<a href="https://www.tweag.io/">Tweag</a>) </strong></p>
+  <img style="float: left; width: 400px; max-width: 90%; margin: 0px 12px 12px 0px;
+                border: 2px solid #031a6f"
+      src="/images/zurihac2020/space_invaders_mob_programming.png">
   <p>
     The goal of this workshop is to collectively implement a small “space
-    invaders” clone, starting from a rudimentary skeleton.  Its format is that
-    of a “coding dojo” or “mob programming” event: there is only one computer,
-    shared among all participants.
+    invaders” clone, starting from a rudimentary skeleton. Its format is that of a “coding dojo” or “mob programming” event: there is only one computer building and running the code, shared among all participants via collaborative editing.
+
   </p>
   <p>
     Volunteers successively get to implement a small part of the game, while
@@ -458,5 +460,7 @@
     (thanks to the Gloss library), and the core logic is free from “scary”
     features such as applicative functors, monads, lenses, etc. This allows
     guests to focus on simple, pure functions.
+  </p>
+  <p><strong>Requirements : </strong> To participate, you'll need VSCode setup with the LiveShare extension. Make sure to have it configured before joining the session ! The collaboration link will be sent to Discord at the beginning of the event.
   </p>
 </section>

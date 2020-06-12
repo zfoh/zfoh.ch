@@ -38,8 +38,7 @@
     {
       "id": "ghc-typechecker-doc",
       "name": "Improving documentation for GHC typechecker plugin authors",
-      "link_comment": "None. Closest is this, if Matthew doesn't mind: https://mpickering.github.io/plugins.html",
-      "link": null,
+      "link": "https://github.com/nfrisby/tcplugins-zurihac2020",
       "contributor level": {
         "beginner": false,
         "intermediate": true,

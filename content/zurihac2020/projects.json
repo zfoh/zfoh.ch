@@ -207,14 +207,14 @@
     {
       "id": "haskell-katas-2",
       "name": "Haskell Katas",
-      "link": null,
+      "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
       "contributor level": {
         "beginner": true,
         "intermediate": true,
         "advanced": false
       },
       "contact": "Reynaldo Cordero Corro",
-      "description": null
+      "description": "Haskell katas proof of concept"
     },
     {
       "id": "hob",
@@ -483,14 +483,14 @@
     {
       "id": "haskell-katas-1",
       "name": "Haskell Katas",
-      "link": null,
+      "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
       "contributor level": {
         "beginner": true,
         "intermediate": false,
         "advanced": false
       },
       "contact": "Sofía Cordero Martínez",
-      "description": null
+      "description": "Haskell katas proof of concept"
     },
     {
       "id": "ide-subset-haskell",

@@ -817,6 +817,18 @@
       "description": "Implement the NoToplevelSelectors GHC extension. It's been sketched out, and I already have some feedback from an earlier iteration."
     },
     {
+      "id": "dhall",
+      "name": "Dhall configuration language",
+      "link": "https://dhall-lang.org",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Gabriel Gonzalez",
+      "description": "Improve the Haskell implementation of Dhall, especially issues with the ZuriHac label"
+    },
+    {
         "id": "mutablefields",
         "name": "Mutable Constructor Fields GHC Extension",
         "link": "https://github.com/ghc-proposals/ghc-proposals/pull/8",

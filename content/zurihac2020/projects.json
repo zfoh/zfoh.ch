@@ -823,7 +823,7 @@
       "contributor level": {
         "beginner": true,
         "intermediate": true,
-        "advanced": true,
+        "advanced": true
       },
       "contact": "Gabriel Gonzalez",
       "description": "Improve the Haskell implementation of Dhall, especially issues with the ZuriHac label"

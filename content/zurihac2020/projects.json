@@ -815,5 +815,17 @@
       },
       "contact": "Simon @reactormonk Hafner",
       "description": "Implement the NoToplevelSelectors GHC extension. It's been sketched out, and I already have some feedback from an earlier iteration."
+    },
+    {
+        "id": "mutablefields",
+        "name": "Mutable Constructor Fields GHC Extension",
+        "link": "https://github.com/ghc-proposals/ghc-proposals/pull/8",
+        "contributor level": {
+            "beginner": false,
+            "intermediate": true,
+            "advanced": true
+        },
+        "contact": "Ryan Yates",
+        "description": "I have implemented mutable constructor fields in the context of IO and STM for my thesis and I'm working on bringing that to GHC head.  I'm also looking to explore uses of the feature to improve performance of libraries and simplify code."
     }
   ]

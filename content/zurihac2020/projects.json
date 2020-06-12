@@ -850,5 +850,17 @@
       },
       "contact": "Ryan Yates",
       "description": "I have implemented mutable constructor fields in the context of IO and STM for my thesis and I'm working on bringing that to GHC head.  I'm also looking to explore uses of the feature to improve performance of libraries and simplify code."
+    },
+    {
+      "id": "haskell-editor-setup",
+      "name": "Haskell Editor Setup",
+      "link": "https://github.com/fairy-tale-agi-solutions/haskell-editor-setup#haskell-editor--ide-setup",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Razvan Flavius Panda",
+      "description": "GUI application for easy installation of Haskell editors on all major operating systems."
     }
   ]

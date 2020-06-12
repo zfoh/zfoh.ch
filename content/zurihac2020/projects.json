@@ -862,5 +862,17 @@
       },
       "contact": "Razvan Flavius Panda",
       "description": "GUI application for easy installation of Haskell editors on all major operating systems."
+    },
+    {
+      "id": "gadoc",
+      "name": "Gadoc",
+      "link": "https://github.com/smatting/gadoc",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Stefan Matting",
+      "description": "Gadoc is a package docs browser for Haskell"
     }
   ]

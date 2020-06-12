@@ -815,5 +815,17 @@
       },
       "contact": "Simon @reactormonk Hafner",
       "description": "Implement the NoToplevelSelectors GHC extension. It's been sketched out, and I already have some feedback from an earlier iteration."
+    },
+    {
+      "id": "haskell-editor-setup",
+      "name": "Haskell Editor Setup",
+      "link": "https://github.com/fairy-tale-agi-solutions/haskell-editor-setup#haskell-editor--ide-setup",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Razvan Flavius Panda",
+      "description": "GUI application for easy installation of Haskell editors on all major operating systems."
     }
   ]

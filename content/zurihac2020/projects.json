@@ -851,5 +851,17 @@
       },
       "contact": "Ryan Yates",
       "description": "I have implemented mutable constructor fields in the context of IO and STM for my thesis and I'm working on bringing that to GHC head.  I'm also looking to explore uses of the feature to improve performance of libraries and simplify code."
+    },
+    {
+      "id": "gadoc",
+      "name": "Gadoc",
+      "link": "https://github.com/smatting/gadoc",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Stefan Matting",
+      "description": "Gadoc is a package docs browser for Haskell"
     }
   ]

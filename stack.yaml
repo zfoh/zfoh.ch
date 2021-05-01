@@ -1,6 +1,5 @@
-resolver: lts-16.9
+resolver: lts-17.9
 
-extra-package-dbs: []
 packages:
 - '.'
 
@@ -11,4 +10,4 @@ flags:
     usePandoc: false
 
 extra-deps:
-- 'hakyll-4.13.4.1'
+- 'hakyll-4.14.0.0'

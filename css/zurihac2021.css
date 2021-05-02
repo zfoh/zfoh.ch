@@ -178,6 +178,7 @@ p {
   margin: 4px;
   padding: 8px;
   background-color: #419c75;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -187,11 +188,6 @@ p {
   .track {
     width: calc(50% - 24px);
   }
-}
-
-.track p {
-  /* margin-top: 0;
-  margin-bottom: 0; */
 }
 
 /*******************************************************************************

@@ -18,18 +18,25 @@ a {
   color: white;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: monospace;
   margin: 36px auto 12px auto;
 }
 
 h1 {
   margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 h2 {
   text-align: left;
   max-width: 768px;
+}
+
+h3 {
+  text-align: left;
+  max-width: 768px;
+  margin-top: 0px;
 }
 
 /*******************************************************************************
@@ -93,7 +100,9 @@ p {
 }
 
 .speaker {
-  margin: 12px;
+  margin: 4px;
+  padding: 8px;
+  /* background-color: #419c75; */
 }
 
 @media (min-width: 768px) {
@@ -157,6 +166,32 @@ p {
 .speaker .links .web {
   background: url("/images/icons/globe.svg");
   background-size: 24px 24px;
+}
+
+.tracks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.track {
+  margin: 4px;
+  padding: 8px;
+  background-color: #419c75;
+}
+
+@media (min-width: 768px) {
+  .tracks {
+    flex-direction: row;
+  }
+  .track {
+    width: calc(50% - 24px);
+  }
+}
+
+.track p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*******************************************************************************

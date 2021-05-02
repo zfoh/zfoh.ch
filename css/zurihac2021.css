@@ -20,7 +20,7 @@ a {
 
 h1, h2 {
   font-family: monospace;
-  margin: 36px auto 12px auto;
+  margin: 30px auto 12px auto;
 }
 
 h1 {
@@ -53,7 +53,7 @@ header {
 
 header a.logo {
   color: #2f7858;
-  font-size: 60px;
+  font-size: 36px;
   font-family: monospace;
   line-height: 110%;
   text-align: center;

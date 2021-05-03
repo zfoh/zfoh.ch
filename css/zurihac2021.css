@@ -69,16 +69,23 @@ header a.logo {
  * Content */
 
 main {
-  padding: 0px 6px 36px 6px;
 }
 
 section {
+  padding: 0px 6px 36px 6px;
   max-width: 768px;
   margin: 0px auto 0px auto;
 }
 
 p {
   text-align: left;
+}
+
+.inverted {
+  background-color: #9fdd9f;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #19331e;
 }
 
 .retro {
@@ -188,6 +195,20 @@ p {
   .track {
     width: calc(50% - 24px);
   }
+}
+
+/*******************************************************************************
+ * Partners */
+
+.partners {
+  margin: 60px auto 60px auto;
+}
+
+.partners img {
+  margin: 18px;
+  height: 72px;
+  width: auto;
+  max-width: 240px;
 }
 
 /*******************************************************************************

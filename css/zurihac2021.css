@@ -206,9 +206,9 @@ p {
 
 .partners img {
   margin: 18px;
-  height: 72px;
-  width: auto;
+  max-height: 72px;
   max-width: 240px;
+  vertical-align: middle;
 }
 
 /*******************************************************************************

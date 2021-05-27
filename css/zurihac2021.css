@@ -44,7 +44,7 @@ h3 {
 
 header {
   height: 400px;
-  background-image: url("/images/zurihac2021/header.png"), url("/images/zurihac2021/header-wide.png");
+  background-image: url("/images/zurihac2021/header.svg"), url("/images/zurihac2021/header-wide.png");
   background-size: auto 400px, 1px 400px;
   background-repeat: no-repeat, repeat-x;
   background-position: center, center;

@@ -21,10 +21,15 @@
   <meta name="twitter:card" content="summary" />
   <style>
     :root {
-      --ani-total-duration: 10s;
+      --ani-total-duration: 20s;
       --mover-size: 1;
       --mover-ypos: 0;
       --mover-zpos: 1;
+    }
+    @media screen and (max-width: 768px) {
+      :root{
+        --ani-total-duration: 10s;
+      }
     }
 
     .animation-wrapper {
@@ -43,6 +48,7 @@
       position: absolute;
       width: 300px;
       height: 300px;
+      animation: moving calc(var(--ani-total-duration) * var(--mover-zpos)) linear infinite both;
     }
 
     .mover .logo,
@@ -54,42 +60,9 @@
       height: 100%;
     }
 
-    @keyframes cloud-frames {
-      0% { filter: blur(0em); opacity: 1.0; }
-      20% { filter: blur(0em); opacity: 1.0; }
-      50% { filter: blur(5em); opacity: 0.0; }
-      80% { filter: blur(0em); opacity: 1.0; }
-      100% { filter: blur(0em); opacity: 1.0; }
-    }
-
-    @keyframes logo-frames {
-      0% { filter: blur(0em); opacity: 0.0; }
-      10% { filter: blur(5em); opacity: 0.0; }
-      45% { filter: blur(0em); opacity: 1.0; }
-      55% { filter: blur(0em); opacity: 1.0; }
-      90% { filter: blur(5em); opacity: 0.0; }
-      100% { filter: blur(0em); opacity: 0.0; }
-    }
-
-    @keyframes moving {
-      0% {
-        transform: translate3d(0,var(--mover-ypos),0) scale(calc(1 / var(--mover-zpos)));
-      }
-      100% {
-        transform: translate3d(100vw,var(--mover-ypos),0) scale(calc(1 / var(--mover-zpos)));
-      }
-    }
-
-
-
-    .mover {
-      animation: moving calc(var(--ani-total-duration) * var(--mover-zpos)) linear infinite both;
-    }
-
     .mover .cloud {
       animation: cloud-frames var(--ani-total-duration) infinite both;
     }
-
     .mover .logo {
       animation: logo-frames var(--ani-total-duration) infinite both;
     }
@@ -111,7 +84,6 @@
       z-index: 2;
     }
 
-
     .mover.cloud-c,
     .mover.cloud-c .logo,
     .mover.cloud-c .cloud {
@@ -119,6 +91,32 @@
       --mover-zpos: 2;
       --mover-ypos: -50px;
       z-index: 1;
+    }
+
+    @keyframes cloud-frames {
+      0% {   filter: blur(0em); opacity: 1.0; }
+      20% {  filter: blur(0em); opacity: 1.0; }
+      50% {  filter: blur(5em); opacity: 0.0; }
+      80% {  filter: blur(0em); opacity: 1.0; }
+      100% { filter: blur(0em); opacity: 1.0; }
+    }
+
+    @keyframes logo-frames {
+      0% {   filter: blur(0em); opacity: 0.0; }
+      10% {  filter: blur(5em); opacity: 0.0; }
+      45% {  filter: blur(0em); opacity: 1.0; }
+      55% {  filter: blur(0em); opacity: 1.0; }
+      90% {  filter: blur(5em); opacity: 0.0; }
+      100% { filter: blur(0em); opacity: 0.0; }
+    }
+
+    @keyframes moving {
+      0% {
+        transform: translate3d(-100%,var(--mover-ypos),0) scale(calc(1 / var(--mover-zpos)));
+      }
+      100% {
+        transform: translate3d(100vw,var(--mover-ypos),0) scale(calc(1 / var(--mover-zpos)));
+      }
     }
   </style>
 </head>

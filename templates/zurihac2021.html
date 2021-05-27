@@ -1,52 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ZuriHac 2021</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="/css/zurihac2021.css?v=2" />
 
-    <meta property="og:title" content="ZuriHac 2021" />
-    <meta
-      property="og:description"
-      content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»"
-    />
-    <meta
-      property="og:image"
-      content="https://zfoh.ch/images/zurihac2021/header.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZuriHac 2021</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="/css/zurihac2021.css?v=2" />
 
-    <meta name="twitter:title" content="ZuriHac 2021" />
-    <meta
-      name="twitter:description"
-      content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»"
-    />
-    <meta
-      name="twitter:image"
-      content="https://zfoh.ch/images/zurihac2021/header.png"
-    />
+  <meta property="og:title" content="ZuriHac 2021" />
+  <meta property="og:description"
+    content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»" />
+  <meta property="og:image" content="https://zfoh.ch/images/zurihac2021/header.png" />
 
-    <meta name="twitter:card" content="summary" />
-  </head>
-  <body>
-    <header>
-      <a class="logo">ZURIHAC_2021</a>
-    </header>
+  <meta name="twitter:title" content="ZuriHac 2021" />
+  <meta name="twitter:description"
+    content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»" />
+  <meta name="twitter:image" content="https://zfoh.ch/images/zurihac2021/header.png" />
 
-    <main>
-      $body$
-    </main>
+  <meta name="twitter:card" content="summary" />
+  <style>
+    .animation-wrapper {
+      height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000000;
+      /* outline: red dashed 10px;
+        outline-offset: -10px; */
+    }
 
-    <footer>
-      Copyright © $copyrightYears$ Zürich Friends of Haskell ·
-      <a href="https://github.com/zfoh/zfoh.ch">Source code available</a>
-      ·
-      <a href="/terms-and-conditions.html">Terms and Conditions</a>
-      ·
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <br>
-      Header image modified from <a href="https://openclipart.org/favs/306465/simple-nature-banner">artwork by j4p4n on openclipart</a>.
-    </footer>
-  </body>
+    .logocloud {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    .logocloud .logo,
+    .logocloud .cloud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @keyframes cloud-frames {
+      0% {
+        filter: blur(0em);
+        opacity: 1.0;
+      }
+
+      20% {
+        filter: blur(0em);
+        opacity: 1.0;
+      }
+
+      50% {
+        filter: blur(5em);
+        opacity: 0.0;
+      }
+
+      80% {
+        filter: blur(0em);
+        opacity: 1.0;
+      }
+
+      100% {
+        filter: blur(0em);
+        opacity: 1.0;
+      }
+    }
+
+    @keyframes logo-frames {
+      0% {
+        filter: blur(0em);
+        opacity: 0.0;
+      }
+
+      10% {
+        filter: blur(5em);
+        opacity: 0.0;
+      }
+
+      45% {
+        filter: blur(0em);
+        opacity: 1.0;
+      }
+
+      55% {
+        filter: blur(0em);
+        opacity: 1.0;
+      }
+
+      90% {
+        filter: blur(5em);
+        opacity: 0.0;
+      }
+
+      100% {
+        filter: blur(0em);
+        opacity: 0.0;
+      }
+    }
+
+    :root {
+      --foo: 10s;
+    }
+
+    .logocloud .cloud {
+      animation: 10s cloud-frames infinite both;
+    }
+
+    .logocloud .logo {
+      animation: 10s logo-frames infinite both;
+    }
+
+
+    .logocloud.cloud-a .logo,
+    .logocloud.cloud-a .cloud {
+      animation-delay: 0s;
+    }
+    .logocloud.cloud-b .logo,
+    .logocloud.cloud-b .cloud {
+      animation-delay: 2s;
+    }
+    .logocloud.cloud-c .logo,
+    .logocloud.cloud-c .cloud {
+      animation-delay: 4s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="animation-wrapper">
+    <div class="logocloud cloud-a">
+      <img src="/images/zurihac2021/cloud-a.svg" alt="abstract cloud" class="cloud">
+      <img src="/images/zurihac2021/logo.svg" alt="zurihac2021 logo" class="logo">
+    </div>
+    <div class="logocloud cloud-b">
+      <img src="/images/zurihac2021/cloud-b.svg" alt="abstract cloud" class="cloud">
+      <img src="/images/zurihac2021/logo.svg" alt="zurihac2021 logo" class="logo">
+    </div>
+    <div class="logocloud cloud-c">
+      <img src="/images/zurihac2021/cloud-c.svg" alt="abstract cloud" class="cloud">
+      <img src="/images/zurihac2021/logo.svg" alt="zurihac2021 logo" class="logo">
+    </div>
+  </div>
+
+  <header>
+    <a class="logo">ZURIHAC_2021</a>
+  </header>
+
+  <main>
+    $body$
+  </main>
+
+  <footer>
+    Copyright © $copyrightYears$ Zürich Friends of Haskell ·
+    <a href="https://github.com/zfoh/zfoh.ch">Source code available</a>
+    ·
+    <a href="/terms-and-conditions.html">Terms and Conditions</a>
+    ·
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <br>
+    Header image modified from <a href="https://openclipart.org/favs/306465/simple-nature-banner">artwork by j4p4n on
+      openclipart</a>.
+  </footer>
+</body>
+
 </html>

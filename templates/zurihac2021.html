@@ -20,9 +20,17 @@
 
   <meta name="twitter:card" content="summary" />
   <style>
+    :root {
+      --ani-total-duration: 10s;
+      --mover-size: 1;
+      --mover-ypos: 0;
+      --mover-zpos: 1;
+    }
+
     .animation-wrapper {
       height: 400px;
       position: absolute;
+      overflow-x: hidden;
       top: 0;
       left: 0;
       right: 0;
@@ -31,14 +39,14 @@
         outline-offset: -10px; */
     }
 
-    .logocloud {
-      position: relative;
-      width: 100px;
-      height: 100px;
+    .mover {
+      position: absolute;
+      width: 300px;
+      height: 300px;
     }
 
-    .logocloud .logo,
-    .logocloud .cloud {
+    .mover .logo,
+    .mover .cloud {
       position: absolute;
       top: 0;
       left: 0;
@@ -47,88 +55,70 @@
     }
 
     @keyframes cloud-frames {
-      0% {
-        filter: blur(0em);
-        opacity: 1.0;
-      }
-
-      20% {
-        filter: blur(0em);
-        opacity: 1.0;
-      }
-
-      50% {
-        filter: blur(5em);
-        opacity: 0.0;
-      }
-
-      80% {
-        filter: blur(0em);
-        opacity: 1.0;
-      }
-
-      100% {
-        filter: blur(0em);
-        opacity: 1.0;
-      }
+      0% { filter: blur(0em); opacity: 1.0; }
+      20% { filter: blur(0em); opacity: 1.0; }
+      50% { filter: blur(5em); opacity: 0.0; }
+      80% { filter: blur(0em); opacity: 1.0; }
+      100% { filter: blur(0em); opacity: 1.0; }
     }
 
     @keyframes logo-frames {
+      0% { filter: blur(0em); opacity: 0.0; }
+      10% { filter: blur(5em); opacity: 0.0; }
+      45% { filter: blur(0em); opacity: 1.0; }
+      55% { filter: blur(0em); opacity: 1.0; }
+      90% { filter: blur(5em); opacity: 0.0; }
+      100% { filter: blur(0em); opacity: 0.0; }
+    }
+
+    @keyframes moving {
       0% {
-        filter: blur(0em);
-        opacity: 0.0;
+        transform: translate3d(0,var(--mover-ypos),0) scale(calc(1 / var(--mover-zpos)));
       }
-
-      10% {
-        filter: blur(5em);
-        opacity: 0.0;
-      }
-
-      45% {
-        filter: blur(0em);
-        opacity: 1.0;
-      }
-
-      55% {
-        filter: blur(0em);
-        opacity: 1.0;
-      }
-
-      90% {
-        filter: blur(5em);
-        opacity: 0.0;
-      }
-
       100% {
-        filter: blur(0em);
-        opacity: 0.0;
+        transform: translate3d(100vw,var(--mover-ypos),0) scale(calc(1 / var(--mover-zpos)));
       }
     }
 
-    :root {
-      --foo: 10s;
+
+
+    .mover {
+      animation: moving calc(var(--ani-total-duration) * var(--mover-zpos)) linear infinite both;
     }
 
-    .logocloud .cloud {
-      animation: 10s cloud-frames infinite both;
+    .mover .cloud {
+      animation: cloud-frames var(--ani-total-duration) infinite both;
     }
 
-    .logocloud .logo {
-      animation: 10s logo-frames infinite both;
+    .mover .logo {
+      animation: logo-frames var(--ani-total-duration) infinite both;
     }
 
-
-    .logocloud.cloud-a .logo,
-    .logocloud.cloud-a .cloud {
+    .mover.cloud-a,
+    .mover.cloud-a .logo,
+    .mover.cloud-a .cloud {
       animation-delay: 0s;
+      --mover-zpos: 1;
+      z-index: 3;
     }
-    .logocloud.cloud-b .logo,
-    .logocloud.cloud-b .cloud {
-      animation-delay: 2s;
+
+    .mover.cloud-b,
+    .mover.cloud-b .logo,
+    .mover.cloud-b .cloud {
+      animation-delay: calc(var(--ani-total-duration) / -5);
+      --mover-ypos: -100px;
+      --mover-zpos: 1.5;
+      z-index: 2;
     }
-    .logocloud.cloud-c .logo,
-    .logocloud.cloud-c .cloud {
-      animation-delay: 4s;
+
+
+    .mover.cloud-c,
+    .mover.cloud-c .logo,
+    .mover.cloud-c .cloud {
+      animation-delay: calc(var(--ani-total-duration) / -3 * 2);
+      --mover-zpos: 2;
+      --mover-ypos: -50px;
+      z-index: 1;
     }
   </style>
 </head>
@@ -136,15 +126,15 @@
 <body>
 
   <div class="animation-wrapper">
-    <div class="logocloud cloud-a">
+    <div class="mover cloud-a">
       <img src="/images/zurihac2021/cloud-a.svg" alt="abstract cloud" class="cloud">
       <img src="/images/zurihac2021/logo.svg" alt="zurihac2021 logo" class="logo">
     </div>
-    <div class="logocloud cloud-b">
+    <div class="mover cloud-b">
       <img src="/images/zurihac2021/cloud-b.svg" alt="abstract cloud" class="cloud">
       <img src="/images/zurihac2021/logo.svg" alt="zurihac2021 logo" class="logo">
     </div>
-    <div class="logocloud cloud-c">
+    <div class="mover cloud-c">
       <img src="/images/zurihac2021/cloud-c.svg" alt="abstract cloud" class="cloud">
       <img src="/images/zurihac2021/logo.svg" alt="zurihac2021 logo" class="logo">
     </div>

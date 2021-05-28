@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="191.02"
+   inkscape:export-xdpi="191.02"
+   inkscape:export-filename="/home/jasper/Documents/Projects/zfoh.ch/images/zurihac2021/header.png"
+   sodipodi:docname="header-fill.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg5527"
+   version="1.1"
+   viewBox="0 0 212.74797 89.056085"
+   height="89.056084mm"
+   width="212.74797mm">
+  <defs
+     id="defs5521" />
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     inkscape:window-maximized="0"
+     inkscape:window-y="37"
+     inkscape:window-x="1428"
+     inkscape:window-height="1356"
+     inkscape:window-width="2012"
+     inkscape:snap-global="false"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="245.66689"
+     inkscape:cx="332.32413"
+     inkscape:zoom="1.7455801"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5524">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(2.744597,-107.95764)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       inkscape:export-ydpi="323.01001"
+       inkscape:export-xdpi="323.01001"
+       y="107.95764"
+       x="-2.744597"
+       height="89.056084"
+       width="212.74797"
+       id="rect5178"
+       style="opacity:1;fill:#aedfe6;fill-opacity:1;stroke:none;stroke-width:1.55113;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+    <rect
+       inkscape:export-ydpi="323.01001"
+       inkscape:export-xdpi="323.01001"
+       y="181.08389"
+       x="-3.2186689"
+       height="16.583298"
+       width="213.69612"
+       id="rect6891"
+       style="opacity:1;fill:#5fbcd3;fill-opacity:1;stroke:none;stroke-width:0.937376;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+  </g>
+</svg>

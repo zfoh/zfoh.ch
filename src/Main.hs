@@ -113,6 +113,7 @@ main = hakyll $ do
     match "content/zurihac2019/sections/*.html" $ compile getResourceBody
     match "content/zurihac2020/sections/*.html" $ compile getResourceBody
     match "content/zurihac2021/sections/*.html" $ compile getResourceBody
+    match "content/zurihac2021/sections/*.js" $ compile getResourceBody
 
     ----------------------------------------------------------------------------
     -- Meetup section is dynamically generated.

@@ -172,6 +172,35 @@ p {
 }
 
 /*******************************************************************************
+ * Schedule */
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .schedule {
+    flex-direction: row;
+    margin: 1em;
+  }
+
+  .schedule .day {
+    flex-basis: 0;
+  }
+}
+
+.schedule .day {
+  flex-grow: 1;
+}
+
+.schedule .day .entry {
+  background-color: blue;
+  box-shadow: inset -3px -3px red;
+}
+
+/*******************************************************************************
  * Partners */
 
 .partners {

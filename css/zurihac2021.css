@@ -178,27 +178,42 @@ p {
   display: flex;
   flex-direction: column;
   text-align: left;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
 }
 
 @media (min-width: 768px) {
   .schedule {
     flex-direction: row;
-    margin: 1em;
   }
 
   .schedule .day {
     flex-basis: 0;
+    margin: 0em 0.5em !important;
   }
 }
 
 .schedule .day {
   flex-grow: 1;
+  margin: 0.5em 0em;
+}
+
+.schedule .day .date {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .schedule .day .entry {
-  background-color: blue;
-  box-shadow: inset -3px -3px red;
+ box-shadow:inset -6px 0px #ccadada1;
+ text-decoration:none;
 }
+
+.schedule * .partner  { background-color: #173435; }
+.schedule * .admin    { background-color: #840d71; }
+.schedule * .talk     { background-color: #551616; }
+.schedule * .beginner { background-color: #21420f; }
+.schedule * .advanced { background-color: #33335e; }
 
 /*******************************************************************************
  * Partners */

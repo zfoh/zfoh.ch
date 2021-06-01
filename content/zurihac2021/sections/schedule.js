@@ -2308,7 +2308,7 @@ var PS = {};
           return function (schedule0) {
               var zero = scheduleStart(schedule0);
               var ticks = function (date) {
-                  return (1.5 * Data_JSDate.getTime(date)) / 1000.0 / 60.0;
+                  return Data_JSDate.getTime(date) / 1000.0 / 60.0;
               };
               var go = function (container) {
                   return function (left) {

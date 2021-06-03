@@ -220,7 +220,7 @@ p {
   text-decoration: none;
 }
 
-.schedule * .partner  { background-color: #e1ffdf; color: black }
+.schedule * .partner  { background-color: #bceebc; color: black }
 .schedule * .admin    { background-color: #e93b75; color: white }
 .schedule * .talk     { background-color: #419c75; color: white }
 .schedule * .beginner { background-color: #fff27d; color: black }

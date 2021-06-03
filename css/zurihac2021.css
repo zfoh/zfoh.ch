@@ -62,6 +62,15 @@ p {
   color: #19331e;
 }
 
+.inverted a {
+  color: #2f7858;
+  /* font-weight: bold; */
+}
+
+.google-cal-link {
+
+}
+
 .retro {
   background-color: #060682;
   border: 1px dashed white;

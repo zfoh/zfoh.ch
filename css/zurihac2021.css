@@ -67,10 +67,6 @@ p {
   /* font-weight: bold; */
 }
 
-.google-cal-link {
-
-}
-
 .retro {
   background-color: #060682;
   border: 1px dashed white;
@@ -216,6 +212,7 @@ p {
 
 .schedule .day .entry {
   /* box-shadow: inset -6px 0px #ccadada1; */
+  box-shadow: inset 0px -2px #9fdd9f;
   /* color: #19331e; */
   /* padding: 6px; */
   font-size: 14px;

@@ -62,6 +62,11 @@ p {
   color: #19331e;
 }
 
+.inverted a {
+  color: #2f7858;
+  /* font-weight: bold; */
+}
+
 .retro {
   background-color: #060682;
   border: 1px dashed white;
@@ -206,18 +211,20 @@ p {
 }
 
 .schedule .day .entry {
-  box-shadow: inset -6px 0px #ccadada1;
-  color: #19331e;
+  /* box-shadow: inset -6px 0px #ccadada1; */
+  box-shadow: inset 0px -2px #9fdd9f;
+  /* color: #19331e; */
+  /* padding: 6px; */
   font-size: 14px;
   line-height: 100%;
   text-decoration: none;
 }
 
-.schedule * .partner  { background-color: #dfcd88; }
-.schedule * .admin    { background-color: #abe7ea; }
-.schedule * .talk     { background-color: #e8cfcf; }
-.schedule * .beginner { background-color: #baffb0; }
-.schedule * .advanced { background-color: #e1ffdf; }
+.schedule * .partner  { background-color: #bceebc; color: black }
+.schedule * .admin    { background-color: #e93b75; color: white }
+.schedule * .talk     { background-color: #419c75; color: white }
+.schedule * .beginner { background-color: #fff27d; color: black }
+.schedule * .advanced { background-color: #ffdc42; color: black }
 
 /*******************************************************************************
  * Partners */

@@ -212,16 +212,18 @@ p {
 
 .schedule .day .entry {
   /* box-shadow: inset -6px 0px #ccadada1; */
-  box-shadow: inset 0px -2px #9fdd9f;
-  /* color: #19331e; */
-  /* padding: 6px; */
+  box-shadow: inset 0px -6px #9fdd9f99;
   font-size: 14px;
   line-height: 100%;
   text-decoration: none;
 }
 
+.schedule .day .entry .time, .schedule .day .entry .title {
+  display: block;
+  margin: 0.5em;
+}
+
 .schedule * .partner  { background-color: #bceebc; color: black }
-.schedule * .admin    { background-color: #e93b75; color: white }
 .schedule * .talk     { background-color: #419c75; color: white }
 .schedule * .beginner { background-color: #fff27d; color: black }
 .schedule * .advanced { background-color: #ffdc42; color: black }

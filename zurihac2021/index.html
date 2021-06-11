@@ -196,13 +196,20 @@
 
 <h1 id="program">___PROGRAM___</h1>
 
-<div style="margin-top: 1em; margin-bottom: 1em;">
+<div id="schedule-description" style="margin-top: 1em; margin-bottom: 1em;">
   There is also a public
   <a href="https://calendar.google.com/calendar/embed?src=208isgf6m89473jiuk2pqme97g%40group.calendar.google.com">
     Google Calendar
   </a>
   that you can use.
 </div>
+
+<script type="text/JavaScript">
+  document.getElementById("schedule-description").innerHTML +=
+    " Schedule is displayed in your browser's timezone (" +
+    Intl.DateTimeFormat().resolvedOptions().timeZone + ").";
+</script>
+
 <div class="inverted">
   <div class="schedule" id="schedule">
     <table>

@@ -1,0 +1,86 @@
+.projects {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.projects li {
+  margin-bottom: 30px;
+}
+
+.projects .name {
+  color: #031a6f;
+  font-weight: bold;
+  font-size: 20px;
+  /* margin-bottom: 2.5em; */
+}
+
+.projects p {
+  margin: 6px 0px 6px 0px;
+}
+
+.projects {
+  border-collapse: collapse;
+}
+
+.projects tr:nth-child(even) {
+  background: #ffedcb;
+}
+
+.projects tr:nth-child(odd) {
+  background: #f8d7ba;
+}
+
+.projects th {
+  background: #031a6f;
+  color: #ffe0c4;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .projects th, td {
+    vertical-align: top;
+    text-align: left;
+    padding: 0.5em;
+    border-top: 2px solid #031a6f;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects th, td {
+    text-align: left;
+    padding: 0.5em;
+    display: block;
+  }
+
+  td:first-child { border-top: 2px solid #031a6f; }
+
+  td:nth-child(2) { font-weight: bold; }
+  td:nth-child(3) { font-weight: bold; }
+}
+
+.bookmark {
+  height: 0.9em;
+  padding-right: 0.3em;
+}
+
+.selected {
+  background: #ffee3a !important;
+}
+
+.clickable {
+  cursor: pointer;
+  /* noselect: */
+  -webkit-touch-callout: none; /* ios safari */
+    -webkit-user-select: none; /* safari */
+      -khtml-user-select: none; /* konqueror html */
+        -moz-user-select: none; /* firefox */
+        -ms-user-select: none; /* internet explorer/edge */
+            user-select: none; /* chrome and opera */
+}
+
+.font-mono {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-bold	{font-weight: 700;}

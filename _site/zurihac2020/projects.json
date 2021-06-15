@@ -1,0 +1,878 @@
+[
+    {
+      "id": "tsearch",
+      "name": "tsearch",
+      "link": "https://tsearch.io",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Christian Gill",
+      "description": "A Hoogle inspired search for Typescript (backend is being built on Haskell)"
+    },
+    {
+      "id": "ginger",
+      "name": "ginger",
+      "link": "https://ginger.tobiasdammers.nl/",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Tobias Dammers",
+      "description": "Jinja2 templating in Haskell"
+    },
+    {
+      "id": "haskus-system",
+      "name": "haskus-system",
+      "link": "https://haskus.org/system/",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Sylvain Henry",
+      "description": "Linux system programming in Haskell"
+    },
+    {
+      "id": "ghc-typechecker-doc",
+      "name": "Improving documentation for GHC typechecker plugin authors",
+      "link": "https://github.com/nfrisby/tcplugins-zurihac2020",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Nicolas Frisby",
+      "description": "Writing/editing technical documentation, building demos, updating stale/collating GHC's Source Notes"
+    },
+    {
+      "id": "cardano",
+      "name": "Cardano Smart Contracts",
+      "link": "https://iohk.io/projects/cardano/",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": false,
+        "advanced": false
+      },
+      "contact": "Trevor Oakley",
+      "description": "Cardano smart contracts (haskell)"
+    },
+    {
+      "id": "conferer",
+      "name": "conferer",
+      "link": "https://github.com/ludat/conferer",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Lucas David Traverso",
+      "description": "Configuration managment for haskell"
+    },
+    {
+      "id": "test-matchers",
+      "name": "test-matchers",
+      "link": "https://github.com/roman-kashitsyn/test-matchers",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Roman Kashitsyn",
+      "description": "Composable assertions with decent error messages."
+    },
+    {
+      "id": "cut-the-crap",
+      "name": "cut-the-crap",
+      "link": "https://github.com/jappeace/cut-the-crap",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Jappie Klooster",
+      "description": "Automated video editing for streamers"
+    },
+    {
+      "id": "freyflex",
+      "name": "Freyflex",
+      "link": null,
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Adriaan Leijnse",
+      "description": "Purely functional distributed programming with Reflex FRP"
+    },
+    {
+      "id": "disco",
+      "name": "Disco",
+      "link": "https://github.com/disco-lang/disco/",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Brent Yorgey",
+      "description": "Teaching language for FP + discrete mathematics"
+    },
+    {
+      "id": "arithmoi",
+      "name": "arithmoi",
+      "link": "https://hackage.haskell.org/package/arithmoi",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Andrew Lelechenko",
+      "description": "Haskell library for number theory: primes, arithmetic functions, modular computations, special sequences. It is also an excellent tool for Project Euler."
+    },
+    {
+      "id": "hasktorch",
+      "name": "hasktorch",
+      "link": "https://github.com/hasktorch/hasktorch",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Torsten Scholak",
+      "description": "Tensors and neural networks in Haskell"
+    },
+    {
+      "id": "carp",
+      "name": "Carp",
+      "link": "https://github.com/carp-lang/carp/",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Veit Heller",
+      "description": "A statically typed lisp, without a GC, for real-time applications—with a compiler in Haskell"
+    },
+    {
+      "id": "hatrace",
+      "name": "hatrace",
+      "link": "https://github.com/nh2/hatrace",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Niklas Hambüchen",
+      "description": "scriptable strace - system call tracing in Haskell"
+    },
+    {
+      "id": "pandoc",
+      "name": "Pandoc",
+      "link": "https://pandoc.org",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Mauro Bieg & Albert Krewinkel",
+      "description": "Universal document converter."
+    },
+    {
+      "id": "tasklite",
+      "name": "TaskLite",
+      "link": "https://tasklite.org",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Adrian Sieber",
+      "description": "CLI task manager built with Haskell and SQLite"
+    },
+    {
+      "id": "haskell-ide-engine",
+      "name": "haskell-ide-engine",
+      "link": "https://github.com/haskell/haskell-ide-engine",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Alan Zimmerman",
+      "description": null
+    },
+    {
+      "id": "haskell-katas-2",
+      "name": "Haskell Katas",
+      "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Reynaldo Cordero Corro",
+      "description": "Haskell katas proof of concept"
+    },
+    {
+      "id": "hob",
+      "name": "hob",
+      "link": "https://github.com/mem-memov/hob",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Aleksandr Novikov",
+      "description": "Anonimous chat. I'll add more detailed description at the project web site later."
+    },
+    {
+      "id": "neuron",
+      "name": "Neuron",
+      "link": "https://github.com/srid/neuron",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Sridhar Ratnakumar",
+      "description": "Zettelkasten app in Haskell"
+    },
+    {
+      "id": "razzpay",
+      "name": "RazzPay",
+      "link": null,
+      "contributor level": {
+        "beginner": false,
+        "intermediate": false,
+        "advanced": true
+      },
+      "contact": "Bassil Eid",
+      "description": "Payroll for Startup and SMEs"
+    },
+    {
+      "id": "cautious-sniffle",
+      "name": "Cautious Sniffle",
+      "link": "https://github.com/mankyKitty/cautious-sniffle",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Sean Chalmers",
+      "description": "Modern Webdriver Protocol Bindings for Haskell"
+    },
+    {
+      "id": "gnunet",
+      "name": "GNUnet",
+      "link": "https://gnunet.org/",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Alexander Bondarenko",
+      "description": "Haskell bindings and a framework for decentralized applications."
+    },
+    {
+      "id": "frost",
+      "name": "Frost",
+      "link": "https://github.com/frost-org/frost",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Pawel Szulc",
+      "description": "Automatic documentation generator"
+    },
+    {
+      "id": "basic",
+      "name": "Basic",
+      "link": "https://gitlab.com/haskell-hr/basic",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Nikola Henezi",
+      "description": "A database first approach database library"
+    },
+    {
+      "id": "hydra",
+      "name": "Hydra",
+      "link": "https://github.com/graninas/Hydra",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Alexander Granin",
+      "description": "Hydra is a full-fledged framework for building web services, multithreaded and concurrent applications with SQL and KV DB support."
+    },
+    {
+      "id": "dependabot",
+      "name": "Haskell support for Dependabot",
+      "link": "https://github.com/sgraf812/dependabot-core",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Sebastian Graf",
+      "description": "This one is not in Haskell, but Ruby. Dependabot is a useful Bot for code hosting platforms such as GitHub and GitLab. Whenever there's an outdated dependency, it will open a Pull Request with a bumped Cabal file."
+    },
+    {
+      "id": "spago",
+      "name": "Spago",
+      "link": "https://github.com/spacchetti/spago",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Fabrizio Ferrai",
+      "description": "PureScript package manager and build tool powered by Dhall and package-sets"
+    },
+    {
+      "id": "hasktorch",
+      "name": "Hasktorch",
+      "link": "https://github.com/hasktorch/hasktorch",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Austin Huang",
+      "description": "Tensors and neural networks in Haskell"
+    },
+    {
+      "id": "hip",
+      "name": "HIP",
+      "link": "https://github.com/lehins/hip",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Alexey Kuleshevich",
+      "description": "Haskell Image Processing"
+    },
+    {
+      "id": "smoke",
+      "name": "Smoke",
+      "link": "https://github.com/SamirTalwar/smoke",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Samir Talwar",
+      "description": "An integration test framework for practically anything, written in Haskell."
+    },
+    {
+      "id": "form-bakery",
+      "name": "Form bakery",
+      "link": "https://github.com/drever/form-bakery",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": false,
+        "advanced": false
+      },
+      "contact": "Johannes Drever",
+      "description": "Educational software for Laws of Form / Graphical Logic / Peirce Existential Graphs"
+    },
+    {
+      "id": "grin-idris",
+      "name": "GRIN Compiler Idris-GRIN backend",
+      "link": "https://github.com/grin-compiler/grin",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Andor Penzes",
+      "description": "GRIN is a compiler back-end for lazy and strict functional languages with whole program optimization support."
+    },
+    {
+      "id": "simple-effects",
+      "name": "simple-effects",
+      "link": "https://hackage.haskell.org/package/simple-effects",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Luka Horvat",
+      "description": "A library for managing effects"
+    },
+    {
+      "id": "ihaskell",
+      "name": "IHaskell",
+      "link": "https://github.com/gibiansky/IHaskell",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Vaibhav Sagar",
+      "description": "Jupyter kernel for Haskell"
+    },
+    {
+      "id": "casimir",
+      "name": "Casimir Effects",
+      "link": "https://github.com/maybevoid/casimir",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Soares Chen",
+      "description": "A unified framework for effects"
+    },
+    {
+      "id": "juvix",
+      "name": "Juvix",
+      "link": "https://juvix.org",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": false,
+        "advanced": true
+      },
+      "contact": "Christopher Goes",
+      "description": "Juvix, written in Haskell, is a new dependently-typed language for writing formally verifiable, efficiently executable smart contracts."
+    },
+    {
+      "id": "electronichealthrecords",
+      "name": "Electronic Health Records Management as a Service",
+      "link": "https://sites.google.com/view/electronichealthrecords/home",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Manu Sheel Gupta",
+      "description": "Enabling the Bottom of Pyramid through Water Management Services on the Cloud build using Reflex FRP framework, Water Quality Tools, Open Source Spreadsheet with Haskell server stack and Picture Archiving and Communication System. Remote Water Monitoring, Sewage Management, Quality Assurance and Recyclability of Water using a software stack build with Glasgow Haskell Compiler."
+    },
+    {
+      "id": "easytensor",
+      "name": "easytensor",
+      "link": "https://github.com/achirkin/easytensor",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Artem Chirkin",
+      "description": "Multidimensional type-level-indexed numeric arrays"
+    },
+    {
+      "id": "haskell-language-server",
+      "name": "haskell-language-server",
+      "link": "https://github.com/haskell/haskell-language-server",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Javier Neira Sanchez",
+      "description": "Integration point for ghcide and haskell-ide-engine. One IDE to rule them all."
+    },
+    {
+      "id": "haskell-katas-1",
+      "name": "Haskell Katas",
+      "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": false,
+        "advanced": false
+      },
+      "contact": "Sofía Cordero Martínez",
+      "description": "Haskell katas proof of concept"
+    },
+    {
+      "id": "ide-subset-haskell",
+      "name": "IDE for (a subset of) Haskell",
+      "link": null,
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Mikhail Barash",
+      "description": "Language workbenches provide a surprisingly quick way to develop IDEs with autocomplete, syntax highlighting, quickfixes, code navigation, and other features. The goals of this project are to disseminate knowledge about language workbenches and to develop an IDE for a subset of Haskell using Metaprogramming System MPS (jetbrains.com/mps). More information can be found at: http://dsl-course.org"
+    },
+    {
+      "id": "smos",
+      "name": "Smos",
+      "link": "https://smos.cs-syd.eu",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Tom Sydney Kerckhove",
+      "description": "A comprehensive GTD System in a TUI"
+    },
+    {
+      "id": "mlir",
+      "name": "Functional languages in mlir",
+      "link": null,
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Tobias Grosser",
+      "description": null
+    },
+    {
+      "id": "beseder",
+      "name": "Beseder",
+      "link": "https://github.com/oofp/Beseder",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Boris Rozinov",
+      "description": "Composing hierarchical state machines"
+    },
+    {
+      "id": "fficxx",
+      "name": "fficxx",
+      "link": "http://github.com/wavewave/fficxx",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Ian-Woo Kim",
+      "description": "Automatic Haskell-C++ binding generator"
+    },
+    {
+      "id": "cadenza",
+      "name": "cadenza",
+      "link": "http://github.com/ekmett/cadenza",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": false,
+        "advanced": true
+      },
+      "contact": "Edward Kmett",
+      "description": "Trying to run fast functional languages on the JVM"
+    },
+    {
+      "id": "asterius",
+      "name": "Asterius",
+      "link": "https://github.com/tweag/asterius",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": false,
+        "advanced": true
+      },
+      "contact": "Cheng Shao",
+      "description": "A Haskell to WebAssembly compiler"
+    },
+    {
+      "id": "grin-compiler",
+      "name": "GRIN Compiler",
+      "link": "https://grin-compiler.github.io",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Csaba Hruska",
+      "description": "whole program optimizer for lazy and strict functional languages"
+    },
+    {
+      "id": "haskell-katas-nix",
+      "name": "Haskell-katas & Nix",
+      "link": "https://github.com/EvanMisshula/haskell-katas",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": false,
+        "advanced": false
+      },
+      "contact": "Evan Misshula",
+      "description": "Small exercises for Haskell using Nix from the beginning"
+    },
+    {
+      "id": "pomelo",
+      "name": "Pomelo",
+      "link": "https://temporal-pomelo.com/",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": false,
+        "advanced": true
+      },
+      "contact": "Wolfgang Jeltsch",
+      "description": "Temporal programming, a variant of functional reactive programming (FRP)"
+    },
+    {
+      "id": "kowainik",
+      "name": "Kowainik",
+      "link": "https://kowainik.github.io/",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Dmitrii Kovanikov",
+      "description": "Working on improvements to the existing Kowainik projects or implementing new ideas"
+    },
+    {
+      "id": "mu",
+      "name": "Mu",
+      "link": "https://github.com/higherkindness/mu-haskell",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Alejandro Serrano & Flavio Corpa",
+      "description": "Write microservices in a format- and protocol-independent way."
+    },
+    {
+      "id": "AURIS",
+      "name": "Satellite Mission Control System in Haskell",
+      "link": "https://github.com/oswald2/AURIS",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Michael Oswald",
+      "description": "A mission control system according to ESA's PUS Standard"
+    },
+    {
+      "id": "servant",
+      "name": "servant, servant-uverb",
+      "link": "https://github.com/haskell-servant/servant/issues/1299",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Matthias Fischmann",
+      "description": "Rethinking webservices and APIs in Haskell, one combinator at a time"
+    },
+    {
+      "id": "poker-maison",
+      "name": "poker-maison",
+      "link": "https://github.com/therewillbecode/poker-maison",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Tom Chambrier",
+      "description": "A multiplayer poker app for playing with friends"
+    },
+    {
+      "id": "ariel",
+      "name": "ariel",
+      "link": "https://github.com/lortabac/ariel",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Lorenzo Tabacchini",
+      "description": "A purely-functional language with a smooth learning curve"
+    },
+    {
+      "id": "web-gamepad",
+      "name": "Web Gamepad",
+      "link": "https://github.com/georgefst/web-gamepad",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "George Thomas",
+      "description": "A web-based gamepad, designed to be used from smartphones, and ideal for simple games with large numbers of players. Built with Servant and Elm. Already works on a Linux host, but I could really do with a Windows-based collaborator (will probably require some FFI work). There are also plenty of smaller tasks."
+    },
+    {
+      "id": "futhark",
+      "name": "Futhark",
+      "link": "https://github.com/diku-dk/futhark",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Troels Henriksen",
+      "description": "A high-performance parallel functional programming language whose compiler and tooling is written in Haskell, and has both easy, intermediate, and impossible opportunities for contribution."
+    },
+    {
+      "id": "xmobar",
+      "name": "xmobar",
+      "link": "https://github.com/jaor/xmobar",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Sibi Prabakaran",
+      "description": "a minimalistic status bar for X Window System"
+    },
+    {
+      "id": "chromar-lang",
+      "name": "Chromar language",
+      "link": "https://github.com/azardilis/Chromar",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": false
+      },
+      "contact": "Argyris Zardilis",
+      "description": "Haskell implementation of Chromar (https://doi.org/10.1016/j.tcs.2017.07.034), a language for biological models, embedded using quasiquotes. I plan to revive the language and work on (i) ease of use perhaps through virtualisation and IHaskell and (ii) optimisations of the queries of the rules of the language"
+    },
+    {
+      "id": "opaleye",
+      "name": "Opaleye",
+      "link": "https://github.com/tomjaguarpaw/haskell-opaleye/",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Tom Ellis",
+      "description": "Opaleye Hackathon: work on Opaleye, a composable Postgres embedded relational query language"
+    },
+    {
+      "id": "contracts4tshirts",
+      "name": "Smart Contracts For Free T-Shirts",
+      "link": "https://github.com/digital-asset/contracts-for-tshirts",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Ognjen Maric",
+      "description": "Write DAML smart contracts to help restore the world of free T-shirts that we all know and love"
+    },
+    {
+      "id": "grpc-native",
+      "name": "gRPC Native",
+      "link": "https://github.com/haskell-grpc-native/",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Lucas DiCioccio",
+      "description": "Improve grpc-native (docs, CI, features, perf, tests, benchs) one tiny step at a time."
+    },
+    {
+      "id": "distributed-dataset",
+      "name": "distributed-dataset",
+      "link": "https://github.com/utdemir/distributed-dataset",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Utku Demir",
+      "description": "A distributed data processing framework in Haskell, powered by -XStaticPointers."
+    },
+    {
+      "id": "smos",
+      "name": "Smos",
+      "link": "https://github.com/NorfairKing/smos/",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Tom Sydney Kerckhove, syd@cs-syd.eu",
+      "description": "A comprehensive self-management system. Org-mode minus emacs plus Haskell"
+    },
+    {
+      "id": "curry-language-server",
+      "name": "Curry Language Server",
+      "link": "https://github.com/fwcd/curry-language-server.git",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Fredrik Wieczerkowski",
+      "description": "An IDE-backend for the Haskell-like functional logic language Curry"
+    },
+    {
+      "id": "toplevelselectors",
+      "name": "NoToplevelSelectors GHC Extension",
+      "link": "https://github.com/ghc-proposals/ghc-proposals/pull/160",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Simon @reactormonk Hafner",
+      "description": "Implement the NoToplevelSelectors GHC extension. It's been sketched out, and I already have some feedback from an earlier iteration."
+    },
+    {
+      "id": "dhall",
+      "name": "Dhall configuration language",
+      "link": "https://dhall-lang.org",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Gabriel Gonzalez",
+      "description": "Improve the Haskell implementation of Dhall, especially issues with the ZuriHac label"
+    },
+    {
+      "id": "arduino-copilot",
+      "name": "arduino-copilot",
+      "link": "http://hackage.haskell.org/package/arduino-copilot",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Joey Hess",
+      "description": "Arduino programming in haskell using the Copilot stream DSL. Stop by to play with it and your Arduino, or to hack on any of its TODO items."
+    },
+    {
+      "id": "mutablefields",
+      "name": "Mutable Constructor Fields GHC Extension",
+      "link": "https://github.com/ghc-proposals/ghc-proposals/pull/8",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Ryan Yates",
+      "description": "I have implemented mutable constructor fields in the context of IO and STM for my thesis and I'm working on bringing that to GHC head.  I'm also looking to explore uses of the feature to improve performance of libraries and simplify code."
+    },
+    {
+      "id": "haskell-editor-setup",
+      "name": "Haskell Editor Setup",
+      "link": "https://github.com/fairy-tale-agi-solutions/haskell-editor-setup#haskell-editor--ide-setup",
+      "contributor level": {
+        "beginner": false,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Razvan Flavius Panda",
+      "description": "GUI application for easy installation of Haskell editors on all major operating systems."
+    },
+    {
+      "id": "gadoc",
+      "name": "Gadoc",
+      "link": "https://github.com/smatting/gadoc",
+      "contributor level": {
+        "beginner": true,
+        "intermediate": true,
+        "advanced": true
+      },
+      "contact": "Stefan Matting",
+      "description": "Gadoc is a package docs browser for Haskell"
+    }
+  ]

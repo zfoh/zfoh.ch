@@ -42,9 +42,6 @@ h3 {
 /*******************************************************************************
  * Content */
 
-main {
-}
-
 section {
   padding: 0px 6px 36px 6px;
   max-width: 768px;
@@ -161,10 +158,29 @@ p {
 }
 
 .track {
-  margin: 4px;
-  padding: 8px;
+  margin: 2px;
+  padding: 18px;
+  border-radius: 6px;
   background-color: #419c75;
   text-align: left;
+}
+
+.track-header {
+  display: flex;
+  align-items:center;
+}
+
+.track-header h3 {
+  margin: auto;
+  flex-grow: 1;
+}
+
+.track-icon {
+  /* vertical-align:middle; */
+  margin-right: 8px;
+  /* margin-bottom: 8px; */
+  /* float: left; */
+  height: 50px;
 }
 
 @media (min-width: 768px) {
@@ -172,7 +188,7 @@ p {
     flex-direction: row;
   }
   .track {
-    width: calc(50% - 24px);
+    width: calc(50% - 40px);
   }
 }
 

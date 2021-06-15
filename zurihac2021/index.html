@@ -196,26 +196,28 @@
 
 <h1 id="program">___PROGRAM___</h1>
 
-<div id="schedule-description" style="margin-top: 1em; margin-bottom: 1em;">
-  There is also a public
-  <a href="https://calendar.google.com/calendar/embed?src=208isgf6m89473jiuk2pqme97g%40group.calendar.google.com">
-    Google Calendar
-  </a>
-  that you can use.
-</div>
+<section>
+  <div id="schedule-description" style="margin-top: 1em; margin-bottom: 1em;">
+    Here is also a public
+    <a href="https://calendar.google.com/calendar/embed?src=208isgf6m89473jiuk2pqme97g%40group.calendar.google.com">
+      Google Calendar
+    </a>
+    that you can use.
+  </div>
 
-<script type="text/JavaScript">
-  document.getElementById("schedule-description").innerHTML +=
+  <script type="text/JavaScript">
+    document.getElementById("schedule-description").innerHTML +=
     " Schedule is displayed in your browser's timezone (" +
     Intl.DateTimeFormat().resolvedOptions().timeZone + ").";
-</script>
+  </script>
+</section>
 
 <div class="inverted">
   <div class="schedule" id="schedule">
     <table>
       <tr><th>Start                    </th><th>End                      </th><th>Kind    </th><th>Link                        </th><th>Title</th></tr>
       <tr><td>2021-06-18T18:00:00+02:00</td><td>2021-06-18T19:30:00+02:00</td><td>talk    </td><td>#speaker-john-hughes        </td><td>Opening &amp; Talk by John Hughes</td></tr></tr>
-      <tr><td>2021-06-18T19:45:00+02:00</td><td>2021-06-18T20:45:00+02:00</td><td>partner </td><td>                            </td><td>Digital Asset: Haskell in the industry, DAML, and Q&amp;A</td></tr></tr>
+      <tr><td>2021-06-18T19:45:00+02:00</td><td>2021-06-18T20:45:00+02:00</td><td>partner </td><td>                            </td><td>Digital Asset: Haskell in the industry, DAML, Q&amp;A</td></tr></tr>
 
       <tr><td>2021-06-19T10:00:00+02:00</td><td>2021-06-19T11:15:00+02:00</td><td>talk    </td><td>#speaker-ollie-charles      </td><td>Talk by Ollie Charles</td></tr></tr>
       <tr><td>2021-06-19T11:30:00+02:00</td><td>2021-06-19T12:30:00+02:00</td><td>partner </td><td>                            </td><td>Fretlink: Fun haskell for regular stuff, Q&amp;A</td></tr></tr>
@@ -229,7 +231,9 @@
       <tr><td>2021-06-19T19:30:00+02:00</td><td>2021-06-19T21:00:00+02:00</td><td>advanced</td><td>#unison-workshop            </td><td>Unison Track</td></tr></tr>
 
       <tr><td>2021-06-20T10:00:00+02:00</td><td>2021-06-20T11:15:00+02:00</td><td>talk    </td><td>#speaker-veronika-romashkina</td><td>Talk by Veronika Romashkina</td></tr></tr>
-      <tr><td>2021-06-20T12:00:00+02:00</td><td>2021-06-20T13:00:00+02:00</td><td>partner </td><td>                            </td><td>Partner block - Serokell</td></tr></tr>
+      <tr><td>2021-06-20T11:15:00+02:00</td><td>2021-06-20T12:00:00+02:00</td><td>advanced </td><td>#serokell-track            </td><td>GHC: Dependency Analysis of Haskell Declarations</td></tr></tr>
+      <tr><td>2021-06-20T12:00:00+02:00</td><td>2021-06-20T13:00:00+02:00</td><td>advanced </td><td>#serokell-track            </td><td>How to make the most of servant</td></tr></tr>
+      <tr><td>2021-06-20T13:00:00+02:00</td><td>2021-06-20T15:00:00+02:00</td><td>beginner</td><td>#mob-programming            </td><td>Mob Programming</td></tr></tr>
       <tr><td>2021-06-20T16:00:00+02:00</td><td>2021-06-20T17:30:00+02:00</td><td>beginner</td><td>#beginner-track             </td><td>Beginner Track</td></tr></tr>
       <tr><td>2021-06-20T14:00:00+02:00</td><td>2021-06-20T17:00:00+02:00</td><td>advanced</td><td>#advanced-track             </td><td>Advanced Track</td></tr></tr>
       <tr><td>2021-06-20T18:00:00+02:00</td><td>2021-06-20T19:15:00+02:00</td><td>talk    </td><td>#speaker-sandy-maguire      </td><td>Talk by Sandy Maguire</td></tr></tr>
@@ -385,11 +389,15 @@
     </div>
 
     <div class="track">
-      <h3 id="ihp-workshop">IHP workshop</h3>
+      <div class="track-header">
+        <!-- <img src="/images/zurihac2021/ihp.svg" class="track-icon"> -->
+        <h3 id="ihp-workshop">IHP workshop</h3>
+      </div>
       <p>
-        The <a href="https://ihp.digitallyinduced.com/">IHP web framework</a> is an
-        up-and-coming Haskell web framework that has been compared to Ruby-on-Rails. It has
-        been received with a lot of excitement, since it comes with highly polished tools
+        The <a href="https://ihp.digitallyinduced.com/">IHP web framework</a> is a really cool
+        Haskell web framework combines the productivity of Ruby-on-Rails with the performance and robustness
+        of Haskell. The community around it is growing really fast,
+        in part because it comes with highly polished tools
         and doesn't need deep technical knowledge to build useful websites very quickly.
       </p>
       <p>
@@ -419,12 +427,14 @@
           <a href="https://youtu.be/RknM0j138PE">Haskell and InfoSec</a>
         </li>
       </ul>
-
     </div>
 
     <div class="track">
-      <h3 id="unison-workshop">Unison workshop</h3>
-      <p>
+      <div class="track-header">
+        <img src="/images/s43/unison.svg" class="track-icon">
+        <h3 id="unison-workshop">Unison workshop</h3>
+      </div>
+      <p style="clear:both">
         Unison is an exciting new programming language that shares Haskell's syntax
         (in addition to being implemented in it).
         The big ideas in Unison are content-addressable code and a focus on creating a language
@@ -440,8 +450,57 @@
       </p>
     </div>
 
-  </div>
+    <div class="track">
+      <h3 id="serokell-track">Intermediate Track</h3>
+      <p>
+        This year year we're delighted to have <a href="https://serokell.io/">Serokell</a>
+        present two topics:
 
+        <ul>
+          <li>
+            Dependency Analysis of Haskell Declarations in GHC.
+          </li>
+          <li>
+            How to make the most of servant.
+          </li>
+        </ul>
+      <p>
+        The servant talk is geared towards industrial practicioners, so please don't hesitate to join
+        if you're excited about practical applications but don't consider yourself an expert.
+      </p>
+    </div>
+
+
+    <div class="track">
+      <div class="track-header">
+        <img src="/images/zurihac2021/angry-lambda.png" class="track-icon">
+        <h3 id="mob-programming">Mob Programming : Angry Lambdas</h3>
+      </div>
+      <div>
+        <p>
+          By <a href="https://twitter.com/akhesaCaro">Caroline Gaudreau</a> of <a href="https://tech.fretlink.com/">Fretlink</a>
+          <br>
+          and <a href="https://twitter.com/gael_deest">Gaël Deest</a> of <a href="https://www.tweag.io/">Tweag</a>
+        </p>
+        <p>
+          Collectively implement a small Angry Birds clone in Haskell using the Gloss library
+          for graphics and user interaction, and the Chiphunk library for physics simulation!
+        </p>
+        <p>
+          This workshop is targeted at beginners with a basic understanding of Haskell.
+          You only need to know algebraic datatypes, pattern-matching, and a bit of IO.
+        </p>
+        <p>
+          Note: This is a mob programming event: participants will take turn at the (virtual) keyboard, while listening to suggestions and comments from the rest of the crowd.
+        </p>
+        <p>
+          To participate, you will need <a href="https://code.visualstudio.com/">VSCode</a>
+          with the <a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">LiveShare</a> extension,
+          install these before joining the session.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="inverted">

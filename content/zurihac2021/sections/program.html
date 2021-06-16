@@ -215,22 +215,85 @@
     <div class="track">
       <h3 id="advanced-track">Advanced Track</h3>
       <p>
-        Similar to last year, we have the privilege to get advanced Haskell training from
-        our friends at <a href="https://www.well-typed.com/">Well-Typed</a>. This will take
-        the form of two independent sessions, distributed over the course of two days.
+        Similar to last year, we have the privilege to get
+        advanced Haskell training from our friends at
+        <a href="https://www.well-typed.com/">Well-Typed</a>. This will take the
+        form of two independent sessions, distributed over the course of two
+        days.
       </p>
-      <p>
-        Watch this space for the announcement of the specific topics, or check out last year's
-        recordings for a taste:
-      </p>
-      <ul>
-        <li>
-          <a href="https://youtu.be/pwnrfREbhWY">Datatype-Generic Programming</a>
-        </li>
-        <li>
-          <a href="https://youtu.be/RknM0j138PE">Haskell and InfoSec</a>
-        </li>
-      </ul>
+      <div id="advanced-track-1" class="hidden">
+        <h4>Saturday: Optics in the abstract by Adam Gundry</h4>
+        <p class="hidden-show">
+          <a href="#advanced-track-1">show more...</a>
+        </p>
+        <div class="hidden-content">
+          <p>
+            Haskell programming often involves manipulating data structures.
+            Optics are a compositional abstraction representing "notions of
+            substructure" as first-class values.  For example, lenses capture
+            the notion of one data structure containing another, and there
+            are more general optics for read-only, write-only, optional or
+            repeated substructures.  Judicious use of optics can lead to
+            succinct, expressive code, yet optics also have a reputation of being
+            impenetrable.
+          </p>
+          <p>
+            In this workshop, we will explore optics-the-concept in general and
+            the optics library in particular.  This library provides interfaces
+            for defining, combining and using various kinds of optics.  Crucially,
+            these interfaces are abstract, so they can be understood without
+            reference to the underlying implementation.
+          </p>
+          <p>
+            We will also discuss how optics can help in addressing the limitations
+            of Haskell's record system, in conjunction with language extensions
+            such as DuplicateRecordFields, OverloadedLabels and the forthcoming
+            RecordDotSyntax and NoFieldSelectors.
+          </p>
+          <p>
+            Finally, we will use optics as a case study to reflect on library
+            design in Haskell.  How can we build libraries that capture powerful
+            concepts and yet remain easy to use by Haskellers with a wide range of
+            skill levels?
+          </p>
+          <p>
+            This workshop will be suitable for Haskell programmers with a
+            knowledge of basic Haskell concepts (polymorphic functions, data
+            types, type classes).  It does not require familiarity with advanced
+            type system features such as higher-rank types or type families.
+          </p>
+        </div>
+      </div>
+      <div id="advanced-track-2" class="hidden">
+        <h4>Sunday: Understanding memory usage with eventlog2html
+        and ghc-debug by Matthew Pickering and Ben Gamari</h4>
+        <p class="hidden-show">
+          <a href="#advanced-track-2">show more...</a>
+        </p>
+        <div class="hidden-content">
+          <p>
+            Profiling memory usage of applications has historically been a
+            difficult task, thankfully in recent years the profiling tools have
+            become more sophisticated and now it is quite easy to work out memory
+            usage issues, if you know how to ask the right question.
+          </p>
+          <p>
+            In this workshop, we will look at two profiling tools which can give
+            you both high and low level insight into the memory usage of your
+            application. Firstly, by using eventlog2html we will understand how to
+            get a high-level overview of your program's memory usage. Then using
+            these insights we will then learn how to use ghc-debug in order to
+            answer some more precise questions about memory usage.
+          </p>
+          <p>
+            The presentation will not require any advanced knowledge but we will
+            be delving into the internals so you should be comfortable with
+            that. The majority of the workshop will be given over to allowing
+            participants to experiment with the tools themselves on our toy
+            examples or their own projects.
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="track">

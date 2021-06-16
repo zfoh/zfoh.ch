@@ -73,6 +73,18 @@ p {
   text-align: center;
 }
 
+.hidden > .hidden-content {
+  display: none;
+}
+
+.hidden:target > .hidden-show {
+  display: none;
+}
+
+.hidden:target > .hidden-content {
+  display: inherit;
+}
+
 /*******************************************************************************
  * Content */
 

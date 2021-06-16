@@ -13,6 +13,6 @@ jobs:
       with:
         enable-stack: true
         stack-no-global: true
-    - run:
+    - run: |
         stack build --pedantic
         stack exec zfoh build

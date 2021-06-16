@@ -1,5 +1,11 @@
 on: [push]
-name: build
+
+# Only build and deploy the main branch.
+# on:
+#   push:
+#     branches:
+#     - master
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # or macOS-latest, or windows-latest
@@ -13,6 +19,9 @@ jobs:
       with:
         enable-stack: true
         stack-no-global: true
-    - run: |
-        stack build --pedantic
-        stack exec zfoh build
+    - run: stack build --pedantic
+    - run: stack exec zfoh build
+    - uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: _site

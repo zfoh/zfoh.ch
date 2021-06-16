@@ -1,0 +1,18 @@
+on: [push]
+name: build
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # or macOS-latest, or windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: ~/.stack
+        key: v1-${{ hashFiles('zfoh.cabal', 'stack.yaml', 'stack.yaml.lock') }}
+    - uses: haskell/actions/setup@v1
+      with:
+        enable-stack: true
+        stack-no-global: true
+    - run:
+        stack build --pedantic
+        stack exec zfoh build

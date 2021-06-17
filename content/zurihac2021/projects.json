@@ -550,5 +550,17 @@
     },
     "contact": "Tom Sydney Kerckhove",
     "description": "A comprehensive self-management system."
+  },
+  {
+    "id": "hmock",
+    "name": "HMock",
+    "link": "https://github.com/cdsmith/HMock",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Chris Smith",
+    "description": "Flexible mock testing framework for Haskell"
   }
 ]

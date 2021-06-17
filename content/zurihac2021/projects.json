@@ -538,5 +538,17 @@
     },
     "contact": "Tom Sydney Kerckhove",
     "description": "A comprehensive self-management system."
+  },
+  {
+    "id": "servant-util",
+    "name": "Servant-util",
+    "link": "https://github.com/serokell/servant-util",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Maxim Koltsov, Konstantin Ivanov",
+    "description": "Common Servant combinators like filtering, sorting and pagination, and their integration with database"
   }
 ]

@@ -276,18 +276,6 @@
     "description": "Tensors and neural networks in Haskell"
   },
   {
-    "id": "no",
-    "name": "No",
-    "link": "No",
-    "contributor level": {
-      "beginner": false,
-      "intermediate": false,
-      "advanced": true
-    },
-    "contact": "Santhoah kumar kabilan. S",
-    "description": "No"
-  },
-  {
     "id": "chrislain razafimahefa",
     "name": "Chrislain Razafimahefa",
     "link": null,

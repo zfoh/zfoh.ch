@@ -368,7 +368,7 @@
       "intermediate": true,
       "advanced": true
     },
-    "contact": "Mauro Bieg",
+    "contact": "Mauro Bieg, Albert Krewinkel",
     "description": "If you need to convert files from one markup format into another, pandoc is your swiss-army knife."
   },
   {
@@ -478,18 +478,6 @@
     },
     "contact": "Benjamin Gamari",
     "description": "It's a compiler"
-  },
-  {
-    "id": "pandoc",
-    "name": "pandoc",
-    "link": "https://pandoc.org",
-    "contributor level": {
-      "beginner": true,
-      "intermediate": true,
-      "advanced": true
-    },
-    "contact": "Albert Krewinkel",
-    "description": "Universal document converter"
   },
   {
     "id": "playground4",

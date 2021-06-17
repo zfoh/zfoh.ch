@@ -538,5 +538,17 @@
     },
     "contact": "Tom Sydney Kerckhove",
     "description": "A comprehensive self-management system."
+  },
+  {
+    "id": "strong-path",
+    "name": "StrongPath",
+    "link": "https://github.com/wasp-lang/strong-path",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Martin Sosic",
+    "description": "Haskell library for strongly typed file paths."
   }
 ]

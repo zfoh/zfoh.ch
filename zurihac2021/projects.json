@@ -1,0 +1,578 @@
+[
+  {
+    "id": "rel8",
+    "name": "rel8",
+    "link": "https://github.com/circuithub/rel8",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Ollie Charles",
+    "description": "A brand new DSL for querying PostgreSQL database. Built on top of Opaleye, with a goal to be familiar to Haskell programmers"
+  },
+  {
+    "id": "itihaas 2.0",
+    "name": "ITIHAAS 2.0",
+    "link": null,
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Ajinder Sandhu",
+    "description": null
+  },
+  {
+    "id": "fakedata",
+    "name": "fakedata",
+    "link": "https://github.com/fakedata-haskell/fakedata",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Sibi",
+    "description": "Haskell Library for producing quality fake data"
+  },
+  {
+    "id": "org2any",
+    "name": "org2any",
+    "link": "https://github.com/serhiip/org2any",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Serhii Pererva",
+    "description": "Simple CLI utility to sync .org items to various todo apps"
+  },
+  {
+    "id": "nuha",
+    "name": "nuha",
+    "link": "https://hackage.haskell.org/package/nuha",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Johannes Kropp",
+    "description": "Linear Algebra and Numerics"
+  },
+  {
+    "id": "disco",
+    "name": "Disco",
+    "link": "https://github.com/disco-lang/disco/",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Brent Yorgey",
+    "description": "Teaching language for FP + discrete mathematics."
+  },
+  {
+    "id": "two projects: naproche & koka (whichever people are interested in)",
+    "name": "Two projects: Naproche & Koka (whichever people are interested in)",
+    "link": "https://github.com/naproche/naproche & https://koka-lang.github.io/koka/doc/index.html",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Anton Lorenzen",
+    "description": "A natural language proof assistant & a functional programming language using fast reference counting"
+  },
+  {
+    "id": "mutable constructor fields",
+    "name": "Mutable Constructor Fields",
+    "link": "https://github.com/fryguybob/ghc/tree/wip/ryates%2Fmutable-fields-9",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Ryan Yates",
+    "description": "Working on implementing the mutable constructor fields proposal for GHC https://github.com/ghc-proposals/ghc-proposals/pull/8."
+  },
+  {
+    "id": "opaleye",
+    "name": "Opaleye",
+    "link": "https://www.youtube.com/watch?v=7gH54qdvySk",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Tom Ellis",
+    "description": "Opaleye postgres query library for Haskell"
+  },
+  {
+    "id": "karya",
+    "name": "karya",
+    "link": "https://ofb.net/~elaforge/karya/doc/overview.md.html",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Evan Laforge",
+    "description": "Music score writing and audio synthesis"
+  },
+  {
+    "id": "serokell",
+    "name": "Serokell",
+    "link": "http://serokell.io/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Roman Alterman",
+    "description": "R&D consulting"
+  },
+  {
+    "id": "electronic health records management as a service",
+    "name": "Electronic Health Records Management as a Service",
+    "link": "https://sites.google.com/view/electronichealthrecords/home",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Manu Sheel Gupta",
+    "description": "Enabling the Bottom of Pyramid through Health Records Management Services on the Cloud build using Reflex FRP framework, Health Quality Management Tools, Open Source Spreadsheet with Haskell server stack and Picture Archiving and Communication System. Remote Health Monitoring, Records Management, Quality Assurance and Early Covid Detection techniques using a software stack build with Glasgow Haskell Compiler."
+  },
+  {
+    "id": "servant-benchmark",
+    "name": "servant-benchmark",
+    "link": "https://github.com/3kyro/servant-benchmark",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Kyriakos Papachrysanthou",
+    "description": "Generate benchmark files from Servant APIs"
+  },
+  {
+    "id": "haskell katas",
+    "name": "Haskell Katas",
+    "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Reynaldo Cordero",
+    "description": "Learn to code by training."
+  },
+  {
+    "id": "stroked",
+    "name": "Stroked",
+    "link": "stroked",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Rikhhil jindal",
+    "description": "opsticals break down , invisible maze on walking flour"
+  },
+  {
+    "id": "lantern",
+    "name": "Lantern",
+    "link": "https://koldfront.dk/git/lantern/about/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Adam Sjøgren",
+    "description": "Lantern is an NNTP based engine for blogging - 80% done, missing the last 80%"
+  },
+  {
+    "id": "fei",
+    "name": "fei",
+    "link": "https://github.com/pierric/fei-nn",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Jiasen Wu",
+    "description": "write neural networks in mxnet with haskell"
+  },
+  {
+    "id": "cascade",
+    "name": "Cascade",
+    "link": "https://github.com/the-dr-lazy/cascade",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Mohammad Hasani",
+    "description": "A project management service with pure functional programming paradigm in the heart."
+  },
+  {
+    "id": "sarsi",
+    "name": "sarsi",
+    "link": "github.com/aloiscochard/sarsi",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Aloïs Cochard",
+    "description": "A universal quickfix toolkit and its protocol."
+  },
+  {
+    "id": "functional language interpreter/compiler",
+    "name": "Functional language interpreter/compiler",
+    "link": null,
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Tim Eichholz",
+    "description": "Based on lambda calculus, using CEK/CESK abstract machine"
+  },
+  {
+    "id": "livecoding & frp",
+    "name": "Livecoding & FRP",
+    "link": "https://github.com/turion/rhine",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Manuel Bärenz",
+    "description": "Learn Arrowized Functional Reactive Programming and help development with a universal livecoding library"
+  },
+  {
+    "id": "conferer",
+    "name": "conferer",
+    "link": "conferer.ludat.io",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Lucas David Traverso",
+    "description": "Library to manage configuration for apps"
+  },
+  {
+    "id": "hasktorch",
+    "name": "Hasktorch",
+    "link": "https://github.com/hasktorch/hasktorch",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Austin Huang",
+    "description": "Tensors and neural networks in Haskell"
+  },
+  {
+    "id": "no",
+    "name": "No",
+    "link": "No",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    },
+    "contact": "Santhoah kumar kabilan. S",
+    "description": "No"
+  },
+  {
+    "id": "chrislain razafimahefa",
+    "name": "Chrislain Razafimahefa",
+    "link": null,
+    "contributor level": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Chrislain Razafimahefa",
+    "description": null
+  },
+  {
+    "id": "ema",
+    "name": "Ema",
+    "link": "https://ema.srid.ca/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Sridhar Ratnakumar",
+    "description": "Static site generator library toolkit with hot reload"
+  },
+  {
+    "id": "massiv",
+    "name": "massiv",
+    "link": "https://github.com/lehins/massiv",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Alexey Kuleshevich",
+    "description": "High performance multi-dimensional array library"
+  },
+  {
+    "id": "fficxx",
+    "name": "fficxx",
+    "link": "https://github.com/wavewave/fficxx",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Ian-Woo Kim",
+    "description": "Automatic Haskell Foreign Function Interface (FFI) generator to C++"
+  },
+  {
+    "id": "drone",
+    "name": "Drone",
+    "link": "Drone project",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Anand palraj",
+    "description": "Drone"
+  },
+  {
+    "id": "stylish-haskell",
+    "name": "stylish-haskell",
+    "link": "https://github.com/haskell/stylish-haskell",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Pawel Szulc",
+    "description": null
+  },
+  {
+    "id": "ghcup",
+    "name": "GHCup",
+    "link": "https://gitlab.haskell.org/haskell/ghcup-hs",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Julian Ospald",
+    "description": "Haskell installer"
+  },
+  {
+    "id": "wasp",
+    "name": "Wasp",
+    "link": "https://wasp-lang.dev/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Matija Sosic",
+    "description": "A DSL for building web apps"
+  },
+  {
+    "id": "pandoc",
+    "name": "pandoc",
+    "link": "https://pandoc.org/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Mauro Bieg",
+    "description": "If you need to convert files from one markup format into another, pandoc is your swiss-army knife."
+  },
+  {
+    "id": "haskell-jsonnet",
+    "name": "haskell-jsonnet",
+    "link": "https://github.com/moleike/haskell-jsonnet",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Alexandre Moreno",
+    "description": "A compiler for the configuration language Jsonnet."
+  },
+  {
+    "id": "xmonad",
+    "name": "xmonad",
+    "link": "https://xmonad.org/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Tomáš Janoušek",
+    "description": "A dynamically tiling X11 window manager that is written and configured in Haskell."
+  },
+  {
+    "id": "heidi - tidy data in haskell",
+    "name": "heidi - tidy data in Haskell",
+    "link": "http://hackage.haskell.org/package/heidi",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Marco Zocca",
+    "description": "Bridging the gap between Haskell types and the dynamic world of dataframes."
+  },
+  {
+    "id": "form bakery",
+    "name": "Form Bakery",
+    "link": "https://drever.github.io/form-bakery/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Johannes Drever",
+    "description": "Laws of Forms is a book that straddles the boundary between mathematics and philosophy. The arithmetic and algebra from this book are implemented in the \"form bakery\". The material is presented in a literal programming style implemented with reflex-frp."
+  },
+  {
+    "id": "hout prover",
+    "name": "Hout prover",
+    "link": "https://github.com/ivanbakel/hout-prover",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Isaac van Bakel",
+    "description": "Haskell library for writing proofs which are Haskell code i.e. writing code using tactic functions in do-notation."
+  },
+  {
+    "id": "stylish-haskell",
+    "name": "stylish-haskell",
+    "link": "https://github.com/haskell/stylish-haskell",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Pawel Szulc",
+    "description": null
+  },
+  {
+    "id": "ramonglymn",
+    "name": "RamonGlymn",
+    "link": "https://adti.uz/category/adti-elonlari/",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "RamonGlymn",
+    "description": null
+  },
+  {
+    "id": "prodapi",
+    "name": "ProdAPI",
+    "link": "https://github.com/lucasdicioccio/prodapi",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Lucas DiCioccio",
+    "description": "A boilerplate for APIs that run need to run in a prod context (including metrics, healthchecks, etc.)"
+  },
+  {
+    "id": "ghc",
+    "name": "GHC",
+    "link": "https://ghc.haskell.org/",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Benjamin Gamari",
+    "description": "It's a compiler"
+  },
+  {
+    "id": "pandoc",
+    "name": "pandoc",
+    "link": "https://pandoc.org",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Albert Krewinkel",
+    "description": "Universal document converter"
+  },
+  {
+    "id": "playground4",
+    "name": "Playground4",
+    "link": "https://gitlab.com/dpwiz/playground4",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Alexander Bondarenko",
+    "description": "Double-A game engine"
+  },
+  {
+    "id": "haskell-fido2",
+    "name": "Haskell-fido2",
+    "link": "https://github.com/arianvp/haskell-fido2",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Arian van Putten",
+    "description": "Haskell library for FIDO2 / WebAuthn authentication standard"
+  },
+  {
+    "id": "darcslab",
+    "name": "darcslab",
+    "link": null,
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Jürgen Peters",
+    "description": "self hosting darcs repositories with an ssh user frontend"
+  },
+  {
+    "id": "ghc-wpc / external-stg / grin-compiler",
+    "name": "GHC-WPC / External-STG / GRIN-Compiler",
+    "link": "https://github.com/grin-compiler/ghc-whole-program-compiler-project",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Csaba Hruska",
+    "description": "GHC-WPC is an extended GHC that exports the STG IR (.modpak) for the compiled modules and linker metadata (.ghc_stgapp) at application link time."
+  },
+  {
+    "id": "smos",
+    "name": "Smos",
+    "link": "https://smos.online",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Tom Sydney Kerckhove",
+    "description": "A comprehensive self-management system."
+  }
+]

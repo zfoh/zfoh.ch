@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZuriHac 2021</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="/css/zurihac2021.css?v=6" />
+
+  <meta property="og:title" content="ZuriHac 2021" />
+  <meta property="og:description"
+    content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»" />
+  <meta property="og:image" content="https://zfoh.ch/images/zurihac2021/header.png" />
+
+  <meta name="twitter:title" content="ZuriHac 2021" />
+  <meta name="twitter:description"
+    content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»" />
+  <meta name="twitter:image" content="https://zfoh.ch/images/zurihac2021/header.png" />
+
+  <meta name="twitter:card" content="summary" />
+  <style>
+    :root {
+      --ani-total-duration: 60s;
+      --floater-y: 0;
+      --floater-z: 1;
+    }
+    @media screen and (max-width: 768px) {
+      :root{
+        --ani-total-duration: 30s;
+      }
+    }
+
+    header {
+      position: relative;
+      height: 400px;
+      overflow-x: hidden;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-image: url("/images/zurihac2021/header-fill.svg");
+      background-size: auto 400px;
+      background-repeat: repeat-x;
+      background-position: center;
+    }
+
+    .floater {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      animation: moving calc(var(--ani-total-duration) / var(--floater-z)) linear infinite both;
+    }
+
+    .floater .logo,
+    .floater .cloud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .floater .cloud {
+      animation: cloud-frames var(--ani-total-duration) infinite both;
+    }
+    .floater .logo {
+      animation: logo-frames var(--ani-total-duration) infinite both;
+    }
+
+    .floater.cloud-a,
+    .floater.cloud-a .logo,
+    .floater.cloud-a .cloud {
+      animation-delay: 0s;
+      --floater-z: 1;
+      --floater-y: 40px;
+    }
+
+    .floater.cloud-b,
+    .floater.cloud-b .logo,
+    .floater.cloud-b .cloud {
+      animation-delay: calc(var(--ani-total-duration) / -5);
+      --floater-y: -100px;
+      --floater-z: 2;
+    }
+
+    .floater.cloud-c,
+    .floater.cloud-c .logo,
+    .floater.cloud-c .cloud {
+      animation-delay: calc(var(--ani-total-duration) / -3 * 2);
+      --floater-z: 3;
+      --floater-y: -50px;
+    }
+
+    @keyframes cloud-frames {
+      0% {   filter: blur( 0px); opacity: 1.0; }
+      20% {  filter: blur( 0px); opacity: 1.0; }
+      50% {  filter: blur(25px); opacity: 0.0; }
+      80% {  filter: blur( 0px); opacity: 1.0; }
+      100% { filter: blur( 0px); opacity: 1.0; }
+    }
+
+    @keyframes logo-frames {
+      0% {   filter: blur(25px); opacity: 0.0; }
+      10% {  filter: blur(25px); opacity: 0.0; }
+      45% {  filter: blur( 0px); opacity: 1.0; }
+      55% {  filter: blur( 0px); opacity: 1.0; }
+      90% {  filter: blur(25px); opacity: 0.0; }
+      100% { filter: blur(25px); opacity: 0.0; }
+    }
+
+    @keyframes moving {
+      0% {
+        transform: translate3d(-100%,var(--floater-y),0) scale(calc(0.5 * var(--floater-z)));
+      }
+      100% {
+        transform: translate3d(100vw,var(--floater-y),0) scale(calc(0.5 * var(--floater-z)));
+      }
+    }
+
+    .header-background, .header-foreground{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: auto 400px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .header-background {
+      background-image: url("/images/zurihac2021/header-background.svg");
+    }
+
+    .header-foreground {
+      background-image: url("/images/zurihac2021/header-foreground.svg");
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="header-background">
+    <div class="floater cloud-a">
+      <img src="/images/zurihac2021/cloud-a.svg" alt="abstract cloud" class="cloud">
+      <img src="/images/zurihac2021/cloud-logo.svg" alt="zurihac2021 logo" class="logo">
+    </div>
+    <img class="header-foreground">
+    <div class="floater cloud-b">
+      <img src="/images/zurihac2021/cloud-b.svg" alt="abstract cloud" class="cloud">
+      <img src="/images/zurihac2021/cloud-logo.svg" alt="zurihac2021 logo" class="logo">
+    </div>
+    <div class="floater cloud-c">
+      <img src="/images/zurihac2021/cloud-c.svg" alt="abstract cloud" class="cloud">
+      <img src="/images/zurihac2021/cloud-logo.svg" alt="zurihac2021 logo" class="logo">
+    </div>
+  </header>
+
+  <main>
+    <section>
+  <div style="height: 10px;"></div>
+  <h1>Projects</h1>
+  <div class="anchor" id="projects"></div>
+  <p>
+    This is the list of projects that attendees of ZuriHac 2021 are planning
+    to work on.  If any of these spark your interest, then you will be able to
+    join the project channel on Discord and hack away on it with other participants.
+  </p>
+  <p>
+    If you want to get your own project included, please add your project name and
+    description by
+    <a href="https://github.com/zfoh/zfoh.ch/edit/master/content/zurihac2021/projects.json">submitting a pull request here</a>.
+    You will get your very own project channel on our Discord server, and other people can join you.
+  </p>
+  <p>Click the bookmark icon to mark projects for later!</p>
+
+  <div style="text-align: left; margin-right: auto;">
+    <p style="margin-bottom:0.3em;">
+      <strong>Filter:</strong>
+    </p>
+    <div id='elm'></div>
+  </div>
+  <link href="projects/projects.css" type="text/css" rel="stylesheet">
+  <script src="projects/projects.js"></script>
+  <script src="projects/main.js"></script>
+</section>
+
+  </main>
+
+  <footer>
+    Copyright © 2018 - 2021 Zürich Friends of Haskell ·
+    <a href="https://github.com/zfoh/zfoh.ch">Source code available</a>
+    ·
+    <a href="/terms-and-conditions.html">Terms and Conditions</a>
+    ·
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <br>
+    Header image modified from <a href="https://openclipart.org/favs/306465/simple-nature-banner">artwork by j4p4n on
+    openclipart</a>.
+  </footer>
+</body>
+
+</html>

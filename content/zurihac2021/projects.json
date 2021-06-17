@@ -120,18 +120,6 @@
     "description": "Music score writing and audio synthesis"
   },
   {
-    "id": "serokell",
-    "name": "Serokell",
-    "link": "http://serokell.io/",
-    "contributor level": {
-      "beginner": true,
-      "intermediate": false,
-      "advanced": false
-    },
-    "contact": "Roman Alterman",
-    "description": "R&D consulting"
-  },
-  {
     "id": "electronic health records management as a service",
     "name": "Electronic Health Records Management as a Service",
     "link": "https://sites.google.com/view/electronichealthrecords/home",

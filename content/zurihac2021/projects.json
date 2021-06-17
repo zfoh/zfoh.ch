@@ -538,5 +538,17 @@
     },
     "contact": "Tom Sydney Kerckhove",
     "description": "A comprehensive self-management system."
+  },
+  {
+    "id": "unison",
+    "name": "Unison Language",
+    "link": "https://unisonweb.org",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Rúnar Bjarnason",
+    "description": "A friendly programming language from the future, based on the idea of content-addressed code. Hack on the compiler and codebase manager, written in Haskell, or on Unison libraries (written in Unison)."
   }
 ]

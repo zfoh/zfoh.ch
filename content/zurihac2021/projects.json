@@ -586,5 +586,17 @@
     },
     "contact": "Chris Smith",
     "description": "Flexible mock testing framework for Haskell"
+  },
+  {
+    "id": "haskell-taxonomer",
+    "name": "The Haskell Taxonomer",
+    "link": "https://gitlab.com/lysxia/haskell-taxonomer",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "contact": "Li-yao Xia",
+    "description": "A web app to visualize Haskell syntax. Written in Purescript."
   }
 ]

@@ -574,5 +574,17 @@
     },
     "contact": "Maxim Koltsov, Konstantin Ivanov",
     "description": "Common Servant combinators like filtering, sorting and pagination, and their integration with database"
+  },
+  {
+    "id": "hmock",
+    "name": "HMock",
+    "link": "https://github.com/cdsmith/HMock",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Chris Smith",
+    "description": "Flexible mock testing framework for Haskell"
   }
 ]

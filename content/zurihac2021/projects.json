@@ -12,6 +12,18 @@
     "description": "A brand new DSL for querying PostgreSQL database. Built on top of Opaleye, with a goal to be familiar to Haskell programmers"
   },
   {
+    "id": "ihp-guide",
+    "name": "IHP-Guide",
+    "link": "https://gitlab.com/fritzfeger/ihp-guide",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Fritz Feger",
+    "description": "Learn IHP, grow a repo with sample solutions"
+  },
+  {
     "id": "itihaas 2.0",
     "name": "ITIHAAS 2.0",
     "link": null,
@@ -72,16 +84,28 @@
     "description": "Teaching language for FP + discrete mathematics."
   },
   {
-    "id": "two projects: naproche & koka (whichever people are interested in)",
-    "name": "Two projects: Naproche & Koka (whichever people are interested in)",
-    "link": "https://github.com/naproche/naproche & https://koka-lang.github.io/koka/doc/index.html",
+    "id": "naproche",
+    "name": "Naproche",
+    "link": "https://github.com/naproche/naproche",
     "contributor level": {
       "beginner": false,
       "intermediate": true,
       "advanced": true
     },
     "contact": "Anton Lorenzen",
-    "description": "A natural language proof assistant & a functional programming language using fast reference counting"
+    "description": "A natural language proof assistant"
+  },
+  {
+    "id": "koka",
+    "name": "Koka",
+    "link": "https://koka-lang.github.io/koka/doc/index.html",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Anton Lorenzen",
+    "description": "A functional programming language using fast reference counting"
   },
   {
     "id": "mutable constructor fields",
@@ -228,8 +252,8 @@
     "description": "Based on lambda calculus, using CEK/CESK abstract machine"
   },
   {
-    "id": "livecoding & frp",
-    "name": "Livecoding & FRP",
+    "id": "rhine",
+    "name": "rhine",
     "link": "https://github.com/turion/rhine",
     "contributor level": {
       "beginner": true,
@@ -242,7 +266,7 @@
   {
     "id": "conferer",
     "name": "conferer",
-    "link": "conferer.ludat.io",
+    "link": "https://conferer.ludat.io",
     "contributor level": {
       "beginner": false,
       "intermediate": true,
@@ -262,18 +286,6 @@
     },
     "contact": "Austin Huang",
     "description": "Tensors and neural networks in Haskell"
-  },
-  {
-    "id": "chrislain razafimahefa",
-    "name": "Chrislain Razafimahefa",
-    "link": null,
-    "contributor level": {
-      "beginner": false,
-      "intermediate": false,
-      "advanced": false
-    },
-    "contact": "Chrislain Razafimahefa",
-    "description": null
   },
   {
     "id": "ema",
@@ -310,18 +322,6 @@
     },
     "contact": "Ian-Woo Kim",
     "description": "Automatic Haskell Foreign Function Interface (FFI) generator to C++"
-  },
-  {
-    "id": "drone",
-    "name": "Drone",
-    "link": "Drone project",
-    "contributor level": {
-      "beginner": true,
-      "intermediate": false,
-      "advanced": false
-    },
-    "contact": "Anand palraj",
-    "description": "Drone"
   },
   {
     "id": "stylish-haskell",
@@ -396,7 +396,7 @@
     "description": "A dynamically tiling X11 window manager that is written and configured in Haskell."
   },
   {
-    "id": "heidi - tidy data in haskell",
+    "id": "heidi",
     "name": "heidi - tidy data in Haskell",
     "link": "http://hackage.haskell.org/package/heidi",
     "contributor level": {
@@ -441,18 +441,6 @@
       "advanced": false
     },
     "contact": "Pawel Szulc",
-    "description": null
-  },
-  {
-    "id": "ramonglymn",
-    "name": "RamonGlymn",
-    "link": "https://adti.uz/category/adti-elonlari/",
-    "contributor level": {
-      "beginner": false,
-      "intermediate": false,
-      "advanced": false
-    },
-    "contact": "RamonGlymn",
     "description": null
   },
   {
@@ -513,10 +501,10 @@
       "advanced": true
     },
     "contact": "Jürgen Peters",
-    "description": "self hosting darcs repositories with an ssh user frontend"
+    "description": "Self hosting darcs repositories with an ssh user frontend"
   },
   {
-    "id": "ghc-wpc / external-stg / grin-compiler",
+    "id": "ghc-wpc",
     "name": "GHC-WPC / External-STG / GRIN-Compiler",
     "link": "https://github.com/grin-compiler/ghc-whole-program-compiler-project",
     "contributor level": {
@@ -550,5 +538,29 @@
     },
     "contact": "Rúnar Bjarnason",
     "description": "A friendly programming language from the future, based on the idea of content-addressed code. Hack on the compiler and codebase manager, written in Haskell, or on Unison libraries (written in Unison)."
+  },
+  {
+    "id": "strong-path",
+    "name": "StrongPath",
+    "link": "https://github.com/wasp-lang/strong-path",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Martin Sosic",
+    "description": "Haskell library for strongly typed file paths."
+  },
+  {
+    "id": "haskell-language-server",
+    "name": "haskell-language-server",
+    "link": "https://github.com/haskell/haskell-language-server",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Javier Neira Sánchez",
+    "description": "Successor of ghcide & haskell-ide-engine. One IDE to rule them all."
   }
 ]

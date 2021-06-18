@@ -12,6 +12,18 @@
     "description": "A brand new DSL for querying PostgreSQL database. Built on top of Opaleye, with a goal to be familiar to Haskell programmers"
   },
   {
+    "id": "ihp-guide",
+    "name": "IHP-Guide",
+    "link": "https://gitlab.com/fritzfeger/ihp-guide",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Fritz Feger",
+    "description": "Learn IHP, grow a repo with sample solutions"
+  },
+  {
     "id": "itihaas 2.0",
     "name": "ITIHAAS 2.0",
     "link": null,

@@ -598,5 +598,17 @@
     },
     "contact": "Li-yao Xia",
     "description": "A web app to visualize Haskell syntax. Written in Purescript."
-  }
+  },
+  {
+    "id": "fir",
+    "name": "FIR: graphics shader EDSL",
+    "link": "https://gitlab.com/sheaf/fir",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Sam Derbyshire",
+    "description": "A Haskell EDSL for writing graphics shaders that run on Vulkan."
+  }  
 ]

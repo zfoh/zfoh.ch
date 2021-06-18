@@ -526,5 +526,17 @@
     },
     "contact": "Tom Sydney Kerckhove",
     "description": "A comprehensive self-management system."
+  },
+  {
+    "id": "haskell-language-server",
+    "name": "haskell-language-server",
+    "link": "https://github.com/haskell/haskell-language-server",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Javier Neira Sánchez",
+    "description": "Successor of ghcide & haskell-ide-engine. One IDE to rule them all."
   }
 ]

@@ -562,5 +562,17 @@
     },
     "contact": "Javier Neira Sánchez",
     "description": "Successor of ghcide & haskell-ide-engine. One IDE to rule them all."
+  },
+  {
+    "id": "servant-util",
+    "name": "Servant-util",
+    "link": "https://github.com/serokell/servant-util",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Maxim Koltsov, Konstantin Ivanov",
+    "description": "Common Servant combinators like filtering, sorting and pagination, and their integration with database"
   }
 ]

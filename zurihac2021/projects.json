@@ -588,9 +588,9 @@
     "description": "Flexible mock testing framework for Haskell"
   },
   {
-    "id": "haskell-taxonomer",
-    "name": "The Haskell Taxonomer",
-    "link": "https://gitlab.com/lysxia/haskell-taxonomer",
+    "id": "haskell-syntaxonomer",
+    "name": "The Haskell Syntaxonomer",
+    "link": "https://gitlab.com/lysxia/haskell-syntaxonomer",
     "contributor level": {
       "beginner": true,
       "intermediate": true,

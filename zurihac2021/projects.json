@@ -608,7 +608,7 @@
     "intermediate": false,
     "advanced": false
   },
-  "contact": "Pedro Jaramillo, Saatvik Shah"
+  "contact": "Pedro Jaramillo, Saatvik Shah",
   "description": "CLI app to merge and manipulate timestamped log files."
 }
 ]

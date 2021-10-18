@@ -57,35 +57,35 @@ section {
 }
 
 details {
-  border: 4px solid #0034ff;
+  border: 4px solid blue;
   background-color: #f0f3ff;
   margin: 1em auto 1em auto;
 }
 
 details > summary {
-  border: 8px solid #0034ff;
+  border: 8px solid blue;
   padding: .5em;
   font-weight: bold;
   font-family: monospace;
   font-size: 20px;
-  background: #0034ff;
-  position: relative;
+  background: blue;
   color: white;
+
+  background-image: url("/images/zurihac2022/ui-maximize.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
 }
 
-details > summary::before {
-  content: "🗖";
-  right: .5em;
-  position: absolute;
+details[open] > summary {
+  background-image: url("/images/zurihac2022/ui-minimize.svg");
 }
 
-details[open] > summary::before {
-  content: "🗕";
-}
-
-details > summary::marker {
+details > summary::marker,
+details > summary::-webkit-details-marker {
   /* This is always to the left of the "title" so we want to hide it. */
   content: none;
+  display: none;
 }
 
 details > .content {

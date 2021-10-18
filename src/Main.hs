@@ -72,6 +72,16 @@ main = hakyll $ do
             loadAndApplyTemplate "templates/zurihac2021.html" zfohContext
 
     ----------------------------------------------------------------------------
+    -- ZuriHac 2022 (should we DRY this up?).
+
+    match "content/zurihac2022/index.html" $ do
+        route dropContentRoute
+        compile $
+            getResourceBody >>=
+            applyAsTemplate sectionContext >>=
+            loadAndApplyTemplate "templates/zurihac2022.html" zfohContext
+
+    ----------------------------------------------------------------------------
     -- Projects page.
 
     let projectsStaticFiles =

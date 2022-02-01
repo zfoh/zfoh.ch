@@ -76,6 +76,13 @@ section {
   --widget-text: white;
 }
 
+.widget-dark2 {
+  --widget-border-color: #d9b38b;
+  --widget-border-text: #1e0404;
+  --widget-color: #592222;
+  --widget-text: #f7f2dc;
+}
+
 details {
   border: 4px solid var(--widget-border-color);
   background-color: var(--widget-color);

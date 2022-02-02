@@ -47,6 +47,10 @@ header {
   font-size: 60px;
 }
 
+header img {
+  max-width: 100%;
+}
+
 h1 {
   font-size: 40px;
 }

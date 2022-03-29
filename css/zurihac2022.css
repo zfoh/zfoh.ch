@@ -68,23 +68,26 @@ section {
 
 :root {
   --widget-border-color: blue;
-  --widget-border-text: white;
   --widget-color: #f0f3ff;
   --widget-text: black;
 }
 
 .widget-dark1 {
   --widget-border-color: #33757b;
-  --widget-border-text: white;
   --widget-color: #2f482a;
   --widget-text: white;
 }
 
 .widget-dark2 {
-  --widget-border-color: #d9b38b;
-  --widget-border-text: #1e0404;
-  --widget-color: #592222;
-  --widget-text: #f7f2dc;
+  --widget-border-color: #592222;
+  --widget-color: #7a3939;
+  --widget-text: white;
+}
+
+.widget-light1 {
+  --widget-border-color: #72337b;
+  --widget-color: #fde2ff;
+  --widget-text: black;
 }
 
 details {
@@ -101,7 +104,7 @@ details > summary {
   font-family: monospace;
   font-size: 20px;
   background: var(--widget-border-color);
-  color: var(--widget-border-text);
+  color: white;
 
   background-image: url("/images/zurihac2022/ui-maximize.svg");
   background-position: right;

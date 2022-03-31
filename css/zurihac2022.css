@@ -90,6 +90,12 @@ section {
   --widget-text: black;
 }
 
+.widget-light2 {
+  --widget-border-color: #179191;
+  --widget-color: #c9ffff;
+  --widget-text: black;
+}
+
 details {
   border: 4px solid var(--widget-border-color);
   background-color: var(--widget-color);

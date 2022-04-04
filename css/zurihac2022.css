@@ -288,7 +288,7 @@ footer {
 
 .partners {
   margin: 60px auto 60px auto;
-  background-image: radial-gradient(closest-side, #fffc 40%, #fff0 100%);
+  background-image: radial-gradient(closest-side, #fffc 60%, #fff0 100%);
 }
 
 .partners img {

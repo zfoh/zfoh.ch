@@ -9,7 +9,8 @@ import qualified Data.List.NonEmpty              as NonEmpty
 import           Data.Ord                        (Down (..))
 import qualified Data.Text                       as T
 import qualified Data.Time                       as Time
-import qualified Network.HTTP.Simple             as Http
+import qualified Network.HTTP.Client             as Http
+import qualified Network.HTTP.Client.TLS         as Http
 import qualified Text.Blaze.Html.Renderer.String as H
 import qualified Text.Blaze.Html5                as H
 import qualified Text.Blaze.Html5.Attributes     as HA
@@ -53,7 +54,9 @@ instance Aeson.FromJSON Meetup where
 
 loadMeetups :: IO (NonEmpty.NonEmpty Meetup)
 loadMeetups = do
-    rsp     <- Http.getResponseBody <$> Http.httpLbs url
+    manager <- Http.newTlsManager
+    req     <- Http.parseRequest url
+    rsp     <- Http.responseBody <$> Http.httpLbs req manager
     meetups <- either fail return (Aeson.eitherDecode rsp)
     let (past, upcoming) = List.partition ((== Past) . mStatus) meetups
         list             =
@@ -64,7 +67,7 @@ loadMeetups = do
         []       -> fail "No meetups found"
         (x : xs) -> return $ x NonEmpty.:| xs
   where
-    url = "http://api.meetup.com/HaskellerZ/events?page=10&status=upcoming,past&desc=true"
+    url = "https://api.meetup.com/HaskellerZ/events?page=10&status=upcoming,past&desc=true"
 
 renderMeetups :: NonEmpty.NonEmpty Meetup -> H.Html
 renderMeetups (m0 NonEmpty.:| meetups) =

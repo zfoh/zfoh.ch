@@ -1,0 +1,374 @@
+[
+  {
+    "contact": "Ilona Prikule",
+    "id": "tzbot",
+    "name": "tzbot",
+    "link": "https://github.com/serokell/tzbot",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Slack bot that detects messages with references to some point in time and converts them to your timezone."
+  },
+  {
+    "contact": "Wolfgang Jeltsch",
+    "id": "pomelo",
+    "name": "Pomelo",
+    "link": "https://temporal-pomelo.com/",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "A flavor of functional reactive programming where strong typing involves temporal aspects"
+  },
+  {
+    "contact": "Tomáš Janoušek",
+    "id": "xmonad",
+    "name": "xmonad",
+    "link": "https://xmonad.org/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "A dynamically tiling X11 window manager that is written and configured in Haskell."
+  },
+  {
+    "contact": "Albert Krewinkel",
+    "id": "pandoc",
+    "name": "pandoc",
+    "link": "https://pandoc.org",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "The universal document converter"
+  },
+  {
+    "contact": "Philip Patsch",
+    "id": "improve-local-hoogle-setup",
+    "name": "Improve local Hoogle setup",
+    "link": null,
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": null
+  },
+  {
+    "contact": "Simeon Krastnikov",
+    "id": "edsl-for-opengl",
+    "name": "EDSL for OpenGL",
+    "link": null,
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "The goal of this (early-stage) project is to distill the entire OpenGL rendering pipeline into a concise but powerful typed EDSL. It thereby aims to expose an elegant, functional approach to graphics programming that will be interesting to both the Haskell and OpenGL communities (and especially useful to those wanting to explore or learn more about graphics but find the boilerplate overhead too restrictive). I am actively looking for others to collaborate or exchange ideas with, so please reach out to me if interested!"
+  },
+  {
+    "contact": "Alexander Biehl",
+    "id": "tie",
+    "name": "Tie",
+    "link": "https://github.com/scarf-sh/tie",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Tie generates Haskell data types and server definitions from OpenAPI 3 specs"
+  },
+  {
+    "contact": "Aloïs Cochard",
+    "id": "koala",
+    "name": "koala",
+    "link": "https://github.com/koala-lang",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "What if we had a tool like `jq` but that works also for (semi)structured binary data and support dozens of different format? Let's build the \"pandoc\" of data processing."
+  },
+  {
+    "contact": "Mario Blažević",
+    "id": "language-haskell",
+    "name": "language-haskell",
+    "link": "https://github.com/blamario/language-haskell",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "A modular standalone parser / pretty-printer for Haskell with GHC extensions"
+  },
+  {
+    "contact": "Jens Petersen ",
+    "id": "hwk",
+    "name": "hwk",
+    "link": "https://GitHub.com/juhp/hwk",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "functional shell text-processing tool"
+  },
+  {
+    "contact": "Maksymilian Brodowicz",
+    "id": "optim",
+    "name": "Optim",
+    "link": "https://optim.finance/",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "Asset Management and Yield Optimization on the Cardano Blockchain"
+  },
+  {
+    "contact": "Dominic Steinitz",
+    "id": "random-fu",
+    "name": "random-fu",
+    "link": "https://github.com/haskell-numerics/random-fu",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Improve representations, remove incoherentinstances etc"
+  },
+  {
+    "contact": "Jamie Bertram",
+    "id": "purescript-reactive-effect",
+    "name": "purescript-reactive-effect",
+    "link": "https://github.com/jhbertra/purescript-reactive-effect",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "I am working on an FRP library for PureScript. I am looking for people willing to help develop features, as well as people who want to hack an application together with it."
+  },
+  {
+    "contact": "Hécate Moonlight",
+    "id": "haskell-docs-zurich-panic",
+    "name": "Haskell Docs: Zurich Panic",
+    "link": "https://haskell-haddock.readthedocs.io/en/latest/markup.html",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "description": "During this week-end, you'll have the opportunity to sit with other folks interested in improving the state of documentation in our ecosystem. You'll get to learn the Haddock markup language, what are the best practices to create reliable documentation, and the kind of stuff they only teach you in creative writing classes!"
+  },
+  {
+    "contact": "Tony Zorman",
+    "id": "xmonad",
+    "name": "xmonad",
+    "link": "https://xmonad.org/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "A dynamically tiling X11 window manager that is written and configured in Haskell!"
+  },
+  {
+    "contact": "ben senn",
+    "id": "cardano-plutus",
+    "name": "cardano plutus",
+    "link": "https://github.com/jules-hedges/open-games-hs",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "description": "integrating real time data feeds from cardano blockchain smart contracts (written in Haskell DSL language Plutus) into P. Zahn's model for open games https://www.philipp-zahn.com/research/"
+  },
+  {
+    "contact": "Simon Shine",
+    "id": "hs-jq",
+    "name": "hs-jq",
+    "link": "https://github.com/sshine/hs-jq",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Implementing jq in Haskell"
+  },
+  {
+    "contact": "arxbetAbusy",
+    "id": "arxbetabusy",
+    "name": "arxbetAbusy",
+    "link": "http://arabixbet.com/",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": false
+    },
+    "description": null
+  },
+  {
+    "contact": "Reynaldo Cordero",
+    "id": "haskell-katas",
+    "name": "Haskell Katas",
+    "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Learn to code by training."
+  },
+  {
+    "contact": "Ollie Charles",
+    "id": "rel8",
+    "name": "rel8",
+    "link": "https://rel8.readthedocs.io",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Rel8 is a Haskell library for interacting with PostgreSQL databases, built on top of the fantastic Opaleye library. I'd like to improve the onborading experience with a docs effort, and to better understand what people want from the library."
+  },
+  {
+    "contact": "Janus Troelsen",
+    "id": "cabal-improvements",
+    "name": "cabal improvements",
+    "link": "cabal.readthedocs.io",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": false
+    },
+    "description": "i don't know which exact improvement to work on but i'll talk to someone and find out"
+  },
+  {
+    "contact": "Tom Sydney Kerckhove",
+    "id": "smos",
+    "name": "Smos",
+    "link": "https://smos.online",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "A comprehensive self-management system in a TUI"
+  },
+  {
+    "contact": "IC Rainbow ",
+    "id": "keid",
+    "name": "Keid",
+    "link": "keid.haskell-game.dev",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Modern AA game engine"
+  },
+  {
+    "contact": "Eric Torreborre",
+    "id": "registry-aeson",
+    "name": "registry-aeson",
+    "link": "https://github.com/etorreborre/registry",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "registry can be used as programmable type classes. I want to extend it to Aeson encoders and decoders. This requires some Template Haskell or Generics-fu, or better ideas that I didn't have :-)"
+  },
+  {
+    "contact": "Julian Ospald",
+    "id": "ghcup",
+    "name": "GHCup",
+    "link": "https://gitlab.haskell.org/haskell/ghcup-hs/-/issues/198",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "GHCup TUI on windows (via ansi-terminal-game)"
+  },
+  {
+    "contact": "Adrian Sieber",
+    "id": "perspec",
+    "name": "Perspec",
+    "link": "https://github.com/feramhq/Perspec",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    },
+    "description": "Scriptable desktop app to correct the perspective of images"
+  },
+  {
+    "contact": "Alex Ionescu",
+    "id": "dynasty",
+    "name": "Dynasty",
+    "link": "https://github.com/aionescu/dynasty",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "Dynamically-typed purely functional language"
+  },
+  {
+    "contact": "Matthew Pickering",
+    "id": "ghc-debug",
+    "name": "ghc-debug",
+    "link": "https://gitlab.haskell.org/ghc/ghc-debug",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    },
+    "description": "ghc-debug allows users to perform precise heap analysis of their programs."
+  },
+  {
+    "contact": "Alexey Kuleshevich",
+    "id": "massiv",
+    "name": "Massiv",
+    "link": "https://github.com/lehins/massiv",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "Multi-dimensional array processing library"
+  },
+  {
+    "contact": "Las Safin",
+    "id": "waymonad",
+    "name": "Waymonad",
+    "link": "https://github.com/L-as/waymonad",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "XMonad but Wayland"
+  },
+  {
+    "contact": "David Christiansen",
+    "id": "haskell-errors-index",
+    "name": "Haskell Errors Index",
+    "link": null,
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "I'd like to work on an error message classification website for GHC in the style of https://doc.rust-lang.org/error-index.html, though extended with a few more examples and the option for user-driven documentation. Prior to ZuriHac, Richard Eisenberg will augment the new structured errors with unique identifiers, and make a buildable branch of GHC in which they show up. I'd like to show up with a structure that can accept documentation, descriptions, examples, and the like for said error messages. If I can get a little team together to seed the site with useful information, the hope is that it will become self-sustaining afterwards, and that people who look at it will want to extend it."
+  }
+]

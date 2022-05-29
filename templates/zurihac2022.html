@@ -27,4 +27,20 @@
       <a href="/privacy-policy.html">Privacy Policy</a>
     </footer>
   </body>
+  <script type="text/JavaScript">
+    function hashChange() {
+      var hash = window.location.hash.substr(1);
+      if(hash) {
+        var element = document.getElementById(hash);
+        if(element) {
+          var parent = element.parentElement;
+          if(parent.tagName == "DETAILS") {
+            parent.open = true;
+          }
+        }
+      }
+    }
+    window.addEventListener('hashchange', hashChange);
+    hashChange();
+  </script>
 </html>

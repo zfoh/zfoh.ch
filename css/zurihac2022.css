@@ -166,11 +166,9 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto 0 auto;
-
-  color: white;
-  font-size: 16px;
+  padding: 1em 0;
 }
 
 @media (min-width: 768px) {
@@ -180,32 +178,40 @@ footer {
 
   .schedule .day {
     flex-basis: 0;
+    margin: 0em 0.5em !important;
   }
-
-  .schedule .blank {
-    display: inherit !important;
-  }
-}
-
-.schedule .blank {
-  display: none;
 }
 
 .schedule .day {
   flex-grow: 1;
+  margin: 0.5em 0em;
 }
 
-.schedule .event, .schedule .blank {
-  padding: 5px 0px 0px 5px;
-  height: 30px;
+.schedule .day .date {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: aliceblue;
+  text-shadow: -1px -1px blue, 1px 1px blue, 2px 2px blue, 3px 3px blue;
 }
 
-.schedule          {background-color: #38515b;}
-.schedule .admin   {background-color: #5f8f71;}
-.schedule .talk    {background-color: #339   ;}
-.schedule .food    {background-color: #9fa0b1;}
-.schedule .tracks  {background-color: #c84b29;}
-.schedule .hacking {background-color: #b96d6d;}
+.schedule .day .entry {
+  font-size: 70%;
+  line-height: 100%;
+  text-decoration: none;
+  color: black;
+  box-shadow: inset -2px -2px #ff020229;
+}
+
+.schedule .day .entry .time, .schedule .day .entry .title {
+  display: block;
+  margin: 0.5em;
+}
+
+.schedule * .talk     { background-color: #a9e6cc }
+.schedule * .food     { background-color: #ffd0f5 }
+.schedule * .admin    { background-color: #fee161 }
+
 
 /*******************************************************************************
  * Speakers */

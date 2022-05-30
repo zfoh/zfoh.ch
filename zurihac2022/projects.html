@@ -65,15 +65,20 @@
       var hash = window.location.hash.substr(1);
       if(hash) {
         var element = document.getElementById(hash);
-        if(element) {
-          var parent = element.parentElement;
-          if(parent.tagName == "DETAILS") {
-            parent.open = true;
+        while(element) {
+          if(element.tagName.toLowerCase() == "details" && !element.open) {
+            // We need to scroll after opening because otherwise we would
+            // first scholl and then open, so it may not be in view.
+            element.open = true;
+            element.scrollIntoView();
+            element = null;
+          } else {
+            element = element.parentElement;
           }
         }
       }
     }
-    window.addEventListener('hashchange', hashChange);
+    window.addEventListener('hashchange', hashChange, false);
     hashChange();
   </script>
 </html>

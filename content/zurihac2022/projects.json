@@ -24,7 +24,7 @@
     "description": "A flavor of functional reactive programming where strong typing involves temporal aspects"
   },
   {
-    "contact": "Tomáš Janoušek",
+    "contact": "Tomáš Janoušek, Tony Zorman, Yecine Megdiche",
     "id": "xmonad",
     "name": "xmonad",
     "link": "https://xmonad.org/",
@@ -166,18 +166,6 @@
       "advanced": false
     },
     "description": "During this week-end, you'll have the opportunity to sit with other folks interested in improving the state of documentation in our ecosystem. You'll get to learn the Haddock markup language, what are the best practices to create reliable documentation, and the kind of stuff they only teach you in creative writing classes!"
-  },
-  {
-    "contact": "Tony Zorman",
-    "id": "xmonad",
-    "name": "xmonad",
-    "link": "https://xmonad.org/",
-    "contributor level": {
-      "beginner": true,
-      "intermediate": true,
-      "advanced": true
-    },
-    "description": "A dynamically tiling X11 window manager that is written and configured in Haskell!"
   },
   {
     "contact": "ben senn",

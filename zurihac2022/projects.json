@@ -277,15 +277,15 @@
   },
   {
     "contact": "Eric Torreborre",
-    "id": "registry-aeson",
-    "name": "registry-aeson",
+    "id": "registry",
+    "name": "registry",
     "link": "https://github.com/etorreborre/registry",
     "contributor level": {
       "beginner": false,
       "intermediate": true,
       "advanced": false
     },
-    "description": "registry can be used as programmable type classes. I want to extend it to Aeson encoders and decoders. This requires some Template Haskell or Generics-fu, or better ideas that I didn't have :-)"
+    "description": "I propose a workshop around the use of the registry library and its derivatives, registry-hedgehog, registry-aeson, registry-messagepack. Those libraries, based on the same idea, help you wire an application, declare data generators, implement encoders / decoders in a very flexible way. Testing an application with mocked components becomes easy, data generation is easy to control, protocols can evolve incrementally"
   },
   {
     "contact": "Julian Ospald",

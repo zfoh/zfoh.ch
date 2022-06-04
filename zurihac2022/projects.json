@@ -382,5 +382,17 @@
       "advanced": true
     },
     "description": "Design and implement language extensions related to overloaded record fields"
+  },
+  {
+    "contact": "Fendor",
+    "id": "haskell-language-server",
+    "name": "Haskell Language Server",
+    "link": null,
+    "contributor level" :{
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "Learn about HLS, write your own plugin, join the community effort!"
   }
 ]

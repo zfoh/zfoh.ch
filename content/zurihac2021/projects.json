@@ -600,15 +600,27 @@
     "description": "A web app to visualize Haskell syntax. Written in Purescript."
   },
   {
-  "id": "loggy",
-  "name": "Loggy",
-  "link": "https://github.com/saatvikshah/loggy",
-  "contributor level": {
-    "beginner": true,
-    "intermediate": false,
-    "advanced": false
+    "id": "fir",
+    "name": "FIR: graphics shader EDSL",
+    "link": "https://gitlab.com/sheaf/fir",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "contact": "Sam Derbyshire",
+    "description": "A Haskell EDSL for writing graphics shaders that run on Vulkan."
   },
-  "contact": "Pedro Jaramillo, Saatvik Shah",
-  "description": "CLI app to merge and manipulate timestamped log files."
-}
+  {
+    "id": "loggy",
+    "name": "Loggy",
+    "link": "https://github.com/saatvikshah/loggy",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Pedro Jaramillo, Saatvik Shah",
+    "description": "CLI app to merge and manipulate timestamped log files."
+  }
 ]

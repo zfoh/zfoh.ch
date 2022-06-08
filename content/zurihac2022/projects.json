@@ -394,5 +394,17 @@
       "advanced": true
     },
     "description": "A dynamically tiling X11 window manager that is written and configured in Haskell."
+  },
+  {
+    "contact": "Hernán Rajchert, Jamie Bertram, Yves Hauser",
+    "id": "marlowe",
+    "name": "Marlowe",
+    "link": "https://github.com/input-output-hk/marlowe-cardano/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "A DSL for financial contracts"
   }
 ]

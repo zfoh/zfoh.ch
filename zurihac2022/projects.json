@@ -360,6 +360,18 @@
     "description": "I'd like to work on an error message classification website for GHC in the style of https://doc.rust-lang.org/error-index.html, though extended with a few more examples and the option for user-driven documentation. Prior to ZuriHac, Richard Eisenberg will augment the new structured errors with unique identifiers, and make a buildable branch of GHC in which they show up. I'd like to show up with a structure that can accept documentation, descriptions, examples, and the like for said error messages. If I can get a little team together to seed the site with useful information, the hope is that it will become self-sustaining afterwards, and that people who look at it will want to extend it."
   },
   {
+    "contact": "Vlad P. Luchian",
+    "id": "Space-lang",
+    "name": "Space",
+    "link": null,
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "A typed stack programing language. Inspired by the FMC, FMCt, and Forth. Will be working on adding a module system, and a new implementation of its type checker."
+  },
+  {
     "contact": "Adam Gundry",
     "id": "ghc-records",
     "name": "GHC Records",

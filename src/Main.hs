@@ -1,9 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import qualified Data.Time        as Time
+import           Data.Foldable   (forM_)
+import qualified Data.Time       as Time
 import           Hakyll
 import           Meetup
-import           System.FilePath  (joinPath, splitPath)
+import           System.FilePath (joinPath, splitPath)
 
 main :: IO ()
 main = hakyll $ do
@@ -72,32 +73,33 @@ main = hakyll $ do
             loadAndApplyTemplate "templates/zurihac2021.html" zfohContext
 
     ----------------------------------------------------------------------------
+    -- ZuriHac 2022 (should we DRY this up?).
+
+    match "content/zurihac2022/index.html" $ do
+        route dropContentRoute
+        compile $
+            getResourceBody >>=
+            applyAsTemplate sectionContext >>=
+            loadAndApplyTemplate "templates/zurihac2022.html" zfohContext
+
+    ----------------------------------------------------------------------------
     -- Projects page.
 
     let projectsStaticFiles =
             [ "content/zurihac2019/projects.json"
-            , "content/zurihac2019/projects/bookmark-regular.svg"
-            , "content/zurihac2019/projects/bookmark-solid.svg"
-            , "content/zurihac2019/projects/main.js"
-            , "content/zurihac2019/projects/projects.css"
-            , "content/zurihac2019/projects/projects.js"
+            , "content/zurihac2019/projects/*"
             -- 2020
             , "content/zurihac2020/projects.json"
-            , "content/zurihac2020/projects/bookmark-regular.svg"
-            , "content/zurihac2020/projects/bookmark-solid.svg"
-            , "content/zurihac2020/projects/main.js"
-            , "content/zurihac2020/projects/projects.css"
-            , "content/zurihac2020/projects/projects.js"
+            , "content/zurihac2020/projects/*"
             -- 2021
             , "content/zurihac2021/projects.json"
-            , "content/zurihac2021/projects/bookmark-regular.svg"
-            , "content/zurihac2021/projects/bookmark-solid.svg"
-            , "content/zurihac2021/projects/main.js"
-            , "content/zurihac2021/projects/projects.css"
-            , "content/zurihac2021/projects/projects.js"
+            , "content/zurihac2021/projects/*"
+            -- 2022
+            , "content/zurihac2022/projects.json"
+            , "content/zurihac2022/projects/*"
             ]
 
-    match (fromList projectsStaticFiles) $ do
+    forM_ projectsStaticFiles $ \pattern -> match pattern $ do
         route dropContentRoute
         compile copyFileCompiler
 
@@ -118,6 +120,12 @@ main = hakyll $ do
         compile $
             getResourceBody >>=
             loadAndApplyTemplate "templates/zurihac2021.html" zfohContext
+
+    match "content/zurihac2022/projects.html" $ do
+        route dropContentRoute
+        compile $
+            getResourceBody >>=
+            loadAndApplyTemplate "templates/zurihac2022.html" zfohContext
 
     ----------------------------------------------------------------------------
     -- Sections that we can pull in from anywhere, they're just strings.

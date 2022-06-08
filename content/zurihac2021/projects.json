@@ -230,7 +230,7 @@
   {
     "id": "sarsi",
     "name": "sarsi",
-    "link": "github.com/aloiscochard/sarsi",
+    "link": "https://github.com/aloiscochard/sarsi",
     "contributor level": {
       "beginner": true,
       "intermediate": false,
@@ -610,5 +610,17 @@
     },
     "contact": "Sam Derbyshire",
     "description": "A Haskell EDSL for writing graphics shaders that run on Vulkan."
-  }  
+  },
+  {
+    "id": "loggy",
+    "name": "Loggy",
+    "link": "https://github.com/saatvikshah/loggy",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    },
+    "contact": "Pedro Jaramillo, Saatvik Shah",
+    "description": "CLI app to merge and manipulate timestamped log files."
+  }
 ]

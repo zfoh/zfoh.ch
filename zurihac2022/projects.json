@@ -1,4 +1,16 @@
 [
+   {
+    "contact": "Sandy Maguire",
+    "id": "denotational-design",
+    "name": "Denotationally Designing a Hardware Multiplier",
+    "link": "https://github.com/conal/denotational-arithmetic",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "Denotational Design is a promising new way to design software, starting with \"what's the question?\" and deriving provably correct solutions via homomorphisms which are guaranteed to be free of abstraction leaks. Sounds good on paper, but how do we actually do it? We're getting a group together to work through a (hopefully) small DD project: getting a provably correct (and ideally highly parametric) hardware multiplier. Come do big brain thinking with us!"
+  },
   {
     "contact": "arxbetAbusy",
     "id": "arxbetabusy",

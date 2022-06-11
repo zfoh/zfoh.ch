@@ -430,5 +430,16 @@
       "advanced": true
     },
     "description": "A DSL for financial contracts"
+  },
+  {
+    "contact": "David Hauer (github: DavHau)",
+    "id": "dream2nix",
+    "name": "dream2nix",
+    "link": "https://github.com/nix-community/dream2nix",
+    "contributor level": {
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "Build haskell (and other) projects using nix with minimal effort"
   }
 ]

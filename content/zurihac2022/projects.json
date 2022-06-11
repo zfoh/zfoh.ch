@@ -441,5 +441,17 @@
       "advanced": true
     },
     "description": "Build haskell (and other) projects using nix with minimal effort"
+  },
+  {
+    "contact": "Adriaan Leijnse",
+    "id": "webflex",
+    "name": "Weblex",
+    "link": "https://github.com/parenthetical/webflex/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "An experiment in purely functional web programming with Reflex FRP"
   }
 ]

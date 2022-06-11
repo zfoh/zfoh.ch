@@ -430,5 +430,17 @@
       "advanced": true
     },
     "description": "A DSL for financial contracts"
+  },
+  {
+    "contact": "Adriaan Leijnse",
+    "id": "webflex",
+    "name": "Weblex",
+    "link": "https://github.com/parenthetical/webflex/",
+    "contributor level": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "An experiment in purely functional web programming with Reflex FRP"
   }
 ]

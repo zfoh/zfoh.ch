@@ -72,6 +72,18 @@
     "description": "The goal of this (early-stage) project is to distill the entire OpenGL rendering pipeline into a concise but powerful typed EDSL. It thereby aims to expose an elegant, functional approach to graphics programming that will be interesting to both the Haskell and OpenGL communities (and especially useful to those wanting to explore or learn more about graphics but find the boilerplate overhead too restrictive). I am actively looking for others to collaborate or exchange ideas with, so please reach out to me if interested!"
   },
   {
+    "contact": "Sebastian Graf",
+    "id": "foldr-build",
+    "name": "Implement a foldr/build-based fusion library by copying it from GHC",
+    "link": "https://github.com/sgraf812/foldr-build",
+    "contributor level": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    },
+    "description": "List fusion lets many list pipelines run in constant space, but it's almost neck-breaking for perf when it fails (see the GH README for some examples). Work with me on a library offering GHC's streaming abstraction without the rewriting from and to the list datatype for reliable performance across modules!"
+  },
+  {
     "contact": "Matthew Pickering",
     "id": "ghc-debug",
     "name": "ghc-debug",

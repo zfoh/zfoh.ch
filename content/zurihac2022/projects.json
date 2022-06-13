@@ -465,5 +465,15 @@
       "advanced": true
     },
     "description": "An experiment in purely functional web programming with Reflex FRP"
+  },
+  {
+    "contact": "Peter Divianszky",
+    "id": "codegen",
+    "name": "CodeGen",
+    "link": "https://divip.hu/code_generation_by_unification.html",
+    "contributor level": {
+      "advanced": true
+    },
+    "description": "Demonstrate machine code generation by unification in Idris"
   }
 ]

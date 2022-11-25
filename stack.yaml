@@ -1,4 +1,4 @@
-resolver: lts-18.16
+resolver: lts-19.17
 
 packages:
 - '.'
@@ -10,7 +10,7 @@ flags:
     usePandoc: false
 
 extra-deps:
-- 'hakyll-4.15.1.0'
+- 'hakyll-4.15.1.1'
 
 nix:
   packages:

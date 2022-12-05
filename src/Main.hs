@@ -43,44 +43,22 @@ main = hakyll $ do
             loadAndApplyTemplate "templates/zfoh.html" zfohContext
 
     ----------------------------------------------------------------------------
-    -- ZuriHac 2019.
+    -- Main pages.
 
-    match "content/zurihac2019/index.html" $ do
+    let zurihacs =
+            [ ("content/zurihac2019/index.html", "templates/zurihac2019.html")
+            , ("content/zurihac2020/index.html", "templates/zurihac2020.html")
+            , ("content/zurihac2021/index.html", "templates/zurihac2021.html")
+            , ("content/zurihac2022/index.html", "templates/zurihac2022.html")
+            , ("content/zurihac2023/index.html", "templates/zurihac2023.html")
+            ]
+
+    forM_ zurihacs $ \(index, tpl) -> match index $ do
         route dropContentRoute
         compile $
             getResourceBody >>=
             applyAsTemplate sectionContext >>=
-            loadAndApplyTemplate "templates/zurihac2019.html" zfohContext
-
-    ----------------------------------------------------------------------------
-    -- ZuriHac 2020.
-
-    match "content/zurihac2020/index.html" $ do
-        route dropContentRoute
-        compile $
-            getResourceBody >>=
-            applyAsTemplate sectionContext >>=
-            loadAndApplyTemplate "templates/zurihac2020.html" zfohContext
-
-    ----------------------------------------------------------------------------
-    -- ZuriHac 2021.
-
-    match "content/zurihac2021/index.html" $ do
-        route dropContentRoute
-        compile $
-            getResourceBody >>=
-            applyAsTemplate sectionContext >>=
-            loadAndApplyTemplate "templates/zurihac2021.html" zfohContext
-
-    ----------------------------------------------------------------------------
-    -- ZuriHac 2022 (should we DRY this up?).
-
-    match "content/zurihac2022/index.html" $ do
-        route dropContentRoute
-        compile $
-            getResourceBody >>=
-            applyAsTemplate sectionContext >>=
-            loadAndApplyTemplate "templates/zurihac2022.html" zfohContext
+            loadAndApplyTemplate tpl zfohContext
 
     ----------------------------------------------------------------------------
     -- Projects page.

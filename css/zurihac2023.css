@@ -6,20 +6,24 @@
 }
 
 html {
-   background-color: black;
-   color: white;
-   text-align: center;
-   font-family: sans-serif;
-   font-size: 16px;
-   line-height: 1.7;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
 
-   /* These should really be set on body instead to avoid repetition. */
-   height: 100%;
-   background-image:
-     linear-gradient(90deg, rgba(213,57,227,0.1) 0%,rgba(222,192,73,0.1) 40%),
-     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba(255, 102,   0, 0.05)  3px,  rgba(255, 255, 255, 0)   6px),
-     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba( 51,  51, 204, 0.1)  79px,  rgba(255, 255, 255, 0) 158px),
-     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba(255,  51, 153, 0.1)  199px, rgba(255, 255, 255, 0) 398px);
+    /* These should really be set on body instead to avoid repetition. */
+    height: 100%;
+    background-image:
+        linear-gradient(90deg, rgba(213,57,227,0.1) 0%,rgba(222,192,73,0.1) 40%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba(255, 102,   0, 0.05)  3px,  rgba(255, 255, 255, 0)   6px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba( 51,  51, 204, 0.1)  79px,  rgba(255, 255, 255, 0) 158px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba(255,  51, 153, 0.1)  199px, rgba(255, 255, 255, 0) 398px);
+}
+
+body {
+    margin: 0px;
 }
 
 header {
@@ -43,10 +47,9 @@ h1 {
 
 h2 {
     display: inline-block;
-    transform: rotate(90deg) translate(0, -50%) scaleX(130%);
+    transform: rotate(90deg) translate(0, -70%) scaleX(130%);
     transform-origin: top left;
     margin: 6px 6px 0px 0px;
-    font-style: italic;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -65,6 +68,7 @@ p {
     position: relative;
     text-align: left;
     z-index: 10;
+    margin: 12px 12px;
 }
 
 a {
@@ -75,4 +79,20 @@ a {
 footer {
     margin: 30px auto 30px auto;
     font-size: 12px;
+}
+
+.registration {
+    padding: 12px 0px;
+    background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(102, 102, 0, 0.5) 3px, rgba(0, 0, 0, 0) 6px);
+    animation: gradient 1s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: 6px 0px;
+    }
 }

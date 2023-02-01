@@ -3,6 +3,8 @@
 
     --highlights0: #e9d086;
     --highlights1: #9fcbf2;
+
+    --retro0: rgba(102,102,0, 0.5);
 }
 
 html {
@@ -84,11 +86,14 @@ footer {
 
 .registration {
     padding: 12px 0px;
-    background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(102, 102, 0, 0.5) 3px, rgba(0, 0, 0, 0) 6px);
-    animation: gradient 1s linear infinite;
 }
 
-@keyframes gradient {
+.retro {
+    background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, var(--retro0) 3px, rgba(0, 0, 0, 0) 6px);
+    animation: retrogradient 1s linear infinite;
+}
+
+@keyframes retrogradient {
     0% {
         background-position: 0px 0px;
     }
@@ -96,4 +101,83 @@ footer {
     100% {
         background-position: 6px 0px;
     }
+}
+
+/*******************************************************************************
+ * Speakers */
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.speaker {
+  margin: 4px;
+  padding: 8px;
+  /* background-color: #419c75; */
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 800px) {
+  .speakers {
+    flex-direction: row;
+  }
+  .speaker {
+    width: 400px;
+  }
+}
+
+.speaker .details {
+  display: flex;
+  flex-direction: row;
+  margin: 6px 0px 12px 0px;
+}
+
+.speaker .avatar {
+  border: 3px solid var(--retro0);
+  height: 60px;
+  margin-right: 24px;
+}
+
+.speaker .name {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.speaker .links {
+  filter: invert(100%);
+  display: flex;
+  flex-direction: row;
+}
+
+.speaker .links a {
+  background-size: contain;
+  height: 24px;
+  margin-right: 6px;
+  width: 24px;
+  opacity: 0.7;
+}
+
+.speaker p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.speaker .links .github {
+  background: url("/images/icons/github.svg");
+  background-size: 24px 24px;
+}
+
+.speaker .links .twitter {
+  background: url("/images/icons/twitter.svg");
+  background-size: 24px 24px;
+}
+
+.speaker .links .web {
+  background: url("/images/icons/globe.svg");
+  background-size: 24px 24px;
 }

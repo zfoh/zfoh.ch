@@ -15,6 +15,7 @@ html {
 
     /* These should really be set on body instead to avoid repetition. */
     height: 100%;
+    background-attachment: fixed;
     background-image:
         linear-gradient(90deg, rgba(213,57,227,0.1) 0%,rgba(222,192,73,0.1) 40%),
         repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba(255, 102,   0, 0.05)  3px,  rgba(255, 255, 255, 0)   6px),

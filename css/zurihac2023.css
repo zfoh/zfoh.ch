@@ -118,8 +118,7 @@ footer {
 .speaker {
   margin: 4px;
   padding: 8px;
-  /* background-color: #419c75; */
-  width: 100%;
+  width: calc(100% - 24px);
   position: relative;
 }
 

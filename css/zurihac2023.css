@@ -95,6 +95,14 @@ footer {
     animation: retrogradient 1s linear infinite;
 }
 
+summary {
+    color: var(--highlights0);
+    font-weight: bold;
+    padding-left: 2em;
+    text-align: left;
+    text-decoration: underline;
+}
+
 @keyframes retrogradient {
     0% {
         background-position: 0px 0px;

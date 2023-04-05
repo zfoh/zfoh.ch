@@ -61,6 +61,14 @@ h2 {
     z-index: 9;
 }
 
+h3 {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 12px;
+    margin-left: 12px;
+    border-left: solid 18px white;
+}
+
 section {
     max-width: var(--page-width);
     margin: 0px auto 0px auto;
@@ -189,4 +197,15 @@ summary {
 .speaker .links .web {
   background: url("/images/icons/globe.svg");
   background-size: 24px 24px;
+}
+
+.campus {
+    padding: 24px 0px 24px 0px;
+    margin: 12px 0px 12px 0px;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+      url("/images/zurihac2022/campus-rapperswil.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

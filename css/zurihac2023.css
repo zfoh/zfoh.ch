@@ -200,12 +200,28 @@ summary {
 }
 
 .campus {
-    padding: 24px 0px 24px 0px;
-    margin: 12px 0px 12px 0px;
-    background-image:
-      linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-      url("/images/zurihac2022/campus-rapperswil.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  padding: 24px 0px 24px 0px;
+  margin: 12px 0px 12px 0px;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url("/images/zurihac2022/campus-rapperswil.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.partners {
+  /* The negative margin here allows us to slightly overlap the gradient with
+   * the header. */
+  margin: -30px auto 30px auto;
+  padding: 30px 0 42px 0;
+  background-image: linear-gradient(#fff0 0%, #fff9 30%, #fff9 70%, #fff0 100%);
+  color: black;
+}
+
+.partners img {
+  margin: 18px;
+  max-height: 72px;
+  max-width: 240px;
+  vertical-align: middle;
 }

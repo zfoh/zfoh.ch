@@ -225,3 +225,60 @@ summary {
   max-width: 240px;
   vertical-align: middle;
 }
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  padding: 1em 0;
+}
+
+.schedule .day .morning {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .schedule {
+    flex-direction: row;
+  }
+
+  .schedule .day {
+    flex-basis: 0;
+    margin: 0em 0.5em !important;
+  }
+
+  .schedule .day .morning {
+    display: block !important;
+  }
+}
+
+.schedule .day {
+  flex-grow: 1;
+  margin: 0.5em 0em;
+}
+
+.schedule .day .date {
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  border-top: 1px solid white;
+}
+
+.schedule .day .entries .entry {
+  font-size: 70%;
+  line-height: 100%;
+  text-decoration: none;
+  color: white;
+  box-shadow: inset -2px -2px #ff020229;
+}
+
+.schedule .day .entries .entry .time, .schedule .day .entries .entry .title {
+  display: block;
+  margin: 0.5em;
+}
+
+.schedule * .talk     { background-color: #244f3c }
+.schedule * .food     { background-color: #59274f }
+.schedule * .admin    { background-color: #1d3553 }

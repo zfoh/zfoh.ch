@@ -82,6 +82,10 @@ p {
     margin: 12px 12px;
 }
 
+ul {
+    text-align: left;
+}
+
 a {
     color: var(--highlights1);
     font-weight: bold;

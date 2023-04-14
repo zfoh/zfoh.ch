@@ -71,7 +71,7 @@ h3 {
 
 section {
     max-width: var(--page-width);
-    margin: 0px auto 0px auto;
+    margin: 30px auto 30px auto;
     position: relative;
 }
 

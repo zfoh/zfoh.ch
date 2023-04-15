@@ -35,6 +35,7 @@ header {
 }
 
 header img {
+    width: calc(0.8 * var(--page-width));
     max-width: 100%;
 }
 

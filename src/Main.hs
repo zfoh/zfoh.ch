@@ -12,7 +12,8 @@ main = hakyll $ do
     ----------------------------------------------------------------------------
     -- Images, CSS, etc.
 
-    match ("images/**.png" .||. "images/**.jpg" .||. "images/**.gif" .||. "images/**.svg") $ do
+    match ("images/**.png" .||. "images/**.jpg" .||. "images/**.gif"
+            .||. "images/**.svg" .||. "images/**.webp") $ do
         route idRoute
         compile copyFileCompiler
 

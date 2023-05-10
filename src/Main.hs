@@ -1,9 +1,11 @@
 {-# LANGUAGE OverloadedStrings #-}
 
+import qualified Data.Aeson      as A
 import           Data.Foldable   (forM_)
 import qualified Data.Time       as Time
 import           Hakyll
 import           Meetup
+import qualified Projects        as Projects
 import           System.FilePath (joinPath, splitPath)
 
 main :: IO ()
@@ -116,6 +118,23 @@ main = hakyll $ do
     match "content/zurihac2020/sections/*.html" $ compile getResourceBody
     match "content/zurihac2021/sections/*.html" $ compile getResourceBody
     match "content/zurihac2021/sections/*.js" $ compile getResourceBody
+
+    ----------------------------------------------------------------------------
+    -- New project pages.
+
+    match "content/zurihac2023/projects/projects.json" $
+        compile $ do
+            body <- itemBody <$> getResourceLBS
+            case A.eitherDecode body of
+                Right projects -> makeItem (projects :: Projects.Projects)
+                Left err       -> fail err
+    match "content/zurihac2023/projects/index.html" $ do
+        route dropContentRoute
+        compile $ do
+            projects <- loadBody "content/zurihac2023/projects/projects.json"
+            html <- getResourceBody >>=
+                applyAsTemplate (Projects.projectsContext projects)
+            loadAndApplyTemplate "templates/zurihac2023.html" zfohContext html
 
     ----------------------------------------------------------------------------
     -- Meetup section is dynamically generated.

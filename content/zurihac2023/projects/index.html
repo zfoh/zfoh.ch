@@ -1,0 +1,40 @@
+<h1>Projects</h1>
+
+<section>
+  <p>
+    This is the list of projects that attendees of ZuriHac 2023 are planning to
+    work on.  If any of these spark your interest, then you will be able to join
+    the project channel on Discord or find the contact at the venue and hack
+    away on it with other participants.
+  </p>
+  <p>
+    If you want to get your own project included, please add your project name and
+    description by
+    <a href="https://github.com/zfoh/zfoh.ch/edit/master/content/zurihac2023/projects/projects.json">submitting a pull request here</a>.
+  </p>
+</section>
+
+<section class="projects">
+  $for(projects)$
+    <div class="project">
+      <div class="name">
+        $if(link)$
+          <a href="$link$">$name$</a>
+        $else$
+          $name$
+        $endif$
+      </div>
+      <div class="contact">
+        Contact: $contact$
+      </div>
+      <div class="level">
+        Contributor level: $contributorLevel$
+      </div>
+      $if(description)$
+        <div class="description">
+          $description$
+        </div>
+      $endif$
+    </div>
+  $endfor$
+</section>

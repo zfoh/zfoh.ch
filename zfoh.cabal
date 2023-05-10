@@ -23,6 +23,7 @@ Executable zfoh
 
   Other-modules:
     Meetup
+    Projects
 
   Build-depends:
     aeson           >=1.2   && < 2.1,

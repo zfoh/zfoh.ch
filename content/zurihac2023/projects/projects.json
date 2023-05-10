@@ -1,0 +1,310 @@
+[
+  {
+    "name": "Mensam",
+    "contact": "Felix Springer",
+    "description": "A desk-booking web application.",
+    "link": "https://github.com/jumper149/mensam",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Plutarch",
+    "contact": "Las Safin",
+    "description": "eDSL framework (like compiling with categories but better)",
+    "link": "https://github.com/Plutonomicon/plutarch-core/pulls",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Spago",
+    "contact": "Fabrizio Ferrai",
+    "description": "PureScript package manager and build tool",
+    "link": "https://github.com/purescript/spago",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Building reliable, scalable and maintainable distributed systems using state machines",
+    "contact": "Stevan Andjelkovic",
+    "description": "How can we build reliable, scalable and maintainable computer systems? Over the past couple of months I've written about how we can use ideas from Erlang/OTP, LMAX Disruptor and FoundationDB to answer this question: https://github.com/stevana/armstrong-distributed-systems/blob/main/docs/erlang-is-not-about.md, https://github.com/stevana/pipelined-state-machines, https://github.com/stevana/coroutine-state-machines, https://github.com/stevana/property-based-testing-stateful-systems-tutorial, https://github.com/stevana/supervised-state-machines, https://github.com/stevana/hot-swapping-state-machines. Next step would be to take those loosely coupled ideas, expand upon and combine them into a concrete and coherent plan.",
+    "link": "https://github.com/stevana/armstrong-distributed-systems",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "halide-haskell",
+    "contact": "Tom Westerhout",
+    "description": "Haskell bindings to Halide that allow to write high-performance array and image processing kernels directly in Haskell",
+    "link": "https://github.com/twesterhout/halide-haskell",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "monad-bayes",
+    "contact": "Dominic Steinitz",
+    "description": "A library for probabilistic programming in Haskell",
+    "link": "https://github.com/tweag/monad-bayes#readme",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "HaskellKatas",
+    "contact": "Reynaldo Cordero",
+    "description": "Tooling for a Katafication code Hackathon",
+    "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Document HLS!",
+    "contact": "Michael Peyton Jones",
+    "description": "The HLS codebase has a lot that could be better documented. I'm going to write a lot of Haddock.",
+    "link": "https://github.com/haskell/haskell-language-server",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "XMonad",
+    "contact": "Tony Zorman",
+    "description": "Dynamically tiling X11 window manager, written and configured in Haskell",
+    "link": "https://xmonad.org/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Fix bugs in `deriving` in GHC",
+    "contact": "Ryan Scott",
+    "description": null,
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Haskell Program Coverage",
+    "contact": "David Binder",
+    "description": "Hacking on the Haskell Program Coverage Toolsuite",
+    "link": "https://gitlab.haskell.org/hpc/hpc-bin",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Hacking on Hadrian",
+    "contact": "Andrey Mokhov",
+    "description": "We'll try to fix some bugs in Hadrian, GHC's build system",
+    "link": "https://gitlab.haskell.org/ghc/ghc/blob/master/hadrian/README.md",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Okapi",
+    "contact": "Rashad Gover",
+    "description": "Okapi is a micro web framework for developing web servers in Haskell.",
+    "link": "https://www.okapi.wiki/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Haskell Syntaxonomer",
+    "contact": "Li-yao Xia",
+    "description": "A simple webapp where you can paste some Haskell code to learn about unfamiliar language features. PureScript prototype to be rewritten in Haskell with the new JavaScript backend.",
+    "link": "https://gitlab.com/lysxia/haskell-syntaxonomer",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Slide Rule Generator",
+    "contact": "Dylan Thinnes",
+    "description": "A language to generate slide rules, currently a monadic DSL on top of diagrams, maybe something cooler soon!",
+    "link": "https://github.com/dylan-thinnes/slide-rule-generator",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "GarganText",
+    "contact": "Alexandre Delanoë",
+    "description": "Collaborative knowledge map protocol and interface fully written in Haskell/Purescript.",
+    "link": "cnrs.gargantext.org",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Ghengin: A Haskell game engine",
+    "contact": "Rodrigo Mesquita",
+    "description": "A vulkan-based, shader-centric, type-heavy Haskell game engine. Ideally we'd be able to make one small game with it.",
+    "link": "https://github.com/alt-romes/ghengin",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "ghc-exactprint",
+    "contact": "Alan Zimmerman",
+    "description": "Too to enable easily modifying haskell source code by manipulating the AST",
+    "link": "https://github.com/alanz/ghc-exactprint",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "blueprint",
+    "contact": "Artin Ghasivand",
+    "description": "A CLI Tool for showing term substitution and outgoing call hierarchy",
+    "link": "https://github.com/Ei30metry/blueprint",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Form Bakery",
+    "contact": "Johannes Drever",
+    "description": "An educational app for a peculiar logical calculus, written with ReflexFRP.",
+    "link": "https://github.com/drever/form-bakery",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "An as of yet unnamed dataflow programming project",
+    "contact": "Philip Nilsson",
+    "description": null,
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Haskell refactor",
+    "contact": "aravind mallapureddy",
+    "description": "Looking at auto refactoring Haskell code using SYB (uniplate) on GHC AST",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Port Superfluid Money to Cardano",
+    "contact": "Miao, ZhiCheng",
+    "description": "Superfluid is a new digital money allowing time-continuous payment. It is live on EVM chains, and its specification is being written in Haskell. Let's port it to Cardano!",
+    "link": "https://github.com/superfluid-finance/protocol-monorepo/tree/dev/packages/spec-haskell",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Horizon Haskell",
+    "contact": "Daniel Firth",
+    "description": null,
+    "link": "https://horizon-haskell.net",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Clipperz epsilon",
+    "contact": "Giulio Cesare Solaroli",
+    "description": "New version of Clipperz password manager implemented in PureScript",
+    "link": "https://github.com/clipperz/password-manager/tree/develop",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "The Haskell Error Index",
+    "contact": "David Thrane Christiansen",
+    "description": "This site collects error messages and warnings for Haskell development tools such as GHC, GHCup, and Stack, documenting them with detailed descriptions and examples. We'll work on documenting all the remaining errors and warnings, as well as extending support for the site to additional tools. No specific technical skills other than curiosity, Git, and Markdown are required, but experience with CSS, JavaScript, Hakyll, and of course Haskell are all useful for certain kinds of contributions.",
+    "link": "errors.haskell.org",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Heave",
+    "contact": "Valentin Gagarin",
+    "description": "A lambda calculus for file system trees (or: the universal FFI)",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Flora:  A community index of Haskell packages",
+    "contact": "Hécate Moonlight",
+    "description": "Together we will develop features for a modern web application in Haskell that serves the community",
+    "link": "https://github.com/flora-pm/flora-server/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  }
+]

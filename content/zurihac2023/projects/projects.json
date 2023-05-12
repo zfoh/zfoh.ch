@@ -297,6 +297,17 @@
     }
   },
   {
+    "name": "Building statically linked Haskell binaries with Bazel",
+    "contact": "Jonathan King",
+    "description": "Update the existing example project to support newer versions of GHC (it's currently on 8.6).",
+    "link": "https://github.com/lunaris/minirepo",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
     "name": "Flora:  A community index of Haskell packages",
     "contact": "Hécate Moonlight",
     "description": "Together we will develop features for a modern web application in Haskell that serves the community",

@@ -204,6 +204,10 @@ summary {
   background-size: 24px 24px;
 }
 
+.speaker .title {
+  font-size: 18px;
+}
+
 .campus {
   padding: 24px 0px 24px 0px;
   margin: 12px 0px 12px 0px;
@@ -285,7 +289,8 @@ summary {
 }
 
 .schedule * .talk     { background-color: #592727 }
-.schedule * .food     { background-color: #59274f }
+.schedule * .advanced { background-color: #59274f }
+.schedule * .beginner { background-color: #756218 }
 .schedule * .admin    { background-color: #1d3553 }
 
 .projects {

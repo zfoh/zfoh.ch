@@ -317,5 +317,16 @@
       "intermediate": true,
       "advanced": true
     }
+  },
+  {
+    "name": "Gigaparsec: Lightweight Generalized Parser Combinators",
+    "contact": "Jaro Reinders",
+    "description": "Parser combinators are neat, but they require you to contort your grammar to avoid things like left recursion. To resolve this problem, we'll be trying to marry GLL parsing techniques with parser combinators.",
+    "link": "https://github.com/noughtmare/gigaparsec/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
   }
 ]

@@ -1,4 +1,5 @@
 on:
+  pull_request: {}
   push:
     branches:
     - master
@@ -20,7 +21,8 @@ jobs:
         stack-no-global: true
     - run: stack build --pedantic
     - run: stack exec zfoh build
-    - uses: JamesIves/github-pages-deploy-action@4.1.4
+    - if: github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         branch: gh-pages
         folder: _site

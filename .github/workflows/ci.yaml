@@ -2,7 +2,7 @@ on:
   pull_request: {}
   push:
     branches:
-    - master
+    - main
   schedule:
   - cron: "0 12 * * *"  # Ensure meetup info is up to date
 

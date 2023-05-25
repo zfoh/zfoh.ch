@@ -24,7 +24,7 @@
   {
     "name": "rules_haskell: Building Haskell with Bazel",
     "contact": "Andreas Herrmann",
-    "description": "Bazel is an open source build system developed to support large, polyglot projects. Join this project or stop by if you would like to learn about building Haskell with Bazel, help us make it easier to get started, learn when Bazel may add value to your project, or if you're interested in contributing to rules_haskell."
+    "description": "Bazel is an open source build system developed to support large, polyglot projects. Join this project or stop by if you would like to learn about building Haskell with Bazel, help us make it easier to get started, learn when Bazel may add value to your project, or if you're interested in contributing to rules_haskell.",
     "link": "https://haskell.build/",
     "contributorLevel": {
       "beginner": true,

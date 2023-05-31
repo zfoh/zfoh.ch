@@ -179,7 +179,7 @@
     "name": "GarganText",
     "contact": "Alexandre Delanoë",
     "description": "Collaborative knowledge map protocol and interface fully written in Haskell/Purescript.",
-    "link": "cnrs.gargantext.org",
+    "link": "https://cnrs.gargantext.org",
     "contributorLevel": {
       "beginner": true,
       "intermediate": true,
@@ -289,7 +289,7 @@
     "name": "The Haskell Error Index",
     "contact": "David Thrane Christiansen",
     "description": "This site collects error messages and warnings for Haskell development tools such as GHC, GHCup, and Stack, documenting them with detailed descriptions and examples. We'll work on documenting all the remaining errors and warnings, as well as extending support for the site to additional tools. No specific technical skills other than curiosity, Git, and Markdown are required, but experience with CSS, JavaScript, Hakyll, and of course Haskell are all useful for certain kinds of contributions.",
-    "link": "errors.haskell.org",
+    "link": "https://errors.haskell.org",
     "contributorLevel": {
       "beginner": true,
       "intermediate": true,
@@ -338,6 +338,17 @@
       "beginner": false,
       "intermediate": true,
       "advanced": true
+    }
+  },
+  {
+    "name": "USort.it",
+    "contact": "Bryan Richter",
+    "description": "With USort, the sort is you! Currently implementing a web app (with ghc-javascript) based on the existing command-line utility",
+    "link": "https://github.com/chreekat/usort/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
     }
   }
 ]

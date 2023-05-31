@@ -132,17 +132,6 @@
     }
   },
   {
-    "name": "Hacking on Hadrian",
-    "contact": "Andrey Mokhov",
-    "description": "We'll try to fix some bugs in Hadrian, GHC's build system",
-    "link": "https://gitlab.haskell.org/ghc/ghc/blob/master/hadrian/README.md",
-    "contributorLevel": {
-      "beginner": true,
-      "intermediate": true,
-      "advanced": true
-    }
-  },
-  {
     "name": "Okapi",
     "contact": "Rashad Gover",
     "description": "Okapi is a micro web framework for developing web servers in Haskell.",

@@ -294,6 +294,25 @@
     <div class="project">
       <div class="name">
         
+          <a href="https://github.com/cgohla/pledge/">Haskell Pledge</a>
+        
+      </div>
+      <div class="contact">
+        Contact: Björn Gohla
+      </div>
+      <div class="level">
+        Contributor level: intermediate, advanced
+      </div>
+      
+        <div class="description">
+          The pledge system call on OpenBSD is a voluntary security mechanism, that a process can use to restrict the available kernel API. It is used throughout the OpenBSD base system and some ports, to guard against undiscovered exploits, following the defense in depth principle. System calls are aggregated into related groups called promises. It is considered good practice to discard a promise, i.e., access to any part of the kernel API, as soon as it is no longer needed. I have implemented a prototype Haskell binding for pledge, that uses type annotations to incrementally minimize the exposed kernel API. This weekend I plan to work on applying this to a (small) real world application. I intend to add a translation layer to seccomp eBPF at some point, so his is relevant beyond OpenBSD. Come say hi, if you think your application could benefit form this idea, or you have an opinion on it.
+        </div>
+      
+    </div>
+  
+    <div class="project">
+      <div class="name">
+        
           <a href="https://gitlab.haskell.org/hpc/hpc-bin">Haskell Program Coverage</a>
         
       </div>

@@ -361,5 +361,16 @@
       "intermediate": true,
       "advanced": true
     }
+  },
+  {
+    "name": "IHP",
+    "contact": "Marc Scholten",
+    "description": "The IHP web framework",
+    "link": "https://ihp.digitallyinduced.com/",
+    "contributorLevel": {
+	"beginner": false,
+	"intermediate": true,
+	"advanced": true
+     }
   }
 ]

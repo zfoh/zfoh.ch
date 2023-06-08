@@ -352,6 +352,17 @@
      }
   },
   {
+    "name": "Clash: Haskell to Hardware",
+    "contact": "Alexander McKenna",
+    "description": "The Clash compiler compiles Haskell to VHDL and (System)Verilog. If anyone is interested in working on the compiler, or learning a bit about using Clash come and say hi, no previous knowledge required!",
+    "link": "https://github.com/clash-lang/clash-compiler/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "IHP",
     "contact": "Marc Scholten",
     "description": "The IHP web framework",

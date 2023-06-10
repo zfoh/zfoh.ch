@@ -157,7 +157,7 @@
     "name": "Slide Rule Generator",
     "contact": "Dylan Thinnes",
     "description": "A language to generate slide rules, currently a monadic DSL on top of diagrams, maybe something cooler soon!",
-    "link": "https://github.com/dylan-thinnes/slide-rule-generator",
+    "link": "https://github.com/dylan-thinnes/slide-rules-generator",
     "contributorLevel": {
       "beginner": true,
       "intermediate": true,

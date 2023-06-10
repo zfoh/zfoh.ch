@@ -383,5 +383,16 @@
       "intermediate": true,
       "advanced": true
     }
+  },
+    {
+    "name": "Bootstrapping GHC from Source",
+    "contact": "Joachim Breitner",
+    "description": "The Bootstrappable project is about building our compilers etc. from source, without relying on pre-built binaries or generated files. Can we achieve this for GHC?",
+    "link": "https://github.com/nomeata/bootstrapping-haskell",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
   }
 ]

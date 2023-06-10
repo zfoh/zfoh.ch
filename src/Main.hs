@@ -80,6 +80,7 @@ main = hakyll $ do
             , "content/zurihac2022/projects/*"
             -- 2023
             , "content/zurihac2023/schedule.js"  -- Not really related to projects
+            , "content/zurihac2023/3d/index.html"  -- Not really related to projects
             ]
 
     forM_ projectsStaticFiles $ \pattern -> match pattern $ do

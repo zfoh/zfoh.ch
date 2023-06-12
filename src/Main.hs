@@ -54,6 +54,7 @@ main = hakyll $ do
             , ("content/zurihac2021/index.html", "templates/zurihac2021.html")
             , ("content/zurihac2022/index.html", "templates/zurihac2022.html")
             , ("content/zurihac2023/index.html", "templates/zurihac2023.html")
+            , ("content/zurihac2024/index.html", "templates/zurihac2024.html")
             ]
 
     forM_ zurihacs $ \(index, tpl) -> match index $ do

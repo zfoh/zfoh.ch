@@ -26,7 +26,7 @@ Executable zfoh
     Projects
 
   Build-depends:
-    aeson           >=1.2   && < 2.1,
+    aeson           >=1.2   && < 2.3,
     base            >=4.7   && < 5,
     binary          >=0.8   && < 0.9,
     blaze-html      >=0.9   && < 0.10,
@@ -36,5 +36,5 @@ Executable zfoh
     http-client     >=0.6   && < 0.8,
     http-client-tls >=0.3   && < 0.4,
     process         >=1.6   && < 1.7,
-    text            >=1.2   && < 1.3,
+    text            >=1.2   && < 2.1,
     time            >=1.8   && < 1.10

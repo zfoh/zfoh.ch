@@ -72,6 +72,26 @@ h1.color1 {
     background: url("/images/zurihac2024/noise.svg"), var(--c1);
 }
 
+h1.color2 {
+    background: url("/images/zurihac2024/noise.svg"), var(--c2);
+}
+
+h2 {
+    text-align: left;
+    color: #666;
+    font-size: 18px;
+}
+
+h2:before {
+   background: url("/images/zurihac2024/noise.svg"), #666;
+   content: ' ';
+   display: inline-block;
+   width: 3em;
+   height: 1em;
+   margin: 0px 1em -0.15em -1em;
+   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0.3em, calc(100% - 0.3em) 0);
+}
+
 p {
     text-align: left;
 }

@@ -164,3 +164,31 @@ footer {
 .schedule * .advanced { background: url("/images/zurihac2024/noise.svg"), var(--c1); }
 .schedule * .beginner { background: url("/images/zurihac2024/noise.svg"), var(--c2); }
 .schedule * .admin    { background: url("/images/zurihac2024/noise.svg"), var(--c3); }
+
+/*******************************************************************************
+ * Partners */
+
+h1#sponsors {
+    background: none;
+    color: #1d3553;
+}
+
+.partners {
+    /* The negative margin here allows us to slightly overlap the gradient with
+    * the header. */
+    margin: -30px auto 30px auto;
+    padding: 30px 0 42px 0;
+    background-image: linear-gradient(#fff0 0%, #fff9 30%, #fff9 70%, #fff0 100%);
+    color: black;
+}
+
+.partners img {
+    margin: 18px;
+    max-height: 72px;
+    max-width: 240px;
+    vertical-align: middle;
+}
+
+.partners section {
+    margin-top: 2em;
+}

@@ -260,6 +260,11 @@ footer {
     background-size: 24px 24px;
 }
 
+.speaker .links .mastodon {
+    background: url("/images/icons/mastodon.svg");
+    background-size: 24px 24px;
+}
+
 .speaker .links .twitter {
     background: url("/images/icons/twitter.svg");
     background-size: 24px 24px;

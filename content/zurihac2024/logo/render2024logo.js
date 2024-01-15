@@ -261,6 +261,11 @@ function render2024logo(canvasId, model) {
       canvas.onclick = function() {
           playing = !playing;
       };
+      document.addEventListener("scroll", function(event) {
+          if(!playing) {
+              playing = true;
+          }
+      });
 
       // Draw the scene repeatedly
       function render(now) {

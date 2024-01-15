@@ -9,10 +9,6 @@ function zurihac2024logo() {
         return out;
     }
 
-    function darken(c) {
-        return [c[0] * 0.8, c[1] * 0.8, c[2] * 0.8, c[3]];
-    }
-
     function color(cf, f) {
         return f(function(p) {return [p, cf(p)]});
     }
@@ -321,17 +317,19 @@ function zurihac2024logo() {
     };
 
     function frontcol(p) {
-        const top = [0.95, 0.35, 0.35, 1.0];
-        const bottom = darken(top);
+        const top = [234/255, 137/255, 109/255, 1];
+        const bottom = [211/255, 32/255, 32/255, 1];
         return lerp(bottom, top, p[1]);
     };
     function topcol(p) {
-        const l = [0.99, 0.75, 0.35, 1];
-        return lerp(l, darken(l), p[0]);
+        const l = [230/255, 196/255, 146/255, 1];
+        const r = [218/255, 163/255, 81/255, 1];
+        return lerp(l, r, p[0]);
     };
     function shadecol (p) {
-        const s = [0.3, 0.3, 0.4, 1];
-        return lerp(s, darken(darken(darken(s))), 1 - p[1]);
+        const top = [0.3, 0.3, 0.4, 1];
+        const bottom = [0.2, 0.2, 0.3, 1];
+        return lerp(bottom, top, 1 - p[1]);
     };
     const cubelw = 0.2;
     const front = tw(cubelw, function(xy) {

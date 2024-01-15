@@ -9,12 +9,18 @@
         content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»" />
     <meta property="og:image" content="https://zfoh.ch/images/zurihac2023/preview.png" />
 
-
     <title>ZuriHac 2024</title>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="/css/zurihac2024.css?v=3" />
+
+    <script type="text/JavaScript" src="/zurihac2024/logo/gl-matrix-min.js"></script>
+    <script type="text/JavaScript" src="/zurihac2024/logo/render2024logo.js"></script>
+    <script type="text/JavaScript" src="/zurihac2024/logo/zurihac2024logo.js"></script>
   </head>
   <body>
+    <div style="max-width: 90%; width: 640px; margin: 0 auto;">
+      <canvas id="logocanvas" width="640" height="640"></canvas>
+    </div>
     $body$
     <footer>
       Copyright © $copyrightYears$ Zürich Friends of Haskell ·
@@ -24,5 +30,6 @@
       ·
       <a href="/privacy-policy.html">Privacy Policy</a>
     </footer>
+    <script type="text/JavaScript">render2024logo("logocanvas", zurihac2024logo())</script>
   </body>
 </html>

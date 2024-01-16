@@ -9,21 +9,19 @@
         content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»" />
     <meta property="og:image" content="https://zfoh.ch/images/zurihac2023/preview.png" />
 
-
     <title>ZuriHac 2024</title>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="/css/zurihac2024.css?v=3" />
+
+    <script type="text/JavaScript" src="/zurihac2024/logo/gl-matrix-min.js"></script>
+    <script type="text/JavaScript" src="/zurihac2024/logo/render2024logo.js"></script>
+    <script type="text/JavaScript" src="/zurihac2024/logo/zurihac2024logo.js"></script>
   </head>
   <body>
-    <header>
-  <div style="display: inline-flex; flex-direction: column; align-items: flex-end;">
-    <div style="font-size: 1.5rem">8–10 June</div>
-    <div style="font-size: 3.5rem">ZuriHac'24</div>
-    <div style="font-size: 1.5rem">OST Campus Rapperswil</div>
-  </div>
-</header>
-
-<h1>What is ZuriHac?</h1>
+    <div style="max-width: 90%; width: 640px; margin: 0 auto;">
+      <canvas id="logocanvas" width="640" height="640"></canvas>
+    </div>
+    <h1>What is ZuriHac?</h1>
 
 <section>
   <p>
@@ -242,5 +240,6 @@
       ·
       <a href="/privacy-policy.html">Privacy Policy</a>
     </footer>
+    <script type="text/JavaScript">render2024logo("logocanvas", zurihac2024logo())</script>
   </body>
 </html>

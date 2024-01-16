@@ -29,15 +29,6 @@ body {
     margin: 0px;
 }
 
-header {
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #182e4f;
-    letter-spacing: -2px;
-    line-height: 1;
-    margin: 2em 0em 3em 0em;
-}
-
 section {
     max-width: calc(800px - 2 * 1em);
     margin: 0em auto 1em auto;

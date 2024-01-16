@@ -49,11 +49,11 @@ function render2024logo(canvasId, model) {
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
       const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
-      console.log("aspect", aspect)
       const zNear = 0.1;
       const zFar = 100.0;
       const projectionMatrix = mat4.create();
-      mat4.ortho(projectionMatrix, -aspect, aspect, -1, 1, zNear, zFar);
+      const zoom = 1.1;
+      mat4.ortho(projectionMatrix, -aspect / zoom, aspect / zoom, -1 / zoom, 1 / zoom, zNear, zFar);
 
       const modelViewMatrix = mat4.create();
 
@@ -258,14 +258,13 @@ function render2024logo(canvasId, model) {
 
       let then = 0;
       let playing = false;
-      canvas.onclick = function() {
-          playing = !playing;
-      };
-      document.addEventListener("scroll", function(event) {
+      function startAnimation() {
           if(!playing) {
               playing = true;
           }
-      });
+      }
+      canvas.onclick = startAnimation;
+      document.addEventListener("scroll", startAnimation);
 
       // Draw the scene repeatedly
       function render(now) {

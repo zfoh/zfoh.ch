@@ -14,19 +14,40 @@ html {
     color: black;
     line-height: 1.5;
 
-    background:
-        url("/images/zurihac2024/noise.svg"),
-        url("/images/zurihac2024/hex.svg"),
-        #e8ecf0;
+    background: url("/images/zurihac2024/hex.svg"), #e8ecf0;
     height: 100vh;
-}
-
-a {
-    color: black;
 }
 
 body {
     margin: 0px;
+    position: relative;
+}
+
+div#noise {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("/images/zurihac2024/noise.svg");
+    z-index: 10;
+}
+
+div#logowrapper {
+    position: relative;
+    max-width: 90%;
+    width: 640px;
+    margin: 0 auto;
+    z-index: 9;
+}
+
+main {
+    position: relative;
+    z-index: 20;
+}
+
+a {
+    color: black;
 }
 
 section {

@@ -63,6 +63,12 @@ div.banner {
     padding: 1em;
     margin: 2em 0em;
     font-size: 18px;
+    font-weight: bold;
+}
+
+div.banner a {
+    color: white;
+    text-transform: uppercase;
 }
 
 h1 {

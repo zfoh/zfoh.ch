@@ -122,6 +122,8 @@ p {
 footer {
     margin-top: 4em;
     padding-bottom: 2em;
+    position: relative;
+    z-index: 20;
 }
 
 /*******************************************************************************

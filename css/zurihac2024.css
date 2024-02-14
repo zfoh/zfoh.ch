@@ -210,7 +210,17 @@ footer {
 }
 
 .partners section {
-    margin-top: 2em;
+    margin-top: 1em;
+}
+
+.partners h2{
+  text-align: center;
+  color: #1d3553;
+  text-transform: uppercase;
+}
+
+.partners h2:before{
+  content: none;
 }
 
 /*******************************************************************************

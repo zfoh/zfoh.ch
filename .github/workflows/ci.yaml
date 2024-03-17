@@ -15,7 +15,7 @@ jobs:
       with:
         path: ~/.stack
         key: v2-${{ hashFiles('zfoh.cabal', 'stack.yaml', 'stack.yaml.lock') }}
-    - uses: haskell/actions/setup@v2
+    - uses: haskell-actions/setup@v2
       with:
         enable-stack: true
         stack-no-global: true

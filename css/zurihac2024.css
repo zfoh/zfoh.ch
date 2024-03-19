@@ -99,9 +99,12 @@ h1.plain {
     color: #1d3553;
 }
 
-h2 {
+h2, h3 {
     text-align: left;
     color: #666;
+}
+
+h2 {
     font-size: 18px;
 }
 
@@ -115,8 +118,21 @@ h2:before {
    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0.3em, calc(100% - 0.3em) 0);
 }
 
+h3 {
+    font-size: 16px;
+}
+
 p {
     text-align: left;
+}
+
+ul {
+    text-align: left;
+}
+
+summary {
+    text-align: left;
+    font-style: italic;
 }
 
 footer {

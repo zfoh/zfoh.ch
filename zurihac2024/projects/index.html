@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="ZuriHac 2024" />
+    <meta property="og:description"
+        content="ZuriHac is a free annual haskell event brought to you by «Zürich Friends of Haskell»" />
+    <meta property="og:image" content="https://zfoh.ch/images/zurihac2024/preview.jpg" />
+
+    <title>ZuriHac 2024</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/zurihac2024.css?v=9" />
+
+    <script type="text/JavaScript" src="/zurihac2024/logo/gl-matrix-min.js"></script>
+    <script type="text/JavaScript" src="/zurihac2024/logo/render2024logo.js"></script>
+    <script type="text/JavaScript" src="/zurihac2024/logo/zurihac2024logo.js"></script>
+  </head>
+  <body>
+    <div id="noise"></div>
+    <main>
+  <h1>Projects</h1>
+
+  <section>
+    <p>
+      This is the list of projects that attendees of ZuriHac 2024 are planning to
+      work on.  If any of these spark your interest, then you will be able to join
+      the project channel on Discord or find the contact at the venue and hack
+      away on it with other participants.
+    </p>
+    <p>
+      If you want to get your own project included, please add your project name and
+      description by
+      <a href="https://github.com/zfoh/zfoh.ch/edit/main/content/zurihac2024/projects/projects.json">submitting a pull request here</a>.
+    </p>
+
+    <div class="projects">
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/agda/agda2hs">Agda2Hs</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Jesper Cockx
+          </div>
+          <div class="level">
+            Contributor level: intermediate, advanced
+          </div>
+          
+            <div class="description">
+              Agda2hs is a tool for producing verified and readable Haskell code by extracting it from a (lightly annotated) Agda program.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://hackage.haskell.org/package/amazonka">Amazonka</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Jack Kelly
+          </div>
+          <div class="level">
+            Contributor level: advanced
+          </div>
+          
+            <div class="description">
+              The Amazonka generator needs some serious rework to cope with modern AWS service definitions.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/vmchale/apple">Apple array system/compiler</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Vanessa McHale
+          </div>
+          <div class="level">
+            Contributor level: advanced
+          </div>
+          
+            <div class="description">
+              A compiler and type system
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              Building Safe Apps with Haskell
+            
+          </div>
+          <div class="contact">
+            Contact: Paweł Szulc
+          </div>
+          <div class="level">
+            Contributor level: beginner
+          </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/alanz/ghc-exactprint">Exact Print Annotations</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Alan Zimmerman
+          </div>
+          <div class="level">
+            Contributor level: advanced
+          </div>
+          
+            <div class="description">
+              The infrastructure in GHC to allow changing the AST and emitting changed source code. With original formatting, comments, etc
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://flora.pm">Flora.pm – A meta-index for the Haskell package ecosystem</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Hécate
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate, advanced
+          </div>
+          
+            <div class="description">
+              Flora gathers packages from across the ecosystem and aims to provide a unifying view, analytics, and better onboarding story for beginners.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://www.haskell.org/ghc/">GHC</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Richard Eisenberg
+          </div>
+          <div class="level">
+            Contributor level: advanced
+          </div>
+          
+            <div class="description">
+              The primary Haskell compiler
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/haskell/ghcup-hs">ghcup</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Julian Ospald
+          </div>
+          <div class="level">
+            Contributor level: intermediate, advanced
+          </div>
+          
+            <div class="description">
+              https://github.com/haskell/ghcup-hs/issues/65
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/runeksvendsen/haskell-function-graph">Haskell Function Graph</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Rune Svendsen
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate, advanced
+          </div>
+          
+            <div class="description">
+              A form of "Hoogle type search" for functions that can find a sequence of composed functions that converts from one type to another. For example, searching for "lazy Text to strict ByteString" returns e.g. "text-2.0.2:Data.Text.Encoding.encodeUtf8 . text-2.0.2:Data.Text.Lazy.toStrict" and "bytestring-0.11.4.0:Data.ByteString.toStrict . text-2.0.2:Data.Text.Lazy.Encoding.encodeUtf8".
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/haskell/haskell-language-server/">Haskell Language Server</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Hannes Siebenhandl
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate, advanced
+          </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://gitlab.com/HaskellKatas/katas--proof-of-concept">HaskellKatas</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Reynaldo Cordero
+          </div>
+          <div class="level">
+            Contributor level: intermediate
+          </div>
+          
+            <div class="description">
+              In mathematics you don't understand things. You just get used to them.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              Identity Provider
+            
+          </div>
+          <div class="contact">
+            Contact: Peter Ryland
+          </div>
+          <div class="level">
+            Contributor level: intermediate
+          </div>
+          
+            <div class="description">
+              Auth system similar to Zitadel or Keycloak
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/turion/rhine-koans">Learn Rhine FRP with type level clocks</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Manuel Bärenz
+          </div>
+          <div class="level">
+            Contributor level: intermediate, advanced
+          </div>
+          
+            <div class="description">
+              You can learn how to write Functional Reactive Programs using the Rhine framework. The main author will lead you through a Koans workshop with many little problems to solve, and support you with your own Rhine project.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://ucsd-progsys.github.io/liquidhaskell/">Liquid Haskell</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Facundo Domínguez
+          </div>
+          <div class="level">
+            Contributor level: intermediate
+          </div>
+          
+            <div class="description">
+              A verification tool for Haskell based on SMT solvers
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="Massimult.org">Massimult</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Jürgen Nicklisch-Franken
+          </div>
+          <div class="level">
+            Contributor level: intermediate, advanced
+          </div>
+          
+            <div class="description">
+              Towards Functional Parallel Hardware
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/Akilan1999/p2p-rendering-computation">p2prc</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Jose Fernandes
+          </div>
+          <div class="level">
+            Contributor level: beginner
+          </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://github.com/feramhq/Perspec">Perspec</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Adrian Sieber
+          </div>
+          <div class="level">
+            Contributor level: intermediate
+          </div>
+          
+            <div class="description">
+              Scriptable desktop app to correct the perspective of images
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://purescript.org">PureScript</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Fabrizio Ferrai
+          </div>
+          <div class="level">
+            Contributor level: intermediate, advanced
+          </div>
+          
+            <div class="description">
+              A strongly-typed language that compiles to JavaScript
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://hackage.haskell.org/package/random">random</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Alexey Kuleshevich
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate, advanced
+          </div>
+          
+            <div class="description">
+              Haskell PRNG library
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://haskell.build/">rules_haskell: Building Haskell with Bazel</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Andreas Herrmann
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate, advanced
+          </div>
+          
+            <div class="description">
+              Bazel is an open source build system developed to support large, polyglot projects. Join this project or stop by if you would like to learn about building Haskell with Bazel, help us make it easier to get started, learn when Bazel may add value to your project, or if you're interested in contributing to rules_haskell.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://smos.online">Smos</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Tom Sydney Kerckhove
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate, advanced
+          </div>
+          
+            <div class="description">
+              A comprehensive self-management system.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="https://haskell-docs.netlify.app/">The Haskell Guide</a>
+            
+          </div>
+          <div class="contact">
+            Contact: Reuben Cohn-Gordon
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate
+          </div>
+          
+            <div class="description">
+              Help me develop an online Haskell guide, aimed at attracting/onboarding newcomers with a background in Python or similar.
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              The philosophical theory of programming languages
+            
+          </div>
+          <div class="contact">
+            Contact: Tilde Rose
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate, advanced
+          </div>
+          
+            <div class="description">
+              exploring the roles of programming languages in society through the lens of semiotics
+            </div>
+          
+        </div>
+      
+        <div class="project">
+          <div class="name">
+            
+              <a href="github.com/danse/visie">visie</a>
+            
+          </div>
+          <div class="contact">
+            Contact: francesco occhipinti
+          </div>
+          <div class="level">
+            Contributor level: beginner, intermediate
+          </div>
+          
+            <div class="description">
+              command-line d3 runner
+            </div>
+          
+        </div>
+      
+    </div>
+  </section>
+
+</main>
+
+    <footer>
+      Copyright © 2018 - 2024 Zürich Friends of Haskell ·
+      <a href="https://github.com/zfoh/zfoh.ch">Source code available</a>
+      ·
+      <a href="/terms-and-conditions.html">Terms and Conditions</a>
+      ·
+      <a href="/privacy-policy.html">Privacy Policy</a>
+    </footer>
+    <script type="text/JavaScript">render2024logo("logocanvas", zurihac2024logo())</script>
+  </body>
+</html>

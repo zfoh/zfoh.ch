@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Agda2Hs",
+    "contact": "Jesper Cockx",
+    "description": "Agda2hs is a tool for producing verified and readable Haskell code by extracting it from a (lightly annotated) Agda program.",
+    "link": "https://github.com/agda/agda2hs",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Amazonka",
+    "contact": "Jack Kelly",
+    "description": "The Amazonka generator needs some serious rework to cope with modern AWS service definitions.",
+    "link": "https://hackage.haskell.org/package/amazonka",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Apple array system/compiler",
+    "contact": "Vanessa McHale",
+    "description": "A compiler and type system",
+    "link": "https://github.com/vmchale/apple",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Building Safe Apps with Haskell",
+    "contact": "Paweł Szulc",
+    "description": null,
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Exact Print Annotations",
+    "contact": "Alan Zimmerman",
+    "description": "The infrastructure in GHC to allow changing the AST and emitting changed source code. With original formatting, comments, etc",
+    "link": "https://github.com/alanz/ghc-exactprint",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Flora.pm – A meta-index for the Haskell package ecosystem",
+    "contact": "Hécate",
+    "description": "Flora gathers packages from across the ecosystem and aims to provide a unifying view, analytics, and better onboarding story for beginners.",
+    "link": "https://flora.pm",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "GHC",
+    "contact": "Richard Eisenberg",
+    "description": "The primary Haskell compiler",
+    "link": "https://www.haskell.org/ghc/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "ghcup",
+    "contact": "Julian Ospald",
+    "description": "https://github.com/haskell/ghcup-hs/issues/65",
+    "link": "https://github.com/haskell/ghcup-hs",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Haskell Function Graph",
+    "contact": "Rune Svendsen",
+    "description": "A form of \"Hoogle type search\" for functions that can find a sequence of composed functions that converts from one type to another. For example, searching for \"lazy Text to strict ByteString\" returns e.g. \"text-2.0.2:Data.Text.Encoding.encodeUtf8 . text-2.0.2:Data.Text.Lazy.toStrict\" and \"bytestring-0.11.4.0:Data.ByteString.toStrict . text-2.0.2:Data.Text.Lazy.Encoding.encodeUtf8\".",
+    "link": "https://github.com/runeksvendsen/haskell-function-graph",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Haskell Language Server",
+    "contact": "Hannes Siebenhandl",
+    "description": null,
+    "link": "https://github.com/haskell/haskell-language-server/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "HaskellKatas",
+    "contact": "Reynaldo Cordero",
+    "description": "In mathematics you don't understand things. You just get used to them.",
+    "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Identity Provider",
+    "contact": "Peter Ryland",
+    "description": "Auth system similar to Zitadel or Keycloak",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Learn Rhine FRP with type level clocks",
+    "contact": "Manuel Bärenz",
+    "description": "You can learn how to write Functional Reactive Programs using the Rhine framework. The main author will lead you through a Koans workshop with many little problems to solve, and support you with your own Rhine project.",
+    "link": "https://github.com/turion/rhine-koans",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Liquid Haskell",
+    "contact": "Facundo Domínguez",
+    "description": "A verification tool for Haskell based on SMT solvers",
+    "link": "https://ucsd-progsys.github.io/liquidhaskell/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Massimult",
+    "contact": "Jürgen Nicklisch-Franken",
+    "description": "Towards Functional Parallel Hardware",
+    "link": "Massimult.org",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "p2prc",
+    "contact": "Jose Fernandes",
+    "description": null,
+    "link": "https://github.com/Akilan1999/p2p-rendering-computation",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Perspec",
+    "contact": "Adrian Sieber",
+    "description": "Scriptable desktop app to correct the perspective of images",
+    "link": "https://github.com/feramhq/Perspec",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "PureScript",
+    "contact": "Fabrizio Ferrai",
+    "description": "A strongly-typed language that compiles to JavaScript",
+    "link": "https://purescript.org",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "random",
+    "contact": "Alexey Kuleshevich",
+    "description": "Haskell PRNG library",
+    "link": "https://hackage.haskell.org/package/random",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "rules_haskell: Building Haskell with Bazel",
+    "contact": "Andreas Herrmann",
+    "description": "Bazel is an open source build system developed to support large, polyglot projects. Join this project or stop by if you would like to learn about building Haskell with Bazel, help us make it easier to get started, learn when Bazel may add value to your project, or if you're interested in contributing to rules_haskell.",
+    "link": "https://haskell.build/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Smos",
+    "contact": "Tom Sydney Kerckhove",
+    "description": "A comprehensive self-management system.",
+    "link": "https://smos.online",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "The Haskell Guide",
+    "contact": "Reuben Cohn-Gordon",
+    "description": "Help me develop an online Haskell guide, aimed at attracting/onboarding newcomers with a background in Python or similar.",
+    "link": "https://haskell-docs.netlify.app/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "The philosophical theory of programming languages",
+    "contact": "Tilde Rose",
+    "description": "exploring the roles of programming languages in society through the lens of semiotics",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "visie",
+    "contact": "francesco occhipinti",
+    "description": "command-line d3 runner",
+    "link": "github.com/danse/visie",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  }
+]

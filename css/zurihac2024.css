@@ -21,6 +21,7 @@ html {
 body {
     margin: 0px;
     position: relative;
+    padding-top: 6px;
 }
 
 div#noise {
@@ -341,4 +342,30 @@ footer {
 
 .campus p a {
     color: white;
+}
+
+/*******************************************************************************
+ * Projects page */
+
+.projects {
+  text-align: left;
+}
+
+.projects .project {
+  background-color: rgba(213, 234, 237, 0.8)
+  margin: 0px;
+  padding: 0.5em;
+}
+
+.projects .project:nth-child(even) {
+  background-color: rgba(227, 255, 176, 0.4);
+}
+
+.projects .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.projects .description {
+  margin-top: 1em;
 }

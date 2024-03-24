@@ -3,44 +3,13 @@
 {-# LANGUAGE OverloadedStrings          #-}
 module Projects where
 
-import qualified Data.Aeson   as A
-import           Data.Binary  (Binary)
-import           Data.Char    (toLower)
-import           Data.List    (sortOn)
-import           Data.List    (intercalate)
-import           GHC.Generics (Generic)
+import qualified Data.Aeson          as A
+import           Data.Binary         (Binary)
+import           Data.List           (intercalate, sortOn)
+import qualified Data.Text           as T
 import           Hakyll
 
-data ContributorLevel = ContributorLevel
-    { clBeginner     :: !Bool
-    , clIntermediate :: !Bool
-    , clAdvanced     :: !Bool
-    } deriving (Generic, Show)
-
-data Project = Project
-    { pName             :: String
-    , pLink             :: Maybe String
-    , pContact          :: String
-    , pContributorLevel :: !ContributorLevel
-    , pDescription      :: Maybe String
-    } deriving (Generic, Show)
-
-instance Binary ContributorLevel
-instance Binary Project
-
-instance A.FromJSON ContributorLevel where
-    parseJSON = A.withObject "ContributorLevel" $ \obj -> ContributorLevel
-        <$> obj A..:? "beginner" A..!= False
-        <*> obj A..:? "intermediate" A..!= False
-        <*> obj A..:? "advanced" A..!= False
-
-instance A.FromJSON Project where
-    parseJSON = A.withObject "Project" $ \obj -> Project
-        <$> obj A..:  "name"
-        <*> obj A..:? "link"
-        <*> obj A..:  "contact"
-        <*> obj A..:  "contributorLevel"
-        <*> obj A..:? "description"
+import           Projects.Definition
 
 newtype Projects = Projects [Project] deriving (Binary, A.FromJSON)
 
@@ -53,15 +22,15 @@ projectsContext (Projects projects) =
     sortOn sortKey projects
   where
     projectContext =
-        field "name" (pure . pName . itemBody) <>
-        field "link" (maybe (fail "no link") pure . pLink . itemBody) <>
-        field "contact" (pure . pContact. itemBody) <>
-        field "description" (maybe (fail "no description") pure . pDescription. itemBody) <>
-        field "contributorLevel" (pure . level . pContributorLevel . itemBody)
+        field "name" (pure . T.unpack . project_name . itemBody) <>
+        field "link" (maybe (fail "no link") (pure . T.unpack) . project_link . itemBody) <>
+        field "contact" (pure . T.unpack . project_contact . itemBody) <>
+        field "description" (maybe (fail "no description") (pure . T.unpack) . project_description . itemBody) <>
+        field "contributorLevel" (pure . level . project_contributorLevel . itemBody)
 
     level cl = intercalate ", " $
-        ["beginner" | clBeginner cl] ++
-        ["intermediate" | clIntermediate cl] ++
-        ["advanced" | clAdvanced cl]
+        ["beginner"     | projectContributorLevel_beginner     cl] ++
+        ["intermediate" | projectContributorLevel_intermediate cl] ++
+        ["advanced"     | projectContributorLevel_advanced     cl]
 
-    sortKey = map toLower . pName
+    sortKey = T.toLower . project_name

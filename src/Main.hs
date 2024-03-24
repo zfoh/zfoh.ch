@@ -125,6 +125,8 @@ main = hakyll $ do
 
     ----------------------------------------------------------------------------
     -- New project pages.
+    --
+    -- TODO: Clean up.
 
     match "content/zurihac2023/projects/projects.json" $
         compile $ do
@@ -139,6 +141,20 @@ main = hakyll $ do
             html <- getResourceBody >>=
                 applyAsTemplate (Projects.projectsContext projects)
             loadAndApplyTemplate "templates/zurihac2023.html" zfohContext html
+
+    match "content/zurihac2024/projects/projects.json" $
+        compile $ do
+            body <- itemBody <$> getResourceLBS
+            case A.eitherDecode body of
+                Right projects -> makeItem (projects :: Projects.Projects)
+                Left err       -> fail err
+    match "content/zurihac2024/projects/index.html" $ do
+        route dropContentRoute
+        compile $ do
+            projects <- loadBody "content/zurihac2024/projects/projects.json"
+            html <- getResourceBody >>=
+                applyAsTemplate (Projects.projectsContext projects)
+            loadAndApplyTemplate "templates/zurihac2024.html" zfohContext html
 
     ----------------------------------------------------------------------------
     -- Meetup section is dynamically generated.

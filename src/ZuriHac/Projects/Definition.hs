@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveGeneric   #-}
 {-# LANGUAGE TemplateHaskell #-}
-module Projects.Definition
+module ZuriHac.Projects.Definition
     ( Project (..)
     , ProjectContributorLevel (..)
     ) where

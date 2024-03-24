@@ -3,17 +3,17 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards   #-}
 {-# LANGUAGE TemplateHaskell   #-}
-import           Control.Monad        (guard)
-import qualified Data.Aeson           as A
-import qualified Data.Aeson.TH        as A
-import qualified Data.ByteString.Lazy as LB
-import           Data.Char            (isPunctuation)
-import           Data.List            (sortOn)
-import           Data.Maybe           (mapMaybe)
-import qualified Data.Text            as T
+import           Control.Monad               (guard)
+import qualified Data.Aeson                  as A
+import qualified Data.Aeson.TH               as A
+import qualified Data.ByteString.Lazy        as LB
+import           Data.Char                   (isPunctuation)
+import           Data.List                   (sortOn)
+import           Data.Maybe                  (mapMaybe)
+import qualified Data.Text                   as T
 
-import qualified AesonOptions         as A
-import           Projects.Definition
+import qualified AesonOptions                as A
+import           ZuriHac.Projects.Definition
 
 --------------------------------------------------------------------------------
 

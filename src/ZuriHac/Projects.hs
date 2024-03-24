@@ -1,15 +1,15 @@
 {-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE OverloadedStrings          #-}
-module Projects where
+module ZuriHac.Projects where
 
-import qualified Data.Aeson          as A
-import           Data.Binary         (Binary)
-import           Data.List           (intercalate, sortOn)
-import qualified Data.Text           as T
+import qualified Data.Aeson                  as A
+import           Data.Binary                 (Binary)
+import           Data.List                   (intercalate, sortOn)
+import qualified Data.Text                   as T
 import           Hakyll
 
-import           Projects.Definition
+import           ZuriHac.Projects.Definition
 
 newtype Projects = Projects [Project] deriving (Binary, A.FromJSON)
 

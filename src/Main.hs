@@ -1,12 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import qualified Data.Aeson      as A
-import           Data.Foldable   (forM_)
-import qualified Data.Time       as Time
+import qualified Data.Aeson       as A
+import           Data.Foldable    (forM_)
+import qualified Data.Time        as Time
 import           Hakyll
 import           Meetup
-import qualified Projects        as Projects
-import           System.FilePath (joinPath, splitPath)
+import           System.FilePath  (joinPath, splitPath)
+import qualified ZuriHac.Projects as Projects
 
 main :: IO ()
 main = hakyll $ do

@@ -24,8 +24,8 @@ Executable zfoh
   Other-modules:
     AesonOptions
     Meetup
-    Projects
-    Projects.Definition
+    ZuriHac.Projects
+    ZuriHac.Projects.Definition
 
   Build-depends:
     aeson           >= 1.2   && < 2.3,
@@ -41,14 +41,14 @@ Executable zfoh
     text            >= 1.2   && < 2.1,
     time            >= 1.8   && < 1.10
 
-Executable zfoh-import-projects
-  Main-is:          ImportProjects.hs
+Executable zfoh-import-zurihac-projects
+  Main-is:          ZuriHac/Projects/Import.hs
   Hs-source-dirs:   src
   Default-language: Haskell2010
 
   Other-modules:
     AesonOptions
-    Projects.Definition
+    ZuriHac.Projects.Definition
 
   Build-depends:
     aeson      >= 1.2  && < 2.3,

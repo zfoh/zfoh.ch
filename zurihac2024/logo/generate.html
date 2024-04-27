@@ -27,34 +27,58 @@
     }
 
     window.addEventListener("load", function() {
-        const background = "Deep Slate Olive";
-        console.log(dict.get(background));
-        document.documentElement.style.backgroundColor = "rgb(" +
-            dict.get(background)[0] * 255 + ", " +
-            dict.get(background)[1] * 255 + ", " +
-            dict.get(background)[2] * 255 + ")";
+        const select = document.createElement("select");
+        document.body.appendChild(select);
+        for (const color of dict.list()) {
+            const option = document.createElement("option");
+            option.value = color;
+            option.innerText = color;
+            select.appendChild(option);
+        }
 
-        for (const palette of dict.with(background)) {
-            if (palette.colors.length >= 3) {
-                const h1 = document.createElement("h1");
-                h1.innerText = palette.combination
-                document.body.appendChild(h1);
-                for (const permutation of permute(palette.colors)) {
-                    const canvas = document.createElement("canvas");
-                    canvas.width = 512;
-                    canvas.height = 512;
-                    document.body.appendChild(canvas);
-                    renderLogo({
-                        "canvas": canvas,
-                        "model": zurihac2024logo({
-                            "front": plain(dict.get(permutation[0])),
-                            "side": plain(dict.get(permutation[0])),
-                            "top": plain(dict.get(permutation[1])),
-                            "shade": plain(dict.get(permutation[2])),
-                        }),
-                    });
+        const main = document.createElement("main");
+        document.body.appendChild(main);
+
+        function cleanup() {
+            main.innerHTML = "";
+        }
+
+        function paint(color) {
+            document.documentElement.style.backgroundColor = "rgb(" +
+                dict.get(color)[0] * 255 + ", " +
+                dict.get(color)[1] * 255 + ", " +
+                dict.get(color)[2] * 255 + ")";
+
+            for (const palette of dict.with(color)) {
+                if (palette.colors.length >= 3) {
+                    const h1 = document.createElement("h1");
+                    h1.innerText = palette.combination
+                    main.appendChild(h1);
+                    for (const permutation of permute(palette.colors)) {
+                        const canvas = document.createElement("canvas");
+                        canvas.width = 512;
+                        canvas.height = 512;
+                        main.appendChild(canvas);
+                        renderLogo({
+                            "canvas": canvas,
+                            "model": zurihac2024logo({
+                                "front": plain(dict.get(permutation[0])),
+                                "side": plain(dict.get(permutation[0])),
+                                "top": plain(dict.get(permutation[1])),
+                                "shade": plain(dict.get(permutation[2])),
+                            }),
+                        });
+                    }
                 }
             }
         }
+
+        function change() {
+            cleanup();
+            paint(select.options[select.selectedIndex].value);
+        }
+
+        select.addEventListener("change", change);
+        change();
     })
 </script>

@@ -4699,6 +4699,13 @@ const dict = (function() {
   };
 
   return {
+    "list": function() {
+      const names = [];
+      for (const color of source) {
+        names.push(color.name);
+      }
+      return names;
+    },
     "get": function(name) {
       if (name in obj) {
         const rgb = obj[name].rgb;

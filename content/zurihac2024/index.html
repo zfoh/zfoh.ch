@@ -4,7 +4,14 @@
 <script type="text/JavaScript" src="/zurihac2024/logo/gl-matrix-min.js"></script>
 <script type="text/JavaScript" src="/zurihac2024/logo/render2024logo.js"></script>
 <script type="text/JavaScript" src="/zurihac2024/logo/zurihac2024logo.js"></script>
-<script type="text/JavaScript">render2024logo("logocanvas", zurihac2024logo())</script>
+<script type="text/JavaScript">
+  renderLogo({
+    "canvasId": "logocanvas",
+    "model": zurihac2024logo(),
+    "resizeCanvas": true,
+    "animate": true,
+  });
+</script>
 <main>
 
 <h1>What is ZuriHac?</h1>

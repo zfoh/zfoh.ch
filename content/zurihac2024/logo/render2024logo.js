@@ -1,6 +1,9 @@
 "use strict";
 
-function render2024logo(canvasId, model) {
+function renderLogo(config) {
+    const canvasId = config.canvasId;
+    const model = config.model;
+
     // Based on <https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL>
     function initBuffers(gl) {
       const positionBuffer = initPositionBuffer(gl);
@@ -202,7 +205,9 @@ function render2024logo(canvasId, model) {
       let deltaTime = 0;
 
       const canvas = document.getElementById(canvasId);
-      maximizeCanvas(canvas);
+      if (config.resizeCanvas) {
+        maximizeCanvas(canvas);
+      }
       const gl = canvas.getContext("webgl");
 
       if (gl === null) {
@@ -273,7 +278,7 @@ function render2024logo(canvasId, model) {
         then = now;
 
         drawScene(gl, programInfo, cubeRotation);
-        if(playing) {
+        if(config.animate && playing) {
             cubeRotation += deltaTime;
             if(cubeRotation >= 2 * Math.PI) {
                 playing = false;

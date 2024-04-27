@@ -14,6 +14,12 @@ function gradient(c0, c1) {
     };
 }
 
+function plain(c) {
+    return function(t) {
+        return c;
+    };
+}
+
 function zurihac2024logo(scheme) {
     if (!scheme) {
         scheme = {

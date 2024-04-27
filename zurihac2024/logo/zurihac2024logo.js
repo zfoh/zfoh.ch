@@ -1,12 +1,39 @@
 "use strict";
 
-function zurihac2024logo() {
-    function lerp(x, y, t) {
-        const out = new Array(x.length);
-        for(let i = 0; i < x.length; i++) {
-            out[i] = x[i] * (1 - t) + y[i] * t;
+function lerp(x, y, t) {
+    const out = new Array(x.length);
+    for(let i = 0; i < x.length; i++) {
+        out[i] = x[i] * (1 - t) + y[i] * t;
+    }
+    return out;
+}
+
+function gradient(c0, c1) {
+    return function(t) {
+        return lerp(c0, c1, t);
+    };
+}
+
+function zurihac2024logo(scheme) {
+    if (!scheme) {
+        scheme = {
+            "front": gradient(
+                [211/255, 32/255, 32/255, 1],
+                [234/255, 137/255, 109/255, 1],
+            ),
+            "side": gradient(
+                [211/255, 32/255, 32/255, 1],
+                [234/255, 137/255, 109/255, 1],
+            ),
+            "top": gradient(
+                [230/255, 196/255, 146/255, 1],
+                [218/255, 163/255, 81/255, 1],
+            ),
+            "shade": gradient(
+                [0.3, 0.3, 0.4, 1],
+                [0.2, 0.2, 0.3, 1],
+            ),
         }
-        return out;
     }
 
     function color(cf, f) {
@@ -317,28 +344,25 @@ function zurihac2024logo() {
     };
 
     function frontcol(p) {
-        const top = [234/255, 137/255, 109/255, 1];
-        const bottom = [211/255, 32/255, 32/255, 1];
-        return lerp(bottom, top, p[1]);
+        return scheme.front(p[1]);
+    };
+    function sidecol(p) {
+        return scheme.side(p[1]);
     };
     function topcol(p) {
-        const l = [230/255, 196/255, 146/255, 1];
-        const r = [218/255, 163/255, 81/255, 1];
-        return lerp(l, r, p[0]);
+        return scheme.top(p[0]);
     };
     function shadecol (p) {
-        const top = [0.3, 0.3, 0.4, 1];
-        const bottom = [0.2, 0.2, 0.3, 1];
-        return lerp(bottom, top, 1 - p[1]);
+        return scheme.shade(p[1]);
     };
     const cubelw = 0.2;
     const front = tw(cubelw, function(xy) {
-        return color(frontcol, function(point) {
+        return color(sidecol, function(point) {
             return point([xy[0], xy[1], 1.0]);
         });
     });
     const back = tw(cubelw, function(xy) {
-        return color(frontcol, function(point) {
+        return color(sidecol, function(point) {
             return point([xy[0], xy[1], 0]);
         });
     });

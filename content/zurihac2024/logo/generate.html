@@ -1,0 +1,60 @@
+<style>
+    html {
+        font-family: sans-serif;
+        color: white;
+    }
+</style>
+<script type="text/JavaScript" src="gl-matrix-min.js"></script>
+<script type="text/JavaScript" src="render2024logo.js"></script>
+<script type="text/JavaScript" src="zurihac2024logo.js"></script>
+<script type="text/JavaScript" src="colors.js"></script>
+<script type="text/JavaScript">
+    function permute(input) {
+        var results = [];
+        function work(arr, memo) {
+            var cur, memo = memo || [];
+            for (var i = 0; i < arr.length; i++) {
+                cur = arr.splice(i, 1);
+                if (arr.length === 0) {
+                    results.push(memo.concat(cur));
+                }
+                work(arr.slice(), memo.concat(cur));
+                arr.splice(i, 0, cur[0]);
+            }
+            return results;
+        }
+        return work(input);
+    }
+
+    window.addEventListener("load", function() {
+        const background = "Deep Slate Olive";
+        console.log(dict.get(background));
+        document.documentElement.style.backgroundColor = "rgb(" +
+            dict.get(background)[0] * 255 + ", " +
+            dict.get(background)[1] * 255 + ", " +
+            dict.get(background)[2] * 255 + ")";
+
+        for (const palette of dict.with(background)) {
+            if (palette.colors.length >= 3) {
+                const h1 = document.createElement("h1");
+                h1.innerText = palette.combination
+                document.body.appendChild(h1);
+                for (const permutation of permute(palette.colors)) {
+                    const canvas = document.createElement("canvas");
+                    canvas.width = 512;
+                    canvas.height = 512;
+                    document.body.appendChild(canvas);
+                    renderLogo({
+                        "canvas": canvas,
+                        "model": zurihac2024logo({
+                            "front": plain(dict.get(permutation[0])),
+                            "side": plain(dict.get(permutation[0])),
+                            "top": plain(dict.get(permutation[1])),
+                            "shade": plain(dict.get(permutation[2])),
+                        }),
+                    });
+                }
+            }
+        }
+    })
+</script>

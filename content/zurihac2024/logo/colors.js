@@ -4698,12 +4698,30 @@ const dict = (function() {
     obj[color.name] = color;
   };
 
-  return function(name) {
-    if (name in obj) {
-      const rgb = obj[name].rgb;
-      return [rgb[0] / 255, rgb[1] / 255, rgb[2] / 255, 1];
-    } else {
-      throw Error("unknown color: " + name);
+  return {
+    "get": function(name) {
+      if (name in obj) {
+        const rgb = obj[name].rgb;
+        return [rgb[0] / 255, rgb[1] / 255, rgb[2] / 255, 1];
+      } else {
+        throw Error("unknown color: " + name);
+      }
+    },
+    "with": function(name) {
+      const palettes = [];
+      for (const combination of obj[name].combinations) {
+        const palette = {
+          "combination": combination,
+          "colors": []
+        };
+        for (const color of source) {
+          if (color.combinations.includes(combination) && color.name != name) {
+            palette.colors.push(color.name);
+          }
+        }
+        palettes.push(palette);
+      }
+      return palettes;
     }
   };
 })();

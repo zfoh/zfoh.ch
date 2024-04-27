@@ -1,7 +1,6 @@
 "use strict";
 
 function renderLogo(config) {
-    const canvasId = config.canvasId;
     const model = config.model;
 
     // Based on <https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL>
@@ -204,7 +203,10 @@ function renderLogo(config) {
       let cubeRotation = 0.0;
       let deltaTime = 0;
 
-      const canvas = document.getElementById(canvasId);
+      let canvas = config.canvas;
+      if (!canvas) {
+        canvas = document.getElementById(config.canvasId);
+      }
       if (config.resizeCanvas) {
         maximizeCanvas(canvas);
       }

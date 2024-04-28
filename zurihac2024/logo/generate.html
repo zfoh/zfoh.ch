@@ -26,14 +26,22 @@
         return work(input);
     }
 
+    function palettes3(color) {
+        return dict.with(color).filter(function (p) {
+            return p.colors.length >= 3;
+        });
+    }
+
     window.addEventListener("load", function() {
         const select = document.createElement("select");
         document.body.appendChild(select);
         for (const color of dict.list()) {
-            const option = document.createElement("option");
-            option.value = color;
-            option.innerText = color;
-            select.appendChild(option);
+            if (palettes3(color).length > 0) {
+                const option = document.createElement("option");
+                option.value = color;
+                option.innerText = color;
+                select.appendChild(option);
+            }
         }
 
         const main = document.createElement("main");
@@ -49,26 +57,24 @@
                 dict.get(color)[1] * 255 + ", " +
                 dict.get(color)[2] * 255 + ")";
 
-            for (const palette of dict.with(color)) {
-                if (palette.colors.length >= 3) {
-                    const h1 = document.createElement("h1");
-                    h1.innerText = palette.combination
-                    main.appendChild(h1);
-                    for (const permutation of permute(palette.colors)) {
-                        const canvas = document.createElement("canvas");
-                        canvas.width = 512;
-                        canvas.height = 512;
-                        main.appendChild(canvas);
-                        renderLogo({
-                            "canvas": canvas,
-                            "model": zurihac2024logo({
-                                "front": plain(dict.get(permutation[0])),
-                                "side": plain(dict.get(permutation[0])),
-                                "top": plain(dict.get(permutation[1])),
-                                "shade": plain(dict.get(permutation[2])),
-                            }),
-                        });
-                    }
+            for (const palette of palettes3(color)) {
+                const h1 = document.createElement("h1");
+                h1.innerText = palette.combination
+                main.appendChild(h1);
+                for (const permutation of permute(palette.colors)) {
+                    const canvas = document.createElement("canvas");
+                    canvas.width = 512;
+                    canvas.height = 512;
+                    main.appendChild(canvas);
+                    renderLogo({
+                        "canvas": canvas,
+                        "model": zurihac2024logo({
+                            "front": plain(dict.get(permutation[0])),
+                            "side": plain(dict.get(permutation[0])),
+                            "top": plain(dict.get(permutation[1])),
+                            "shade": plain(dict.get(permutation[2])),
+                        }),
+                    });
                 }
             }
         }

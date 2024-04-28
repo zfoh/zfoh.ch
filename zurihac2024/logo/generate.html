@@ -53,14 +53,20 @@
 
         function paint(color) {
             document.documentElement.style.backgroundColor = "rgb(" +
-                dict.get(color)[0] * 255 + ", " +
-                dict.get(color)[1] * 255 + ", " +
-                dict.get(color)[2] * 255 + ")";
+                dict.rgb(color)[0] * 255 + ", " +
+                dict.rgb(color)[1] * 255 + ", " +
+                dict.rgb(color)[2] * 255 + ")";
+            document.documentElement.style.color =
+                dict.lab(color)[0] >= 50 ? 'black' : 'white';
+
+            const h1 = document.createElement("h1");
+            h1.innerText = color;
+            main.appendChild(h1);
 
             for (const palette of palettes3(color)) {
-                const h1 = document.createElement("h1");
-                h1.innerText = palette.combination
-                main.appendChild(h1);
+                const h2 = document.createElement("h2");
+                h2.innerText = palette.combination
+                main.appendChild(h2);
                 for (const permutation of permute(palette.colors)) {
                     const canvas = document.createElement("canvas");
                     canvas.width = 512;
@@ -69,10 +75,10 @@
                     renderLogo({
                         "canvas": canvas,
                         "model": zurihac2024logo({
-                            "front": plain(dict.get(permutation[0])),
-                            "side": plain(dict.get(permutation[0])),
-                            "top": plain(dict.get(permutation[1])),
-                            "shade": plain(dict.get(permutation[2])),
+                            "front": plain(dict.rgb(permutation[0])),
+                            "side": plain(dict.rgb(permutation[0])),
+                            "top": plain(dict.rgb(permutation[1])),
+                            "shade": plain(dict.rgb(permutation[2])),
                         }),
                     });
                 }

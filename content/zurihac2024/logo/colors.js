@@ -4706,10 +4706,17 @@ const dict = (function() {
       }
       return names;
     },
-    "get": function(name) {
+    "rgb": function(name) {
       if (name in obj) {
         const rgb = obj[name].rgb;
         return [rgb[0] / 255, rgb[1] / 255, rgb[2] / 255, 1];
+      } else {
+        throw Error("unknown color: " + name);
+      }
+    },
+    "lab": function(name) {
+      if (name in obj) {
+        return obj[name].lab;
       } else {
         throw Error("unknown color: " + name);
       }

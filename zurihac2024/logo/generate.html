@@ -67,6 +67,11 @@
                 const h2 = document.createElement("h2");
                 h2.innerText = palette.combination
                 main.appendChild(h2);
+
+                const p = document.createElement("p");
+                p.innerText = palette.colors.join(", ");
+                main.appendChild(p);
+
                 for (const permutation of permute(palette.colors)) {
                     const canvas = document.createElement("canvas");
                     canvas.width = 512;

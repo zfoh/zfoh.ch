@@ -256,7 +256,7 @@
     "name": "visie",
     "contact": "francesco occhipinti",
     "description": "command-line d3 runner",
-    "link": "github.com/danse/visie",
+    "link": "https://github.com/danse/visie",
     "contributorLevel": {
       "beginner": true,
       "intermediate": true,

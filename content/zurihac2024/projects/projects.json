@@ -165,6 +165,17 @@
     }
   },
   {
+    "name": "Mensam",
+    "contact": "Felix Springer",
+    "description": "A desk-booking web application. Haskell backend (servant, selda). Elm frontend (elm-ui).",
+    "link": "https://github.com/jumper149/mensam",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "p2prc",
     "contact": "Jose Fernandes",
     "description": null,

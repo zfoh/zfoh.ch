@@ -8,4 +8,8 @@ Source of <https://zfoh.ch>
 
 ## run local dev environment
 
-    stack exec zfoh preview
+    stack exec zfoh watch
+
+## with Nix:
+
+    nix run . -- watch

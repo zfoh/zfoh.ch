@@ -252,6 +252,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    padding: 1em;
 }
 
 .speaker {

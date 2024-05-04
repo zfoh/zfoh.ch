@@ -3,3 +3,5 @@ _cache
 _site
 dist-newstyle
 elm-stuff
+result
+.direnv

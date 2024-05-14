@@ -44,6 +44,17 @@
     }
   },
   {
+    "name": "cabal hacking",
+    "contact": "Andrea Bedini",
+    "description": "Cabal is a system for building and packaging Haskell code. It has accumulated many features but everybody still wants it to do something more. I will guide participants through the codebase and help get them started on their favourite new feature.",
+    "link": "https://github.com/haskell/cabal",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "Exact Print Annotations",
     "contact": "Alan Zimmerman",
     "description": "The infrastructure in GHC to allow changing the AST and emitting changed source code. With original formatting, comments, etc",

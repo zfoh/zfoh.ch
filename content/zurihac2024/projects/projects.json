@@ -1,5 +1,16 @@
 [
   {
+    "name": "A Powerful New Visual Programming System: Lambda Express",
+    "contact": "Theo Weidmann, Sverrir Thorgeirsson",
+    "description": "Lambda Express is a new visual programming system developed at ETH Zurich that makes it easy to create data-driven applications with user interfaces with ease. Join us for the first public demonstration of the system and become an early adopter!",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "Agda2Hs",
     "contact": "Jesper Cockx",
     "description": "Agda2hs is a tool for producing verified and readable Haskell code by extracting it from a (lightly annotated) Agda program.",

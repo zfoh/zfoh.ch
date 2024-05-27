@@ -256,6 +256,7 @@ footer {
 }
 
 .speaker {
+    text-align: left;
     margin: 4px;
     padding: 8px;
     width: calc(100% - 24px);

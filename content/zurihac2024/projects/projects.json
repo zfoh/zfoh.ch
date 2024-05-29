@@ -110,6 +110,16 @@
     }
   },
   {
+   "name": "GHC SIMD in the NCG",
+   "contact": "Sam Derbyshire",
+   "description": "Adding SIMD support to GHC's NCG",
+   "link": "https://gitlab.haskell.org/ghc/ghc/-/wikis/SIMD-NCG",
+   "contributorLevel": {
+     "beginner": false,
+     "intermediate": true,
+     "advanced": true
+  },
+  {
     "name": "ghcup",
     "contact": "Julian Ospald",
     "description": "https://github.com/haskell/ghcup-hs/issues/65",

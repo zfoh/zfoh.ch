@@ -303,6 +303,10 @@ footer {
     opacity: 0.7;
 }
 
+.speaker .title {
+  font-style: italic;
+}
+
 .speaker p {
     margin-top: 12px;
     margin-bottom: 12px;

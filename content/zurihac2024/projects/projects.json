@@ -123,8 +123,8 @@
   {
     "name": "ghcup",
     "contact": "Julian Ospald",
-    "description": "https://github.com/haskell/ghcup-hs/issues/65",
-    "link": "https://github.com/haskell/ghcup-hs",
+    "description": "GHCup is the main installer for Haskell",
+    "link": "https://github.com/haskell/ghcup-hs/issues/1074",
     "contributorLevel": {
       "beginner": false,
       "intermediate": true,

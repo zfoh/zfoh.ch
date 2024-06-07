@@ -286,6 +286,17 @@
     }
   },
   {
+    "name": "Template Haskell",
+    "contact": "Sebastian Graf, Teo Camerasu",
+    "description": "Teo and I want to improve the implementation of Template Haskell, with an emphasis on stability and usability. Come join us in the GHC room! There is much to do.",
+    "link": "https://gitlab.haskell.org/ghc/ghc/-/issues/24783",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
     "name": "The Haskell Guide",
     "contact": "Reuben Cohn-Gordon",
     "description": "Help me develop an online Haskell guide, aimed at attracting/onboarding newcomers with a background in Python or similar.",

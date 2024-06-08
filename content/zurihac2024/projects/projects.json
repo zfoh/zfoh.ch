@@ -165,10 +165,10 @@
     }
   },
   {
-    "name": "Identity Provider",
+    "name": "SSO Identity Provider",
     "contact": "Peter Ryland",
-    "description": "Auth system similar to Zitadel or Keycloak",
-    "link": null,
+    "description": "I'm working on an auth system similar to Zitadel or Keycloak, called Jasso.  I'd love it if you just want to try it or use it and I'd be stoked if you want to help work on it.  There's a big TODO list!  I'll be doing a demo on Sunday afternoon, so please join the #sso Discord channel where I'll announce the location for the demo.",
+    "link": "https://dev.piglet.ch/jasso/jasso",
     "contributorLevel": {
       "beginner": false,
       "intermediate": true,

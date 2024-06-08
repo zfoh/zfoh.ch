@@ -5,6 +5,7 @@
     --c1: #d11e1eba;
     --c2: #105a0eba;
     --c3: #0a075aba;
+    --c3: #6b5263ba;
 }
 
 html {
@@ -210,6 +211,7 @@ footer {
 .schedule * .advanced { background: url("/images/zurihac2024/noise.svg"), var(--c1); }
 .schedule * .beginner { background: url("/images/zurihac2024/noise.svg"), var(--c2); }
 .schedule * .admin    { background: url("/images/zurihac2024/noise.svg"), var(--c3); }
+.schedule * .food     { background: url("/images/zurihac2024/noise.svg"), var(--c4); }
 
 /*******************************************************************************
  * Partners */

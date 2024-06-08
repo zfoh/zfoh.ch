@@ -328,5 +328,16 @@
       "intermediate": true,
       "advanced": false
     }
+  },
+  {
+    "name": "wxHaskell",
+    "contact": "Francesco Gazzetta, George Thomas",
+    "description": "command-line d3 runner",
+    "link": "https://github.com/wxHaskell/wxHaskell/tree/cxx-options",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
   }
 ]

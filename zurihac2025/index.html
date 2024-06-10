@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="ZuriHac 2025" />
+    <meta property="og:description"
+        content="ZuriHac is a free annual Haskell event brought to you by «Zürich Friends of Haskell»" />
+    <meta property="og:image" content="https://zfoh.ch/images/zurihac2024/preview.jpg" />
+
+    <title>ZuriHac 2025</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/zurihac2025.css?v=0" />
+  </head>
+  <body>
+    <style>
+    .screen {
+        transform: skew(0, 15deg);;
+        color: #00ff64;
+        font-family: monospace;
+        transform: skew(5deg, -3deg);
+        font-size: 5vh;
+    }
+</style>
+
+<span class="screen" id="screen">
+    ZURIHAC 2025 <br>
+    7-9 June <br>
+    OST Campus <br>
+    Rapperswil
+</span>
+
+<script type="text/JavaScript">
+    const img = new Image();
+
+    function setup() {
+        const rect = document.body.getBoundingClientRect();
+        const rectAspect = rect.width / rect.height;
+        const imgAspect = img.naturalWidth / img.naturalHeight;
+        let imgWidth, imgHeight;
+
+        if (imgAspect > rectAspect) {
+            imgHeight = rect.height;
+            imgWidth = imgHeight * imgAspect;
+        } else {
+            imgWidth = rect.width;
+            imgHeight = imgWidth / imgAspect;
+        }
+
+        img.style.width = imgWidth + "px";
+        img.style.height = imgHeight + "px";
+        const offsetX = (rect.width - imgWidth) / 2;
+        const offsetY = rect.height - imgHeight;
+        img.style.position = "absolute";
+        img.style.left = offsetX + "px";
+        img.style.top = offsetY + "px";
+        img.style.zIndex = "-1";
+        img.style.xOverflow = "hide";
+        img.style.yOverflow = "hide";
+
+        const screen = document.getElementById("screen");
+        const screenRect = screen.getBoundingClientRect();
+        screen.style.position = "absolute";
+        screen.style.bottom = imgHeight * 0.325 + "px";
+        screen.style.left = (rect.width * 0.5 - screenRect.width * 0.6) + "px";
+
+        console.log("lol");
+
+        const delay = Math.random() * 1000;
+        const opacity = Math.random() * 0.7 + 0.3;
+        screen.style.opacity = opacity;
+        setTimeout(setup, delay);
+    };
+
+    img.src = "/images/zurihac2025/cover.webp";
+    img.onload = setup;
+    document.body.appendChild(img);
+</script>
+
+  </body>
+</html>

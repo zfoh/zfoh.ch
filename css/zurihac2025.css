@@ -1,8 +1,30 @@
 html {
     text-align: center;
-
     font-family: sans-serif;
+    font-size: 16px;
+    line-height: 150%;
     color: black;
-
     background: url("/images/zurihac2025/hex.svg");
+    background-position: top;
+}
+
+body {
+    margin: 0px;
+}
+
+header img {
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    transform: scaleY(1.3) skewX(-30deg);
+}
+
+section {
+    max-width: calc(800px - 2 * 1em);
+    margin: 0em auto 1em auto;
+    background: #ffffff80;
+    padding: 1em;
 }

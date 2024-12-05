@@ -17,6 +17,7 @@
       subtract(that) { return new Point(this.x - that.x, this.y - that.y); }
       multiply(s)    { return new Point(this.x * s,      this.y * s     ); }
       divide(s)      { return new Point(this.x / s,      this.y / s     ); }
+      negate()       { return new Point(-this.x,         -this.y        ); }
 
       toString() { return `${this.x},${this.y}`; }
 
@@ -53,9 +54,12 @@
     svg.appendChild(style);
     style.setAttribute("type", "text/css");
     style.appendChild(document.createTextNode(`
-      svg { background: #f0fef8; }
-      polygon { fill: #deede6; }
+      svg { background: #e4f5ed; }
+      polygon { fill: #f0fef8; }
+      line { stroke: #f0fef8; stroke-width: 2px; }
     `));
+
+    const divisor = 8;
 
     const makeTriangleElement = (rot) => {
       const g = document.createElementNS(svgNS, "g");
@@ -69,18 +73,17 @@
 
       const t2 = document.createElementNS(svgNS, "polygon");
       g.appendChild(t2);
-      const v = triangle.side / 7;
+      const v = triangle.side / divisor;
       // vc/\va
       //   --
       //   vb
       const va = Point.fromPolar(v, Math.PI / 3)
       const vb = new Point(v, 0)
       const vc = Point.fromPolar(v, 2 * Math.PI / 3);
-      const inset = triangle.side * 0.12;
-      const l1 = top.add(va.divide(2)).add(vc.divide(2));
-      const l2 = right.subtract(vb.divide(2)).subtract(va.divide(2));
+      const l1 = top.add(va).add(vc);
+      const l2 = right.subtract(vb).subtract(va);
       const l3 = l2.subtract(vb);
-      const l6 = left.add(vb.divide(2)).subtract(vc.divide(2)).add(vb);
+      const l6 = left.add(vb).subtract(vc).add(vb);
       const l5 = l6.add(vb);
       const l8 = l1.add(vc);
       const l7 = l8.add(va);
@@ -120,6 +123,22 @@
     svg.appendChild(makeHexElement(new Point(triangle.side, triangle.height * 3)));
     svg.appendChild(makeHexElement(new Point(-triangle.side / 2, triangle.height * 4)));
     svg.appendChild(makeHexElement(new Point(triangle.side * 5 / 2, triangle.height * 4)));
+
+    const svgCenter = new Point(svgWidth, svgHeight).divide(2);
+
+    for (const degrees of [0, 60, 120]) {
+      for (let d = -20; d < 20; d++) {
+        const line = document.createElementNS(svgNS, "line");
+        const y = d * triangle.height / divisor;
+        line.setAttribute("transform", `translate(${svgCenter.x} ${svgCenter.y}) rotate(${degrees})`);
+        line.setAttribute("x1", -svgHeight);
+        line.setAttribute("y1", y);
+        line.setAttribute("x2", svgHeight);
+        line.setAttribute("y2", y);
+        svg.appendChild(line);
+      }
+    }
+
     document.body.appendChild(svg);
   </script>
 </body>

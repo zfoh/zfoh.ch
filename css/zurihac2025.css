@@ -18,13 +18,44 @@ header img {
 
 h1 {
     font-size: 24px;
-    text-transform: uppercase;
+    font-variant: small-caps;
     transform: scaleY(1.3) skewX(-30deg);
+}
+
+h2 {
+    font-size: 18px;
 }
 
 section {
     max-width: calc(800px - 2 * 1em);
-    margin: 0em auto 1em auto;
+    margin: 1em auto 1em auto;
     background: #ffffff80;
     padding: 1em;
+}
+
+/*******************************************************************************
+ * Partners */
+
+.partners {
+    /* The negative margin here allows us to slightly overlap the gradient with
+    * the header. */
+    margin: -30px auto 30px auto;
+    padding: 30px 0 42px 0;
+    background-image: linear-gradient(#fff0 0%, #fff9 30%, #fff9 70%, #fff0 100%);
+    color: black;
+}
+
+.partners img {
+    margin: 18px;
+    max-height: 72px;
+    max-width: 240px;
+    vertical-align: middle;
+}
+
+.partners section {
+    margin-top: 1em;
+}
+
+.partners h2:before{
+  content: none;
 }

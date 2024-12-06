@@ -59,3 +59,91 @@ section {
 .partners h2:before{
   content: none;
 }
+
+/*******************************************************************************
+ * Speakers */
+
+.speakers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+}
+
+.speaker {
+    text-align: left;
+    margin: 4px;
+    padding: 8px;
+    width: calc(100% - 24px);
+    position: relative;
+}
+
+@media (min-width: 800px) {
+    .speakers {
+        flex-direction: row;
+    }
+    .speaker {
+        width: 450px;
+    }
+}
+
+.speaker .details {
+    display: flex;
+    flex-direction: row;
+    margin: 6px 0px 12px 0px;
+}
+
+.speaker .avatar {
+    border: 3px solid black;
+    height: 60px;
+    margin-right: 24px;
+}
+
+.speaker .name {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.speaker .links {
+    display: flex;
+    flex-direction: row;
+}
+
+.speaker .links a {
+    background-size: contain;
+    height: 24px;
+    margin-right: 6px;
+    width: 24px;
+    opacity: 0.7;
+}
+
+.speaker .title {
+  font-style: italic;
+}
+
+.speaker p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.speaker .links .github {
+    background: url("/images/icons/github.svg");
+    background-size: 24px 24px;
+}
+
+.speaker .links .mastodon {
+    background: url("/images/icons/mastodon.svg");
+    background-size: 24px 24px;
+}
+
+.speaker .links .twitter {
+    background: url("/images/icons/twitter.svg");
+    background-size: 24px 24px;
+}
+
+.speaker .links .web {
+    background: url("/images/icons/globe.svg");
+    background-size: 24px 24px;
+}

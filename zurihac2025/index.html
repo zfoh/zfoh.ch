@@ -11,21 +11,37 @@
 
     <title>ZuriHac 2025</title>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="/css/zurihac2025.css?v=0" />
     <link rel="me" href="https://fosstodon.org/@zurihac" />
+    <style>
+        html {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+
+            height: 100%;
+        }
+
+        .screen {
+            transform: skew(0, 15deg);;
+            color: #00ff64;
+            font-family: monospace;
+            transform: skew(5deg, -3deg);
+            font-size: 5vh;
+            opacity: 0;
+        }
+    </style>
   </head>
   <body>
-    <style>
-    .screen {
-        transform: skew(0, 15deg);;
-        color: #00ff64;
-        font-family: monospace;
-        transform: skew(5deg, -3deg);
-        font-size: 5vh;
-        opacity: 0;
-    }
-</style>
-
 <span class="screen" id="screen">
     ZURIHAC 2025 <br>
     7-9 June <br>
@@ -79,6 +95,5 @@
     img.onload = setup;
     document.body.appendChild(img);
 </script>
-
   </body>
 </html>

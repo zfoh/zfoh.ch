@@ -55,7 +55,7 @@ main = hakyll $ do
             , ("content/zurihac2022/index.html", "templates/zurihac2022.html")
             , ("content/zurihac2023/index.html", "templates/zurihac2023.html")
             , ("content/zurihac2024/index.html", "templates/zurihac2024.html")
-            , ("content/zurihac2025-preview/index.html", "templates/zurihac2025.html")
+            , ("content/zurihac2025/index.html", "templates/zurihac2025.html")
             ]
 
     forM_ zurihacs $ \(index, tpl) -> match index $ do
@@ -85,8 +85,6 @@ main = hakyll $ do
             , "content/zurihac2023/3d/index.html"  -- Not really related to projects
             -- 2024
             , "content/zurihac2024/logo/*"  -- Not really related to projects
-            -- 2025
-            , "content/zurihac2025/index.html"  -- Temporarily
             ]
 
     forM_ projectsStaticFiles $ \pattern -> match pattern $ do

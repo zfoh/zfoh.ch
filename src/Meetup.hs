@@ -1,91 +1,128 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE RecordWildCards   #-}
-module Meetup where
+-- | This module used to grab events from the meetup API at:
+--
+-- > https://api.meetup.com/HaskellerZ/events?page=10&status=upcoming,past&desc=true
+--
+-- However, this API has since been dropped, so we are now using the iCal export
+-- instead...
+module Meetup
+    ( getMeetups
+    ) where
 
-import           Control.Monad                   (forM_)
-import qualified Data.Aeson                      as Aeson
-import qualified Data.List                       as List
-import qualified Data.List.NonEmpty              as NonEmpty
-import           Data.Ord                        (Down (..))
+import           Data.Bifunctor                  (first)
+import qualified Data.ByteString.Lazy            as BL
+import           Data.Char                       (isSpace)
+import           Data.List                       (stripPrefix)
+import           Data.Maybe                      (isNothing, mapMaybe)
 import qualified Data.Text                       as T
+import qualified Data.Text.Encoding              as T
 import qualified Data.Time                       as Time
+import qualified Hakyll.Web.Pandoc               as Hakyll
 import qualified Network.HTTP.Client             as Http
 import qualified Network.HTTP.Client.TLS         as Http
 import qualified Text.Blaze.Html.Renderer.String as H
 import qualified Text.Blaze.Html5                as H
 import qualified Text.Blaze.Html5.Attributes     as HA
+import qualified Text.Pandoc                     as Pandoc
 
-data Status = Past | Upcoming deriving (Eq, Show)
+type Property = (String, String)
 
-instance Aeson.FromJSON Status where
-    parseJSON = Aeson.withText "FromJSON Status" $ \t -> case t of
-        "past"     -> return Past
-        "upcoming" -> return Upcoming
-        _          -> fail $ "Unknown meetup status: " ++ show t
+-- Parses properties from ICS, should be good enough to grab the event
+-- description and time.
+parseProperties :: String -> [Property]
+parseProperties = go . lines
+  where
+    go (l : ls) =
+        let (key, val) = break (== ':') l
+            -- Ignore extra attributes between ';' and ':'.
+            key' = takeWhile (/= ';') key
+            -- Read extra continuation lines if necessary.
+            (cont, ls') = break (isNothing . continues) ls
+            val' = unescape $ drop 1 val ++ concat (mapMaybe continues cont) in
+        (key', val') : go ls'
+    go [] = []
 
-newtype MeetupTime = MeetupTime {unMeetupTime :: Time.LocalTime}
-    deriving (Eq, Ord, Show)
+    -- A continuation line starts with a space or tab.
+    continues (' ' : x)  = Just x
+    continues ('\t' : x) = Just x
+    continues _          = Nothing
 
-parseMeetupTime :: T.Text -> T.Text -> Maybe MeetupTime
-parseMeetupTime localDate localTime = fmap MeetupTime $ Time.parseTimeM
-    True
-    Time.defaultTimeLocale
-    "%Y-%m-%d %H:%M"
-    (T.unpack $ localDate <> " " <> localTime)
+    -- Unescaping values.
+    unescape ('\\' : 'n' : t) = '\n' : unescape t
+    unescape ('\\' : x : t)   = x : unescape t
+    unescape ('\r' : t)       = unescape t
+    unescape (x : t)          = x : unescape t
+    unescape []               = []
 
-data Meetup = Meetup
-    { mName        :: !T.Text
-    , mStatus      :: !Status
-    , mLink        :: !T.Text
-    , mTime        :: !MeetupTime
-    , mDescription :: !T.Text
-    } deriving (Show)
+data Event = Event
+    { eventTime        :: Time.UTCTime
+    , eventURL         :: String
+    , eventSummary     :: String
+    , eventDescription :: H.Html
+    }
 
-instance Aeson.FromJSON Meetup where
-    parseJSON = Aeson.withObject "FromJSON Meetup" $ \o -> Meetup
-        <$> o Aeson..: "name"
-        <*> o Aeson..: "status"
-        <*> o Aeson..: "link"
-        <*> (do
-                date <- o Aeson..: "local_date"
-                time <- o Aeson..: "local_time"
-                maybe (fail "Invalid date") return (parseMeetupTime date time))
-        <*> o Aeson..: "description"
+propertiesToEvents :: String -> [Property] -> Either String [Event]
+propertiesToEvents calendarName props
+    | null moreProps = pure []
+    | otherwise      = do
+        dtstart <- getProp "DTSTART"
+        start <- maybe (Left "could not parse DTSTART") pure $
+            Time.parseTimeM False Time.defaultTimeLocale "%Y%m%dT%H%M%S" dtstart
+        url <- getProp "URL"
+        summary <- getProp "SUMMARY"
+        description <- getProp "DESCRIPTION" >>= md2html . cleanDescription
+        (Event start url summary description :) <$>
+            propertiesToEvents calendarName moreProps
+  where
+    (eventProps, moreProps) = break (== ("END", "VEVENT")) $
+        dropWhile (/= ("BEGIN", "VEVENT")) props
 
-loadMeetups :: IO (NonEmpty.NonEmpty Meetup)
-loadMeetups = do
+    getProp k = maybe (Left $ k ++ " not found") pure $ lookup k eventProps
+
+    md2html md = first show $ Pandoc.runPure $ do
+        p <- Pandoc.readMarkdown Hakyll.defaultHakyllReaderOptions $ T.pack md
+        Pandoc.writeHtml5 Hakyll.defaultHakyllWriterOptions p
+
+    cleanDescription desc
+        | Just desc' <- stripPrefix calendarName desc = dropWhile isSpace desc'
+        | otherwise = desc
+
+parseCalendar :: String -> Either String [Event]
+parseCalendar input = do
+    name <- maybe (Left "missing calendar NAME") pure $ lookup "NAME" props
+    propertiesToEvents name props
+  where
+    props = parseProperties input
+
+loadCalendar :: IO [Event]
+loadCalendar = do
     manager <- Http.newTlsManager
     req     <- Http.parseRequest url
     rsp     <- Http.responseBody <$> Http.httpLbs req manager
-    meetups <- either fail return (Aeson.eitherDecode rsp)
-    let (past, upcoming) = List.partition ((== Past) . mStatus) meetups
-        list             =
-            take 1 (List.sortOn mTime upcoming) ++
-            List.sortOn (Down . mTime) past
-
-    case list of
-        []       -> fail "No meetups found"
-        (x : xs) -> return $ x NonEmpty.:| xs
+    either fail pure $ parseCalendar $ T.unpack $ T.decodeUtf8 $
+        BL.toStrict rsp
   where
-    url = "https://api.meetup.com/HaskellerZ/events?page=10&status=upcoming,past&desc=true"
+    url = "https://www.meetup.com/HaskellerZ/events/ical/"
 
-renderMeetups :: NonEmpty.NonEmpty Meetup -> H.Html
-renderMeetups (m0 NonEmpty.:| meetups) =
-    H.div H.! HA.class_ "twocolumn" $ do
-        H.div H.! HA.class_ "left" $ do
-            H.h2 $ case mStatus m0 of
-                Past     -> "Last meetup"
-                Upcoming -> "Next meetup"
-            H.a H.! HA.href (H.toValue $ mLink m0) $ H.toHtml $ mName m0
-            H.p H.! HA.class_ "meetup-time" $ H.toHtml $ Time.formatTime
-                Time.defaultTimeLocale
-                "%A %e %B, %H:%M"
-                (unMeetupTime $ mTime m0)
-            H.preEscapedToHtml (mDescription m0)
-        H.div H.! HA.class_ "right past-meetups" $ do
-            H.h3 $ "Past meetups"
-            H.ul $ forM_ meetups $ \m -> H.li $
-                H.a H.! HA.href (H.toValue $ mLink m) $ H.toHtml $ mName m
+renderCalendar :: [Event] -> H.Html
+renderCalendar calendar = do
+    H.h2 "HaskellerZ meetups"
+    case calendar of
+        [] -> do
+            "No meetups currently scheduled. Join our "
+            H.a H.! HA.href "https://www.meetup.com/HaskellerZ/events/ical/" $
+                "meetup group"
+            " to be notified when we will meet."
+        event : _ -> do
+            H.p $ do
+                "The next meetup takes place "
+                H.toHtml $ Time.formatTime
+                    Time.defaultTimeLocale
+                    "%A %e %B, %H:%M"
+                    (eventTime event)
+                "."
+            H.p $ H.a H.! HA.href (H.toValue $ eventURL event) $
+                H.toHtml $ eventSummary event
+            eventDescription event
 
 getMeetups :: IO String
-getMeetups = H.renderHtml . renderMeetups <$> loadMeetups
+getMeetups = H.renderHtml . renderCalendar <$> loadCalendar

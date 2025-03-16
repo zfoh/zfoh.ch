@@ -3,12 +3,6 @@ resolver: lts-19.17
 packages:
 - '.'
 
-flags:
-  # This significantly speeds up CI builds, and we don't really need Pandoc for
-  # this website.
-  hakyll:
-    usePandoc: false
-
 extra-deps:
 - 'hakyll-4.15.1.1'
 

@@ -64,6 +64,7 @@
           nativeBuildInputs = with pkgs.haskellPackages; [
             cabal-install
             stack
+            stylish-haskell
           ];
         };
       }

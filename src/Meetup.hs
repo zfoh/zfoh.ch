@@ -4,6 +4,7 @@
 --
 -- However, this API has since been dropped, so we are now using the iCal export
 -- instead...
+{-# LANGUAGE OverloadedStrings #-}
 module Meetup
     ( getMeetups
     ) where

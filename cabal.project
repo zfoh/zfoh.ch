@@ -1,1 +1,4 @@
 packages: .
+
+package hakyll
+  flags: -previewServer

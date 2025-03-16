@@ -39,7 +39,7 @@ Executable zfoh
     http-client-tls >= 0.3   && < 0.4,
     pandoc          >= 3.1   && < 3.7,
     process         >= 1.6   && < 1.7,
-    text            >= 1.2   && < 2.1,
+    text            >= 1.2   && < 2.2,
     time            >= 1.8   && < 1.13
 
 Executable zfoh-import-zurihac-projects
@@ -56,4 +56,4 @@ Executable zfoh-import-zurihac-projects
     base       >= 4.7  && < 5,
     binary     >= 0.8  && < 0.9,
     bytestring >= 0.10 && < 0.12,
-    text       >= 1.2  && < 2.1
+    text       >= 1.2  && < 2.2

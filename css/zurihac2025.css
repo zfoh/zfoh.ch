@@ -212,3 +212,30 @@ section {
 .schedule * .beginner { background-color: #fffea9 }
 .schedule * .admin    { background-color: #ceedff }
 .schedule * .food     { background-color: #d0ffa0 }
+
+/*******************************************************************************
+ * Projects page */
+
+.projects {
+  max-width: calc(800px);
+  margin: 0em auto 3em auto;
+  text-align: left;
+}
+
+.projects .project {
+  background-color: rgba(213, 234, 237, 0.4);
+  padding: 1em;
+}
+
+.projects .project:nth-child(even) {
+  background-color: rgba(227, 255, 176, 0.4);
+}
+
+.projects .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.projects .description {
+  margin-top: 1em;
+}

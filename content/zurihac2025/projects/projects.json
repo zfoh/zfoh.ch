@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Ballpit",
+    "contact": "Wout Werkman",
+    "description": "A physics simulation multiplayer game :)",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Bluefin",
+    "contact": "Tom Ellis",
+    "description": "The Bluefin effect system",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "cardano-streamer",
+    "contact": "lehins",
+    "description": "Library for streaming Cardano blocks",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Clash",
+    "contact": "Christiaan Baaij",
+    "description": "Create digital circuits, and program FPGAs, using Haskell",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Dataframe",
+    "contact": "Chav",
+    "description": "An interactive dataframe library.",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "ghc-exactprint",
+    "contact": "Alan Zimmerman",
+    "description": "Library for writing code refactors. Exact prints a GHC AST after modification",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "ghc-tags-plugin",
+    "contact": "Marcin Szamotulski",
+    "description": "Generate (e)tags for Haskell Projects",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "HaskellKatas",
+    "contact": "Reynaldo Cordero Corro",
+    "description": "Learn to program by playing with Haskell expressiveness",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    }
+  },
+  {
+    "name": "hydra",
+    "contact": "Franco Testagrossa",
+    "description": "Hydra is the layer-two scalability solution for Cardano.",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Keid",
+    "contact": "IC Rainbow",
+    "description": "Vulkan-based game engine",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Markers Markup Language",
+    "contact": "Macchiato",
+    "description": "A Markup Language and Ecossystem for building academic papers made entirely in Haskell.",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "P2PRC",
+    "contact": "Akilan",
+    "description": "p2p network designed for orchestration",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Perspec",
+    "contact": "Adrian Sieber",
+    "description": "Desktop app to correct the perspective of images",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "PureScript",
+    "contact": "Fabrizio Ferrai",
+    "description": "A strongly-typed functional programming language that compiles to JavaScript",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "rules_haskell: Building Haskell with Bazel",
+    "contact": "Andreas Herrmann",
+    "description": "Bazel is an open source build system developed to support large, polyglot projects. Join this project or stop by if you would like to learn about building Haskell with Bazel, help us make it easier to get started, learn when Bazel may add value to your project, or if you're interested in contributing to rules_haskell.",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Security advisories",
+    "contact": "Gautier DI FOLCO",
+    "description": "Haskell ecosystem security advisories",
+    "link": null,
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": false,
+      "advanced": false
+    }
+  },
+  {
+    "name": "The Flora Haskell packages index",
+    "contact": "Théophile Choutri",
+    "description": "Flora gathers packages from across the ecosystem and aims to provide a unifying view, analytics, and better onboarding story for beginners.",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Yolc",
+    "contact": "miao",
+    "description": "Yolc is a safe, expressive, fun language for Ethereum, embedded in Haskell as a DSL",
+    "link": null,
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  }
+]

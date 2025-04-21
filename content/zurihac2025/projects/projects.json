@@ -176,6 +176,17 @@
     }
   },
   {
+    "name": "Swarm",
+    "contact": "Brent Yorgey",
+    "description": "Swarm is a 2D programming and resource gathering game, implemented in Haskell."
+    "link": "https://github.com/swarm-game/swarm"
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "The Flora Haskell packages index",
     "contact": "Théophile Choutri",
     "description": "Flora gathers packages from across the ecosystem and aims to provide a unifying view, analytics, and better onboarding story for beginners.",

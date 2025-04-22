@@ -207,5 +207,16 @@
       "intermediate": true,
       "advanced": true
     }
+  },
+  {
+    "name": "roguefunctor",
+    "contact": "Avery/PPK",
+    "description": "roguefunctor is a library for making roguelike games in Haskell - fleshing out the features in the library and making examples for a series of tutorial posts to help people with their first proper Haskell applications.",
+    "link": "https://github.com/ppkfs/roguefunctor",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
   }
 ]

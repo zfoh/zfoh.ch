@@ -130,25 +130,15 @@ section {
     margin-bottom: 12px;
 }
 
-.speaker .links .github {
-    background: url("/images/icons/github.svg");
-    background-size: 24px 24px;
+.speaker .links a {
+    background-size: 24px 24px !important;
 }
 
-.speaker .links .mastodon {
-    background: url("/images/icons/mastodon.svg");
-    background-size: 24px 24px;
-}
-
-.speaker .links .twitter {
-    background: url("/images/icons/twitter.svg");
-    background-size: 24px 24px;
-}
-
-.speaker .links .web {
-    background: url("/images/icons/globe.svg");
-    background-size: 24px 24px;
-}
+.speaker .links .github   { background: url("/images/icons/github.svg")   }
+.speaker .links .mastodon { background: url("/images/icons/mastodon.svg") }
+.speaker .links .twitter  { background: url("/images/icons/twitter.svg")  }
+.speaker .links .web      { background: url("/images/icons/globe.svg")    }
+.speaker .links .youtube  { background: url("/images/icons/youtube.svg")  }
 
 /*******************************************************************************
  * Schedule */

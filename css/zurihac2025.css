@@ -101,10 +101,16 @@ section {
     }
 }
 
-.speaker .details {
+.speaker .header {
     display: flex;
     flex-direction: row;
     margin: 6px 0px 12px 0px;
+}
+
+.speaker .topic {
+  border-left: 2px solid #0108;
+  padding-left: 1em;
+  color: #222;
 }
 
 .speaker .avatar {

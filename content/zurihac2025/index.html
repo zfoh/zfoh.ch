@@ -30,7 +30,7 @@
 <div class="speakers">
   <div class="speaker">
     <div class="anchor" id="speaker-lennart-augustsson"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/lennart-augustsson.jpg" alt="Lennart Augustsson" class="avatar">
       <div>
         <span class="name">Lennart Augustsson</span>
@@ -40,6 +40,21 @@
         </div>
       </div>
     </div>
+    <details>
+      <summary class="title">“MicroHs - A small Haskell compiler”</summary>
+      <div class="topic">
+        <p>
+          MicroHs is a compiler for Haskell2010 + extensions. It compiles to SKI
+          combinators and has a reasonably simple runtime that interprets the
+          combinator graph. The runtime is simple enough to run Haskell programs
+          on, e.g., microcontrollers.
+        </p>
+        <p>
+          In this talk I will describe some highlights (and lowlights) of
+          implementing MicroHs. And there will also be some live demos.
+        </p>
+      </div>
+    </details>
     <p>
       Lennart Augustsson works at
       <a href="https://www.epicgames.com">Epic Games</a>
@@ -51,7 +66,7 @@
   </div>
   <div class="speaker">
     <div class="anchor" id="speaker-brent-yorgey"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/brent-yorgey.jpg" alt="Brent Yorgey" class="avatar">
       <div>
         <span class="name">Brent Yorgey</span>
@@ -62,6 +77,19 @@
         </div>
       </div>
     </div>
+    <details>
+      <summary class="title">“Haskell for competitive programming”</summary>
+      <div class="topic">
+        <p>
+          Over the past ten years, I have solved over 1700 competitive
+          programming problems in Haskell, just for fun (as well as a few
+          that were not fun). I will give a brief introduction to competitive
+          programming and show off some examples demonstrating the unique
+          benefits of Haskell in this context. We will then have a miniature
+          programming contest, open to all - only Haskell allowed!
+        </p>
+      </div>
+    </details>
     <p>
       Brent Yorgey is an assistant professor at
       <a href="http://ozark.hendrix.edu">Hendrix College</a>.
@@ -74,7 +102,7 @@
   </div>
   <div class="speaker">
     <div class="anchor" id="speaker-richard-southwell"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/richard-southwell.jpg" alt="Richard Southwell" class="avatar">
       <div>
         <span class="name">Richard Southwell</span>
@@ -83,6 +111,17 @@
         </div>
       </div>
     </div>
+    <details>
+      <summary class="title">“Category Theory Track”</summary>
+      <div class="topic">
+        <p>
+          We introduce category theory from first principles, asking what
+          category theory is and what's so great about it. We introduce the main
+          ideas of categories and functors, and will also touch on topics like
+          natural transformations and the Yoneda lemma if time allows.
+        </p>
+      </div>
+    </details>
     <p>
       Richard Southwell is a mathematician who works as a researcher
       for <a href="https://planting.space/">PlantingSpace </a> where he applies
@@ -95,7 +134,7 @@
   </div>
   <div class="speaker">
     <div class="anchor" id="speaker-andres-loeh"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/andres-loeh.jpg" alt="Andres Löh" class="avatar">
       <div>
         <span class="name">Andres Löh</span>
@@ -107,6 +146,7 @@
         </div>
       </div>
     </div>
+    <p class="title">“Beginner Track”</p>
     <p>
       Andres is a partner at <a href="https://well-typed.com/">Well-Typed</a>.
       He has been a active contributor, speaker and organizer in the Haskell
@@ -118,7 +158,7 @@
   </div>
   <div class="speaker">
     <div class="anchor" id="speaker-tom-ellis"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/tom-ellis.jpg" alt="Tom Ellis" class="avatar">
       <div>
         <span class="name">Tom Ellis</span>
@@ -128,6 +168,7 @@
         </div>
       </div>
     </div>
+    <p class="title">“The History of Effect Systems”</p>
     <p>
       Tom is a software engineer at
       <a href="https://groq.com/">Groq</a> and a member of the
@@ -139,7 +180,7 @@
   </div>
   <div class="speaker">
     <div class="anchor" id="speaker-alex-vieth"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/alex-vieth.jpg" alt="Alex Vieth" class="avatar">
       <div>
         <span class="name">Alex Vieth</span>
@@ -159,7 +200,7 @@
   </div>
   <div class="speaker">
     <div class="anchor" id="speaker-cheng-shao"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/cheng-shao.webp" alt="Cheng Shao" class="avatar">
       <div>
         <span class="name">Cheng Shao</span>
@@ -170,6 +211,7 @@
         </div>
       </div>
     </div>
+    <p class="title">“WASM Track”</p>
     <p>
       Cheng “TerrorJack” Shao is the project lead and main developer of
       <a href="https://www.tweag.io/">Tweag</a>'s
@@ -179,7 +221,7 @@
   </div>
   <div class="speaker">
     <div class="anchor" id="speaker-julian-arni"></div>
-    <div class="details">
+    <div class="header">
       <img src="/images/speakers/julian-arni.jpg" alt="Julian Arni" class="avatar">
       <div>
         <span class="name">Julian Arni</span>
@@ -189,6 +231,7 @@
         </div>
       </div>
     </div>
+    <p class="title">“Nix Track”</p>
     <p>
       Julian is the CEO of <a href="https://garnix.io/">garnix</a>, a CI
       framework based on <a href="https://nixos.org/">Nix</a>,
@@ -220,27 +263,27 @@
 
 <div class="schedule" id="schedule">
   <table>
-    <tr><th>Start                    </th><th>End                      </th><th>Title                                     </th><th>Link</th><th>Kind    </th></tr>
-    <tr><td>2025-06-07T09:00:00+02:00</td><td>2025-06-07T10:00:00+02:00</td><td>Registration Opens                        </td><td>    </td><td>admin   </td></tr>
-    <tr><td>2025-06-07T10:00:00+02:00</td><td>2025-06-07T11:00:00+02:00</td><td>Talk by Lennart Augustsson                </td><td>    </td><td>talk    </td></tr>
-    <tr><td>2025-06-07T11:00:00+02:00</td><td>2025-06-07T12:00:00+02:00</td><td>Opening Presentation &amp; Project Pitches</td><td>    </td><td>admin   </td></tr>
-    <tr><td>2025-06-07T12:00:00+02:00</td><td>2025-06-07T14:00:00+02:00</td><td>Food Truck                                </td><td     </td><td>food    </td></tr>
-    <tr><td>2025-06-07T13:30:00+02:00</td><td>2025-06-07T15:30:00+02:00</td><td>Beginner Track by Andres Löh              </td><td>    </td><td>beginner</td></tr>
-    <tr><td>2025-06-07T14:00:00+02:00</td><td>2025-06-07T16:00:00+02:00</td><td>WASM Track by Cheng Shao                  </td><td>    </td><td>advanced</td></tr>
-    <tr><td>2025-06-07T17:30:00+02:00</td><td>2025-06-07T20:30:00+02:00</td><td>BBQ hosted by Jane Street                 </td><td     </td><td>food    </td></tr>
+    <tr><th>Start                    </th><th>End                      </th><th>Title                                     </th><th>Link                       </th><th>Kind    </th></tr>
+    <tr><td>2025-06-07T09:00:00+02:00</td><td>2025-06-07T10:00:00+02:00</td><td>Registration Opens                        </td><td>                           </td><td>admin   </td></tr>
+    <tr><td>2025-06-07T10:00:00+02:00</td><td>2025-06-07T11:00:00+02:00</td><td>Talk by Lennart Augustsson                </td><td>#speaker-lennart-augustsson</td><td>talk    </td></tr>
+    <tr><td>2025-06-07T11:00:00+02:00</td><td>2025-06-07T12:00:00+02:00</td><td>Opening Presentation &amp; Project Pitches</td><td>                           </td><td>admin   </td></tr>
+    <tr><td>2025-06-07T12:00:00+02:00</td><td>2025-06-07T14:00:00+02:00</td><td>Food Truck                                </td><td                            </td><td>food    </td></tr>
+    <tr><td>2025-06-07T13:30:00+02:00</td><td>2025-06-07T15:30:00+02:00</td><td>Beginner Track by Andres Löh              </td><td>#speaker-andres-loeh       </td><td>beginner</td></tr>
+    <tr><td>2025-06-07T14:00:00+02:00</td><td>2025-06-07T16:00:00+02:00</td><td>WASM Track by Cheng Shao                  </td><td>#speaker-cheng-shao        </td><td>advanced</td></tr>
+    <tr><td>2025-06-07T17:30:00+02:00</td><td>2025-06-07T20:30:00+02:00</td><td>BBQ hosted by Jane Street                 </td><td                            </td><td>food    </td></tr>
 
-    <tr><td>2025-06-08T10:00:00+02:00</td><td>2025-06-08T11:00:00+02:00</td><td>Talk by Tom Ellis                         </td><td>    </td><td>talk    </td></tr>
-    <tr><td>2025-06-08T12:00:00+02:00</td><td>2025-06-08T14:00:00+02:00</td><td>Food Truck                                </td><td     </td><td>food    </td></tr>
-    <tr><td>2025-06-08T13:30:00+02:00</td><td>2025-06-08T15:30:00+02:00</td><td>Beginner Track by Andres Löh              </td><td>    </td><td>beginner</td></tr>
-    <tr><td>2025-06-08T13:30:00+02:00</td><td>2025-06-08T16:30:00+02:00</td><td>Category Track by Richard Southwell       </td><td>    </td><td>advanced</td></tr>
-    <tr><td>2025-06-08T17:00:00+02:00</td><td>2025-06-08T18:00:00+02:00</td><td>Talk by Alex Vieth                        </td><td>    </td><td>talk    </td></tr>
-    <tr><td>2025-06-08T18:00:00+02:00</td><td>2025-06-08T20:00:00+02:00</td><td>Food Truck                                </td><td>    </td><td>food    </td></tr>
+    <tr><td>2025-06-08T10:00:00+02:00</td><td>2025-06-08T11:00:00+02:00</td><td>Talk by Tom Ellis                         </td><td>#speaker-tom-ellis         </td><td>talk    </td></tr>
+    <tr><td>2025-06-08T12:00:00+02:00</td><td>2025-06-08T14:00:00+02:00</td><td>Food Truck                                </td><td                            </td><td>food    </td></tr>
+    <tr><td>2025-06-08T13:30:00+02:00</td><td>2025-06-08T15:30:00+02:00</td><td>Beginner Track by Andres Löh              </td><td>#speaker-andres-loeh       </td><td>beginner</td></tr>
+    <tr><td>2025-06-08T13:30:00+02:00</td><td>2025-06-08T16:30:00+02:00</td><td>Category Track by Richard Southwell       </td><td>#speaker-richard-southwell </td><td>advanced</td></tr>
+    <tr><td>2025-06-08T17:00:00+02:00</td><td>2025-06-08T18:00:00+02:00</td><td>Talk by Alex Vieth                        </td><td>#speaker-alex-vieth        </td><td>talk    </td></tr>
+    <tr><td>2025-06-08T18:00:00+02:00</td><td>2025-06-08T20:00:00+02:00</td><td>Food Truck                                </td><td>                           </td><td>food    </td></tr>
 
-    <tr><td>2025-06-09T10:00:00+02:00</td><td>2025-06-09T11:00:00+02:00</td><td>Talk by Brent Yorgey                      </td><td>    </td><td>talk    </td></tr>
-    <tr><td>2025-06-09T12:00:00+02:00</td><td>2025-06-09T14:00:00+02:00</td><td>Food Truck                                </td><td>    </td><td>food    </td></tr>
-    <tr><td>2025-06-09T13:00:00+02:00</td><td>2025-06-09T15:00:00+02:00</td><td>Nix Track by Julian Arni                  </td><td>    </td><td>advanced</td></tr>
-    <tr><td>2025-06-09T15:30:00+02:00</td><td>2025-06-09T16:15:00+02:00</td><td>Project presentations                     </td><td>    </td><td>admin   </td></tr>
-    <tr><td>2025-06-09T16:15:00+02:00</td><td>2025-06-09T17:00:00+02:00</td><td>Closing                                   </td><td>    </td><td>admin   </td></tr>
+    <tr><td>2025-06-09T10:00:00+02:00</td><td>2025-06-09T11:00:00+02:00</td><td>Talk by Brent Yorgey                      </td><td>#speaker-brent-yorgey      </td><td>talk    </td></tr>
+    <tr><td>2025-06-09T12:00:00+02:00</td><td>2025-06-09T14:00:00+02:00</td><td>Food Truck                                </td><td>                           </td><td>food    </td></tr>
+    <tr><td>2025-06-09T13:00:00+02:00</td><td>2025-06-09T15:00:00+02:00</td><td>Nix Track by Julian Arni                  </td><td>#speaker-julian-arni       </td><td>advanced</td></tr>
+    <tr><td>2025-06-09T15:30:00+02:00</td><td>2025-06-09T16:15:00+02:00</td><td>Project presentations                     </td><td>                           </td><td>admin   </td></tr>
+    <tr><td>2025-06-09T16:15:00+02:00</td><td>2025-06-09T17:00:00+02:00</td><td>Closing                                   </td><td>                           </td><td>admin   </td></tr>
   </table>
 </div>
 
@@ -248,7 +291,7 @@
 <script type="text/JavaScript" src="/zurihac2023/schedule.js">
 </script>
 
-<h1>ZuriHac Prelude</h1>
+<h1 id="zurihac-prelude">ZuriHac Prelude</h1>
 <section>
   <p>
     The

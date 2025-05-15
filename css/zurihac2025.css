@@ -1,11 +1,10 @@
 html {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 150%;
-    color: black;
-    background: url("/images/zurihac2025/hex.svg");
-    background-position: top;
+  text-align: center;
+  font-family: serif;
+  font-size: 16px;
+  line-height: 150%;
+  color: black;
+  background-color: #f44;
 }
 
 body {
@@ -17,12 +16,30 @@ header img {
 }
 
 h1 {
-    font-size: 24px;
-    font-variant: small-caps;
-    transform: scaleY(1.3) skewX(-30deg) scaleX(0.9);
-    text-align: center;
-    margin-top: 1em;
+  font-size: 28px;
+  font-variant: small-caps;
+  font-style: italic;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  min-height: 40px;
+  background: white;
+  line-height: 1.2em;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  color: #c00;
 }
+
+h1:before, h1:after {
+  content: "";
+  background: url("/images/zurihac2025/tablecloth.svg");
+  flex-grow: 1;
+}
+
+h1:before { margin-right: 1em; }
+h1:after  { margin-left:  1em; }
 
 h2 {
     font-size: 18px;
@@ -31,7 +48,7 @@ h2 {
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 summary {
@@ -39,11 +56,12 @@ summary {
 }
 
 section {
-    max-width: calc(800px - 2 * 1em);
-    margin: 1em auto 1em auto;
-    background: #ffffff80;
-    padding: 1em;
-    text-align: left;
+  max-width: calc(800px - 2 * 1em);
+  margin: 0em auto 1em auto;
+  padding: 1em;
+  text-align: left;
+
+  background: #fff;
 }
 
 /*******************************************************************************
@@ -52,9 +70,9 @@ section {
 .partners {
     /* The negative margin here allows us to slightly overlap the gradient with
     * the header. */
-    margin: -30px auto 30px auto;
     padding: 30px 0 0 0;
-    background-image: linear-gradient(#fff0 0%, #fff9 10%, #fff9 70%, #fff0 100%);
+    background-image: linear-gradient(#fff0 0%, #ffff 10%, #ffff 70%, #fff0 100%);
+    background-color: #fff;
     color: black;
 }
 
@@ -85,11 +103,11 @@ section {
 }
 
 .speaker {
-    text-align: left;
-    margin: 4px;
-    padding: 8px;
-    width: calc(100% - 24px);
-    position: relative;
+  text-align: left;
+  margin: 0.5em;
+  width: calc(100% - 24px);
+  position: relative;
+  background-color: #fff;
 }
 
 @media (min-width: 800px) {
@@ -102,21 +120,29 @@ section {
 }
 
 .speaker .header {
-    display: flex;
-    flex-direction: row;
-    margin: 6px 0px 12px 0px;
+  display: flex;
+  flex-direction: row;
+  background: url("/images/zurihac2025/tablecloth.svg");
+}
+
+.speaker details {
+  margin: 1em;
 }
 
 .speaker .topic {
   border-left: 2px solid #0108;
-  padding-left: 1em;
+  padding-left: 0.2em;
   color: #222;
 }
 
 .speaker .avatar {
-    border: 3px solid black;
-    height: 60px;
-    margin-right: 24px;
+  border: 3px solid black;
+  height: 60px;
+}
+
+.speaker .namelinks {
+  background: #fff;
+  padding: .3em 1em 0 1em;
 }
 
 .speaker .name {
@@ -143,8 +169,7 @@ section {
 }
 
 .speaker p {
-    margin-top: 12px;
-    margin-bottom: 12px;
+  margin: 1em;
 }
 
 .speaker .links a {
@@ -200,6 +225,7 @@ section {
     font-variant: small-caps;
     transform: scaleY(1.3) skewX(-30deg) scaleX(0.9);
     margin: .5em 0em;
+    color: #fff;
 }
 
 .schedule .day .entries .entry {
@@ -230,12 +256,12 @@ section {
 }
 
 .projects .project {
-  background-color: rgba(213, 234, 237, 0.4);
+  background-color: #fff;
   padding: 1em;
 }
 
 .projects .project:nth-child(even) {
-  background-color: rgba(227, 255, 176, 0.4);
+  background-color: #fcc;
 }
 
 .projects .name {

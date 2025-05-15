@@ -5,10 +5,17 @@ html {
   line-height: 150%;
   color: black;
   background-color: #f44;
+  background: url("/images/zurihac2025/pizzas.svg"), linear-gradient(#f44);
+  background-repeat: repeat;
+  background-size: 800px 800px;
 }
 
 body {
     margin: 0px;
+}
+
+header {
+  background: #f44;
 }
 
 header img {

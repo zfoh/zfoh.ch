@@ -1,5 +1,15 @@
 [
   {
+    "name": "Amazonka",
+    "contact": "Jack Kelly",
+    "description": "The comprehensive AWS SDK for Haskell",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "Ballpit",
     "contact": "Wout Werkman",
     "description": "A physics simulation multiplayer game :)",

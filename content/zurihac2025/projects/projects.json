@@ -130,6 +130,17 @@
       "advanced": false
     }
   },
+  {    
+    "name": "OpenTelemetry",
+    "contact": "Ian Duncan",
+    "description": "An instrumentation ecosystem for production-grade applications",
+    "link": "https://github.com/iand675/hs-opentelemetry/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  }, 
   {
     "name": "P2PRC",
     "contact": "Akilan",

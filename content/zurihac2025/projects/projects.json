@@ -239,5 +239,16 @@
       "intermediate": true,
       "advanced": false
     }
+  },
+  {
+    "name": "Haskell Language Server",
+    "contact": "fendor",
+    "description": "The official language server for the Haskell programming language.",
+    "link": "https://github.com/haskell/haskell-language-server",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
   }
 ]

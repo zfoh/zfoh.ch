@@ -120,6 +120,17 @@
     }
   },
   {
+    "name": "language-haskell",
+    "contact": "Mario Blažević",
+    "description": "AST, parser, and pretty-printer for Haskell 2010 with GHC extensions",
+    "link": "https://hackage.haskell.org/package/language-haskell-0.1/candidate",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "Markers Markup Language",
     "contact": "Macchiato",
     "description": "A Markup Language and Ecossystem for building academic papers made entirely in Haskell.",

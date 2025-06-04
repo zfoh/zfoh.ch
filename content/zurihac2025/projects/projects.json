@@ -27,7 +27,7 @@
     "link": null,
     "contributorLevel": {
       "beginner": false,
-      "intermediate": false,
+      "intermediate": true,
       "advanced": true
     }
   },

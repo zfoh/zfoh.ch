@@ -283,5 +283,17 @@
       "intermediate": true,
       "advanced": true
     }
+  },
+    {
+    "name": "Solving the Climate Crisis with Monads",
+    "contact": "Noon",
+    "description": "Chat about how the climate crisis and monads are related.",
+    "link": "https://github.com/silky/solving-climate-crisis-monads",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
   }
+
 ]

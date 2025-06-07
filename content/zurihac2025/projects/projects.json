@@ -283,5 +283,16 @@
       "intermediate": true,
       "advanced": true
     }
+  },
+  {
+    "name": "Vim with training wheels",
+    "contact": "Fiona Pichler",
+    "description": "a beginner friendly, vim-like editor",
+    "link": "https://github.com/ztrnchn/vim-tw",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
   }
 ]

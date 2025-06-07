@@ -43,6 +43,17 @@
     }
   },
   {
+    "name": "CHAMP HashMap",
+    "contact": "Marten Wijnja (Qqwy)",
+    "description": "A new HashMap/HashSet implementation that is a drop-in replacement for `unordered-containers`, while taking taking <50% memory and with many operations being more performant.",
+    "link": "https://github.com/qqwy/haskell-champ",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "Clash",
     "contact": "Christiaan Baaij",
     "description": "Create digital circuits, and program FPGAs, using Haskell",

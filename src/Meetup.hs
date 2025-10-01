@@ -110,7 +110,7 @@ renderCalendar calendar = do
     case calendar of
         [] -> do
             "No meetups currently scheduled. Join our "
-            H.a H.! HA.href "https://www.meetup.com/HaskellerZ/events/ical/" $
+            H.a H.! HA.href "https://www.meetup.com/HaskellerZ/" $
                 "meetup group"
             " to be notified when we will meet."
         event : _ -> do

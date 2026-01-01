@@ -19,11 +19,16 @@ section {
 }
 
 a {
-    color: #000;
+  color: #000;
+}
+
+h1 {
+  margin-top: 3em;
 }
 
 /*******************************************************************************
  * Calendar header */
+
 header .cal {
   font-size: 20px;
   line-height: 120%;
@@ -44,3 +49,64 @@ header .cal .zh {
   color: #fff;
   background-color: #000;
 }
+
+/*******************************************************************************
+ * Schedule */
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  padding: 1em 0;
+}
+
+.schedule .day .morning {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .schedule {
+    flex-direction: row;
+  }
+
+  .schedule .day {
+    flex-basis: 0;
+    margin: 0em 0.5em !important;
+  }
+
+  .schedule .day .morning {
+    display: block !important;
+  }
+}
+
+.schedule .day {
+  flex-grow: 1;
+  margin: 0.5em 0em;
+}
+
+.schedule .day .date {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: .5em 0em;
+}
+
+.schedule .day .entries .entry {
+    font-size: 70%;
+    font-weight: bold;
+    line-height: 100%;
+    text-decoration: none;
+}
+
+.schedule .day .entries .entry .time, .schedule .day .entries .entry .title {
+    display: block;
+    margin: 0.5em;
+}
+
+.schedule * .talk     { background-color: #ccc }
+.schedule * .advanced { background-color: #ccc }
+.schedule * .beginner { background-color: #ccc }
+.schedule * .admin    { background-color: #ccc }
+.schedule * .food     { background-color: #ccc }

@@ -110,3 +110,21 @@ header .cal .zh {
 .schedule * .beginner { background-color: #ccc }
 .schedule * .admin    { background-color: #ccc }
 .schedule * .food     { background-color: #ccc }
+
+/*******************************************************************************
+ * Partners */
+
+.partners img {
+    margin: 18px;
+    max-height: 72px;
+    max-width: 240px;
+    vertical-align: middle;
+}
+
+.partners section {
+    margin-top: 1em;
+}
+
+.partners h2:before{
+  content: none;
+}

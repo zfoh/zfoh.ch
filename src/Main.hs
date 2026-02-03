@@ -180,6 +180,12 @@ main = hakyll $ do
         compile $ unsafeCompiler getMeetups >>= makeItem
 
     ----------------------------------------------------------------------------
+    -- /donate redirect
+
+    createRedirects
+        [("donate/index.html", "https://pay.sumup.com/b2c/QI0HGB5E")]
+
+    ----------------------------------------------------------------------------
     -- Templates.
 
     match "templates/*.html" $ compile templateCompiler

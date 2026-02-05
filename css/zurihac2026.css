@@ -1,3 +1,7 @@
+:root {
+    --section-width: 800px;
+}
+
 html {
   text-align: center;
   font-family: sans-serif;
@@ -12,10 +16,11 @@ body {
 }
 
 section {
-  max-width: calc(800px - 2 * 1em);
+  max-width: calc(var(--section-width) - 2 * 1em);
   margin: 0em auto 1em auto;
   padding: 1em;
   text-align: left;
+  position: relative;
 }
 
 a {
@@ -37,14 +42,63 @@ h2 {
 }
 
 /*******************************************************************************
- * Calendar header */
+ * sasakitiller */
+
+header img, .ink-left, .ink-right {
+  opacity: 0.8;
+}
 
 header img {
   margin-top: 1em;
-  max-width: min(100%, 800px);
-  opacity: 0.85;
+  max-width: min(100%, var(--section-width));
 }
 
+.ink-left, .ink-right {
+  /* Create an element that spans exactly the entire width of the page.  We want
+   * to be able to add this inside other elements, so we accumulate a bit of
+   * weirdness to position it in the center so we can espace the width of the
+   * parent and still position it right. */
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  display: block;
+
+  /* Inside this element, we will position a specific background image. */
+  height: 120px;
+  margin-top: -60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ink-left {
+  background-position: calc(50% - 0.7 * var(--section-width));
+}
+
+.ink-right {
+  background-position: calc(50% + 0.7 * var(--section-width));
+}
+
+.ink-01 {
+  background-image: url("/images/zurihac2026/detail-01.png");
+}
+
+.ink-02 {
+  background-image: url("/images/zurihac2026/detail-02.png");
+}
+
+.ink-03 {
+  background-image: url("/images/zurihac2026/detail-03.png");
+  height: 80px;
+}
+
+.ink-04 {
+  background-image: url("/images/zurihac2026/detail-04.png");
+}
+
+.ink-05 {
+  background-image: url("/images/zurihac2026/detail-05.png");
+}
 
 /*******************************************************************************
  * Schedule */

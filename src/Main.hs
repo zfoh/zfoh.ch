@@ -183,7 +183,7 @@ main = hakyll $ do
     -- /donate redirect
 
     createRedirects
-        [("donate/index.html", "https://pay.sumup.com/b2c/QI0HGB5E")]
+        [("donate/index.html", "https://pay.sumup.com/b2c/QUWNA9F5")]
 
     ----------------------------------------------------------------------------
     -- Templates.

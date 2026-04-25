@@ -38,7 +38,6 @@ jobs:
       uses: actions/cache/save@v3
       with:
         key: ${{ steps.setup.outputs.ghc-version }}-v1-${{ hashFiles('zfoh.cabal') }}
-        restore-keys: ${{ steps.setup.outputs.ghc-version }}-v1-
         path: |
           ~/.cabal
           ~/.ghc

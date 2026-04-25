@@ -30,7 +30,7 @@ data RegistrationRegistrant = RegistrationRegistrant
 
 data RegistrationProject = RegistrationProject
     { registrationProject_name             :: T.Text
-    , registrationProject_website          :: Maybe T.Text
+    , registrationProject_link             :: Maybe T.Text
     , registrationProject_shortDescription :: Maybe T.Text
     , registrationProject_contributorLevel :: RegistrationContributorLevel
     } deriving (Show)
@@ -61,7 +61,7 @@ convert Registration {..} = do
         { project_name        = registrationProject_name
         , project_contact     =
             fromMaybe registrationRegistrant_name registrationRegistrant_badgeName
-        , project_link        = registrationProject_website
+        , project_link        = registrationProject_link
         , project_description = registrationProject_shortDescription
         , project_contributorLevel = ProjectContributorLevel
             { projectContributorLevel_beginner     = registrationContributorLevel_beginner

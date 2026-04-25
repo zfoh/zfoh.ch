@@ -295,3 +295,30 @@ header img {
 .campus a {
   color: white;
 }
+
+/*******************************************************************************
+ * Projects page */
+
+.projects {
+  max-width: calc(800px);
+  margin: 0em auto 3em auto;
+  text-align: left;
+}
+
+.projects .project {
+  background-color: #fff8;
+  padding: 1em;
+}
+
+.projects .project:nth-child(even) {
+  background-color: #0001;
+}
+
+.projects .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.projects .description {
+  margin-top: 1em;
+}

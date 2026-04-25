@@ -1,0 +1,245 @@
+[
+  {
+    "name": "Beam",
+    "contact": "Laurent P. René de Cotret",
+    "description": "Library for type-safe interactions with SQL databases",
+    "link": "https://github.com/haskell-beam/beam",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "cardano-streamer",
+    "contact": "Alexey (lehins)",
+    "description": "A Haskell library and cli tool that allow iterating over Cardano blockchain data with ability to inspect individual Blocks, Transactions in them and the corresponding Ledger State.",
+    "link": "https://github.com/lehins/cardano-streamer",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Clash",
+    "contact": "Christiaan Baaij",
+    "description": "Clash compiles a large semantic subset of Haskell to VHDL/Verilog to program FPGAs",
+    "link": "https://clash-lang.org/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "DataHaskell",
+    "contact": "Michael Chavinda, Jireh Tan (daikonradish)",
+    "description": "Come hack on any and everything to do with data science/processing.",
+    "link": "https://www.datahaskell.org/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "GHC",
+    "contact": "Evan Piro",
+    "description": "haskell compiler",
+    "link": "https://gitlab.haskell.org/ghc/ghc",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Haskell Infrastructure",
+    "contact": "chreekat",
+    "description": "Making Haskell work",
+    "link": "https://haskell-status.org/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "HaskellKatas",
+    "contact": "Reynaldo Cordero",
+    "description": "Learn to program by serendipity. Welcome to the gymnastics of code katafication.",
+    "link": "https://gitlab.com/HaskellKatas/katas--proof-of-concept",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "hx",
+    "contact": "Raffael",
+    "description": "A fast, opinionated, next-gen toolchain for Haskell. Built in Rust.",
+    "link": "https://arcanist.sh/hx/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Keid game engine",
+    "contact": "IC Rainbow",
+    "description": "Get busy making games instead of renderers",
+    "link": "https://keid.haskell-game.dev",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Order",
+    "contact": "Emily Pillmore",
+    "description": "Order theory done right",
+    "link": "https://github.com/emilypi/order",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Perspec",
+    "contact": "Adrian Sieber",
+    "description": "Desktop app to correct the perspective of images",
+    "link": "https://github.com/ad-si/Perspec",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "PostgREST",
+    "contact": "Andrei Dziahel",
+    "description": "PostgREST is a standalone web server that turns your PostgreSQL database directly into a RESTful API. The structural constraints and permissions in the database determine the API endpoints and operations.",
+    "link": "https://postgrest.org/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "PureScript",
+    "contact": "Fabrizio Ferrai",
+    "description": "A strongly-typed language that compiles to JavaScript",
+    "link": "https://www.purescript.org/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Rhine FRP and automaton streaming library",
+    "contact": "Manuel Bärenz",
+    "description": "Clock type safe streaming and FRP library",
+    "link": "https://github.com/turion/rhine/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "sasha",
+    "contact": "michael litchard",
+    "description": "a text adventure engine designed as an instructional playground",
+    "link": "https://gitlab.com/liftlatch/sasha",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Security Advisories",
+    "contact": "Gautier DI FOLCO",
+    "description": "Haskell security infrastructure and tools",
+    "link": "https://github.com/haskell/security-advisories",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": false,
+      "advanced": true
+    }
+  },
+  {
+    "name": "stable-haskell",
+    "contact": "hasufell",
+    "description": "Making Haskell predictable, stable, and actually fun to use in production!",
+    "link": "https://github.com/stable-haskell",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Stackage",
+    "contact": "Jens Petersen",
+    "description": "Collaboration on improving Stackage tooling",
+    "link": "https://github.com/commercialhaskell/stackage",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Swarm",
+    "contact": "Ondřej Weis",
+    "description": "Swarm is a terminal-based 2D programming and resource gathering game.",
+    "link": "https://swarm-game.github.io/",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": false
+    }
+  },
+  {
+    "name": "Symparsec",
+    "contact": "Ben Orchard",
+    "description": "Type level string parser combinators. Many things to work on, especially singling/demoting parsers and examples.",
+    "link": "https://github.com/raehik/symparsec",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "The new Haskell Debugger",
+    "contact": "Rodrigo Mesquita",
+    "description": "Modern step-through interactive debugging for Haskell",
+    "link": "https://github.com/well-typed/haskell-debugger/issues",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
+    "name": "Waterfall CAD",
+    "contact": "Joe Warren",
+    "description": "Haskell Declarative CAD/Solid Modeling Library",
+    "link": "https://hackage.haskell.org/package/waterfall-cad",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  }
+]
+

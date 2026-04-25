@@ -172,6 +172,20 @@ main = hakyll $ do
                 applyAsTemplate (Projects.projectsContext projects)
             loadAndApplyTemplate "templates/zurihac2025.html" zfohContext html
 
+    match "content/zurihac2026/projects/projects.json" $
+        compile $ do
+            body <- itemBody <$> getResourceLBS
+            case A.eitherDecode body of
+                Right projects -> makeItem (projects :: Projects.Projects)
+                Left err       -> fail err
+    match "content/zurihac2026/projects/index.html" $ do
+        route dropContentRoute
+        compile $ do
+            projects <- loadBody "content/zurihac2026/projects/projects.json"
+            html <- getResourceBody >>=
+                applyAsTemplate (Projects.projectsContext projects)
+            loadAndApplyTemplate "templates/zurihac2026.html" zfohContext html
+
     ----------------------------------------------------------------------------
     -- Meetup section is dynamically generated.
 

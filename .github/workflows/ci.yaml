@@ -17,10 +17,10 @@ jobs:
       with:
         ghc-version: '9.6.5'
 
-    - uses: actions/cache@v3
+    - uses: actions/cache/restore@v3
       with:
         key: ${{ steps.setup.outputs.ghc-version }}-v1-${{ hashFiles('zfoh.cabal') }}
-        restore-keys: ${{ steps.setup.outputs-ghc-version }}-v1-
+        restore-keys: ${{ steps.setup.outputs.ghc-version }}-v1-
         path: |
           ~/.cabal
           ~/.ghc
@@ -33,3 +33,12 @@ jobs:
       with:
         branch: gh-pages
         folder: _site
+
+    - if: github.event_name != 'pull_request'
+      uses: actions/cache/save@v3
+      with:
+        key: ${{ steps.setup.outputs.ghc-version }}-v1-${{ hashFiles('zfoh.cabal') }}
+        restore-keys: ${{ steps.setup.outputs.ghc-version }}-v1-
+        path: |
+          ~/.cabal
+          ~/.ghc

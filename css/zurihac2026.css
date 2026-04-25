@@ -217,12 +217,12 @@ header img {
 }
 
 .speaker details {
-  margin: 1em;
+  margin-top: 1em;
 }
 
 .speaker .topic {
   border-left: 2px solid #0108;
-  padding-left: 0.2em;
+  padding-left: 0.5em;
 }
 
 .speaker .avatar {

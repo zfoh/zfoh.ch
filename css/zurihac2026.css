@@ -160,11 +160,11 @@ header img {
   margin: 0.5em;
 }
 
-.schedule * .talk   { background-color: #ccc }
-.schedule * .advanced { background-color: #ccc }
-.schedule * .beginner { background-color: #ccc }
-.schedule * .admin  { background-color: #ccc }
-.schedule * .food   { background-color: #ccc }
+.schedule * .talk     { background-color: #cccc }
+.schedule * .advanced { background-color: #bcec }
+.schedule * .beginner { background-color: #cdcc }
+.schedule * .admin    { background-color: #fffc }
+.schedule * .food     { background-color: #eddc }
 
 /*******************************************************************************
  * Partners */

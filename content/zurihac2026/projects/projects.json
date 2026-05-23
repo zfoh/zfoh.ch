@@ -240,6 +240,17 @@
       "intermediate": true,
       "advanced": true
     }
+  },
+  {
+    "name": "bsc",
+    "contact": "Lucas Kramer",
+    "description": "Compiler for the Bluespec hardware description language",
+    "link": "https://github.com/B-Lang-org/bsc",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
   }
 ]
 

@@ -242,6 +242,17 @@
     }
   },
   {
+    "name": "WireCat",
+    "contact": "Juan Raphael Diaz Simões",
+    "description": "WireCat: visual programming with cartesian categories",
+    "link": "https://github.com/guaraqe/wirecat",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "bsc",
     "contact": "Lucas Kramer",
     "description": "Compiler for the Bluespec hardware description language",

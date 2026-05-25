@@ -11,6 +11,17 @@
     }
   },
   {
+    "name": "bsc",
+    "contact": "Lucas Kramer",
+    "description": "Compiler for the Bluespec hardware description language",
+    "link": "https://github.com/B-Lang-org/bsc",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "cardano-streamer",
     "contact": "Alexey (lehins)",
     "description": "A Haskell library and cli tool that allow iterating over Cardano blockchain data with ability to inspect individual Blocks, Transactions in them and the corresponding Ledger State.",
@@ -251,17 +262,5 @@
       "intermediate": true,
       "advanced": true
     }
-  },
-  {
-    "name": "bsc",
-    "contact": "Lucas Kramer",
-    "description": "Compiler for the Bluespec hardware description language",
-    "link": "https://github.com/B-Lang-org/bsc",
-    "contributorLevel": {
-      "beginner": false,
-      "intermediate": true,
-      "advanced": true
-    }
   }
 ]
-

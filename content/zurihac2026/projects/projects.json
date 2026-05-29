@@ -154,6 +154,17 @@
     }
   },
   {
+    "name": "Quipper",
+    "contact": "Edi",
+    "description": "Quipper is an EDSL for quantum computation (Green et al., 2013). Let's bump it to GHC 9.",
+    "link": "https://hackage.haskell.org/package/quipper-language/",
+    "contributorLevel": {
+      "beginner": false,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "Rhine FRP and automaton streaming library",
     "contact": "Manuel Bärenz",
     "description": "Clock type safe streaming and FRP library",

@@ -109,6 +109,7 @@ header img {
  * Schedule */
 
 .schedule {
+  print-color-adjust: exact;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -163,7 +164,7 @@ header img {
 .schedule * .talk     { background-color: #cccc }
 .schedule * .advanced { background-color: #bcec }
 .schedule * .beginner { background-color: #cdcc }
-.schedule * .admin    { background-color: #fffc }
+.schedule * .admin    { background-color: #eeec }
 .schedule * .food     { background-color: #eddc }
 
 /*******************************************************************************

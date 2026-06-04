@@ -165,6 +165,17 @@
     }
   },
   {
+    "name": "Reflex FRP",
+    "contact": "Adriaan Leijnse (aidylns)",
+    "description": "Functional Reactive Programming for the Web, TUIs, and more.",
+    "link": "https://github.com/reflex-frp/reflex",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
+  {
     "name": "Rhine FRP and automaton streaming library",
     "contact": "Manuel Bärenz",
     "description": "Clock type safe streaming and FRP library",

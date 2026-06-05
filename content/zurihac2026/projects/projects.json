@@ -79,7 +79,7 @@
   {
     "name" : "Haskell Certification",
     "contact" : "Tobi Oloke",
-    "description" : "Evaluate and provide feedback on and suppoet to the Haskell Foundation Certification efforts", 
+    "description" : "Evaluate and provide feedback on and support to the Haskell Foundation Certification efforts", 
     "link" :"https://haskell.foundation/certification-syllabi/pdf/output.pdf",
     "contributorLevel" :{
       "beginner":true,

@@ -77,6 +77,17 @@
     }
   },
   {
+    "name" : "Haskell Certification",
+    "contact" : "Tobi Oloke",
+    "description" : "Evaluate and provide feedback on and support to the Haskell Foundation Certification efforts", 
+    "link" :"https://haskell.foundation/certification-syllabi/pdf/output.pdf",
+    "contributorLevel" :{
+      "beginner":true,
+      "intermediate" : true,
+      "advanced": true, 
+    }
+  }, 
+  {
     "name": "HaskellKatas",
     "contact": "Reynaldo Cordero",
     "description": "Learn to program by serendipity. Welcome to the gymnastics of code katafication.",

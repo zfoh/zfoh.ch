@@ -241,6 +241,17 @@
       "advanced": false
     }
   },
+    {
+    "name": "Tricorder",
+    "contact": "Christian Georgii",
+    "description": "A new incremental rebuilder for Haskell development",
+    "link": "https://github.com/atelier-hub/tricorder",
+    "contributorLevel": {
+      "beginner": true,
+      "intermediate": true,
+      "advanced": true
+    }
+  },
   {
     "name": "Symparsec",
     "contact": "Ben Orchard",

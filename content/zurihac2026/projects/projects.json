@@ -84,9 +84,9 @@
     "contributorLevel" :{
       "beginner":true,
       "intermediate" : true,
-      "advanced": true, 
+      "advanced": true
     }
-  }, 
+  },
   {
     "name": "HaskellKatas",
     "contact": "Reynaldo Cordero",
